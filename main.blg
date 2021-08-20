@@ -1,0 +1,83 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: biblatex.bst
+A level-1 auxiliary file: Chapters/ChapterTemplate.aux
+A level-1 auxiliary file: Appendices/AppendixA.aux
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: main-blx.bib
+Database file #2: example.bib
+Repeated entry---line 427 of file example.bib
+ : @article{litjens2017survey
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 436 of file example.bib
+ : @article{reader2020deep
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 478 of file example.bib
+ : @article{leuschner2021quantitative
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 624 of file example.bib
+ : @inproceedings{ronneberger2015u
+ :                                ,
+I'm skipping whatever remains of this entry
+Biblatex version: 3.8
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 28 entries,
+            6268 wiz_defined-function locations,
+            1328 strings with 14934 characters,
+and the built_in function-call counts, 250205 in all, are:
+= -- 19246
+> -- 3752
+< -- 1097
++ -- 7496
+- -- 1506
+* -- 19744
+:= -- 28229
+add.period$ -- 0
+call.type$ -- 28
+change.case$ -- 680
+chr.to.int$ -- 32
+cite$ -- 54
+duplicate$ -- 27985
+empty$ -- 21690
+format.name$ -- 2832
+if$ -- 49236
+int.to.chr$ -- 0
+int.to.str$ -- 79
+missing$ -- 0
+newline$ -- 1519
+num.names$ -- 1553
+pop$ -- 10396
+preamble$ -- 1
+purify$ -- 934
+quote$ -- 0
+skip$ -- 5492
+stack$ -- 0
+substring$ -- 33522
+swap$ -- 6105
+text.length$ -- 922
+text.prefix$ -- 54
+top$ -- 1
+type$ -- 940
+warning$ -- 0
+while$ -- 3588
+width$ -- 0
+write$ -- 1492
+(There were 4 error messages)
