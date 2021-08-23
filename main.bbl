@@ -291,131 +291,62 @@
     \field{year}{2002}
   \endentry
 
-  \entry{gong2018pet}{article}{}
-    \name{author}{4}{}{%
-      {{hash=GK}{%
-         family={Gong},
+  \entry{guo2016deep}{article}{}
+    \name{author}{6}{}{%
+      {{hash=GY}{%
+         family={Guo},
          familyi={G\bibinitperiod},
-         given={Kuang},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=GJ}{%
-         family={Guan},
-         familyi={G\bibinitperiod},
-         given={Jiahui},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=LCC}{%
-         family={Liu},
-         familyi={L\bibinitperiod},
-         given={Chih-Chieh},
-         giveni={C\bibinitperiod-C\bibinitperiod},
-      }}%
-      {{hash=QJ}{%
-         family={Qi},
-         familyi={Q\bibinitperiod},
-         given={Jinyi},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{GK+1}
-    \strng{fullhash}{GKGJLCCQJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Gon+18}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{year}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{number}{2}
-    \field{pages}{153\bibrangedash 161}
-    \field{title}{{PET} image denoising using a deep neural network through
-  fine tuning}
-    \field{volume}{3}
-    \field{journaltitle}{IEEE Transactions on Radiation and Plasma Medical
-  Sciences}
-    \field{year}{2018}
-  \endentry
-
-  \entry{gong2019iterative}{article}{}
-    \name{author}{9}{}{%
-      {{hash=GK}{%
-         family={Gong},
-         familyi={G\bibinitperiod},
-         given={Kuang},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=GJ}{%
-         family={Guan},
-         familyi={G\bibinitperiod},
-         given={Jiahui},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=KK}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Kyungsang},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=ZX}{%
-         family={Zhang},
-         familyi={Z\bibinitperiod},
-         given={Xuezhu},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=YJ}{%
-         family={Yang},
-         familyi={Y\bibinitperiod},
-         given={Jaewon},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=SY}{%
-         family={Seo},
-         familyi={S\bibinitperiod},
-         given={Youngho},
+         given={Yanming},
          giveni={Y\bibinitperiod},
       }}%
-      {{hash=EFG}{%
-         family={El\bibnamedelima Fakhri},
-         familyi={E\bibinitperiod\bibinitdelim F\bibinitperiod},
-         given={Georges},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=QJ}{%
-         family={Qi},
-         familyi={Q\bibinitperiod},
-         given={Jinyi},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=LQ}{%
-         family={Li},
+      {{hash=LY}{%
+         family={Liu},
          familyi={L\bibinitperiod},
-         given={Quanzheng},
-         giveni={Q\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=OA}{%
+         family={Oerlemans},
+         familyi={O\bibinitperiod},
+         given={Ard},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Lao},
+         familyi={L\bibinitperiod},
+         given={Songyang},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Song},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LMS}{%
+         family={Lew},
+         familyi={L\bibinitperiod},
+         given={Michael\bibnamedelima S},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {IEEE}%
+      {Elsevier}%
     }
-    \strng{namehash}{GK+1}
-    \strng{fullhash}{GKGJKKZXYJSYEFGQJLQ1}
+    \strng{namehash}{GY+1}
+    \strng{fullhash}{GYLYOALSWSLMS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Gon+19}
-    \field{labelyear}{2019}
+    \field{labelalpha}{Guo+16}
+    \field{labelyear}{2016}
     \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
-    \field{number}{3}
-    \field{pages}{675\bibrangedash 685}
-    \field{title}{Iterative {PET} image reconstruction using convolutional
-  neural network representation}
-    \field{volume}{38}
-    \field{journaltitle}{IEEE Transactions on Medical Imaging}
-    \field{year}{2019}
+    \field{pages}{27\bibrangedash 48}
+    \field{title}{Deep learning for visual understanding: A review}
+    \field{volume}{187}
+    \field{journaltitle}{Neurocomputing}
+    \field{year}{2016}
   \endentry
 
   \entry{guo2019deep}{article}{}
@@ -471,48 +402,6 @@
     \field{journaltitle}{IEEE Transactions on Radiation and Plasma Medical
   Sciences}
     \field{year}{2019}
-  \endentry
-
-  \entry{haeggstroem2018deeprec}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HI}{%
-         family={Haeggstroem},
-         familyi={H\bibinitperiod},
-         given={Ida},
-         giveni={I\bibinitperiod},
-      }}%
-      {{hash=SCR}{%
-         family={Schmidtlein},
-         familyi={S\bibinitperiod},
-         given={C\bibnamedelima Ross},
-         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=CG}{%
-         family={Campanella},
-         familyi={C\bibinitperiod},
-         given={Gabriele},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=FTJ}{%
-         family={Fuchs},
-         familyi={F\bibinitperiod},
-         given={Thomas\bibnamedelima J},
-         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HI+1}
-    \strng{fullhash}{HISCRCGFTJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Hae+18}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{year}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{title}{DeepRec: A deep encoder-decoder network for directly solving
-  the {{PET}} reconstruction inverse problem}
-    \field{journaltitle}{arXiv preprint arXiv:1804.07851}
-    \field{year}{2018}
   \endentry
 
   \entry{hatt2018first}{article}{}
@@ -598,6 +487,50 @@
     \field{year}{2018}
   \endentry
 
+  \entry{isola2017image}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=IP}{%
+         family={Isola},
+         familyi={I\bibinitperiod},
+         given={Phillip},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=ZJY}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Jun-Yan},
+         giveni={J\bibinitperiod-Y\bibinitperiod},
+      }}%
+      {{hash=ZT}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Tinghui},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=EAA}{%
+         family={Efros},
+         familyi={E\bibinitperiod},
+         given={Alexei\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IP+1}
+    \strng{fullhash}{IPZJYZTEAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Iso+17}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}
+    \field{pages}{1125\bibrangedash 1134}
+    \field{title}{Image-to-image translation with conditional adversarial
+  networks}
+    \field{year}{2017}
+  \endentry
+
   \entry{kadimesetty2018convolutional}{article}{}
     \name{author}{4}{}{%
       {{hash=KVS}{%
@@ -647,84 +580,6 @@
     \field{year}{2018}
   \endentry
 
-  \entry{kim2018penalized}{article}{}
-    \name{author}{9}{}{%
-      {{hash=KK}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Kyungsang},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=WD}{%
-         family={Wu},
-         familyi={W\bibinitperiod},
-         given={Dufan},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=GK}{%
-         family={Gong},
-         familyi={G\bibinitperiod},
-         given={Kuang},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=DJ}{%
-         family={Dutta},
-         familyi={D\bibinitperiod},
-         given={Joyita},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=KJH}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Jong\bibnamedelima Hoon},
-         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-      {{hash=SYD}{%
-         family={Son},
-         familyi={S\bibinitperiod},
-         given={Young\bibnamedelima Don},
-         giveni={Y\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=KHK}{%
-         family={Kim},
-         familyi={K\bibinitperiod},
-         given={Hang\bibnamedelima Keun},
-         giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=EFG}{%
-         family={El\bibnamedelima Fakhri},
-         familyi={E\bibinitperiod\bibinitdelim F\bibinitperiod},
-         given={Georges},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=LQ}{%
-         family={Li},
-         familyi={L\bibinitperiod},
-         given={Quanzheng},
-         giveni={Q\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{KK+1}
-    \strng{fullhash}{KKWDGKDJKJHSYDKHKEFGLQ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Kim+18}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{year}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{number}{6}
-    \field{pages}{1478\bibrangedash 1487}
-    \field{title}{Penalized {PET} reconstruction using deep learning prior and
-  local linear fitting}
-    \field{volume}{37}
-    \field{journaltitle}{IEEE Transactions on Medical Imaging}
-    \field{year}{2018}
-  \endentry
-
   \entry{kim2014combining}{article}{}
     \name{author}{3}{}{%
       {{hash=KD}{%
@@ -765,6 +620,87 @@
     \field{volume}{34}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
     \field{year}{2014}
+  \endentry
+
+  \entry{ledig2017photo}{inproceedings}{}
+    \true{moreauthor}
+    \name{author}{10}{}{%
+      {{hash=LC}{%
+         family={Ledig},
+         familyi={L\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={Theis},
+         familyi={T\bibinitperiod},
+         given={Lucas},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=HF}{%
+         family={Husz{\'a}r},
+         familyi={H\bibinitperiod},
+         given={Ferenc},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Caballero},
+         familyi={C\bibinitperiod},
+         given={Jose},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Cunningham},
+         familyi={C\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Acosta},
+         familyi={A\bibinitperiod},
+         given={Alejandro},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Aitken},
+         familyi={A\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={Tejani},
+         familyi={T\bibinitperiod},
+         given={Alykhan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Totz},
+         familyi={T\bibinitperiod},
+         given={Johannes},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zehan},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LC+1}
+    \strng{fullhash}{LCTLHFCJCAAAAATATJWZ+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Led+17}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}
+    \field{pages}{4681\bibrangedash 4690}
+    \field{title}{Photo-realistic single image super-resolution using a
+  generative adversarial network}
+    \field{year}{2017}
   \endentry
 
   \entry{leuschner2021quantitative}{article}{}
@@ -901,6 +837,56 @@
   Low-Dose {CT} Denoising with Self-supervised Perceptual Loss Network}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
     \field{year}{2020}
+  \endentry
+
+  \entry{lim2017enhanced}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=LB}{%
+         family={Lim},
+         familyi={L\bibinitperiod},
+         given={Bee},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Son},
+         familyi={S\bibinitperiod},
+         given={Sanghyun},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Heewon},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Nah},
+         familyi={N\bibinitperiod},
+         given={Seungjun},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MLK}{%
+         family={Mu\bibnamedelima Lee},
+         familyi={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+         given={Kyoung},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LB+1}
+    \strng{fullhash}{LBSSKHNSMLK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Lim+17}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
+  pattern recognition workshops}
+    \field{pages}{136\bibrangedash 144}
+    \field{title}{Enhanced deep residual networks for single image
+  super-resolution}
+    \field{year}{2017}
   \endentry
 
   \entry{litjens2017survey}{article}{}
@@ -1045,54 +1031,6 @@
     \field{volume}{33}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
     \field{year}{2013}
-  \endentry
-
-  \entry{maier2018deep}{article}{}
-    \name{author}{4}{}{%
-      {{hash=MJ}{%
-         family={Maier},
-         familyi={M\bibinitperiod},
-         given={Joscha},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=SS}{%
-         family={Sawall},
-         familyi={S\bibinitperiod},
-         given={Stefan},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=KM}{%
-         family={Knaup},
-         familyi={K\bibinitperiod},
-         given={Michael},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=KM}{%
-         family={Kachelrie{\ss}},
-         familyi={K\bibinitperiod},
-         given={Marc},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{MJ+1}
-    \strng{fullhash}{MJSSKMKM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Mai+18}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{year}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-    \field{number}{3}
-    \field{pages}{57}
-    \field{title}{Deep scatter estimation ({DSE}): Accurate real-time scatter
-  estimation for {X-ray CT} using a deep convolutional neural network}
-    \field{volume}{37}
-    \field{journaltitle}{Journal of Nondestructive Evaluation}
-    \field{year}{2018}
   \endentry
 
   \entry{nuyts1998iterative}{article}{}
@@ -1286,98 +1224,6 @@
     \field{year}{2019}
   \endentry
 
-  \entry{whiteley2019direct}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=WW}{%
-         family={Whiteley},
-         familyi={W\bibinitperiod},
-         given={William},
-         giveni={W\bibinitperiod},
-      }}%
-      {{hash=GJ}{%
-         family={Gregor},
-         familyi={G\bibinitperiod},
-         given={Jens},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \list{organization}{2}{%
-      {International Society for Optics}%
-      {Photonics}%
-    }
-    \strng{namehash}{WWGJ1}
-    \strng{fullhash}{WWGJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{WG19}
-    \field{labelyear}{2019}
-    \field{labeldatesource}{year}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \field{booktitle}{15th International Meeting on Fully Three-Dimensional
-  Image Reconstruction in Radiology and Nuclear Medicine}
-    \field{pages}{1107225}
-    \field{title}{Direct image reconstruction from raw measurement data using
-  an encoding transform refinement-and-scaling neural network}
-    \field{volume}{11072}
-    \field{year}{2019}
-  \endentry
-
-  \entry{xie2019generative}{inproceedings}{}
-    \name{author}{5}{}{%
-      {{hash=XZ}{%
-         family={Xie},
-         familyi={X\bibinitperiod},
-         given={Zhaoheng},
-         giveni={Z\bibinitperiod},
-      }}%
-      {{hash=BR}{%
-         family={Baikejiang},
-         familyi={B\bibinitperiod},
-         given={Reheman},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=GK}{%
-         family={Gong},
-         familyi={G\bibinitperiod},
-         given={Kuang},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=ZX}{%
-         family={Zhang},
-         familyi={Z\bibinitperiod},
-         given={Xuezhu},
-         giveni={X\bibinitperiod},
-      }}%
-      {{hash=QJ}{%
-         family={Qi},
-         familyi={Q\bibinitperiod},
-         given={Jinyi},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \list{organization}{2}{%
-      {International Society for Optics}%
-      {Photonics}%
-    }
-    \strng{namehash}{XZ+1}
-    \strng{fullhash}{XZBRGKZXQJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Xie+19}
-    \field{labelyear}{2019}
-    \field{labeldatesource}{year}
-    \field{sortinit}{X}
-    \field{sortinithash}{X}
-    \field{booktitle}{15th International Meeting on Fully Three-Dimensional
-  Image Reconstruction in Radiology and Nuclear Medicine}
-    \field{pages}{110720P}
-    \field{title}{Generative adversarial networks based regularized image
-  reconstruction for {PET}}
-    \field{volume}{11072}
-    \field{year}{2019}
-  \endentry
-
   \entry{yang2018low}{article}{}
     \name{author}{10}{}{%
       {{hash=YQ}{%
@@ -1496,57 +1342,48 @@
     \field{year}{2020}
   \endentry
 
-  \entry{zhu2018image}{article}{}
-    \name{author}{5}{}{%
-      {{hash=ZB}{%
+  \entry{zhu2017unpaired}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=ZJY}{%
          family={Zhu},
          familyi={Z\bibinitperiod},
-         given={Bo},
-         giveni={B\bibinitperiod},
+         given={Jun-Yan},
+         giveni={J\bibinitperiod-Y\bibinitperiod},
       }}%
-      {{hash=LJZ}{%
-         family={Liu},
-         familyi={L\bibinitperiod},
-         given={Jeremiah\bibnamedelima Z},
-         giveni={J\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      {{hash=PT}{%
+         family={Park},
+         familyi={P\bibinitperiod},
+         given={Taesung},
+         giveni={T\bibinitperiod},
       }}%
-      {{hash=CSF}{%
-         family={Cauley},
-         familyi={C\bibinitperiod},
-         given={Stephen\bibnamedelima F},
-         giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+      {{hash=IP}{%
+         family={Isola},
+         familyi={I\bibinitperiod},
+         given={Phillip},
+         giveni={P\bibinitperiod},
       }}%
-      {{hash=RBR}{%
-         family={Rosen},
-         familyi={R\bibinitperiod},
-         given={Bruce\bibnamedelima R},
-         giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=RMS}{%
-         family={Rosen},
-         familyi={R\bibinitperiod},
-         given={Matthew\bibnamedelima S},
-         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      {{hash=EAA}{%
+         family={Efros},
+         familyi={E\bibinitperiod},
+         given={Alexei\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Nature Publishing Group}%
-    }
-    \strng{namehash}{ZB+1}
-    \strng{fullhash}{ZBLJZCSFRBRRMS1}
+    \strng{namehash}{ZJY+1}
+    \strng{fullhash}{ZJYPTIPEAA1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Zhu+18}
-    \field{labelyear}{2018}
+    \field{labelalpha}{Zhu+17}
+    \field{labelyear}{2017}
     \field{labeldatesource}{year}
     \field{sortinit}{Z}
     \field{sortinithash}{Z}
-    \field{number}{7697}
-    \field{pages}{487}
-    \field{title}{Image reconstruction by domain-transform manifold learning}
-    \field{volume}{555}
-    \field{journaltitle}{Nature}
-    \field{year}{2018}
+    \field{booktitle}{Proceedings of the IEEE international conference on
+  computer vision}
+    \field{pages}{2223\bibrangedash 2232}
+    \field{title}{Unpaired image-to-image translation using cycle-consistent
+  adversarial networks}
+    \field{year}{2017}
   \endentry
 \enddatalist
 \endinput

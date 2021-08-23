@@ -12,47 +12,20 @@
 
 The use of deep learning in medical imaging has been on the rise over the last few years. It has widely been used in various tasks across medical imaging such as image segmentation  (\cite{ronneberger2015u,guo2019deep,sinha2019multi,dolz2018hyperdense,hatt2018first}), image denoising (\cite{kadimesetty2018convolutional,li2020sacnn,chen2017low,yang2018low}), image analysis (\cite{litjens2017survey,amyar20193,cui2018artificial}). %\noteAB{Add more references}. 
 Deep learning based algorithms produce faster results along with best possible quality in accordance with existing state of the art methods (\cite{leuschner2021quantitative}). Medical Image reconstruction too has benefited hugely with the advancement of deep learning (\cite{reader2020deep,zhang2020review}).
-Medical Image reconstruction corresponds to the task of mapping raw projection data retrieved from the detector to image domain data. During the course of this thesis, the focus has been specific to \ac{PET} and \ac{CT} image reconstruction. Both these modalities present a unique of set of challenges for image reconstruction. There are many standard analytical and model-based methods for the task of medical image reconstruction. \ac{PET} imaging corresponds to emission tomography wherein the image reconstruction task revolves around identifying the radio-tracer distribution emitted from the patient.    Some of the challenges in \ac{PET} image reconstruction are scatter, attenuation and difficulty in identifying the exact annihilation point of the electron-positron. Analytical algorithms for \ac{PET} often result in very noisy image realizations. In the specific case of \ac{CT} image reconstruction, there has been active interest in sparse-view and low-dose reconstruction scenarios. In both cases, severe artifacts are introduced in  reconstructed images either due to incomplete projections or low counts. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods for require the knowledge of the noise and artifacts statistics and generally have longer reconstruction times (\cite{kim2014combining}). 
+Medical Image reconstruction corresponds to the task of mapping raw projection data retrieved from the detector to image domain data. During the course of this thesis, the focus has been towards \ac{PET} and \ac{CT} image reconstruction. Both these modalities present a unique of set of challenges for image reconstruction. 
+ 
+\ac{PET} imaging is a form of emission tomography wherein the image reconstruction task revolves around identifying the radio-tracer distribution emitted from the patient. A \ac{PET} image gives functional information about the organs in a patient making it invaluable for oncology. Some of the challenges in \ac{PET} image reconstruction are scatter, attenuation and difficulty in identifying the exact annihilation point of the electron-positron. Despite being the most sensitive emission tomography modality, the number of photons captured is low relative to the photons emitted contributing to further image degradation. These challenges result in very noisy images when reconstructed with analytical algorithms. These challenges are addressed by  Iterative/Model-based approaches which take into account detector geometry, noise statistics and approximate scatter and attenuation correction resulting in better image quality. 
+
+\ac{CT} imaging on the other hand is an example of transmission tomography. The extent of attenuation undergone by X-Rays that pass through a patient are measured to obtain attenuation maps. In \ac{CT} imaging research, there has been active interest in sparse-view and low-dose reconstruction scenarios. In both cases, severe artifacts are introduced in  reconstructed images either due to incomplete projections or low counts. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods for require the knowledge of the noise and artifacts statistics and generally have longer reconstruction times (\cite{kim2014combining}). 
 
 
+The main tasks involved in image reconstruction can be broadly categorized into three: sinogram correction, domain translation from sinogram to image, and image correction. Algorithms either tackle the three task individually or simultaneously account for them. One can relate to these tasks in the domain of Computer Vision wherein deep learning architectures have revolutionized the field by producing the state of the art results in most applications (\cite{guo2016deep}). For example, effective use of deep learning-based methods is seen in dealing with image denoising (\cite{kadimesetty2018convolutional,li2020sacnn,chen2017low,yang2018low}), super resolution (\cite{ledig2017photo,lim2017enhanced}) and image-to-image translation (\cite{isola2017image,zhu2017unpaired}) tasks. The continuous improvement in the availability of public data has further propelled interest in data-driven medical image reconstruction making it an active area of research. This thesis aims to explore novel deep learning approaches for \ac{PET} and \ac{CT} image reconstruction. Most common ways to introduce deep learning architectures in the image reconstruction pipeline are for pre-processing to correct raw projection data from the detector and post-processing to improve images reconstructed with existing methods. Another way is to embed the network into an iterative algorithm to enable faster convergence. The relatively less explored way called direct image reconstruction is to utilize neural networks alone for the entire reconstruction process. In this thesis \ac{CNN} approaches are proposed for direct image reconstruction with neural networks. 
 
-
-
-
-
-
-
-Deep learning-based methods have proven to be effective in dealing with image denoising and image-to-image translation tasks making them suitable for tackling the difficulties posed in medical image reconstruction. (add citations here) This thesis aims to explore novel deep learning approaches for \ac{PET} and \ac{CT} image reconstruction. The proposed methods are also compared with standard reconstruction algorithms and existing deep learning algorithms appropriate to the particular case. 
-% \noteAB{Insert a paragraph on image reconstruction: ``The utilization of deep learning technique for image reconstruction is more challenging. Image reconstruction corresponds to the task of ... . The challenge of image reconstruction is ...'', then carry on with the next paragraph}
-%One can broadly identify three different categories of approaches for the implementation of deep learning within the framework of medical image reconstruction:
-%\begin{itemize}
-%	\item[(i)] methods that use deep learning as an image processing step that improves the quality of the raw data and/or the reconstructed image \cite{gong2018pet, maier2018deep}; 
-%	\item[(ii)] methods that embed deep-learning image processing techniques in the iterative reconstruction framework to accelerate convergence or to improve image quality \cite{xie2019generative,kim2018penalized,gong2019iterative};
-%	\item[(iii)] direct reconstruction with deep learning alone without any use of traditional reconstruction methods  \cite{whiteley2019direct,zhu2018image,haeggstroem2018deeprec}.
-%\end{itemize}
-
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
-\subsection{Subsection 1}
-
-Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
-
-%-----------------------------------
-%	SUBSECTION 2
-%-----------------------------------
-
-\subsection{Subsection 2}
-Morbi rutrum odio eget arcu adipiscing sodales. Aenean et purus a est pulvinar pellentesque. Cras in elit neque, quis varius elit. Phasellus fringilla, nibh eu tempus venenatis, dolor elit posuere quam, quis adipiscing urna leo nec orci. Sed nec nulla auctor odio aliquet consequat. Ut nec nulla in ante ullamcorper aliquam at sed dolor. Phasellus fermentum magna in augue gravida cursus. Cras sed pretium lorem. Pellentesque eget ornare odio. Proin accumsan, massa viverra cursus pharetra, ipsum nisi lobortis velit, a malesuada dolor lorem eu neque.
-
-%----------------------------------------------------------------------------------------
-%	SECTION 2
-%----------------------------------------------------------------------------------------
 
 \section{Thesis Organization}
 
-Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
-
+This thesis is divided into six chapters with the first two chapters being introduction and literature review, followed by three chapters that focus on different deep learning methods explored during the thesis, and finally conclusion and perspectives. In the introduction various aspects of \ac{PET} and \ac{CT} image reconstruction are discussed along with the relevant background in deep learning background. The second chapter throws light on deep learning applied to medical image reconstruction and reviews the state of the art approaches in the scope of this thesis. 
+In chapter 3 , we discuss the proposed reconstruction framework \ac{DUGAN} for \ac{PET} and \ac{CT} image reconstruction. This  
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
