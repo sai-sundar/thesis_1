@@ -25,7 +25,7 @@ The main tasks involved in image reconstruction can be broadly categorized into 
 \section{Thesis Organization}
 
 This thesis is divided into six chapters with the first two chapters being introduction and literature review, followed by three chapters that focus on different deep learning methods explored during the thesis, and finally conclusion and perspectives. In the introduction various aspects of \ac{PET} and \ac{CT} image reconstruction are discussed along with the relevant background in deep learning background. The second chapter throws light on deep learning applied to medical image reconstruction and reviews the state of the art approaches in the scope of this thesis. 
-In chapter 3 , we discuss the proposed reconstruction framework \ac{DUGAN} for \ac{PET} and \ac{CT} image reconstruction. This  
+In chapter 3 , we discuss reconstruction framework \ac{DUGAN} for \ac{PET} and \ac{CT} image reconstruction. A novel method for Sparse-view \ac{CT} reconstruction called \ac{LRRCED} is covered in chapter 4. A modified version of \ac{LRRCED} for total body \ac{PET} is discussed in chapter 5. Potential improvements and ideas for future work are presented in the final chapter. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
@@ -39,17 +39,64 @@ In chapter 3 , we discuss the proposed reconstruction framework \ac{DUGAN} for \
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{PET}
+In medical imaging, image reconstruction corresponds to the task of reconstructing an image  $\boldx \in \bbR^m$, from a scanner measurement $\boldy \in \bbR^n$, where $m$ is the number of voxels defining the image and $n$ is the number of detectors in the scanner.  In \ac{CT}, the image $\boldx = \boldmu$ corresponds to X-ray attenuation, measured by the proportion of X-rays scattered or absorbed as they pass through the object. In \ac{PET}, $\boldx = \boldlambda$ is the distribution of a radiotracer delivered to the patient by injection, and is measured through the detection of pairs of $\gamma$-rays emitted in opposite directions (indirectly from the positron-emitting radiotracer).
+
+The measurement $\boldy$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries:
+\begin{equation}\label{eq:poisson}
+\boldy \sim \mathrm{Poisson}(\boldybar(\boldx))
+\end{equation}    
+where $\boldybar(\boldx) \in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. In a simplified setting, the expected number of counts in \ac{CT} is
+\begin{equation}\label{eq:CT}
+\boldybar(\boldmu) = \exp (-\boldL \boldmu)
+\end{equation}
+where $\boldL \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldL]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. In \ac{PET}, the expected number of counts is (also in a simplified setting) is
+\begin{equation}\label{eq:PET}
+\boldybar(\boldlambda) = \boldP \boldlambda
+\end{equation}
+where $\boldP \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldP]_{i,j}$ represents the probability that a photon pair emitted from voxel $j$. For simplification we assume $\boldP=\boldL$ which is a reasonable assumption in a non time-of-flight setting. Image reconstruction is achieved by finding a suitable image $\boldxhat = \boldmuhat$ or $\boldlambdahat$ that approximately solves 
+\begin{equation}\label{eq:pb2solve}
+\boldy = \boldybar(\boldx) \, .
+\end{equation} 
+
 
 
 %-----------------------------------
-%	SUBSECTION 1
+%	SUBSECTION 2
 %-----------------------------------
 \subsection{CT}
 
+Let an image be represented by $\boldx \in \bbR^m$ and the scanner measurement by $\boldb \in \bbR^n$ where $m$ is the number of voxels and $n$ is the number of measurements. In \ac{2D} \ac{CT} imaging $n$ depends on the number of detectors $N_\mathrm{d}$ and the number of angles $N_\mathrm{a}$. The task of medical image reconstruction corresponds to finding a mapping from $\boldb$ to $\boldx$. The measurement $\boldb$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries, i.e.,
+\begin{equation}\label{eq:poisson}
+\boldb \sim \mathrm{Poisson}(\boldbbar(\boldx))
+\end{equation}    
+where, $\boldb  =  [b_1(\boldx),\dots,b_n(\boldx)]\transp\in \bbR^n$ and $\boldbbar(\boldx)  =  [\bbar_1(\boldx),\dots,\bbar_n(\boldx)]\transp\in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
+
+The image $\boldx\in\mathbb{R}^m$ is a vectorized input image (also referred to as attenuation) representing the measure of X-rays absorbed or scattered as they pass through the patient. In a monochromatic setting, the expected number of counts $\boldbbar(\boldx)$  is given by the Beer-Lambert law, i.e.,
+\begin{equation}\label{eq:CT}
+\bbar_i(\boldx) = I \cdot \exp (-[\boldP \boldx]_i) \quad \forall i=1,\dots,n 
+\end{equation}
+where, $I$ is the intensity and $\boldP \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldP]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. Given the raw projections $\boldbbar$, we take the logarithm as follows
+\begin{equation}
+y_i = \log\left(\frac{I}{b_i}\right) \quad \forall i=1,\dots,n   
+\end{equation}
+where we assumed that the intensity $I$ is sufficiently high so that $b_i>0$ for all $i$. Image reconstruction is based on finding a suitable image $\boldxhat$ that approximately solves 
+\begin{equation}\label{eq:pb2solve}
+\boldy = \boldP \boldxhat 
+\end{equation} 
+ 
+where $\boldy  =  [y_1,\dots,y_n]\transp\in \bbR^m$. The reconstruction can also be achieved with more sophisticated iterative techniques that account for the stochastic properties of the measurement \eqref{eq:poisson} \cite{nuyts1998iterative,Elbakri2002}.
+
+In a sparse-view setting, the number of rotation angles of the detector is decreased in order to reduce the radiation passing through the patient. This implies a reduction in the number of projection angles in the measurement $\boldy$.
+
+
+%-----------------------------------
+%	SUBSECTION 3
+%-----------------------------------
+\subsection{Analytical Reconstruction Algorithms}
 
 
 
-
-
-
-
+%-----------------------------------
+%	SUBSECTION 4
+%-----------------------------------
+\subsection{Iterative Reconstruction Algorithms}
