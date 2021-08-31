@@ -36,48 +36,60 @@ Repeated entry---line 624 of file example.bib
  : @inproceedings{ronneberger2015u
  :                                ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 816 of file example.bib
+ : @article{fessler2000statistical
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 825 of file example.bib
+ : @article{shepp1982
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 835 of file example.bib
+ : @article{depierro1995
+ :                      ,
+I'm skipping whatever remains of this entry
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 25 entries,
+You've used 28 entries,
             6268 wiz_defined-function locations,
-            1314 strings with 14254 characters,
-and the built_in function-call counts, 221296 in all, are:
-= -- 16938
-> -- 3270
-< -- 907
-+ -- 6737
-- -- 1374
-* -- 17613
-:= -- 25403
+            1332 strings with 14690 characters,
+and the built_in function-call counts, 238098 in all, are:
+= -- 17988
+> -- 3616
+< -- 1010
++ -- 7079
+- -- 1514
+* -- 19046
+:= -- 26985
 add.period$ -- 0
-call.type$ -- 25
-change.case$ -- 504
+call.type$ -- 28
+change.case$ -- 549
 chr.to.int$ -- 32
-cite$ -- 48
-duplicate$ -- 25008
-empty$ -- 19140
-format.name$ -- 2551
-if$ -- 43188
+cite$ -- 54
+duplicate$ -- 26740
+empty$ -- 20793
+format.name$ -- 2764
+if$ -- 46725
 int.to.chr$ -- 0
-int.to.str$ -- 66
+int.to.str$ -- 72
 missing$ -- 0
-newline$ -- 1358
-num.names$ -- 1278
-pop$ -- 9325
+newline$ -- 1453
+num.names$ -- 1413
+pop$ -- 10337
 preamble$ -- 1
-purify$ -- 737
+purify$ -- 791
 quote$ -- 0
-skip$ -- 4584
+skip$ -- 5113
 stack$ -- 0
-substring$ -- 29517
-swap$ -- 5354
-text.length$ -- 847
-text.prefix$ -- 49
+substring$ -- 31328
+swap$ -- 5853
+text.length$ -- 947
+text.prefix$ -- 52
 top$ -- 1
-type$ -- 838
+type$ -- 940
 warning$ -- 0
-while$ -- 3269
+while$ -- 3448
 width$ -- 0
-write$ -- 1334
-(There were 4 error messages)
+write$ -- 1426
+(There were 7 error messages)

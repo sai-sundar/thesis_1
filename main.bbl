@@ -258,6 +258,33 @@
     \field{year}{2018}
   \endentry
 
+  \entry{depierro1995}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DPAR}{%
+         family={De\bibnamedelima Pierro},
+         familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+         given={A.\bibnamedelima R.},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPAR1}
+    \strng{fullhash}{DPAR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DP95}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{year}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{1}
+    \field{pages}{132\bibrangedash 137}
+    \field{title}{A modified expectation maximization algorithm for penalized
+  likelihood estimation in emission tomography}
+    \field{volume}{14}
+    \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{1995}
+  \endentry
+
   \entry{Elbakri2002}{article}{}
     \name{author}{2}{}{%
       {{hash=EIA}{%
@@ -289,6 +316,44 @@
     \field{volume}{21}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
     \field{year}{2002}
+  \endentry
+
+  \entry{fessler2000statistical}{article}{}
+    \name{author}{3}{}{%
+      {{hash=FJA}{%
+         family={Fessler},
+         familyi={F\bibinitperiod},
+         given={J.\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sonka},
+         familyi={S\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FJM}{%
+         family={Fitzpatrick},
+         familyi={F\bibinitperiod},
+         given={J.\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FJASMFJM1}
+    \strng{fullhash}{FJASMFJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{FSF00}
+    \field{labelyear}{2000}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{pages}{1\bibrangedash 70}
+    \field{title}{Statistical image reconstruction methods for transmission
+  tomography}
+    \field{volume}{2}
+    \field{journaltitle}{Handbook of medical imaging}
+    \field{year}{2000}
   \endentry
 
   \entry{guo2016deep}{article}{}
@@ -1222,6 +1287,38 @@
     \field{title}{Multi-scale guided attention for medical image segmentation}
     \field{journaltitle}{arXiv preprint arXiv:1906.02849}
     \field{year}{2019}
+  \endentry
+
+  \entry{Shepp1982}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SLA}{%
+         family={Shepp},
+         familyi={S\bibinitperiod},
+         given={L.\bibnamedelima A.},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VY}{%
+         family={Vardi},
+         familyi={V\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SLAVY1}
+    \strng{fullhash}{SLAVY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SV82}
+    \field{labelyear}{1982}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{113\bibrangedash 122}
+    \field{title}{Maximum Likelihood Reconstruction for Emission Tomography}
+    \field{volume}{1}
+    \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{1982}
   \endentry
 
   \entry{yang2018low}{article}{}

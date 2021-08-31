@@ -31,42 +31,41 @@ In chapter 3 , we discuss reconstruction framework \ac{DUGAN} for \ac{PET} and \
 %	SECTION 3
 %----------------------------------------------------------------------------------------
 
-\section{Image Reconstruction Model}
-
+\section{Imaging Modalities and Reconstruction Models}
 
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{PET}
-In medical imaging, image reconstruction corresponds to the task of reconstructing an image  $\boldx \in \bbR^m$, from a scanner measurement $\boldy \in \bbR^n$, where $m$ is the number of voxels defining the image and $n$ is the number of detectors in the scanner.  In \ac{CT}, the image $\boldx = \boldmu$ corresponds to X-ray attenuation, measured by the proportion of X-rays scattered or absorbed as they pass through the object. In \ac{PET}, $\boldx = \boldlambda$ is the distribution of a radiotracer delivered to the patient by injection, and is measured through the detection of pairs of $\gamma$-rays emitted in opposite directions (indirectly from the positron-emitting radiotracer).
+
+
+\ac{PET} images provide functional information to the radiologist making them invaluable in image analysis. The application of \ac{PET} imaging has been on the rise in oncology, cardiology and neuropsychiatry. The increased application lead to the development of many novel reconstruction approaches that lead to improved image quality. This section focuses on the standard analytical and iterative algorithms which are applicable in the context of this thesis. 
+
+The aim of image reconstruction in \ac{PET} is to predict the tracer distribution emitted from the patient. The emission is a result of positron emitting radionuclide injected into the patient which causes positron-electron annihilation. The annihilation results in the production of gamma photons that travel in opposite directions due to the law of conservation of momentum. The simultaneous detection of these photons (also called coincidence events) enables the estimation of tracer distribution in \ac{PET} imaging. A \ac{PET} scanner detects the coincidence events through a set of detectors arranged in a circular fashion. This design of the scanner facilitates detection of coincidence photons between a pair of detectors. The centers of two detectors is connected by a straight line called \ac{LOR}. Photon pairs that are not subject to scatter are a result of annihilation events that occur along a thin volume surrounding the \ac{LOR}. In \ac{PET}, $\boldx = \boldlambda$ is the distribution of a radiotracer delivered to the patient by injection, and is measured through the detection of pairs of $\gamma$-rays emitted in opposite directions (indirectly from the positron-emitting radiotracer).
 
 The measurement $\boldy$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries:
 \begin{equation}\label{eq:poisson}
 \boldy \sim \mathrm{Poisson}(\boldybar(\boldx))
 \end{equation}    
-where $\boldybar(\boldx) \in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. In a simplified setting, the expected number of counts in \ac{CT} is
-\begin{equation}\label{eq:CT}
-\boldybar(\boldmu) = \exp (-\boldL \boldmu)
-\end{equation}
-where $\boldL \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldL]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. In \ac{PET}, the expected number of counts is (also in a simplified setting) is
+where $\boldybar(\boldx) \in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
+
+The expected number of counts is
 \begin{equation}\label{eq:PET}
 \boldybar(\boldlambda) = \boldP \boldlambda
 \end{equation}
-where $\boldP \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldP]_{i,j}$ represents the probability that a photon pair emitted from voxel $j$. For simplification we assume $\boldP=\boldL$ which is a reasonable assumption in a non time-of-flight setting. Image reconstruction is achieved by finding a suitable image $\boldxhat = \boldmuhat$ or $\boldlambdahat$ that approximately solves 
-\begin{equation}\label{eq:pb2solve}
+where $\boldP \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldP]_{i,j}$ represents the probability that a photon pair emitted from voxel $j$. Image reconstruction is achieved by finding a suitable image $\boldxhat = \boldlambdahat$ that approximately solves 
+\begin{equation}\label{eq:pb1solve}
 \boldy = \boldybar(\boldx) \, .
 \end{equation} 
-
-
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 \subsection{CT}
-
+% Write a paragraph on CT imaging
 Let an image be represented by $\boldx \in \bbR^m$ and the scanner measurement by $\boldb \in \bbR^n$ where $m$ is the number of voxels and $n$ is the number of measurements. In \ac{2D} \ac{CT} imaging $n$ depends on the number of detectors $N_\mathrm{d}$ and the number of angles $N_\mathrm{a}$. The task of medical image reconstruction corresponds to finding a mapping from $\boldb$ to $\boldx$. The measurement $\boldb$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries, i.e.,
-\begin{equation}\label{eq:poisson}
+\begin{equation}\label{eq:pCT}
 \boldb \sim \mathrm{Poisson}(\boldbbar(\boldx))
 \end{equation}    
 where, $\boldb  =  [b_1(\boldx),\dots,b_n(\boldx)]\transp\in \bbR^n$ and $\boldbbar(\boldx)  =  [\bbar_1(\boldx),\dots,\bbar_n(\boldx)]\transp\in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
@@ -93,10 +92,32 @@ In a sparse-view setting, the number of rotation angles of the detector is decre
 %	SUBSECTION 3
 %-----------------------------------
 \subsection{Analytical Reconstruction Algorithms}
+Analytical algorithms can efficiently solve \eqref{eq:pb1solve} and \eqref{eq:pb2solve} and have been the cornerstone of tomographic image reconstruction. One of the most famous reconstruction algorithms for both \ac{PET} and \ac{CT} is the \ac{FBP}. The projections ($\boldy$) are first filtered (typically with a ramp filter) and then back-projected to get an image. The discrete implementation of the \ac{FBP} can be written as follows:
 
+\begin{equation}\label{eq:FBP}
+	\boldx(i,j) = \frac{\pi}{N_\phi}\sum_{l=0}^{N_\phi-1}\boldy_f(s=i\cos\phi_l+j\sin\phi_l,\phi_l)
+\end{equation}
 
+where $x$ is the image for a set of pixels $(i,j)$, $\boldy_f$ are the filtered projections obtained by filtering the projections, expressed in terms of radial variable $s$ and projection angle $\phi$, and $N_\phi$ number of projection angles. The above equation is the approximation of backprojection by a discrete quadrature. 
 
+Analytical methods are faster and practical for implementation in a clinical setting but they are vulnerable to noise. The assumptions made in analytical formations are that the measurements are continuous and the solutions are of integral formulation. Sampling is done to the data a posteriori. They are also highly susceptible to system geometry. Since the 80's, \ac{MBIR} techniques \cite{Shepp1982,fessler2000statistical} became the standard approach. They consist in iteratively approximating a solution $\boldxhat$ such that $\boldybar(\boldxhat)$ maximizes the likelihood of the measurement $\boldy$. As they model the stochasticity of the system, they are more robust to noise as compared with \ac{FBP}, and can be completed with a penalty term for additional control over the noise \cite{depierro1995}. 
 %-----------------------------------
 %	SUBSECTION 4
 %-----------------------------------
 \subsection{Iterative Reconstruction Algorithms}
+
+\subsubsection{MLEM}
+
+\subsubsection{TV-PWLS}
+
+
+
+
+
+
+
+
+
+
+
+
