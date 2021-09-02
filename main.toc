@@ -13,6 +13,7 @@
 \contentsline {subsection}{\numberline {1.3.4}Iterative Reconstruction Algorithms}{6}{subsection.30}
 \contentsline {subsubsection}{\ac {MLEM}}{7}{section*.31}
 \contentsline {subsubsection}{\ac {WLS}}{7}{section*.35}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{9}{appendix.40}
-\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{9}{section.41}
-\contentsline {chapter}{Bibliography}{11}{appendix*.42}
+\contentsline {section}{\numberline {1.4}Neural networks}{9}{section.40}
+\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{11}{appendix.44}
+\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{11}{section.45}
+\contentsline {chapter}{Bibliography}{13}{appendix*.46}

@@ -160,11 +160,51 @@ R(x)=\sum_{j=1}^{n_{\mathrm{p}}} \sum_{k \in \mathcal{N}_{j}} \psi_{j k}\left(x_
 
 where $N_j$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels.
 
-Sparse-view \ac{CT} image reconstruction problem has been explored during the course of this theis. Sparse-view \ac{CT} image reconstruction is an underdetermined problem due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. Consider a 2D digital image $x[p,q]$, discrete form of \ac{TV} can be written as:
+Sparse-view \ac{CT} image reconstruction problem has been explored during the course of this thesis. Sparse-view \ac{CT} image reconstruction is an under-determined problem due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. Consider a 2D digital image $x[p,q]$, discrete form of \ac{TV} can be written as:
 
 \begin{equation}
 \sum_{p} \sum_{p}|x[p, q]-x[p-1, q]|+|x[p, q]-x[p, q-1]|
 \end{equation}    
 
-This is an anisotropic version of \ac{TV} regularization. Images reconstructed with \ac{TV}, sometimes have inexplicable artefacts due to the fact that the absolute value potential is not differentiable at $0$. 
+This is an an-isotropic version of \ac{TV} regularization. Images reconstructed with \ac{TV}, sometimes have inexplicable artifacts due to the fact that the absolute value potential is not differentiable at $0$. 
+
+\section{Neural networks}
+
+Neural networks also known as \ac{ANN} are machine learning algorithms that form the basis of deep learning. They inherit name and structure from neurons in the brain. Biological neurons transmit signals to one another through complex networks. This interconnected networking is realized though various architectures by \ac{ANN}s. Sets of artificial neurons are stacked on top of each other to form a layer. A typical neural network consists of many such layers that are connected to each other. The first layer is called input layer, the final layer is termed output layer and the layers in-between are called hidden layers. A neural network with three hidden layers is depicted in Fig~\ref{fig:nn}. The transmission of data across the nodes or artificial neurons happens through the connections. Each and every node has a specific weight and threshold associated. The output from a node is passed through the connection only if the value is above the threshold. Neural network approaches are data-driven. Their performance improves as they learn through training on a dataset. 
+
+\begin{figure}
+	\centering
+\begin{neuralnetwork}[height=5]
+	\newcommand{\x}[2]{$x_#2$}
+	\newcommand{\y}[2]{$\hat{y}_#2$}
+	\newcommand{\hfirst}[2]{\small $h^{(1)}_#2$}
+	\newcommand{\hsecond}[2]{\small $h^{(2)}_#2$}
+	\inputlayer[count=4, bias=true, title=Input\\layer, text=\x]
+	\hiddenlayer[count=5, bias=false, title=Hidden\\layer 1, text=\hfirst] \linklayers
+	\hiddenlayer[count=4, bias=false, title=Hidden\\layer 2, text=\hsecond] \linklayers
+	\hiddenlayer[count=3, bias=false, title=Hidden\\layer 3, text=\hsecond] \linklayers
+	\outputlayer[count=2, title=Output\\layer, text=\y] \linklayers
+\end{neuralnetwork}
+\caption{Depiction of a neural network with an input layer, three hidden layers and an output layer}\label{fig:nn}
+\end{figure}
+
+
+To further understand the working of a neural network, we can imagine each node to be solving the problem of linear regression. For example consider a node with four inputs ($x_i, i=1,2,\dots4$), four weights ($w_i, i=1,2,\dots4$) and a bias:
+
+\begin{equation}
+\sum_{i=1}^{m} w_{i} x_{i}+\text { bias }=w_{1} x_{1}+w_{2} x_{2}+w_{3} x_{3}+w_{4} x_{4}+\text { bias }
+\end{equation}
+
+The output of the node is the above summation after going through an activation function $f$:
+
+\begin{equation}
+\text { output }=f(x)=\left\{\begin{array}{l}
+1 \text { if } \sum w_{1} x_{1}+b \geq 0 \\
+0 \text { if } \sum w_{1} x_{1}+b<0
+\end{array}\right.
+\end{equation}
+
+In the above example, the given activation function of this node propagates the value $1$ only when the weighted sum of it's inputs is non-negative. When the condition of an activation function are met the output of this node becomes an input to the node to which it's connected. Due to the process of forwarding values through a network, an \ac{ANN} is also called feed-forward network. Complex networks with multiple layers of these nodes are used in practical tasks. An important category of machine learning task is supervised learning. It involves training a neural network on labeled datasets. The goal of training a neural network is to minimize a cost function that enforces the closeness of predicted and real output labels. During the training the network reorganizes it's weights based on the loss function. This process of updating weights is called optimization. Each update is aimed at reaching a minimum of the loss function. A popular optimization method is gradient descent. It guides the model in the direction of reducing errors to reach an optima. The development of back-propagation \cite{rumelhart1986learning} has been instrumental in successful implementation of optimization algorithms for neural networks.  
+
+
 
