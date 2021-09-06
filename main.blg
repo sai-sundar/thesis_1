@@ -20,76 +20,76 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: main-blx.bib
 Database file #2: example.bib
-Repeated entry---line 427 of file example.bib
+Repeated entry---line 428 of file example.bib
  : @article{litjens2017survey
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 436 of file example.bib
+Repeated entry---line 437 of file example.bib
  : @article{reader2020deep
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 478 of file example.bib
+Repeated entry---line 479 of file example.bib
  : @article{leuschner2021quantitative
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 624 of file example.bib
+Repeated entry---line 625 of file example.bib
  : @inproceedings{ronneberger2015u
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 816 of file example.bib
+Repeated entry---line 817 of file example.bib
  : @article{fessler2000statistical
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 825 of file example.bib
+Repeated entry---line 826 of file example.bib
  : @article{shepp1982
  :                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 835 of file example.bib
+Repeated entry---line 836 of file example.bib
  : @article{depierro1995
  :                      ,
 I'm skipping whatever remains of this entry
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 28 entries,
+You've used 31 entries,
             6268 wiz_defined-function locations,
-            1332 strings with 14690 characters,
-and the built_in function-call counts, 238098 in all, are:
-= -- 17988
-> -- 3616
-< -- 1010
-+ -- 7079
-- -- 1514
-* -- 19046
-:= -- 26985
+            1351 strings with 15264 characters,
+and the built_in function-call counts, 259303 in all, are:
+= -- 19478
+> -- 4019
+< -- 1129
++ -- 7582
+- -- 1684
+* -- 20792
+:= -- 29097
 add.period$ -- 0
-call.type$ -- 28
-change.case$ -- 549
+call.type$ -- 31
+change.case$ -- 626
 chr.to.int$ -- 32
-cite$ -- 54
-duplicate$ -- 26740
-empty$ -- 20793
-format.name$ -- 2764
-if$ -- 46725
+cite$ -- 60
+duplicate$ -- 28923
+empty$ -- 22758
+format.name$ -- 3013
+if$ -- 51145
 int.to.chr$ -- 0
-int.to.str$ -- 72
+int.to.str$ -- 80
 missing$ -- 0
-newline$ -- 1453
-num.names$ -- 1413
-pop$ -- 10337
+newline$ -- 1572
+num.names$ -- 1584
+pop$ -- 11390
 preamble$ -- 1
-purify$ -- 791
+purify$ -- 883
 quote$ -- 0
-skip$ -- 5113
+skip$ -- 5705
 stack$ -- 0
-substring$ -- 31328
-swap$ -- 5853
-text.length$ -- 947
-text.prefix$ -- 52
+substring$ -- 33937
+swap$ -- 6419
+text.length$ -- 1036
+text.prefix$ -- 56
 top$ -- 1
-type$ -- 940
+type$ -- 1042
 warning$ -- 0
-while$ -- 3448
+while$ -- 3686
 width$ -- 0
-write$ -- 1426
+write$ -- 1542
 (There were 7 error messages)

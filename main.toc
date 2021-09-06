@@ -14,6 +14,11 @@
 \contentsline {subsubsection}{\ac {MLEM}}{7}{section*.31}
 \contentsline {subsubsection}{\ac {WLS}}{7}{section*.35}
 \contentsline {section}{\numberline {1.4}Neural networks}{9}{section.40}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{11}{appendix.44}
-\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{11}{section.45}
-\contentsline {chapter}{Bibliography}{13}{appendix*.46}
+\contentsline {subsection}{\numberline {1.4.1}Convolutional Neural Networks}{10}{subsection.44}
+\contentsline {subsection}{\numberline {1.4.2}Convolution}{11}{subsection.45}
+\contentsline {subsection}{\numberline {1.4.3}Activation Layer}{12}{subsection.48}
+\contentsline {subsection}{\numberline {1.4.4}Pooling Layer}{12}{subsection.50}
+\contentsline {subsection}{\numberline {1.4.5}Fully Convolutional Networks}{13}{subsection.53}
+\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{15}{appendix.54}
+\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{15}{section.55}
+\contentsline {chapter}{Bibliography}{17}{appendix*.56}

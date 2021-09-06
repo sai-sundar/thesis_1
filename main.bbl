@@ -687,6 +687,39 @@
     \field{year}{2014}
   \endentry
 
+  \entry{lecun1995convolutional}{article}{}
+    \true{moreauthor}
+    \name{author}{2}{}{%
+      {{hash=LY}{%
+         family={LeCun},
+         familyi={L\bibinitperiod},
+         given={Yann},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LYBY+1}
+    \strng{fullhash}{LYBY+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{LB+95}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{10}
+    \field{pages}{1995}
+    \field{title}{Convolutional networks for images, speech, and time series}
+    \field{volume}{3361}
+    \field{journaltitle}{The handbook of brain theory and neural networks}
+    \field{year}{1995}
+  \endentry
+
   \entry{ledig2017photo}{inproceedings}{}
     \true{moreauthor}
     \name{author}{10}{}{%
@@ -1260,6 +1293,47 @@
     \field{year}{2015}
   \endentry
 
+  \entry{rumelhart1986learning}{article}{}
+    \name{author}{3}{}{%
+      {{hash=RDE}{%
+         family={Rumelhart},
+         familyi={R\bibinitperiod},
+         given={David\bibnamedelima E},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=HGE}{%
+         family={Hinton},
+         familyi={H\bibinitperiod},
+         given={Geoffrey\bibnamedelima E},
+         giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=WRJ}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={Ronald\bibnamedelima J},
+         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{RDEHGEWRJ1}
+    \strng{fullhash}{RDEHGEWRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{RHW86}
+    \field{labelyear}{1986}
+    \field{labeldatesource}{year}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{6088}
+    \field{pages}{533\bibrangedash 536}
+    \field{title}{Learning representations by back-propagating errors}
+    \field{volume}{323}
+    \field{journaltitle}{nature}
+    \field{year}{1986}
+  \endentry
+
   \entry{sinha2019multi}{article}{}
     \name{author}{2}{}{%
       {{hash=SA}{%
@@ -1319,6 +1393,51 @@
     \field{volume}{1}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
     \field{year}{1982}
+  \endentry
+
+  \entry{voulodimos2018deep}{article}{}
+    \name{author}{4}{}{%
+      {{hash=VA}{%
+         family={Voulodimos},
+         familyi={V\bibinitperiod},
+         given={Athanasios},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DN}{%
+         family={Doulamis},
+         familyi={D\bibinitperiod},
+         given={Nikolaos},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doulamis},
+         familyi={D\bibinitperiod},
+         given={Anastasios},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PE}{%
+         family={Protopapadakis},
+         familyi={P\bibinitperiod},
+         given={Eftychios},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Hindawi}%
+    }
+    \strng{namehash}{VA+1}
+    \strng{fullhash}{VADNDAPE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Vou+18}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{title}{Deep learning for computer vision: A brief review}
+    \field{volume}{2018}
+    \field{journaltitle}{Computational intelligence and neuroscience}
+    \field{year}{2018}
   \endentry
 
   \entry{yang2018low}{article}{}
