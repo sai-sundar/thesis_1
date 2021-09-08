@@ -53,12 +53,16 @@ citestyle=authoryear,natbib=true]{biblatex}
 \usepackage{bm}
 \usepackage{amsmath,amssymb,amsfonts}
 %\usepackage{algorithmic}
+\usepackage[ruled,vlined]{algorithm2e}
 \usepackage{neuralnetwork}
 \usepackage{array}
 \usepackage{bm}
 \usepackage{graphicx}
 \input{acronyms.tex}
 \input{macros.tex}
+\usepackage{tikz} 
+\usepackage{pgfplots}
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -267,10 +271,10 @@ $\omega$ & angular frequency & \si{\radian} \\
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
-\include{Chapters/ChapterTemplate}
-%\include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4} 
+\include{Chapters/Chapter1}
+\include{Chapters/Chapter2} 
+\include{Chapters/Chapter3}
+\include{Chapters/Chapter4} 
 %\include{Chapters/Chapter5} 
 
 %----------------------------------------------------------------------------------------

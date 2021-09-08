@@ -2,3 +2,18 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Trainable Parameters comparison\relax }}{25}{table.caption.68}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Dataset Description\relax }}{29}{table.caption.84}
+\contentsline {table}{\numberline {3.3}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }}{33}{table.caption.98}
+\contentsline {table}{\numberline {3.4}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }}{36}{table.caption.100}
+\contentsline {table}{\numberline {3.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{36}{table.caption.106}
+\contentsline {table}{\numberline {3.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{36}{table.caption.107}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Architecture Summary.\relax }}{50}{table.caption.122}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Dataset Description\relax }}{51}{table.caption.129}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{55}{table.caption.141}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{55}{table.caption.142}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{59}{table.caption.150}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{60}{table.caption.151}
+\addvspace {10\p@ }

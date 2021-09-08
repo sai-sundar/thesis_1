@@ -27,6 +27,7 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand \oddpage@label [2]{}
 \@writefile{toc}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
 \@writefile{lof}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
 \@writefile{lot}{\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax }
@@ -36,10 +37,75 @@
 \@writefile{toc}{\contentsline {chapter}{Acknowledgements}{ix}{section*.3}}
 \acro@used@once {MLEM}{xi}{11}{10}
 \acro@used@once {WLS}{xi}{11}{10}
+\acro@used@once {CED}{xii}{12}{11}
 \acro@used@once {PET}{xiii}{13}{12}
 \acro@used@once {LOR}{xiii}{13}{12}
 \acro@used@once {ReLU}{xiii}{13}{12}
 \acro@used@once {CNN}{xiii}{13}{12}
+\acro@used@twice {CNN}{xiii}{13}{12}
+\acro@used@once {2D}{xiii}{13}{12}
+\acro@used@once {DUGAN}{xiii}{13}{12}
+\acro@used@twice {DUGAN}{xiv}{14}{13}
+\acro@used@once {GT}{xiv}{14}{13}
+\acro@used@twice {PET}{xiv}{14}{13}
+\acro@used@once {SNR}{xiv}{14}{13}
+\acro@used@once {CNR}{xiv}{14}{13}
+\acro@used@twice {PET}{xiv}{14}{13}
+\acro@used@twice {DUGAN}{xiv}{14}{13}
+\acro@used@once {SR}{xiv}{14}{13}
+\acro@used@twice {GT}{xiv}{14}{13}
+\acro@used@once {CT}{xiv}{14}{13}
+\acro@used@twice {SNR}{xiv}{14}{13}
+\acro@used@twice {CNR}{xiv}{14}{13}
+\acro@used@twice {CT}{xiv}{14}{13}
+\acro@used@twice {PET}{xiv}{14}{13}
+\acro@used@twice {DUGAN}{xiv}{14}{13}
+\acro@used@twice {DUGAN}{xiv}{14}{13}
+\acro@used@twice {GT}{xiv}{14}{13}
+\acro@used@twice {CT}{xiv}{14}{13}
+\acro@used@twice {DUGAN}{xiv}{14}{13}
+\acro@used@twice {SR}{xiv}{14}{13}
+\acro@used@twice {GT}{xiv}{14}{13}
+\acro@used@once {FBP}{xiv}{14}{13}
+\acro@used@once {LRRCED}{xiv}{14}{13}
+\acro@used@twice {LRRCED}{xiv}{14}{13}
+\acro@used@twice {FBP}{xiv}{14}{13}
+\acro@used@twice {GT}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {FBP}{xv}{15}{14}
+\acro@used@twice {GT}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {FBP}{xv}{15}{14}
+\acro@used@twice {GT}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {GT}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@twice {LRRCED}{xv}{15}{14}
+\acro@used@once {SSIM}{xv}{15}{14}
+\acro@used@twice {SSIM}{xv}{15}{14}
+\acro@used@twice {SSIM}{xv}{15}{14}
+\acro@used@twice {SSIM}{xvii}{17}{16}
+\acro@used@once {RMSE}{xvii}{17}{16}
+\acro@used@twice {SSIM}{xvii}{17}{16}
+\acro@used@twice {RMSE}{xvii}{17}{16}
+\acro@used@twice {CT}{xvii}{17}{16}
+\acro@used@twice {2D}{xvii}{17}{16}
+\acro@used@twice {DUGAN}{xvii}{17}{16}
+\acro@used@twice {DUGAN}{xvii}{17}{16}
+\acro@used@twice {SR}{xvii}{17}{16}
+\acro@used@once {SD}{xvii}{17}{16}
+\acro@used@twice {SNR}{xvii}{17}{16}
+\acro@used@twice {SD}{xvii}{17}{16}
+\acro@used@twice {SNR}{xvii}{17}{16}
+\acro@used@twice {SSIM}{xvii}{17}{16}
+\acro@used@once {PSNR}{xvii}{17}{16}
+\acro@used@twice {SSIM}{xvii}{17}{16}
+\acro@used@twice {PSNR}{xvii}{17}{16}
+\acro@used@twice {SSIM}{xvii}{17}{16}
+\acro@used@twice {SSIM}{xvii}{17}{16}
 \gdef \LT@i {\LT@entry 
     {1}{38.66383pt}\LT@entry 
     {1}{139.01842pt}}
@@ -51,7 +117,7 @@
     {1}{21.46788pt}\LT@entry 
     {1}{109.07895pt}\LT@entry 
     {1}{58.59073pt}}
-\@input{Chapters/ChapterTemplate.aux}
+\@input{Chapters/Chapter1.aux}
 \citation{ronneberger2015u}
 \abx@aux@cite{ronneberger2015u}
 \abx@aux@segm{0}{0}{ronneberger2015u}
@@ -151,70 +217,339 @@
 \citation{voulodimos2018deep}
 \abx@aux@cite{voulodimos2018deep}
 \abx@aux@segm{0}{0}{voulodimos2018deep}
+\citation{dumoulin2016guide}
+\abx@aux@cite{dumoulin2016guide}
+\abx@aux@segm{0}{0}{dumoulin2016guide}
+\citation{dumoulin2016guide}
+\abx@aux@segm{0}{0}{dumoulin2016guide}
+\citation{lecun2015deep}
+\abx@aux@cite{lecun2015deep}
+\abx@aux@segm{0}{0}{lecun2015deep}
 \citation{lecun1995convolutional}
 \abx@aux@cite{lecun1995convolutional}
 \abx@aux@segm{0}{0}{lecun1995convolutional}
 \citation{lecun1995convolutional}
 \abx@aux@segm{0}{0}{lecun1995convolutional}
+\citation{dumoulin2016guide}
+\abx@aux@segm{0}{0}{dumoulin2016guide}
+\citation{dumoulin2016guide}
+\abx@aux@segm{0}{0}{dumoulin2016guide}
+\@input{Chapters/Chapter2.aux}
+\citation{litjens2017survey}
+\abx@aux@segm{0}{0}{litjens2017survey}
+\citation{greenspan2016guest}
+\abx@aux@cite{greenspan2016guest}
+\abx@aux@segm{0}{0}{greenspan2016guest}
+\citation{wang2020deep}
+\abx@aux@cite{wang2020deep}
+\abx@aux@segm{0}{0}{wang2020deep}
+\citation{yedder2021deep}
+\abx@aux@cite{yedder2021deep}
+\abx@aux@segm{0}{0}{yedder2021deep}
+\citation{reader2020deep}
+\abx@aux@segm{0}{0}{reader2020deep}
+\citation{nuyts1998iterative}
+\abx@aux@segm{0}{0}{nuyts1998iterative}
+\citation{Elbakri2002}
+\abx@aux@segm{0}{0}{Elbakri2002}
+\citation{liu2013total}
+\abx@aux@segm{0}{0}{liu2013total}
+\citation{kim2014combining}
+\abx@aux@segm{0}{0}{kim2014combining}
+\citation{leuschner2021quantitative}
+\abx@aux@segm{0}{0}{leuschner2021quantitative}
+\citation{gong2018pet}
+\abx@aux@cite{gong2018pet}
+\abx@aux@segm{0}{0}{gong2018pet}
+\citation{maier2018deep}
+\abx@aux@cite{maier2018deep}
+\abx@aux@segm{0}{0}{maier2018deep}
+\citation{xie2019generative}
+\abx@aux@cite{xie2019generative}
+\abx@aux@segm{0}{0}{xie2019generative}
+\citation{kim2018penalized}
+\abx@aux@cite{kim2018penalized}
+\abx@aux@segm{0}{0}{kim2018penalized}
+\citation{gong2019iterative}
+\abx@aux@cite{gong2019iterative}
+\abx@aux@segm{0}{0}{gong2019iterative}
+\citation{whiteley2019direct}
+\abx@aux@cite{whiteley2019direct}
+\abx@aux@segm{0}{0}{whiteley2019direct}
+\citation{zhu2018image}
+\abx@aux@cite{zhu2018image}
+\abx@aux@segm{0}{0}{zhu2018image}
+\citation{haeggstroem2018deeprec}
+\abx@aux@cite{haeggstroem2018deeprec}
+\abx@aux@segm{0}{0}{haeggstroem2018deeprec}
+\citation{maier2018deep}
+\abx@aux@segm{0}{0}{maier2018deep}
+\citation{whiteley2019cnn}
+\abx@aux@cite{whiteley2019cnn}
+\abx@aux@segm{0}{0}{whiteley2019cnn}
+\citation{lee2018deep}
+\abx@aux@cite{lee2018deep}
+\abx@aux@segm{0}{0}{lee2018deep}
+\citation{gong2018pet}
+\abx@aux@segm{0}{0}{gong2018pet}
+\citation{jin2017deep}
+\abx@aux@cite{jin2017deep}
+\abx@aux@segm{0}{0}{jin2017deep}
+\citation{zhang2018sparse}
+\abx@aux@cite{zhang2018sparse}
+\abx@aux@segm{0}{0}{zhang2018sparse}
+\citation{gong2019iterative}
+\abx@aux@segm{0}{0}{gong2019iterative}
+\citation{xie2019generative}
+\abx@aux@segm{0}{0}{xie2019generative}
+\citation{kim2018penalized}
+\abx@aux@segm{0}{0}{kim2018penalized}
+\citation{gupta2018cnn}
+\abx@aux@cite{gupta2018cnn}
+\abx@aux@segm{0}{0}{gupta2018cnn}
+\citation{adler2018learned}
+\abx@aux@cite{adler2018learned}
+\abx@aux@segm{0}{0}{adler2018learned}
+\citation{zhu2018image}
+\abx@aux@segm{0}{0}{zhu2018image}
+\citation{whiteley2019direct}
+\abx@aux@segm{0}{0}{whiteley2019direct}
+\citation{haeggstroem2018deeprec}
+\abx@aux@segm{0}{0}{haeggstroem2018deeprec}
+\citation{li2019learning}
+\abx@aux@cite{li2019learning}
+\abx@aux@segm{0}{0}{li2019learning}
+\citation{fu2019hierarchical}
+\abx@aux@cite{fu2019hierarchical}
+\abx@aux@segm{0}{0}{fu2019hierarchical}
+\citation{ye2018deep}
+\abx@aux@cite{ye2018deep}
+\abx@aux@segm{0}{0}{ye2018deep}
+\citation{thaler2018sparse}
+\abx@aux@cite{thaler2018sparse}
+\abx@aux@segm{0}{0}{thaler2018sparse}
+\citation{arjovsky2017wasserstein}
+\abx@aux@cite{arjovsky2017wasserstein}
+\abx@aux@segm{0}{0}{arjovsky2017wasserstein}
+\citation{kandarpa2020dug}
+\abx@aux@cite{kandarpa2020dug}
+\abx@aux@segm{0}{0}{kandarpa2020dug}
+\@input{Chapters/Chapter3.aux}
+\citation{ronneberger2015u}
+\abx@aux@segm{0}{0}{ronneberger2015u}
+\citation{perdios2018deep}
+\abx@aux@cite{perdios2018deep}
+\abx@aux@segm{0}{0}{perdios2018deep}
+\citation{perdios2018deep}
+\abx@aux@segm{0}{0}{perdios2018deep}
+\citation{isola2017image}
+\abx@aux@segm{0}{0}{isola2017image}
+\citation{zhu2018image}
+\abx@aux@segm{0}{0}{zhu2018image}
+\citation{whiteley2019direct}
+\abx@aux@segm{0}{0}{whiteley2019direct}
+\citation{ledig2017photo}
+\abx@aux@segm{0}{0}{ledig2017photo}
+\citation{lim2017enhanced}
+\abx@aux@segm{0}{0}{lim2017enhanced}
+\citation{simonyan2014very}
+\abx@aux@cite{simonyan2014very}
+\abx@aux@segm{0}{0}{simonyan2014very}
+\citation{kostakoglu2015phase}
+\abx@aux@cite{kostakoglu2015phase}
+\abx@aux@segm{0}{0}{kostakoglu2015phase}
+\citation{abadi2016tensorflow}
+\abx@aux@cite{abadi2016tensorflow}
+\abx@aux@segm{0}{0}{abadi2016tensorflow}
+\citation{chollet2015keras}
+\abx@aux@cite{chollet2015keras}
+\abx@aux@segm{0}{0}{chollet2015keras}
+\citation{haeggstroem2018deeprec}
+\abx@aux@segm{0}{0}{haeggstroem2018deeprec}
+\@input{Chapters/Chapter4.aux}
+\citation{jegou2017one}
+\abx@aux@cite{jegou2017one}
+\abx@aux@segm{0}{0}{jegou2017one}
+\citation{ronneberger2015u}
+\abx@aux@segm{0}{0}{ronneberger2015u}
+\citation{jegou2017one}
+\abx@aux@segm{0}{0}{jegou2017one}
+\citation{ronneberger2015u}
+\abx@aux@segm{0}{0}{ronneberger2015u}
+\citation{huang2017densely}
+\abx@aux@cite{huang2017densely}
+\abx@aux@segm{0}{0}{huang2017densely}
+\citation{jegou2017one}
+\abx@aux@segm{0}{0}{jegou2017one}
+\citation{ronneberger2015u}
+\abx@aux@segm{0}{0}{ronneberger2015u}
+\citation{johnson2016perceptual}
+\abx@aux@cite{johnson2016perceptual}
+\abx@aux@segm{0}{0}{johnson2016perceptual}
+\citation{simonyan2014very}
+\abx@aux@segm{0}{0}{simonyan2014very}
+\citation{deng2009imagenet}
+\abx@aux@cite{deng2009imagenet}
+\abx@aux@segm{0}{0}{deng2009imagenet}
+\citation{Lung20}
+\abx@aux@cite{Lung20}
+\abx@aux@segm{0}{0}{Lung20}
+\citation{clark2013cancer}
+\abx@aux@cite{clark2013cancer}
+\abx@aux@segm{0}{0}{clark2013cancer}
+\citation{van2016fast}
+\abx@aux@cite{van2016fast}
+\abx@aux@segm{0}{0}{van2016fast}
+\citation{abadi2016tensorflow}
+\abx@aux@segm{0}{0}{abadi2016tensorflow}
+\citation{chollet2015keras}
+\abx@aux@segm{0}{0}{chollet2015keras}
+\citation{jin2017deep}
+\abx@aux@segm{0}{0}{jin2017deep}
+\citation{tang2009performance}
+\abx@aux@cite{tang2009performance}
+\abx@aux@segm{0}{0}{tang2009performance}
 \@input{Appendices/AppendixA.aux}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{17}{appendix*.56}}
-\acro@pages{CT}{{1}{1}{24}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{5}{5}{28}|{6}{6}{29}|{6}{6}{29}|{7}{7}{30}|{8}{8}{31}|{8}{8}{31}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{67}{appendix*.159}}
+\acro@pages{CT}{{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{xv}{15}{14}|{1}{1}{24}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{4}{4}{27}|{4}{4}{27}|{5}{5}{28}|{6}{6}{29}|{7}{7}{30}|{8}{8}{31}|{9}{9}{32}|{9}{9}{32}|{17}{17}{40}|{17}{17}{40}|{18}{18}{41}|{18}{18}{41}|{18}{18}{41}|{21}{21}{44}|{21}{21}{44}|{21}{21}{44}|{23}{23}{46}|{23}{23}{46}|{23}{23}{46}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{29}{29}{52}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}|{40}{40}{63}|{43}{43}{66}|{43}{43}{66}|{43}{43}{66}|{43}{43}{66}|{43}{43}{66}|{44}{44}{67}|{45}{45}{68}|{46}{46}{69}|{51}{51}{74}|{53}{53}{76}|{62}{62}{85}|{62}{62}{85}|{62}{62}{85}|{62}{62}{85}}
 \acro@barriers{CT}{}
-\acro@pages{ReLU}{{xiii}{13}{12}|{11}{11}{34}|{11}{11}{34}|{12}{12}{35}}
+\acro@pages{FC}{{20}{20}{43}|{20}{20}{43}|{20}{20}{43}|{25}{25}{48}}
+\acro@barriers{FC}{}
+\acro@pages{GT}{{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{29}{29}{52}|{31}{31}{54}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}|{36}{36}{59}|{48}{48}{71}|{48}{48}{71}|{49}{49}{72}|{53}{53}{76}|{53}{53}{76}|{53}{53}{76}|{53}{53}{76}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{55}{55}{78}}
+\acro@barriers{GT}{}
+\acro@pages{SD}{{xv}{15}{14}|{xv}{15}{14}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}}
+\acro@barriers{SD}{}
+\acro@pages{PReLU}{{27}{27}{50}}
+\acro@barriers{PReLU}{}
+\acro@pages{ReLU}{{xiii}{13}{12}|{11}{11}{34}|{11}{11}{34}|{12}{12}{35}|{47}{47}{70}|{47}{47}{70}|{48}{48}{71}}
 \acro@barriers{ReLU}{}
-\acro@pages{DUGAN}{{2}{2}{25}}
+\acro@pages{DUGAN}{{xiii}{13}{12}|{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{xv}{15}{14}|{xv}{15}{14}|{2}{2}{25}|{23}{23}{46}|{25}{25}{48}|{26}{26}{49}|{27}{27}{50}|{29}{29}{52}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}|{40}{40}{63}}
 \acro@barriers{DUGAN}{}
-\acro@pages{ANN}{{8}{8}{31}|{8}{8}{31}|{10}{10}{33}}
+\acro@pages{GAN}{{19}{19}{42}|{25}{25}{48}}
+\acro@barriers{GAN}{}
+\acro@pages{ANN}{{9}{9}{32}|{9}{9}{32}|{10}{10}{33}}
 \acro@barriers{ANN}{}
-\acro@pages{PET}{{xiii}{13}{12}|{1}{1}{24}|{1}{1}{24}|{1}{1}{24}|{1}{1}{24}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{4}{4}{27}|{6}{6}{29}|{6}{6}{29}}
+\acro@pages{SSIM}{{xv}{15}{14}|{xv}{15}{14}|{30}{30}{53}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{40}{40}{63}|{52}{52}{75}|{53}{53}{76}|{53}{53}{76}|{54}{54}{77}|{54}{54}{77}|{55}{55}{78}|{55}{55}{78}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{59}{59}{82}|{62}{62}{85}}
+\acro@barriers{SSIM}{}
+\acro@pages{MAE}{{48}{48}{71}}
+\acro@barriers{MAE}{}
+\acro@pages{RMSE}{{xv}{15}{14}|{xv}{15}{14}|{30}{30}{53}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{33}{33}{56}|{53}{53}{76}}
+\acro@barriers{RMSE}{}
+\acro@pages{MSE}{{19}{19}{42}|{24}{24}{47}|{40}{40}{63}}
+\acro@barriers{MSE}{}
+\acro@pages{PET}{{xiii}{13}{12}|{xiv}{14}{13}|{xiv}{14}{13}|{xiv}{14}{13}|{1}{1}{24}|{1}{1}{24}|{1}{1}{24}|{1}{1}{24}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{2}{2}{25}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{3}{3}{26}|{4}{4}{27}|{6}{6}{29}|{7}{7}{30}|{17}{17}{40}|{17}{17}{40}|{18}{18}{41}|{18}{18}{41}|{19}{19}{42}|{19}{19}{42}|{20}{20}{43}|{21}{21}{44}|{23}{23}{46}|{23}{23}{46}|{23}{23}{46}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{28}{28}{51}|{29}{29}{52}|{29}{29}{52}|{32}{32}{55}|{32}{32}{55}|{32}{32}{55}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}|{40}{40}{63}}
 \acro@barriers{PET}{}
-\acro@pages{MLEM}{{xi}{11}{10}|{6}{6}{29}|{7}{7}{30}|{7}{7}{30}|{7}{7}{30}|{7}{7}{30}}
+\acro@pages{MRI}{{20}{20}{43}}
+\acro@barriers{MRI}{}
+\acro@pages{ROI}{{32}{32}{55}|{33}{33}{56}|{36}{36}{59}|{40}{40}{63}}
+\acro@barriers{ROI}{}
+\acro@pages{SNR}{{xiv}{14}{13}|{xiv}{14}{13}|{xv}{15}{14}|{xv}{15}{14}|{31}{31}{54}|{31}{31}{54}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}|{40}{40}{63}}
+\acro@barriers{SNR}{}
+\acro@pages{MLEM}{{xi}{11}{10}|{7}{7}{30}|{7}{7}{30}|{7}{7}{30}|{7}{7}{30}|{8}{8}{31}|{33}{33}{56}|{33}{33}{56}}
 \acro@barriers{MLEM}{}
-\acro@pages{MBIR}{{6}{6}{29}|{6}{6}{29}}
+\acro@pages{MBIR}{{6}{6}{29}|{7}{7}{30}}
 \acro@barriers{MBIR}{}
-\acro@pages{CNN}{{xiii}{13}{12}|{2}{2}{25}|{10}{10}{33}|{10}{10}{33}|{10}{10}{33}|{10}{10}{33}|{11}{11}{34}|{11}{11}{34}|{12}{12}{35}|{12}{12}{35}|{12}{12}{35}|{12}{12}{35}|{12}{12}{35}|{13}{13}{36}|{13}{13}{36}}
+\acro@pages{CNN}{{xiii}{13}{12}|{xiii}{13}{12}|{2}{2}{25}|{10}{10}{33}|{10}{10}{33}|{10}{10}{33}|{11}{11}{34}|{11}{11}{34}|{11}{11}{34}|{12}{12}{35}|{12}{12}{35}|{13}{13}{36}|{13}{13}{36}|{13}{13}{36}|{13}{13}{36}|{13}{13}{36}|{13}{13}{36}|{14}{14}{37}|{14}{14}{37}|{14}{14}{37}|{18}{18}{41}|{18}{18}{41}|{18}{18}{41}|{21}{21}{44}|{21}{21}{44}|{21}{21}{44}|{54}{54}{77}}
 \acro@barriers{CNN}{}
-\acro@pages{WLS}{{xi}{11}{10}|{6}{6}{29}|{7}{7}{30}|{7}{7}{30}|{8}{8}{31}}
+\acro@pages{CNR}{{xiv}{14}{13}|{xiv}{14}{13}|{31}{31}{54}|{31}{31}{54}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}|{36}{36}{59}|{36}{36}{59}|{40}{40}{63}}
+\acro@barriers{CNR}{}
+\acro@pages{WLS}{{xi}{11}{10}|{7}{7}{30}|{8}{8}{31}|{8}{8}{31}|{8}{8}{31}}
 \acro@barriers{WLS}{}
-\acro@pages{TV}{{8}{8}{31}|{8}{8}{31}|{8}{8}{31}|{8}{8}{31}}
+\acro@pages{TV}{{9}{9}{32}|{9}{9}{32}|{9}{9}{32}|{9}{9}{32}|{43}{43}{66}|{53}{53}{76}|{53}{53}{76}}
 \acro@barriers{TV}{}
-\acro@pages{2D}{{5}{5}{28}}
+\acro@pages{2D}{{xiii}{13}{12}|{xv}{15}{14}|{5}{5}{28}|{23}{23}{46}|{25}{25}{48}|{29}{29}{52}|{29}{29}{52}|{33}{33}{56}|{40}{40}{63}|{51}{51}{74}}
 \acro@barriers{2D}{}
-\acro@pages{FBP}{{6}{6}{29}|{6}{6}{29}|{6}{6}{29}}
+\acro@pages{FBP}{{xiv}{14}{13}|{xiv}{14}{13}|{6}{6}{29}|{6}{6}{29}|{6}{6}{29}|{18}{18}{41}|{36}{36}{59}|{36}{36}{59}|{43}{43}{66}|{43}{43}{66}|{43}{43}{66}|{43}{43}{66}|{43}{43}{66}|{44}{44}{67}|{45}{45}{68}|{45}{45}{68}|{47}{47}{70}|{51}{51}{74}|{51}{51}{74}|{51}{51}{74}|{51}{51}{74}|{51}{51}{74}|{53}{53}{76}|{53}{53}{76}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{55}{55}{78}|{59}{59}{82}|{59}{59}{82}|{62}{62}{85}|{62}{62}{85}|{62}{62}{85}}
 \acro@barriers{FBP}{}
+\acro@pages{OSEM}{{32}{32}{55}}
+\acro@barriers{OSEM}{}
+\acro@pages{SR}{{xiv}{14}{13}|{xiv}{14}{13}|{xv}{15}{14}|{27}{27}{50}|{29}{29}{52}|{29}{29}{52}|{32}{32}{55}|{33}{33}{56}|{33}{33}{56}|{36}{36}{59}}
+\acro@barriers{SR}{}
 \acro@pages{LOR}{{xiii}{13}{12}|{3}{3}{26}|{3}{3}{26}|{4}{4}{27}}
 \acro@barriers{LOR}{}
-\acro@pages{LRRCED}{{2}{2}{25}|{2}{2}{25}}
+\acro@pages{LRRCED}{{xiv}{14}{13}|{xiv}{14}{13}|{2}{2}{25}|{2}{2}{25}|{47}{47}{70}|{47}{47}{70}|{47}{47}{70}|{47}{47}{70}|{47}{47}{70}|{47}{47}{70}|{47}{47}{70}|{48}{48}{71}|{48}{48}{71}|{51}{51}{74}|{51}{51}{74}|{53}{53}{76}|{53}{53}{76}|{53}{53}{76}|{53}{53}{76}|{53}{53}{76}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{54}{54}{77}|{55}{55}{78}|{62}{62}{85}|{62}{62}{85}|{62}{62}{85}|{62}{62}{85}}
 \acro@barriers{LRRCED}{}
+\acro@pages{CED}{{xii}{12}{11}|{14}{14}{37}|{43}{43}{66}|{44}{44}{67}|{45}{45}{68}|{46}{46}{69}|{46}{46}{69}|{53}{53}{76}|{59}{59}{82}|{62}{62}{85}}
+\acro@barriers{CED}{}
+\acro@pages{PWLS}{{53}{53}{76}|{53}{53}{76}}
+\acro@barriers{PWLS}{}
+\acro@pages{DB}{{47}{47}{70}}
+\acro@barriers{DB}{}
+\acro@pages{TU}{{47}{47}{70}|{47}{47}{70}}
+\acro@barriers{TU}{}
+\acro@pages{TD}{{47}{47}{70}|{47}{47}{70}}
+\acro@barriers{TD}{}
+\acro@pages{PSNR}{{52}{52}{75}|{53}{53}{76}|{53}{53}{76}|{54}{54}{77}|{54}{54}{77}|{62}{62}{85}}
+\acro@barriers{PSNR}{}
+\acro@pages{Lung}{{51}{51}{74}}
+\acro@barriers{Lung}{}
 \acro@rerun@check 
 \abx@aux@refcontextdefaultsdone
+\abx@aux@defaultrefcontext{0}{abadi2016tensorflow}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{arjovsky2017wasserstein}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{amyar20193}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{adler2018learned}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{chen2017low}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{chollet2015keras}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{clark2013cancer}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{cui2018artificial}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{deng2009imagenet}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{dolz2018hyperdense}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{depierro1995}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{dumoulin2016guide}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{Elbakri2002}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{fu2019hierarchical}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{fessler2000statistical}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{gong2018pet}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{gong2019iterative}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{guo2016deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{guo2019deep}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{gupta2018cnn}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{greenspan2016guest}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{haeggstroem2018deeprec}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{hatt2018first}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{huang2017densely}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{isola2017image}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{johnson2016perceptual}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{jin2017deep}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{jegou2017one}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{kadimesetty2018convolutional}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{kandarpa2020dug}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{kim2018penalized}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{kostakoglu2015phase}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{kim2014combining}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{lecun1995convolutional}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{lecun2015deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ledig2017photo}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{lee2018deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{leuschner2021quantitative}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{li2019learning}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{li2020sacnn}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{Lung20}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{lim2017enhanced}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{litjens2017survey}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{liu2013total}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{maier2018deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{nuyts1998iterative}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{perdios2018deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{reader2020deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{ronneberger2015u}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{rumelhart1986learning}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{sinha2019multi}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{Shepp1982}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{simonyan2014very}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{thaler2018sparse}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{tang2009performance}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{van2016fast}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{voulodimos2018deep}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{whiteley2019cnn}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{whiteley2019direct}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{wang2020deep}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{xie2019generative}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{yang2018low}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{yedder2021deep}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{ye2018deep}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{zhang2020review}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{zhang2018sparse}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{zhu2017unpaired}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{zhu2018image}{anyt/global//global/global}

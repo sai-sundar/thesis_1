@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  6 SEP 2021 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  8 SEP 2021 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1972,6 +1972,57 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count422
+\algocf@hangindent=\skip79
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count423
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip80
+\skiplinenumber=\skip81
+\skiprule=\skip82
+\skiphlne=\skip83
+\skiptext=\skip84
+\skiplength=\skip85
+\algomargin=\skip86
+\skipalgocfslide=\skip87
+\algowidth=\dimen191
+\inoutsize=\dimen192
+\inoutindent=\dimen193
+\interspacetitleruled=\dimen194
+\interspacealgoruled=\dimen195
+\interspacetitleboxruled=\dimen196
+\algocf@ruledwidth=\skip88
+\algocf@inoutbox=\box55
+\algocf@inputbox=\box56
+\AlCapSkip=\skip89
+\AlCapHSkip=\skip90
+\algoskipindent=\skip91
+\algocf@nlbox=\box57
+\algocf@hangingbox=\box58
+\algocf@untilbox=\box59
+\algocf@skipuntil=\skip92
+\algocf@capbox=\box60
+\algocf@lcaptionbox=\skip93
+\algoheightruledefault=\skip94
+\algoheightrule=\skip95
+\algotitleheightruledefault=\skip96
+\algotitleheightrule=\skip97
+\c@algocfline=\count424
+\c@algocfproc=\count425
+\c@algocf=\count426
+\algocf@algoframe=\box61
+\algocf@algobox=\box62
+)
 (/usr/share/texlive/texmf-dist/tex/latex/neuralnetwork/neuralnetwork.sty
 Package: neuralnetwork 2013/07/18 v1.0 Neural network diagrams, Mark Kuckian Co
 wan, mark@battlesnake.co.uk
@@ -1990,7 +2041,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks26
 \XKV@tempa@toks=\toks27
 )
-\XKV@depth=\count422
+\XKV@depth=\count427
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -1998,12 +2049,12 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks28
-\pgfutil@tempdima=\dimen191
-\pgfutil@tempdimb=\dimen192
+\pgfutil@tempdima=\dimen197
+\pgfutil@tempdimb=\dimen198
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box55
+\pgfutil@abb=\box63
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -2025,20 +2076,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ex
 \pgfkeys@tmptoks=\toks31
 ))
-\pgf@x=\dimen193
-\pgf@y=\dimen194
-\pgf@xa=\dimen195
-\pgf@ya=\dimen196
-\pgf@xb=\dimen197
-\pgf@yb=\dimen198
-\pgf@xc=\dimen199
-\pgf@yc=\dimen256
+\pgf@x=\dimen199
+\pgf@y=\dimen256
+\pgf@xa=\dimen257
+\pgf@ya=\dimen258
+\pgf@xb=\dimen259
+\pgf@yb=\dimen260
+\pgf@xc=\dimen261
+\pgf@yc=\dimen262
 \w@pgf@writea=\write5
 \r@pgf@reada=\read3
-\c@pgf@counta=\count423
-\c@pgf@countb=\count424
-\c@pgf@countc=\count425
-\c@pgf@countd=\count426
+\c@pgf@counta=\count428
+\c@pgf@countb=\count429
+\c@pgf@countc=\count430
+\c@pgf@countd=\count431
 \t@pgf@toka=\toks32
 \t@pgf@tokb=\toks33
 \t@pgf@tokc=\toks34
@@ -2057,8 +2108,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count427
-\pgfsyssoftpath@bigbuffer@items=\count428
+\pgfsyssoftpath@smallbuffer@items=\count432
+\pgfsyssoftpath@bigbuffer@items=\count433
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -2071,9 +2122,9 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen257
-\pgfmath@count=\count429
-\pgfmath@box=\box56
+\pgfmath@dimen=\dimen263
+\pgfmath@count=\count434
+\pgfmath@box=\box64
 \pgfmath@toks=\toks35
 \pgfmath@stack@operand=\toks36
 \pgfmath@stack@operation=\toks37
@@ -2096,57 +2147,57 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count430
+\c@pgfmathroundto@lastzeros=\count435
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen258
-\pgf@picmaxx=\dimen259
-\pgf@picminy=\dimen260
-\pgf@picmaxy=\dimen261
-\pgf@pathminx=\dimen262
-\pgf@pathmaxx=\dimen263
-\pgf@pathminy=\dimen264
-\pgf@pathmaxy=\dimen265
-\pgf@xx=\dimen266
-\pgf@xy=\dimen267
-\pgf@yx=\dimen268
-\pgf@yy=\dimen269
-\pgf@zx=\dimen270
-\pgf@zy=\dimen271
+\pgf@picminx=\dimen264
+\pgf@picmaxx=\dimen265
+\pgf@picminy=\dimen266
+\pgf@picmaxy=\dimen267
+\pgf@pathminx=\dimen268
+\pgf@pathmaxx=\dimen269
+\pgf@pathminy=\dimen270
+\pgf@pathmaxy=\dimen271
+\pgf@xx=\dimen272
+\pgf@xy=\dimen273
+\pgf@yx=\dimen274
+\pgf@yy=\dimen275
+\pgf@zx=\dimen276
+\pgf@zy=\dimen277
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen272
-\pgf@path@lasty=\dimen273
+\pgf@path@lastx=\dimen278
+\pgf@path@lasty=\dimen279
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen274
-\pgf@shorten@start@additional=\dimen275
+\pgf@shorten@end@additional=\dimen280
+\pgf@shorten@start@additional=\dimen281
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count431
+\pgfpic=\box65
+\pgf@hbox=\box66
+\pgf@layerbox@main=\box67
+\pgf@picture@serial@count=\count436
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen276
+\pgflinewidth=\dimen282
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen277
-\pgf@pt@y=\dimen278
-\pgf@pt@temp=\dimen279
+\pgf@pt@x=\dimen283
+\pgf@pt@y=\dimen284
+\pgf@pt@temp=\dimen285
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -2162,12 +2213,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen280
+\pgfarrowsep=\dimen286
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen281
-\pgf@sys@shading@range@num=\count432
+\pgf@max=\dimen287
+\pgf@sys@shading@range@num=\count437
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -2175,7 +2226,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box60
+\pgfexternal@startupbox=\box68
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -2191,15 +2242,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box61
+\pgfnodeparttextbox=\box69
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen282
-\pgf@nodesepend=\dimen283
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -2213,8 +2264,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen284
-\pgffor@skip=\dimen285
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
 \pgffor@stack=\toks38
 \pgffor@toks=\toks39
 ))
@@ -2224,31 +2275,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count433
-\pgfplotmarksize=\dimen286
+\pgf@plot@mark@count=\count438
+\pgfplotmarksize=\dimen292
 )
-\tikz@lastx=\dimen287
-\tikz@lasty=\dimen288
-\tikz@lastxsaved=\dimen289
-\tikz@lastysaved=\dimen290
-\tikzleveldistance=\dimen291
-\tikzsiblingdistance=\dimen292
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count434
-\tikznumberofchildren=\count435
-\tikznumberofcurrentchild=\count436
-\tikz@fig@count=\count437
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikzleveldistance=\dimen297
+\tikzsiblingdistance=\dimen298
+\tikz@figbox=\box70
+\tikz@figbox@bg=\box71
+\tikz@tempbox=\box72
+\tikz@tempbox@bg=\box73
+\tikztreelevel=\count439
+\tikznumberofchildren=\count440
+\tikznumberofcurrentchild=\count441
+\tikz@fig@count=\count442
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count438
-\pgfmatrixcurrentcolumn=\count439
-\pgf@matrix@numberofcolumns=\count440
+\pgfmatrixcurrentrow=\count443
+\pgfmatrixcurrentcolumn=\count444
+\pgf@matrix@numberofcolumns=\count445
 )
-\tikz@expandcount=\count441
+\tikz@expandcount=\count446
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -2258,31 +2309,31 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count442
-\c@ALG@rem=\count443
-\c@ALG@nested=\count444
-\ALG@tlm=\skip79
-\ALG@thistlm=\skip80
-\c@ALG@Lnr=\count445
-\c@ALG@blocknr=\count446
-\c@ALG@storecount=\count447
-\c@ALG@tmpcounter=\count448
-\ALG@tmplength=\skip81
+\c@ALG@line=\count447
+\c@ALG@rem=\count448
+\c@ALG@nested=\count449
+\ALG@tlm=\skip98
+\ALG@thistlm=\skip99
+\c@ALG@Lnr=\count450
+\c@ALG@blocknr=\count451
+\c@ALG@storecount=\count452
+\c@ALG@tmpcounter=\count453
+\ALG@tmplength=\skip100
 ) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count449
-\calc@Bcount=\count450
-\calc@Adimen=\dimen293
-\calc@Bdimen=\dimen294
-\calc@Askip=\skip82
-\calc@Bskip=\skip83
+\calc@Acount=\count454
+\calc@Bcount=\count455
+\calc@Adimen=\dimen299
+\calc@Bdimen=\dimen300
+\calc@Askip=\skip101
+\calc@Bskip=\skip102
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count451
-\calc@Cskip=\skip84
+\calc@Ccount=\count456
+\calc@Cskip=\skip103
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
@@ -2291,15 +2342,15 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count452
-\l_MT_multwidth_dim=\dimen295
-\origjot=\skip85
-\l_MT_shortvdotswithinadjustabove_dim=\dimen296
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen297
-\l_MT_above_intertext_sep=\dimen298
-\l_MT_below_intertext_sep=\dimen299
-\l_MT_above_shortintertext_sep=\dimen300
-\l_MT_below_shortintertext_sep=\dimen301
+\g_MT_multlinerow_int=\count457
+\l_MT_multwidth_dim=\dimen301
+\origjot=\skip104
+\l_MT_shortvdotswithinadjustabove_dim=\dimen302
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen303
+\l_MT_above_intertext_sep=\dimen304
+\l_MT_below_intertext_sep=\dimen305
+\l_MT_above_shortintertext_sep=\dimen306
+\l_MT_below_shortintertext_sep=\dimen307
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryshapes.code.tex
@@ -2352,31 +2403,147 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
 s.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 
-\pgfnodepartlowerbox=\box66
-\pgfnodeparttwobox=\box67
-\pgfnodepartthreebox=\box68
-\pgfnodepartfourbox=\box69
-\pgfnodeparttwentybox=\box70
-\pgfnodepartnineteenbox=\box71
-\pgfnodeparteighteenbox=\box72
-\pgfnodepartseventeenbox=\box73
-\pgfnodepartsixteenbox=\box74
-\pgfnodepartfifteenbox=\box75
-\pgfnodepartfourteenbox=\box76
-\pgfnodepartthirteenbox=\box77
-\pgfnodeparttwelvebox=\box78
-\pgfnodepartelevenbox=\box79
-\pgfnodeparttenbox=\box80
-\pgfnodepartninebox=\box81
-\pgfnodeparteightbox=\box82
-\pgfnodepartsevenbox=\box83
-\pgfnodepartsixbox=\box84
-\pgfnodepartfivebox=\box85
+\pgfnodepartlowerbox=\box74
+\pgfnodeparttwobox=\box75
+\pgfnodepartthreebox=\box76
+\pgfnodepartfourbox=\box77
+\pgfnodeparttwentybox=\box78
+\pgfnodepartnineteenbox=\box79
+\pgfnodeparteighteenbox=\box80
+\pgfnodepartseventeenbox=\box81
+\pgfnodepartsixteenbox=\box82
+\pgfnodepartfifteenbox=\box83
+\pgfnodepartfourteenbox=\box84
+\pgfnodepartthirteenbox=\box85
+\pgfnodeparttwelvebox=\box86
+\pgfnodepartelevenbox=\box87
+\pgfnodeparttenbox=\box88
+\pgfnodepartninebox=\box89
+\pgfnodeparteightbox=\box90
+\pgfnodepartsevenbox=\box91
+\pgfnodepartsixbox=\box92
+\pgfnodepartfivebox=\box93
 )))) (./acronyms.tex) (./macros.tex
-\c@proposition=\count453
-\c@definition=\count454
+\c@proposition=\count458
+\c@definition=\count459
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2017/06/05 v1.15 Data Visualization (1.15)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks40
+\t@pgfplots@tokb=\toks41
+\t@pgfplots@tokc=\toks42
+\pgfplots@tmpa=\dimen308
+\c@pgfplots@coordindex=\count460
+\c@pgfplots@scanlineindex=\count461
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgflibraryfpu.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count462
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count463
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count464
+\t@pgfplotstable@a=\toks43
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count465
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen309
+\pgfdecoratedremainingdistance=\dimen310
+\pgfdecoratedinputsegmentcompleteddistance=\dimen311
+\pgfdecoratedinputsegmentremainingdistance=\dimen312
+\pgf@decorate@distancetomove=\dimen313
+\pgf@decorate@repeatstate=\count466
+\pgfdecorationsegmentamplitude=\dimen314
+\pgfdecorationsegmentlength=\dimen315
+)
+\tikz@lib@dec@box=\box94
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count467
+\pgfplots@xmin@reg=\dimen316
+\pgfplots@xmax@reg=\dimen317
+\pgfplots@ymin@reg=\dimen318
+\pgfplots@ymax@reg=\dimen319
+\pgfplots@zmin@reg=\dimen320
+\pgfplots@zmax@reg=\dimen321
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+))) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -2411,16 +2578,16 @@ Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-\@linkdim=\dimen302
-\Hy@linkcounter=\count455
-\Hy@pagecounter=\count456
+\@linkdim=\dimen322
+\Hy@linkcounter=\count468
+\Hy@pagecounter=\count469
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count457
+\Hy@SavedSpaceFactor=\count470
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -2432,12 +2599,12 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count458
+\c@Hy@tempcnt=\count471
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen303
-\Fld@menulength=\count459
-\Field@Width=\dimen304
-\Fld@charsize=\dimen305
+\XeTeXLinkMargin=\dimen323
+\Fld@menulength=\count472
+\Field@Width=\dimen324
+\Fld@charsize=\dimen325
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -2447,39 +2614,39 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count460
-\c@Item=\count461
-\c@Hfootnote=\count462
+\Hy@abspage=\count473
+\c@Item=\count474
+\c@Hfootnote=\count475
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 100.
+(scrhack)             need that hack, on input line 104.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\HyAnn@Count=\count463
-\Fld@listcount=\count464
-\c@bookmark@seq@number=\count465
+\HyAnn@Count=\count476
+\Fld@listcount=\count477
+\c@bookmark@seq@number=\count478
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip86
+\Hy@SectionHShift=\skip105
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 100.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 100.
-Package hyperref Info: Option `colorlinks' set `true' on input line 100.
-Package hyperref Info: Option `unicode' set `true' on input line 100.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 104.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 104.
+Package hyperref Info: Option `colorlinks' set `true' on input line 104.
+Package hyperref Info: Option `unicode' set `true' on input line 104.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 100.
+Package hyperref Info: Option `breaklinks' set `true' on input line 104.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -2489,26 +2656,34 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./main.aux
-(./Chapters/ChapterTemplate.aux) (./Appendices/AppendixA.aux))
+(./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux)
+(./Chapters/Chapter4.aux
+
+LaTeX Warning: Label `table:5' multiply defined.
+
+
+LaTeX Warning: Label `table:6' multiply defined.
+
+) (./Appendices/AppendixA.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 104.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -2597,17 +2772,17 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count466
-\scratchdimen=\dimen306
-\scratchbox=\box86
-\nofMPsegments=\count467
-\nofMParguments=\count468
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count469
-\MPscratchDim=\dimen307
-\MPnumerator=\count470
-\makeMPintoPDFobject=\count471
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count479
+\scratchdimen=\dimen326
+\scratchbox=\box95
+\nofMPsegments=\count480
+\nofMParguments=\count481
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count482
+\MPscratchDim=\dimen327
+\MPnumerator=\count483
+\makeMPintoPDFobject=\count484
+\everyMPtoPDFconversion=\toks45
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2665,15 +2840,15 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 100.
-Package scrbase Info: activating english \abbrevname on input line 100.
-Package scrbase Info: activating english \byname on input line 100.
-Package scrbase Info: activating english \acknowledgementname on input line 100
+(scrlayer)             \begin{document} on input line 104.
+Package scrbase Info: activating english \abbrevname on input line 104.
+Package scrbase Info: activating english \byname on input line 104.
+Package scrbase Info: activating english \acknowledgementname on input line 104
 .
-Package scrbase Info: activating english \authorshipname on input line 100.
-Package scrbase Info: activating english \constantsname on input line 100.
-Package scrbase Info: activating english \symbolsname on input line 100.
-\AtBeginShipoutBox=\box87
+Package scrbase Info: activating english \authorshipname on input line 104.
+Package scrbase Info: activating english \constantsname on input line 104.
+Package scrbase Info: activating english \symbolsname on input line 104.
+\AtBeginShipoutBox=\box96
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
 nary-english.trsl
@@ -2681,7 +2856,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 100.
+or `english'. on input line 104.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -2693,75 +2868,80 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 100.
-Package biblatex Info: Reference segment=0 on input line 100.
+Package biblatex Info: Reference section=0 on input line 104.
+Package biblatex Info: Reference segment=0 on input line 104.
  ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring ON on input line 100.
 
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.15} into 
+your preamble.
+ on input line 104.
+
+Package hyperref Info: Link coloring ON on input line 104.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count472
+\c@section@level=\count485
 )
-LaTeX Info: Redefining \ref on input line 100.
-LaTeX Info: Redefining \pageref on input line 100.
-LaTeX Info: Redefining \nameref on input line 100.
+LaTeX Info: Redefining \ref on input line 104.
+LaTeX Info: Redefining \pageref on input line 104.
+LaTeX Info: Redefining \nameref on input line 104.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
-\c__siunitx_mathsf_int=\count473
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 100.
+\c__siunitx_mathsf_int=\count486
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 104.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 100
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 104
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 100
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 104
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 100
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 104
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 100
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 104
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 100.
+(Font)              scaled to size 12.50409pt on input line 104.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 100.
+(Font)              scaled to size 9.37807pt on input line 104.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 100.
+(Font)              scaled to size 7.29405pt on input line 104.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 100.
+(Font)              scaled to size 12.50409pt on input line 104.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 100.
+(Font)              scaled to size 9.37807pt on input line 104.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 100.
-\c__siunitx_mathtt_int=\count474
+(Font)              scaled to size 7.29405pt on input line 104.
+\c__siunitx_mathtt_int=\count487
 
 1: section
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 118.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 122.
 [1
 
 
@@ -2773,20 +2953,20 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
  Declaration of Authorship
 --------------------
 
-Overfull \hbox (4.79494pt too wide) in paragraph at lines 155--156
+Overfull \hbox (4.79494pt too wide) in paragraph at lines 159--160
 \T1/ppl/m/n/12 I, Venkata Sai Sun-dar \T1/ppl/m/sc/12 Kan-darpa\T1/ppl/m/n/12 ,
  de-clare that this the-sis ti-tled, ^^P  To-mo-graphic
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 158.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 162.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 158.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
@@ -2800,7 +2980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
  Abstract
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 189.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 193.
 1: section
 [7] [8
 
@@ -2811,31 +2991,67 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 1: section
 [9] [10
 
-] (./main.toc)
+] (./main.toc
+1: section
+[11]
+Overfull \hbox (32.68448pt too wide) in paragraph at lines 40--40
+ [] [][][]\T1/ppl/b/n/12 LRR-CED: Low-Resolution Re-con-struc-tion aware Con-vo
+-lu-tional Encoder- 
+ []
+
+)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
+ [12] (./main.lof
+Overfull \hbox (1.18338pt too wide) in paragraph at lines 17--17
+ [][] [][][]\T1/ppl/m/n/12 Proposed Deep Learn-ing pipeline for Di-rect Im-age 
+Re-con-struc- 
+ []
 
 1: section
-[11] [12
+[13
 
-] (./main.lof)
+]
+Overfull \hbox (2.28627pt too wide) in paragraph at lines 26--26
+ \T1/ppl/m/n/12 com-par-i-son amongst DUG+SR and OSEM for []PET im-age along 
+ []
+
+
+Overfull \hbox (0.82314pt too wide) in paragraph at lines 29--29
+ [][] [][][]\T1/ppl/m/n/12 Intensity Pro-file across the im-age (high-lighted b
+y a yel-low line) 
+ []
+
+
+Overfull \hbox (3.79929pt too wide) in paragraph at lines 32--32
+ [][] [][][]\T1/ppl/m/n/12 General rep-re-sen-ta-tion of an encoder-decoder ar-
+chi-tec-ture with 
+ []
+
+
+Overfull \hbox (22.77068pt too wide) in paragraph at lines 32--32
+ \T1/ppl/m/n/12 fully con-vo-lu-tional lay-ers and the pro-posed []filtered-bac
+kprojection 
+ []
+
+
+Overfull \hbox (2.62315pt too wide) in paragraph at lines 34--34
+ [][] [][][][]\T1/ppl/m/n/12 low-resolution re-con-struc-tion aware con-vo-lu-t
+ional en-coder de- 
+ []
+
+[14])
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
-
-1: section
-[13] [14
+ [15] [16
 
 ] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
-1: section
-[15] [16
-
-]
 1: section
 [17] [18
 
@@ -2848,17 +3064,21 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 [21] [22
 
 ]
---------------------
- Dedicatory
---------------------
 1: section
 [23] [24
 
 ]
+--------------------
+ Dedicatory
+--------------------
 1: section
-\openout2 = `Chapters/ChapterTemplate.aux'.
+[25] [26
 
-(./Chapters/ChapterTemplate.tex
+]
+1: section
+\openout2 = `Chapters/Chapter1.aux'.
+
+(./Chapters/Chapter1.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
@@ -2872,7 +3092,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 40.
  [3]
-<./Figures/PET_det-crop.pdf, id=330, 290.08376pt x 290.08376pt>
+<./Figures/PET_det-crop.pdf, id=681, 290.08376pt x 290.08376pt>
 File: ./Figures/PET_det-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_det-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_det-crop.pdf  used on input line 49.
@@ -2894,7 +3114,14 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 59.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-[4 <./Figures/PET_det-crop.pdf>] [5] [6] [7] [8]
+[4 <./Figures/PET_det-crop.pdf>]
+<./Figures/x_ray_geo-crop.pdf, id=706, 292.09125pt x 206.7725pt>
+File: ./Figures/x_ray_geo-crop.pdf Graphic file (type pdf)
+<use ./Figures/x_ray_geo-crop.pdf>
+Package pdftex.def Info: ./Figures/x_ray_geo-crop.pdf  used on input line 80.
+(pdftex.def)             Requested size: 282.81912pt x 200.22517pt.
+ [5 <./Figures/x_ray_geo-crop.pdf>] [6]
+[7] [8]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2905,13 +3132,13 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-\c@nn@layerindex@counter=\count475
-\c@nn@lastlayerstart@counter=\count476
-\c@nn@thislayerstart@counter=\count477
-\c@nn@lastlayercount@counter=\count478
-\c@nn@thislayercount@counter=\count479
-\c@nn@lastlayerindex@counter=\count480
-\c@nn@thislayerindex@counter=\count481
+\c@nn@layerindex@counter=\count488
+\c@nn@lastlayerstart@counter=\count489
+\c@nn@thislayerstart@counter=\count490
+\c@nn@lastlayercount@counter=\count491
+\c@nn@thislayercount@counter=\count492
+\c@nn@lastlayerindex@counter=\count493
+\c@nn@thislayerindex@counter=\count494
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -2985,35 +3212,332 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [9] [10]
-<./Figures/convol-crop.pdf, id=417, 182.6825pt x 197.73875pt>
+<./Figures/convol-crop.pdf, id=779, 182.6825pt x 197.73875pt>
 File: ./Figures/convol-crop.pdf Graphic file (type pdf)
 <use ./Figures/convol-crop.pdf>
-Package pdftex.def Info: ./Figures/convol-crop.pdf  used on input line 221.
+Package pdftex.def Info: ./Figures/convol-crop.pdf  used on input line 232.
 (pdftex.def)             Requested size: 161.60916pt x 174.93692pt.
-<Figures/relu-crop.pdf, id=420, 263.98625pt x 196.735pt>
+<Figures/relu-crop.pdf, id=784, 263.98625pt x 196.735pt>
 File: Figures/relu-crop.pdf Graphic file (type pdf)
 <use Figures/relu-crop.pdf>
-Package pdftex.def Info: Figures/relu-crop.pdf  used on input line 234.
+Package pdftex.def Info: Figures/relu-crop.pdf  used on input line 245.
 (pdftex.def)             Requested size: 242.4199pt x 180.66216pt.
- [11 <./Figures/convol-crop.pdf>]
-<Figures/maxP-crop.pdf, id=440, 309.155pt x 147.55125pt>
+ [11] [12 <./Figures/convol-crop.pdf> <./Figures/relu-crop.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/relu-crop.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>]
+<Figures/maxP-crop.pdf, id=818, 309.155pt x 147.55125pt>
 File: Figures/maxP-crop.pdf Graphic file (type pdf)
 <use Figures/maxP-crop.pdf>
-Package pdftex.def Info: Figures/maxP-crop.pdf  used on input line 248.
+Package pdftex.def Info: Figures/maxP-crop.pdf  used on input line 259.
 (pdftex.def)             Requested size: 242.4199pt x 115.70413pt.
 
-Overfull \hbox (36.67169pt too wide) in paragraph at lines 309--310
+Overfull \hbox (36.67169pt too wide) in paragraph at lines 324--325
  [][] 
  []
 
-[12 <./Figures/relu-crop.pdf> <./Figures/maxP-crop.pdf
+<Figures/transposed.pdf, id=826, 165.90782pt x 185.82524pt>
+File: Figures/transposed.pdf Graphic file (type pdf)
+<use Figures/transposed.pdf>
+Package pdftex.def Info: Figures/transposed.pdf  used on input line 335.
+(pdftex.def)             Requested size: 202.01454pt x 226.26694pt.
+[13 <./Figures/maxP-crop.pdf>]
+<Figures/fcn-crop.pdf, id=845, 534.99875pt x 143.53625pt>
+File: Figures/fcn-crop.pdf Graphic file (type pdf)
+<use Figures/fcn-crop.pdf>
+Package pdftex.def Info: Figures/fcn-crop.pdf  used on input line 344.
+(pdftex.def)             Requested size: 404.02908pt x 108.40314pt.
+) [14 <./Figures/transposed.pdf>] [15 <./Figures/fcn-crop.pdf>]
+\openout2 = `Chapters/Chapter2.aux'.
 
-pdfTeX warning: /usr/bin/pdflatex (file ./Figures/maxP-crop.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->]) [13]
+ (./Chapters/Chapter2.tex [16
+
+
+
+]
+Chapter 2.
+
+Overfull \hbox (5.40573pt too wide) in paragraph at lines 11--12
+\T1/ppl/m/n/12 proves the qual-ity of the raw data and/or the re-con-structed i
+m-age (Gong
+ []
+
+1: section
+[17]
+<./Figures/dl_mi.pdf, id=899, 380.42125pt x 217.81375pt>
+File: ./Figures/dl_mi.pdf Graphic file (type pdf)
+<use ./Figures/dl_mi.pdf>
+Package pdftex.def Info: ./Figures/dl_mi.pdf  used on input line 18.
+(pdftex.def)             Requested size: 323.22449pt x 185.06943pt.
+ [18 <./Figures/dl_mi.pdf>] [19]
+<./Figures/direct-crop.pdf, id=940, 395.4775pt x 161.60374pt>
+File: ./Figures/direct-crop.pdf Graphic file (type pdf)
+<use ./Figures/direct-crop.pdf>
+Package pdftex.def Info: ./Figures/direct-crop.pdf  used on input line 57.
+(pdftex.def)             Requested size: 323.22449pt x 132.07947pt.
+ [20 <./Figures/direct-crop.pdf>] [21])
+[22]
+\openout2 = `Chapters/Chapter3.aux'.
+
+ (./Chapters/Chapter3.tex
+Chapter 3.
+1: section
+[23
+
+
+
+]
+<./Figures/three-step-crop.pdf, id=992, 503.8825pt x 60.225pt>
+File: ./Figures/three-step-crop.pdf Graphic file (type pdf)
+<use ./Figures/three-step-crop.pdf>
+Package pdftex.def Info: ./Figures/three-step-crop.pdf  used on input line 20.
+(pdftex.def)             Requested size: 399.991pt x 47.80786pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package scrlayer-scrpage Warning: \headheight to low.
+(scrlayer-scrpage)                At least 35.9889pt needed,
+(scrlayer-scrpage)                but only 20.66162pt found.
+(scrlayer-scrpage)                I'll enlarge \headheight, for further
+(scrlayer-scrpage)                processing, but you should do this yourself,
+(scrlayer-scrpage)                e.g., setting geometry's option
+(scrlayer-scrpage)                `head=35.9889pt'.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 5
+0.
+
+
+Overfull \vbox (15.32729pt too high) has occurred while \output is active []
+
+
+[24 <./Figures/three-step-crop.pdf>]
+<./Figures/denoise-crop.pdf, id=1015, 518.93875pt x 186.6975pt>
+File: ./Figures/denoise-crop.pdf Graphic file (type pdf)
+<use ./Figures/denoise-crop.pdf>
+Package pdftex.def Info: ./Figures/denoise-crop.pdf  used on input line 58.
+(pdftex.def)             Requested size: 404.02908pt x 145.36421pt.
+ [25] [26 <./Figures/denoise-crop.pdf>]
+<./Figures/dugan-crop.pdf, id=1053, 503.8825pt x 333.245pt>
+File: ./Figures/dugan-crop.pdf Graphic file (type pdf)
+<use ./Figures/dugan-crop.pdf>
+Package pdftex.def Info: ./Figures/dugan-crop.pdf  used on input line 85.
+(pdftex.def)             Requested size: 404.02908pt x 267.20653pt.
+
+[27 <./Figures/dugan-crop.pdf>]
+<./Figures/super-crop.pdf, id=1081, 390.45876pt x 140.525pt>
+File: ./Figures/super-crop.pdf Graphic file (type pdf)
+<use ./Figures/super-crop.pdf>
+Package pdftex.def Info: ./Figures/super-crop.pdf  used on input line 124.
+(pdftex.def)             Requested size: 399.991pt x 143.96185pt.
+
+Overfull \hbox (0.91753pt too wide) in paragraph at lines 130--132
+\T1/ppl/m/n/12 We ap-plied our method-ol-ogy on flu-o-rothymi-dine (FLT) PET/CT
+ im-ages from
+ []
+
+[28 <./Figures/super-crop.pdf>]
+<./Figures/dataset_gen-crop.pdf, id=1108, 527.9725pt x 405.515pt>
+File: ./Figures/dataset_gen-crop.pdf Graphic file (type pdf)
+<use ./Figures/dataset_gen-crop.pdf>
+Package pdftex.def Info: ./Figures/dataset_gen-crop.pdf  used on input line 161
+.
+(pdftex.def)             Requested size: 399.991pt x 307.21693pt.
+<./Figures/PET_sample-crop.pdf, id=1109, 198.7425pt x 198.7425pt>
+File: ./Figures/PET_sample-crop.pdf Graphic file (type pdf)
+<use ./Figures/PET_sample-crop.pdf>
+Package pdftex.def Info: ./Figures/PET_sample-crop.pdf  used on input line 168.
+
+(pdftex.def)             Requested size: 202.01454pt x 202.0202pt.
+ [29 <./Figures/dataset_gen-crop.pdf>]
+<./Figures/CT_sample-crop.pdf, id=1154, 198.7425pt x 199.74625pt>
+File: ./Figures/CT_sample-crop.pdf Graphic file (type pdf)
+<use ./Figures/CT_sample-crop.pdf>
+Package pdftex.def Info: ./Figures/CT_sample-crop.pdf  used on input line 183.
+(pdftex.def)             Requested size: 202.01454pt x 203.04051pt.
+
+Underfull \hbox (badness 1158) in paragraph at lines 184--184
+ []\T1/ppl/m/sc/10.95 Figure 3.7: |\T1/ppl/m/n/10.95 Ex-am-ple CT sinogram-imag
+e pairs from the 
+ []
+
+[30 <./Figures/PET_sample-crop.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+[31 <./Figures/CT_sample-crop.pdf>]
+<./Figures/deepPET-crop.pdf, id=1195, 549.05125pt x 310.15875pt>
+File: ./Figures/deepPET-crop.pdf Graphic file (type pdf)
+<use ./Figures/deepPET-crop.pdf>
+Package pdftex.def Info: ./Figures/deepPET-crop.pdf  used on input line 222.
+(pdftex.def)             Requested size: 404.02908pt x 228.2408pt.
+ [32 <./Figures/deepPET-crop.pdf>]
+<./Figures/PET_with_dp-crop.pdf, id=1216, 303.1325pt x 313.17pt>
+File: ./Figures/PET_with_dp-crop.pdf Graphic file (type pdf)
+<use ./Figures/PET_with_dp-crop.pdf>
+Package pdftex.def Info: ./Figures/PET_with_dp-crop.pdf  used on input line 267
+.
+(pdftex.def)             Requested size: 282.81912pt x 292.18645pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Figures/PET_MLEM-crop.pdf, id=1217, 493.845pt x 338.26375pt>
+File: ./Figures/PET_MLEM-crop.pdf Graphic file (type pdf)
+<use ./Figures/PET_MLEM-crop.pdf>
+Package pdftex.def Info: ./Figures/PET_MLEM-crop.pdf  used on input line 302.
+(pdftex.def)             Requested size: 323.22449pt x 221.39145pt.
+<./Figures/CT_with_dp-crop.pdf, id=1218, 530.98375pt x 375.4025pt>
+File: ./Figures/CT_with_dp-crop.pdf Graphic file (type pdf)
+<use ./Figures/CT_with_dp-crop.pdf>
+Package pdftex.def Info: ./Figures/CT_with_dp-crop.pdf  used on input line 309.
+
+(pdftex.def)             Requested size: 323.22449pt x 228.51974pt.
+<./Figures/CT_roi2-crop.pdf, id=1219, 470.75874pt x 301.125pt>
+File: ./Figures/CT_roi2-crop.pdf Graphic file (type pdf)
+<use ./Figures/CT_roi2-crop.pdf>
+Package pdftex.def Info: ./Figures/CT_roi2-crop.pdf  used on input line 317.
+(pdftex.def)             Requested size: 323.22449pt x 206.75642pt.
+[33] [34 <./Figures/PET_with_dp-crop.pdf> <./Figures/PET_MLEM-crop.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/PET_MLEM-crop.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>] [35 <./Figures/CT_with_dp-crop.pdf> <./Figures/CT_roi2-crop.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/CT_roi2-crop.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+<./Figures/PET_ip2-crop.pdf, id=1414, 313.17pt x 532.99126pt>
+File: ./Figures/PET_ip2-crop.pdf Graphic file (type pdf)
+<use ./Figures/PET_ip2-crop.pdf>
+Package pdftex.def Info: ./Figures/PET_ip2-crop.pdf  used on input line 327.
+(pdftex.def)             Requested size: 323.22449pt x 550.12572pt.
+<./Figures/CT_ip2-crop.pdf, id=1415, 455.7025pt x 735.74875pt>
+File: ./Figures/CT_ip2-crop.pdf Graphic file (type pdf)
+<use ./Figures/CT_ip2-crop.pdf>
+Package pdftex.def Info: ./Figures/CT_ip2-crop.pdf  used on input line 334.
+(pdftex.def)             Requested size: 323.22449pt x 521.86884pt.
+ [36] [37 <./Figures/PET_ip2-crop.pdf>] [38 <./Figures/CT_ip2-crop.pdf>]
+[39] [40]) [41]
+\openout2 = `Chapters/Chapter4.aux'.
+
+ (./Chapters/Chapter4.tex [42
+
+
+
+]
+Chapter 4.
+1: section
+[43] [44]
+<Figures/general_enc-crop.pdf, id=1554, 410.53375pt x 338.26375pt>
+File: Figures/general_enc-crop.pdf Graphic file (type pdf)
+<use Figures/general_enc-crop.pdf>
+Package pdftex.def Info: Figures/general_enc-crop.pdf  used on input line 30.
+(pdftex.def)             Requested size: 282.81912pt x 233.0306pt.
+
+Overfull \hbox (2.98975pt too wide) in paragraph at lines 40--41
+\T1/ppl/m/n/12 learned via neu-ral net-works which can be rep-re-sented as a fu
+nc-tion $\OML/zplm/b/it/12 F[] [] [] \U/fplmbb/m/n/12 R[] \OMS/zplm/m/n/12 !
+ []
+
+[45 <./Figures/general_enc-crop.pdf>] [46] [47]
+<./Figures/dense_block-crop.pdf, id=1598, 124.465pt x 359.3425pt>
+File: ./Figures/dense_block-crop.pdf Graphic file (type pdf)
+<use ./Figures/dense_block-crop.pdf>
+Package pdftex.def Info: ./Figures/dense_block-crop.pdf  used on input line 79.
+
+(pdftex.def)             Requested size: 92.92496pt x 268.28896pt.
+<./Figures/densenet-crop.pdf, id=1599, 430.60875pt x 603.25375pt>
+File: ./Figures/densenet-crop.pdf Graphic file (type pdf)
+<use ./Figures/densenet-crop.pdf>
+Package pdftex.def Info: ./Figures/densenet-crop.pdf  used on input line 88.
+(pdftex.def)             Requested size: 335.34486pt x 469.80884pt.
+<./Figures/u_net-crop.pdf, id=1600, 533.995pt x 415.5525pt>
+File: ./Figures/u_net-crop.pdf Graphic file (type pdf)
+<use ./Figures/u_net-crop.pdf>
+Package pdftex.def Info: ./Figures/u_net-crop.pdf  used on input line 144.
+(pdftex.def)             Requested size: 323.22449pt x 251.54002pt.
+ [48 <./Figures/dense_block-crop.pdf>] [49 <./Figures/densenet-crop.pdf>] [50 <
+./Figures/u_net-crop.pdf>]
+<./Figures/data-crop.pdf, id=1665, 383.4325pt x 337.26pt>
+File: ./Figures/data-crop.pdf Graphic file (type pdf)
+<use ./Figures/data-crop.pdf>
+Package pdftex.def Info: ./Figures/data-crop.pdf  used on input line 204.
+(pdftex.def)             Requested size: 323.22449pt x 284.32054pt.
+
+[51] [52 <./Figures/data-crop.pdf>]
+Overfull \hbox (13.13536pt too wide) in paragraph at lines 235--236
+\T1/ppl/m/n/12 based ap-proach, namely FBP-ConvNet Jin et al., [][]2017[][], an
+d a []pe-nal-ized weighted
+ []
+
+[53]
+<./Figures/views_dense-crop.pdf, id=1729, 517.935pt x 298.11375pt>
+File: ./Figures/views_dense-crop.pdf Graphic file (type pdf)
+<use ./Figures/views_dense-crop.pdf>
+Package pdftex.def Info: ./Figures/views_dense-crop.pdf  used on input line 247
+.
+(pdftex.def)             Requested size: 323.22449pt x 186.0477pt.
+<./Figures/views_unet-crop.pdf, id=1730, 517.935pt x 298.11375pt>
+File: ./Figures/views_unet-crop.pdf Graphic file (type pdf)
+<use ./Figures/views_unet-crop.pdf>
+Package pdftex.def Info: ./Figures/views_unet-crop.pdf  used on input line 255.
+
+(pdftex.def)             Requested size: 323.22449pt x 186.0477pt.
+<./Figures/results1-crop.pdf, id=1731, 387.4475pt x 571.13374pt>
+File: ./Figures/results1-crop.pdf Graphic file (type pdf)
+<use ./Figures/results1-crop.pdf>
+Package pdftex.def Info: ./Figures/results1-crop.pdf  used on input line 301.
+(pdftex.def)             Requested size: 404.02908pt x 595.58604pt.
+<./Figures/result2-crop.pdf, id=1732, 387.4475pt x 571.13374pt>
+File: ./Figures/result2-crop.pdf Graphic file (type pdf)
+<use ./Figures/result2-crop.pdf>
+Package pdftex.def Info: ./Figures/result2-crop.pdf  used on input line 308.
+(pdftex.def)             Requested size: 404.02908pt x 595.58604pt.
+PGFPlots: reading {./Plots/Fig11.txt}
+PGFPlots: reading {./Plots/Fig11.txt}
+PGFPlots: reading {./Plots/Fig11.txt}
+PGFPlots: reading {./Plots/Fig11.txt}
+PGFPlots: reading {./Plots/Fig11.txt}
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+PGFPlots: reading {./Plots/Fig10.txt}
+PGFPlots: reading {./Plots/Fig10.txt}
+PGFPlots: reading {./Plots/Fig10.txt}
+PGFPlots: reading {./Plots/Fig10.txt}
+PGFPlots: reading {./Plots/Fig10.txt}
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[54 <./Figures/views_dense-crop.pdf>] [55 <./Figures/views_unet-crop.pdf>]
+
+LaTeX Warning: Text page 56 contains only floats.
+
+[56 <./Figures/results1-crop.pdf>]
+
+LaTeX Warning: Text page 57 contains only floats.
+
+[57 <./Figures/result2-crop.pdf>] [58]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[59] [60] [61]
+Overfull \hbox (1.5898pt too wide) in paragraph at lines 534--535
+\T1/ppl/m/n/12 other al-ter-na-tive ar-chi-tec-tures is also be-ing ex-plored t
+o ar-rive at re-con-structed
+ []
+
+[62]) [63]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [14
+ (./Appendices/AppendixA.tex [64
 
 
 
@@ -3024,90 +3548,216 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
 1: section
-[15] [16
+[65] [66
 
 
 ]
-Overfull \hbox (0.3655pt too wide) in paragraph at lines 293--293
-[]\T1/ppl/m/n/12 A Am-yar et al. ^^P  3-D RPET-NET: de-vel-op-ment of a 3-D PET
- imag-
+Overfull \hbox (4.49007pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Jonas Adler and Ozan Ök-tem. ^^P  Learned primal-dual re-con-s
+truc-
  []
 
 
-Overfull \hbox (1.88063pt too wide) in paragraph at lines 293--293
-\T1/ppl/m/n/12 ing con-vo-lu-tional neu-ral net-work for ra-diomics anal-y-sis 
-and out-
+Overfull \hbox (17.63725pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 tion^^Q. In: \T1/ppl/m/it/12 IEEE Trans-ac-tions on Med-i-cal Im
+ag-ing \T1/ppl/m/n/12 37.6 (2018), pp. 1322^^U
  []
 
 
-Overfull \hbox (9.31712pt too wide) in paragraph at lines 293--293
-\T1/ppl/m/n/12 ral net-work^^Q. In: \T1/ppl/m/it/12 2017 IEEE 14th In-ter-na-ti
-onal Sym-po-sium on Biomed-
+Overfull \hbox (6.86902pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Kenneth Clark et al. ^^P  The Can-cer Imag-ing Archive (TCIA):
+ main-
  []
 
 
-Overfull \hbox (11.62456pt too wide) in paragraph at lines 293--293
-\T1/ppl/m/it/12 IEEE Trans-ac-tions on Ra-di-a-tion and Plasma Med-i-cal Sci-en
-ces \T1/ppl/m/n/12 3.2 (2018),
+Overfull \hbox (0.64056pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 tain-ing and op-er-at-ing a pub-lic in-for-ma-tion repos-i-tory^
+^Q. In: \T1/ppl/m/it/12 Jour-
  []
 
 
-Overfull \hbox (3.79259pt too wide) in paragraph at lines 293--293
+Overfull \hbox (27.67714pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Jia Deng et al. ^^P  Im-a-genet: A large-scale hi-er-ar-chi-ca
+l im-age database^^Q.
+ []
+
+
+Overfull \hbox (10.56075pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/it/12 tions on Ra-di-a-tion and Plasma Med-i-cal Sci-ences \T1/ppl/m/
 n/12 38.5 (2018), pp. 1116^^U
  []
 
-
-Overfull \hbox (4.7972pt too wide) in paragraph at lines 293--293
-\T1/ppl/m/n/12 phy^^Q. In: \T1/ppl/m/it/12 IEEE Trans-ac-tions on Med-i-cal Ima
-g-ing \T1/ppl/m/n/12 14.1 (1995), pp. 132^^U
+1: section
+[67]
+Overfull \hbox (25.99696pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 tion arith-metic for deep learn-ing^^Q. In: \T1/ppl/m/it/12 arXi
+v preprint arXiv:1603.07285
  []
 
-1: section
-[17]
-Overfull \hbox (13.16443pt too wide) in paragraph at lines 293--293
+
+Overfull \hbox (19.92441pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 mers. ^^P  Guest ed-i-to-rial deep learn-ing in med-i-cal imag-i
+ng: Overview
+ []
+
+[68]
+Overfull \hbox (2.01317pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 based ro-bust de-nois-ing of low-dose com-puted to-mog-ra-phy pe
+r-
+ []
+
+
+Overfull \hbox (0.34113pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 fu-sion maps^^Q. In: \T1/ppl/m/it/12 IEEE Trans-ac-tions on Ra-d
+i-a-tion and Plasma Med-
+ []
+
+
+Overfull \hbox (20.69629pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 Im-age Re-con-struc-tion Us-ing Con-vo-lu-tional Gen-er-a-tive N
+et-works^^Q.
+ []
+
+
+Overfull \hbox (4.34515pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Kyungsang Kim et al. ^^P  Pe-nal-ized PET re-con-struc-tion us
+-ing deep
+ []
+
+
+Overfull \hbox (56.25716pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Lale Kostakoglu et al. ^^P  A phase II study of 3-deoxy-3-18F-
+fluorothymidine
+ []
+
+
+Overfull \hbox (2.45712pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 neoad-ju-vant chemother-apy: re-sults from ACRIN 6688^^Q. In: \T
+1/ppl/m/it/12 Jour-
+ []
+
+[69]
+Overfull \hbox (1.36089pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 CT im-age re-con-struc-tion^^Q. In: \T1/ppl/m/it/12 IEEE Trans-a
+c-tions on Med-i-cal Imag-
+ []
+
+
+Overfull \hbox (3.1744pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Yann Le-Cun, Yoshua Ben-gio, and Ge-of-frey Hin-ton. ^^P  Deep
+ learn-
+ []
+
+
+Overfull \hbox (19.93259pt too wide) in paragraph at lines 297--297
 []\T1/ppl/m/n/12 Christian Ledig et al. ^^P  Photo-realistic sin-gle im-age sup
 er-resolution
  []
 
-[18]
-Overfull \hbox (10.52348pt too wide) in paragraph at lines 293--293
+
+Overfull \hbox (1.10909pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 the-sis for sparse-view CT im-age re-con-struc-tion^^Q. In: \T1/
+ppl/m/it/12 IEEE Trans-
+ []
+
+
+Overfull \hbox (8.7726pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/it/12 ac-tions on Ra-di-a-tion and Plasma Med-i-cal Sci-ences \T1/ppl
+/m/n/12 3.2 (2018), pp. 109^^U
+ []
+
+[70]
+Overfull \hbox (0.10121pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 ul-tra-sound im-age en-hance-ment^^Q. In: \T1/ppl/m/it/12 2018 I
+EEE In-ter-na-tional Ul-
+ []
+
+
+Overfull \hbox (17.29164pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 In: \T1/ppl/m/it/12 In-ter-na-tional Con-fer-ence on Med-i-cal i
 m-age com-put-ing and computer-
  []
 
 
-Overfull \hbox (0.26938pt too wide) in paragraph at lines 293--293
+Overfull \hbox (7.03754pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 med-i-cal im-age seg-men-ta-tion^^Q. In: \T1/ppl/m/it/12 arXiv p
 reprint arXiv:1906.02849
  []
 
-
-Overfull \hbox (0.67671pt too wide) in paragraph at lines 293--293
-\T1/ppl/m/n/12 cycle-consistent ad-ver-sar-ial net-works^^Q. In: \T1/ppl/m/it/1
-2 Pro-ceed-ings of the IEEE
+[71]
+Overfull \hbox (6.6494pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Franz Thaler et al. ^^P  Sparse-view CT re-con-struc-tion us-i
+ng wasser-
  []
 
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
- (./main.aux (./Chapters/ChapterTemplate.aux) (./Appendices/AppendixA.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
+
+Overfull \hbox (10.11293pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 com-par-i-son be-tween to-tal vari-a-tion (TV)-based com-pressed
+ sens-
+ []
+
+
+Overfull \hbox (9.05225pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 ing and sta-tis-ti-cal it-er-a-tive re-con-struc-tion al-go-rith
+ms^^Q. In: \T1/ppl/m/it/12 Physics
+ []
+
+
+Overfull \hbox (14.82399pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 re-pair to mit-i-gate de-fec-tive block de-tec-tors^^Q. In: \T1/
+ppl/m/it/12 Physics in Medicine
+ []
+
+
+Overfull \hbox (0.34091pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 reg-u-lar-ized im-age re-con-struc-tion for PET^^Q. In: \T1/ppl/
+m/it/12 15th In-ter-na-tional
+ []
+
+[72]
+Overfull \hbox (2.77243pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 ^^P  Deep learn-ing for biomed-i-cal im-age re-con-struc-tion: A
+ sur-vey^^Q.
+ []
+
+
+Overfull \hbox (6.09723pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Zhicheng Zhang et al. ^^P  A sparse-view CT re-con-struc-tion 
+method
+ []
+
+
+Overfull \hbox (6.78537pt too wide) in paragraph at lines 297--297
+\T1/ppl/m/n/12 based on com-bi-na-tion of DenseNet and de-con-vo-lu-tion^^Q. In
+: \T1/ppl/m/it/12 IEEE
+ []
+
+[73]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
+ (./main.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
+(./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Appendices/AppendixA.aux
+))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 837586DFC6C31CCB3BDD57BAD947EB8E;3276.
+(rerunfilecheck)             Checksum: BC4771F5AD93BF6C9360215A61172271;10084.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52490 strings out of 492982
- 1115435 string characters out of 6134895
- 1455637 words of memory out of 5000000
- 55204 multiletter control sequences out of 15000+600000
- 614917 words of font info for 205 fonts, out of 8000000 for 9000
+ 64581 strings out of 492982
+ 1496781 string characters out of 6134895
+ 1916663 words of memory out of 5000000
+ 66880 multiletter control sequences out of 15000+600000
+ 620263 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,20n,82p,10377b,2967s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,20n,100p,10377b,2967s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -3118,15 +3768,16 @@ bb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
-o/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (43 pages, 268577 bytes).
+s/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (99 pages, 6777117 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
- 496 compressed objects within 5 object streams
- 130 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2123 PDF objects out of 2487 (max. 8388607)
+ 1602 compressed objects within 17 object streams
+ 327 named destinations out of 1000 (max. 500000)
+ 637 words of extra memory for PDF output out of 10000 (max. 10000000)
 
