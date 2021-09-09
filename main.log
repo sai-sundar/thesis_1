@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  8 SEP 2021 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  9 SEP 2021 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3109,19 +3109,20 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 50.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 50.
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 59.
+ [4 <./Figures/PET_det-crop.pdf>]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 90.
 
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-[4 <./Figures/PET_det-crop.pdf>]
-<./Figures/x_ray_geo-crop.pdf, id=706, 292.09125pt x 206.7725pt>
+) [5] [6] [7]
+<./Figures/x_ray_geo-crop.pdf, id=747, 292.09125pt x 206.7725pt>
 File: ./Figures/x_ray_geo-crop.pdf Graphic file (type pdf)
 <use ./Figures/x_ray_geo-crop.pdf>
-Package pdftex.def Info: ./Figures/x_ray_geo-crop.pdf  used on input line 80.
+Package pdftex.def Info: ./Figures/x_ray_geo-crop.pdf  used on input line 183.
 (pdftex.def)             Requested size: 282.81912pt x 200.22517pt.
- [5 <./Figures/x_ray_geo-crop.pdf>] [6]
-[7] [8]
+
+[8 <./Figures/x_ray_geo-crop.pdf>] [9] [10]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -3211,47 +3212,43 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [9] [10]
-<./Figures/convol-crop.pdf, id=779, 182.6825pt x 197.73875pt>
+ [11] [12]
+<./Figures/convol-crop.pdf, id=805, 182.6825pt x 197.73875pt>
 File: ./Figures/convol-crop.pdf Graphic file (type pdf)
 <use ./Figures/convol-crop.pdf>
-Package pdftex.def Info: ./Figures/convol-crop.pdf  used on input line 232.
+Package pdftex.def Info: ./Figures/convol-crop.pdf  used on input line 308.
 (pdftex.def)             Requested size: 161.60916pt x 174.93692pt.
-<Figures/relu-crop.pdf, id=784, 263.98625pt x 196.735pt>
+ [13 <./Figures/convol-crop.pdf>]
+<Figures/relu-crop.pdf, id=830, 263.98625pt x 196.735pt>
 File: Figures/relu-crop.pdf Graphic file (type pdf)
 <use Figures/relu-crop.pdf>
-Package pdftex.def Info: Figures/relu-crop.pdf  used on input line 245.
+Package pdftex.def Info: Figures/relu-crop.pdf  used on input line 321.
 (pdftex.def)             Requested size: 242.4199pt x 180.66216pt.
- [11] [12 <./Figures/convol-crop.pdf> <./Figures/relu-crop.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./Figures/relu-crop.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->]
-<Figures/maxP-crop.pdf, id=818, 309.155pt x 147.55125pt>
+<Figures/maxP-crop.pdf, id=832, 309.155pt x 147.55125pt>
 File: Figures/maxP-crop.pdf Graphic file (type pdf)
 <use Figures/maxP-crop.pdf>
-Package pdftex.def Info: Figures/maxP-crop.pdf  used on input line 259.
+Package pdftex.def Info: Figures/maxP-crop.pdf  used on input line 335.
 (pdftex.def)             Requested size: 242.4199pt x 115.70413pt.
-
-Overfull \hbox (36.67169pt too wide) in paragraph at lines 324--325
+ [14 <./Figures/relu-crop.pdf>]
+Overfull \hbox (36.67169pt too wide) in paragraph at lines 400--401
  [][] 
  []
 
-<Figures/transposed.pdf, id=826, 165.90782pt x 185.82524pt>
+[15 <./Figures/maxP-crop.pdf>]
+<Figures/transposed.pdf, id=874, 165.90782pt x 185.82524pt>
 File: Figures/transposed.pdf Graphic file (type pdf)
 <use Figures/transposed.pdf>
-Package pdftex.def Info: Figures/transposed.pdf  used on input line 335.
+Package pdftex.def Info: Figures/transposed.pdf  used on input line 411.
 (pdftex.def)             Requested size: 202.01454pt x 226.26694pt.
-[13 <./Figures/maxP-crop.pdf>]
-<Figures/fcn-crop.pdf, id=845, 534.99875pt x 143.53625pt>
+<Figures/fcn-crop.pdf, id=878, 534.99875pt x 143.53625pt>
 File: Figures/fcn-crop.pdf Graphic file (type pdf)
 <use Figures/fcn-crop.pdf>
-Package pdftex.def Info: Figures/fcn-crop.pdf  used on input line 344.
+Package pdftex.def Info: Figures/fcn-crop.pdf  used on input line 420.
 (pdftex.def)             Requested size: 404.02908pt x 108.40314pt.
-) [14 <./Figures/transposed.pdf>] [15 <./Figures/fcn-crop.pdf>]
+ [16 <./Figures/transposed.pdf> <./Figures/fcn-crop.pdf>]) [17]
 \openout2 = `Chapters/Chapter2.aux'.
 
- (./Chapters/Chapter2.tex [16
+ (./Chapters/Chapter2.tex [18
 
 
 
@@ -3264,31 +3261,31 @@ m-age (Gong
  []
 
 1: section
-[17]
-<./Figures/dl_mi.pdf, id=899, 380.42125pt x 217.81375pt>
+[19]
+<./Figures/dl_mi.pdf, id=934, 380.42125pt x 217.81375pt>
 File: ./Figures/dl_mi.pdf Graphic file (type pdf)
 <use ./Figures/dl_mi.pdf>
 Package pdftex.def Info: ./Figures/dl_mi.pdf  used on input line 18.
 (pdftex.def)             Requested size: 323.22449pt x 185.06943pt.
- [18 <./Figures/dl_mi.pdf>] [19]
-<./Figures/direct-crop.pdf, id=940, 395.4775pt x 161.60374pt>
+ [20 <./Figures/dl_mi.pdf>] [21]
+<./Figures/direct-crop.pdf, id=976, 395.4775pt x 161.60374pt>
 File: ./Figures/direct-crop.pdf Graphic file (type pdf)
 <use ./Figures/direct-crop.pdf>
 Package pdftex.def Info: ./Figures/direct-crop.pdf  used on input line 57.
 (pdftex.def)             Requested size: 323.22449pt x 132.07947pt.
- [20 <./Figures/direct-crop.pdf>] [21])
-[22]
+ [22 <./Figures/direct-crop.pdf>] [23])
+[24]
 \openout2 = `Chapters/Chapter3.aux'.
 
  (./Chapters/Chapter3.tex
 Chapter 3.
 1: section
-[23
+[25
 
 
 
 ]
-<./Figures/three-step-crop.pdf, id=992, 503.8825pt x 60.225pt>
+<./Figures/three-step-crop.pdf, id=1031, 503.8825pt x 60.225pt>
 File: ./Figures/three-step-crop.pdf Graphic file (type pdf)
 <use ./Figures/three-step-crop.pdf>
 Package pdftex.def Info: ./Figures/three-step-crop.pdf  used on input line 20.
@@ -3312,21 +3309,21 @@ Package scrlayer-scrpage Warning: \headheight to low.
 Overfull \vbox (15.32729pt too high) has occurred while \output is active []
 
 
-[24 <./Figures/three-step-crop.pdf>]
-<./Figures/denoise-crop.pdf, id=1015, 518.93875pt x 186.6975pt>
+[26 <./Figures/three-step-crop.pdf>]
+<./Figures/denoise-crop.pdf, id=1058, 518.93875pt x 186.6975pt>
 File: ./Figures/denoise-crop.pdf Graphic file (type pdf)
 <use ./Figures/denoise-crop.pdf>
 Package pdftex.def Info: ./Figures/denoise-crop.pdf  used on input line 58.
 (pdftex.def)             Requested size: 404.02908pt x 145.36421pt.
- [25] [26 <./Figures/denoise-crop.pdf>]
-<./Figures/dugan-crop.pdf, id=1053, 503.8825pt x 333.245pt>
+ [27] [28 <./Figures/denoise-crop.pdf>]
+<./Figures/dugan-crop.pdf, id=1099, 503.8825pt x 333.245pt>
 File: ./Figures/dugan-crop.pdf Graphic file (type pdf)
 <use ./Figures/dugan-crop.pdf>
 Package pdftex.def Info: ./Figures/dugan-crop.pdf  used on input line 85.
 (pdftex.def)             Requested size: 404.02908pt x 267.20653pt.
 
-[27 <./Figures/dugan-crop.pdf>]
-<./Figures/super-crop.pdf, id=1081, 390.45876pt x 140.525pt>
+[29 <./Figures/dugan-crop.pdf>]
+<./Figures/super-crop.pdf, id=1130, 390.45876pt x 140.525pt>
 File: ./Figures/super-crop.pdf Graphic file (type pdf)
 <use ./Figures/super-crop.pdf>
 Package pdftex.def Info: ./Figures/super-crop.pdf  used on input line 124.
@@ -3337,21 +3334,21 @@ Overfull \hbox (0.91753pt too wide) in paragraph at lines 130--132
  im-ages from
  []
 
-[28 <./Figures/super-crop.pdf>]
-<./Figures/dataset_gen-crop.pdf, id=1108, 527.9725pt x 405.515pt>
+[30 <./Figures/super-crop.pdf>]
+<./Figures/dataset_gen-crop.pdf, id=1159, 527.9725pt x 405.515pt>
 File: ./Figures/dataset_gen-crop.pdf Graphic file (type pdf)
 <use ./Figures/dataset_gen-crop.pdf>
 Package pdftex.def Info: ./Figures/dataset_gen-crop.pdf  used on input line 161
 .
 (pdftex.def)             Requested size: 399.991pt x 307.21693pt.
-<./Figures/PET_sample-crop.pdf, id=1109, 198.7425pt x 198.7425pt>
+<./Figures/PET_sample-crop.pdf, id=1160, 198.7425pt x 198.7425pt>
 File: ./Figures/PET_sample-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_sample-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_sample-crop.pdf  used on input line 168.
 
 (pdftex.def)             Requested size: 202.01454pt x 202.0202pt.
- [29 <./Figures/dataset_gen-crop.pdf>]
-<./Figures/CT_sample-crop.pdf, id=1154, 198.7425pt x 199.74625pt>
+ [31 <./Figures/dataset_gen-crop.pdf>]
+<./Figures/CT_sample-crop.pdf, id=1206, 198.7425pt x 199.74625pt>
 File: ./Figures/CT_sample-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_sample-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_sample-crop.pdf  used on input line 183.
@@ -3362,19 +3359,19 @@ Underfull \hbox (badness 1158) in paragraph at lines 184--184
 e pairs from the 
  []
 
-[30 <./Figures/PET_sample-crop.pdf>]
+[32 <./Figures/PET_sample-crop.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-[31 <./Figures/CT_sample-crop.pdf>]
-<./Figures/deepPET-crop.pdf, id=1195, 549.05125pt x 310.15875pt>
+[33 <./Figures/CT_sample-crop.pdf>]
+<./Figures/deepPET-crop.pdf, id=1252, 549.05125pt x 310.15875pt>
 File: ./Figures/deepPET-crop.pdf Graphic file (type pdf)
 <use ./Figures/deepPET-crop.pdf>
 Package pdftex.def Info: ./Figures/deepPET-crop.pdf  used on input line 222.
 (pdftex.def)             Requested size: 404.02908pt x 228.2408pt.
- [32 <./Figures/deepPET-crop.pdf>]
-<./Figures/PET_with_dp-crop.pdf, id=1216, 303.1325pt x 313.17pt>
+ [34 <./Figures/deepPET-crop.pdf>]
+<./Figures/PET_with_dp-crop.pdf, id=1274, 303.1325pt x 313.17pt>
 File: ./Figures/PET_with_dp-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_with_dp-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_with_dp-crop.pdf  used on input line 267
@@ -3384,54 +3381,54 @@ Package pdftex.def Info: ./Figures/PET_with_dp-crop.pdf  used on input line 267
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/PET_MLEM-crop.pdf, id=1217, 493.845pt x 338.26375pt>
+<./Figures/PET_MLEM-crop.pdf, id=1275, 493.845pt x 338.26375pt>
 File: ./Figures/PET_MLEM-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_MLEM-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_MLEM-crop.pdf  used on input line 302.
 (pdftex.def)             Requested size: 323.22449pt x 221.39145pt.
-<./Figures/CT_with_dp-crop.pdf, id=1218, 530.98375pt x 375.4025pt>
+<./Figures/CT_with_dp-crop.pdf, id=1276, 530.98375pt x 375.4025pt>
 File: ./Figures/CT_with_dp-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_with_dp-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_with_dp-crop.pdf  used on input line 309.
 
 (pdftex.def)             Requested size: 323.22449pt x 228.51974pt.
-<./Figures/CT_roi2-crop.pdf, id=1219, 470.75874pt x 301.125pt>
+<./Figures/CT_roi2-crop.pdf, id=1277, 470.75874pt x 301.125pt>
 File: ./Figures/CT_roi2-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_roi2-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_roi2-crop.pdf  used on input line 317.
 (pdftex.def)             Requested size: 323.22449pt x 206.75642pt.
-[33] [34 <./Figures/PET_with_dp-crop.pdf> <./Figures/PET_MLEM-crop.pdf
+[35] [36 <./Figures/PET_with_dp-crop.pdf> <./Figures/PET_MLEM-crop.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Figures/PET_MLEM-crop.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->] [35 <./Figures/CT_with_dp-crop.pdf> <./Figures/CT_roi2-crop.pdf
+>] [37 <./Figures/CT_with_dp-crop.pdf> <./Figures/CT_roi2-crop.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Figures/CT_roi2-crop.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >]
-<./Figures/PET_ip2-crop.pdf, id=1414, 313.17pt x 532.99126pt>
+<./Figures/PET_ip2-crop.pdf, id=1475, 313.17pt x 532.99126pt>
 File: ./Figures/PET_ip2-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_ip2-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_ip2-crop.pdf  used on input line 327.
 (pdftex.def)             Requested size: 323.22449pt x 550.12572pt.
-<./Figures/CT_ip2-crop.pdf, id=1415, 455.7025pt x 735.74875pt>
+<./Figures/CT_ip2-crop.pdf, id=1476, 455.7025pt x 735.74875pt>
 File: ./Figures/CT_ip2-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_ip2-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_ip2-crop.pdf  used on input line 334.
 (pdftex.def)             Requested size: 323.22449pt x 521.86884pt.
- [36] [37 <./Figures/PET_ip2-crop.pdf>] [38 <./Figures/CT_ip2-crop.pdf>]
-[39] [40]) [41]
+ [38] [39 <./Figures/PET_ip2-crop.pdf>] [40 <./Figures/CT_ip2-crop.pdf>]
+[41] [42]) [43]
 \openout2 = `Chapters/Chapter4.aux'.
 
- (./Chapters/Chapter4.tex [42
+ (./Chapters/Chapter4.tex [44
 
 
 
 ]
 Chapter 4.
 1: section
-[43] [44]
-<Figures/general_enc-crop.pdf, id=1554, 410.53375pt x 338.26375pt>
+[45] [46]
+<Figures/general_enc-crop.pdf, id=1621, 410.53375pt x 338.26375pt>
 File: Figures/general_enc-crop.pdf Graphic file (type pdf)
 <use Figures/general_enc-crop.pdf>
 Package pdftex.def Info: Figures/general_enc-crop.pdf  used on input line 30.
@@ -3442,56 +3439,56 @@ Overfull \hbox (2.98975pt too wide) in paragraph at lines 40--41
 nc-tion $\OML/zplm/b/it/12 F[] [] [] \U/fplmbb/m/n/12 R[] \OMS/zplm/m/n/12 !
  []
 
-[45 <./Figures/general_enc-crop.pdf>] [46] [47]
-<./Figures/dense_block-crop.pdf, id=1598, 124.465pt x 359.3425pt>
+[47 <./Figures/general_enc-crop.pdf>] [48] [49]
+<./Figures/dense_block-crop.pdf, id=1668, 124.465pt x 359.3425pt>
 File: ./Figures/dense_block-crop.pdf Graphic file (type pdf)
 <use ./Figures/dense_block-crop.pdf>
 Package pdftex.def Info: ./Figures/dense_block-crop.pdf  used on input line 79.
 
 (pdftex.def)             Requested size: 92.92496pt x 268.28896pt.
-<./Figures/densenet-crop.pdf, id=1599, 430.60875pt x 603.25375pt>
+<./Figures/densenet-crop.pdf, id=1669, 430.60875pt x 603.25375pt>
 File: ./Figures/densenet-crop.pdf Graphic file (type pdf)
 <use ./Figures/densenet-crop.pdf>
 Package pdftex.def Info: ./Figures/densenet-crop.pdf  used on input line 88.
 (pdftex.def)             Requested size: 335.34486pt x 469.80884pt.
-<./Figures/u_net-crop.pdf, id=1600, 533.995pt x 415.5525pt>
+<./Figures/u_net-crop.pdf, id=1670, 533.995pt x 415.5525pt>
 File: ./Figures/u_net-crop.pdf Graphic file (type pdf)
 <use ./Figures/u_net-crop.pdf>
 Package pdftex.def Info: ./Figures/u_net-crop.pdf  used on input line 144.
 (pdftex.def)             Requested size: 323.22449pt x 251.54002pt.
- [48 <./Figures/dense_block-crop.pdf>] [49 <./Figures/densenet-crop.pdf>] [50 <
+ [50 <./Figures/dense_block-crop.pdf>] [51 <./Figures/densenet-crop.pdf>] [52 <
 ./Figures/u_net-crop.pdf>]
-<./Figures/data-crop.pdf, id=1665, 383.4325pt x 337.26pt>
+<./Figures/data-crop.pdf, id=1741, 383.4325pt x 337.26pt>
 File: ./Figures/data-crop.pdf Graphic file (type pdf)
 <use ./Figures/data-crop.pdf>
 Package pdftex.def Info: ./Figures/data-crop.pdf  used on input line 204.
 (pdftex.def)             Requested size: 323.22449pt x 284.32054pt.
 
-[51] [52 <./Figures/data-crop.pdf>]
+[53] [54 <./Figures/data-crop.pdf>]
 Overfull \hbox (13.13536pt too wide) in paragraph at lines 235--236
 \T1/ppl/m/n/12 based ap-proach, namely FBP-ConvNet Jin et al., [][]2017[][], an
 d a []pe-nal-ized weighted
  []
 
-[53]
-<./Figures/views_dense-crop.pdf, id=1729, 517.935pt x 298.11375pt>
+[55]
+<./Figures/views_dense-crop.pdf, id=1810, 517.935pt x 298.11375pt>
 File: ./Figures/views_dense-crop.pdf Graphic file (type pdf)
 <use ./Figures/views_dense-crop.pdf>
 Package pdftex.def Info: ./Figures/views_dense-crop.pdf  used on input line 247
 .
 (pdftex.def)             Requested size: 323.22449pt x 186.0477pt.
-<./Figures/views_unet-crop.pdf, id=1730, 517.935pt x 298.11375pt>
+<./Figures/views_unet-crop.pdf, id=1811, 517.935pt x 298.11375pt>
 File: ./Figures/views_unet-crop.pdf Graphic file (type pdf)
 <use ./Figures/views_unet-crop.pdf>
 Package pdftex.def Info: ./Figures/views_unet-crop.pdf  used on input line 255.
 
 (pdftex.def)             Requested size: 323.22449pt x 186.0477pt.
-<./Figures/results1-crop.pdf, id=1731, 387.4475pt x 571.13374pt>
+<./Figures/results1-crop.pdf, id=1812, 387.4475pt x 571.13374pt>
 File: ./Figures/results1-crop.pdf Graphic file (type pdf)
 <use ./Figures/results1-crop.pdf>
 Package pdftex.def Info: ./Figures/results1-crop.pdf  used on input line 301.
 (pdftex.def)             Requested size: 404.02908pt x 595.58604pt.
-<./Figures/result2-crop.pdf, id=1732, 387.4475pt x 571.13374pt>
+<./Figures/result2-crop.pdf, id=1813, 387.4475pt x 571.13374pt>
 File: ./Figures/result2-crop.pdf Graphic file (type pdf)
 <use ./Figures/result2-crop.pdf>
 Package pdftex.def Info: ./Figures/result2-crop.pdf  used on input line 308.
@@ -3513,31 +3510,31 @@ PGFPlots: reading {./Plots/Fig10.txt}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[54 <./Figures/views_dense-crop.pdf>] [55 <./Figures/views_unet-crop.pdf>]
+[56 <./Figures/views_dense-crop.pdf>] [57 <./Figures/views_unet-crop.pdf>]
 
-LaTeX Warning: Text page 56 contains only floats.
+LaTeX Warning: Text page 58 contains only floats.
 
-[56 <./Figures/results1-crop.pdf>]
+[58 <./Figures/results1-crop.pdf>]
 
-LaTeX Warning: Text page 57 contains only floats.
+LaTeX Warning: Text page 59 contains only floats.
 
-[57 <./Figures/result2-crop.pdf>] [58]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[59 <./Figures/result2-crop.pdf>] [60]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[59] [60] [61]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[61] [62] [63]
 Overfull \hbox (1.5898pt too wide) in paragraph at lines 534--535
 \T1/ppl/m/n/12 other al-ter-na-tive ar-chi-tec-tures is also be-ing ex-plored t
 o ar-rive at re-con-structed
  []
 
-[62]) [63]
+[64]) [65]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [64
+ (./Appendices/AppendixA.tex [66
 
 
 
@@ -3548,7 +3545,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
 1: section
-[65] [66
+[67] [68
 
 
 ]
@@ -3588,7 +3585,7 @@ n/12 38.5 (2018), pp. 1116^^U
  []
 
 1: section
-[67]
+[69]
 Overfull \hbox (25.99696pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 tion arith-metic for deep learn-ing^^Q. In: \T1/ppl/m/it/12 arXi
 v preprint arXiv:1603.07285
@@ -3600,7 +3597,7 @@ Overfull \hbox (19.92441pt too wide) in paragraph at lines 297--297
 ng: Overview
  []
 
-[68]
+[70]
 Overfull \hbox (2.01317pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 based ro-bust de-nois-ing of low-dose com-puted to-mog-ra-phy pe
 r-
@@ -3636,7 +3633,7 @@ Overfull \hbox (2.45712pt too wide) in paragraph at lines 297--297
 1/ppl/m/it/12 Jour-
  []
 
-[69]
+[71]
 Overfull \hbox (1.36089pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 CT im-age re-con-struc-tion^^Q. In: \T1/ppl/m/it/12 IEEE Trans-a
 c-tions on Med-i-cal Imag-
@@ -3666,7 +3663,7 @@ Overfull \hbox (8.7726pt too wide) in paragraph at lines 297--297
 /m/n/12 3.2 (2018), pp. 109^^U
  []
 
-[70]
+[72]
 Overfull \hbox (0.10121pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 ul-tra-sound im-age en-hance-ment^^Q. In: \T1/ppl/m/it/12 2018 I
 EEE In-ter-na-tional Ul-
@@ -3684,7 +3681,7 @@ Overfull \hbox (7.03754pt too wide) in paragraph at lines 297--297
 reprint arXiv:1906.02849
  []
 
-[71]
+[73]
 Overfull \hbox (6.6494pt too wide) in paragraph at lines 297--297
 []\T1/ppl/m/n/12 Franz Thaler et al. ^^P  Sparse-view CT re-con-struc-tion us-i
 ng wasser-
@@ -3714,7 +3711,7 @@ Overfull \hbox (0.34091pt too wide) in paragraph at lines 297--297
 m/it/12 15th In-ter-na-tional
  []
 
-[72]
+[74]
 Overfull \hbox (2.77243pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 ^^P  Deep learn-ing for biomed-i-cal im-age re-con-struc-tion: A
  sur-vey^^Q.
@@ -3732,7 +3729,7 @@ Overfull \hbox (6.78537pt too wide) in paragraph at lines 297--297
 : \T1/ppl/m/it/12 IEEE
  []
 
-[73]
+[75]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
  (./main.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
@@ -3740,9 +3737,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
 ))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BC4771F5AD93BF6C9360215A61172271;10084.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 9075606BC73446751A911DC166B7AB96;9982
+(rerunfilecheck)             After:  79AB28A90FA9A441798DD89DD18B70DF;10173.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3751,33 +3754,255 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 64581 strings out of 492982
- 1496781 string characters out of 6134895
- 1916663 words of memory out of 5000000
- 66880 multiletter control sequences out of 15000+600000
+ 64710 strings out of 492982
+ 1499164 string characters out of 6134895
+ 1916843 words of memory out of 5000000
+ 66924 multiletter control sequences out of 15000+600000
  620263 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,20n,100p,10377b,2967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
-e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplm
-bb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (99 pages, 6777117 bytes).
+pdfTeX warning (dest): name{algocf.87} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.30} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.158} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.149} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.137} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.130} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.114} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.108} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.106} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.92} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.76} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.160} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.151} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.147} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.138} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.131} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.128} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.120} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.109} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.107} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.103} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.96} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.93} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.90} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.84} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.79} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.75} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.71} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.66} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.63} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.60} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.58} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.56} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.50} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.34} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix*.167} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.166} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.165} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.163} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.156} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.155} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.146} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.144} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.139} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.136} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.132} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.126} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.122} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.121} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.119} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.118} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.116} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.104} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.100} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.97} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.95} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.91} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.88} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.80} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.77} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.74} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.73} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.72} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.67} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.65} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.62} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.59} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.57} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.53} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.49} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.44} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.40} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.39} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.33} has been referenced but does not exi
+st, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (101 pages, 6786062 bytes).
 PDF statistics:
- 2123 PDF objects out of 2487 (max. 8388607)
- 1602 compressed objects within 17 object streams
- 327 named destinations out of 1000 (max. 500000)
+ 2232 PDF objects out of 2487 (max. 8388607)
+ 1708 compressed objects within 18 object streams
+ 412 named destinations out of 1000 (max. 500000)
  637 words of extra memory for PDF output out of 10000 (max. 10000000)
 

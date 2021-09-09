@@ -2,45 +2,45 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Depiction of a circular \ac {PET} detector with detectors $d_p$ and $d_q$ connected with a \ac {LOR} indicated in gray.\relax }}{4}{figure.caption.19}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Fan-beam geometry \relax }}{5}{figure.caption.24}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Depiction of a neural network with an input layer, three hidden layers and an output layer\relax }}{10}{figure.caption.42}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Convolution of an input image of dimensions 5$\times $5 with a filter of dimensions 3$\times $3.(\cite {dumoulin2016guide})\relax }}{12}{figure.caption.48}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The \ac {ReLU} function\relax }}{12}{figure.caption.50}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Max pooling with 2$\times $2 filter and stride 1\relax }}{13}{figure.caption.52}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Architecture of a typical \ac {CNN}. This representation was first proposed by \cite {lecun1995convolutional}.\relax }}{14}{figure.caption.53}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Transposed convolution over a $2\times 2$ input to get a $4\times 4$ output. (\cite {dumoulin2016guide})\relax }}{14}{figure.caption.55}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces \ac {CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.\relax }}{15}{figure.caption.56}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Fan-beam geometry \relax }}{8}{figure.caption.39}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Depiction of a neural network with an input layer, three hidden layers and an output layer\relax }}{12}{figure.caption.51}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Convolution of an input image of dimensions 5$\times $5 with a filter of dimensions 3$\times $3.(\cite {dumoulin2016guide})\relax }}{13}{figure.caption.57}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The \ac {ReLU} function\relax }}{14}{figure.caption.59}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Max pooling with 2$\times $2 filter and stride 1\relax }}{15}{figure.caption.61}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Architecture of a typical \ac {CNN}. This representation was first proposed by \cite {lecun1995convolutional}.\relax }}{15}{figure.caption.62}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Transposed convolution over a $2\times 2$ input to get a $4\times 4$ output. (\cite {dumoulin2016guide})\relax }}{16}{figure.caption.64}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces \ac {CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.\relax }}{16}{figure.caption.65}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Deep Learning in Medical Image Reconstruction\relax }}{18}{figure.caption.58}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Direct image reconstruction with deep learning\relax }}{20}{figure.caption.63}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Deep Learning in Medical Image Reconstruction\relax }}{20}{figure.caption.67}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Direct image reconstruction with deep learning\relax }}{22}{figure.caption.72}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Proposed Deep Learning pipeline for Direct Image Reconstruction\relax }}{24}{figure.caption.67}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Representation of the denoising network. The inputs to the network were \ac {2D} grayscale slices with resolution $128\times {}128$ and the outputs were denoised sinograms.\relax }}{26}{figure.caption.71}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Representation of the \ac {DUGAN}, the image reconstruction block. This network was trained on denoised sinograms which were the outputs of the previous segment.\relax }}{27}{figure.caption.76}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Representation of the super resolution block. It consists of 8 residual blocks with Convolution, Batch normalization and PReLu.\relax }}{28}{figure.caption.82}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Data preparation\relax }}{29}{figure.caption.85}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Example PET sinogram-image pairs from the dataset\relax }}{30}{figure.caption.86}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Example CT sinogram-image pairs from the dataset \relax }}{31}{figure.caption.88}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Representation of DeepPET. The number of filters in each convolutional layer is labeled on top of each block.\relax }}{32}{figure.caption.95}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Image predictions by \ac {DUGAN}+SR, DeepPET and \ac {GT} for four \ac {PET} Images from different parts of the patient volume\relax }}{34}{figure.caption.99}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces \ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {PET} image along 4 regions of interest\relax }}{34}{figure.caption.101}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Image predictions by \ac {DUGAN}+ \ac {SR}, DeepPET and \ac {GT} are displayed for 3 \ac {CT} Images along different parts of the patient volume.\relax }}{35}{figure.caption.102}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces \ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {CT} image along 4 regions of interest\relax }}{35}{figure.caption.103}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Intensity Profile across the image (highlighted by a yellow line) for a \ac {PET} image prediction by \ac {DUGAN}, \ac {DUGAN}+SR and DeepPET compared with the \ac {GT}\relax }}{37}{figure.caption.104}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Intensity Profile for two \ac {CT} images (highlighted by a yellow line) predicted by \ac {DUGAN} and \ac {SR} compared with the \ac {GT}\relax }}{38}{figure.caption.105}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Proposed Deep Learning pipeline for Direct Image Reconstruction\relax }}{26}{figure.caption.76}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Representation of the denoising network. The inputs to the network were \ac {2D} grayscale slices with resolution $128\times {}128$ and the outputs were denoised sinograms.\relax }}{28}{figure.caption.80}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Representation of the \ac {DUGAN}, the image reconstruction block. This network was trained on denoised sinograms which were the outputs of the previous segment.\relax }}{29}{figure.caption.85}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Representation of the super resolution block. It consists of 8 residual blocks with Convolution, Batch normalization and PReLu.\relax }}{30}{figure.caption.91}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Data preparation\relax }}{31}{figure.caption.94}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Example PET sinogram-image pairs from the dataset\relax }}{32}{figure.caption.95}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Example CT sinogram-image pairs from the dataset \relax }}{33}{figure.caption.97}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Representation of DeepPET. The number of filters in each convolutional layer is labeled on top of each block.\relax }}{34}{figure.caption.104}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Image predictions by \ac {DUGAN}+SR, DeepPET and \ac {GT} for four \ac {PET} Images from different parts of the patient volume\relax }}{36}{figure.caption.108}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {PET} image along 4 regions of interest\relax }}{36}{figure.caption.110}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Image predictions by \ac {DUGAN}+ \ac {SR}, DeepPET and \ac {GT} are displayed for 3 \ac {CT} Images along different parts of the patient volume.\relax }}{37}{figure.caption.111}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces \ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {CT} image along 4 regions of interest\relax }}{37}{figure.caption.112}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Intensity Profile across the image (highlighted by a yellow line) for a \ac {PET} image prediction by \ac {DUGAN}, \ac {DUGAN}+SR and DeepPET compared with the \ac {GT}\relax }}{39}{figure.caption.113}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Intensity Profile for two \ac {CT} images (highlighted by a yellow line) predicted by \ac {DUGAN} and \ac {SR} compared with the \ac {GT}\relax }}{40}{figure.caption.114}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces General representation of an encoder-decoder architecture with fully convolutional layers and the proposed \ac {FBP} concatenations ($\bm {x}_1$ and $\bm {x}_2$) at two different resolutions $h_1 \times w_1$ and $h_2 \times w_2$\relax }}{45}{figure.caption.112}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Representation of a Dense Block with three layers.\relax }}{48}{figure.caption.120}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \ac {LRRCED}(D): Fully convolutional dense network with $\bm {x}_1$ at $64\times 64$ and $\bm {x}_2$ at $128\times 128$.\relax }}{49}{figure.caption.121}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \ac {LRRCED}(U): U-Net with $\bm {x}_1$ at $128\times 128$ and $\bm {x}_2$ at $256\times 256$.\relax }}{50}{figure.caption.123}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Samples from the dataset: Sinograms with different sparse-view configurations along with their corresponding \ac {FBP} estimate.\relax }}{52}{figure.caption.130}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Images reconstructed with LRR-CED(D) approach with different sparse-view configurations, i.e., projections with $N_\mathrm {a}=60,90$ and $120$.\relax }}{54}{figure.caption.139}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Images reconstructed with LRR-CED(U) approach with different Sparse-View configurations, i.e., projections with $N_\mathrm {a}=60,90$ and $120$.\relax }}{55}{figure.caption.140}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Comparative analysis for 60 views: From the top left, we have \ac {GT} image, reconstructions with \ac {LRRCED}(D) and \ac {LRRCED}(U). In the second row reconstructed images with FBP-ConvNet, PWLS-TV and \ac {FBP}. \relax }}{56}{figure.caption.143}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparative analysis for 90 views: From the top we have \ac {GT} image, reconstructions with \ac {LRRCED}(D) and \ac {LRRCED}(U). In the second row reconstructed images with FBP-ConvNet, PWLS-TV and \ac {FBP}.\relax }}{57}{figure.caption.144}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Intensity plot profile for the region marked in red from Figure~\ref {fig:res_60} for PWLS-TV, \ac {GT}, \ac {LRRCED}(D), \ac {LRRCED}(U) and FBP-ConvNet.\relax }}{58}{figure.caption.145}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Intensity plot profile for the region marked in red from Figure~\ref {fig:res_90} for PWLS-TV, \ac {GT}, \ac {LRRCED}(D), \ac {LRRCED}(U) and FBP-ConvNet.\relax }}{58}{figure.caption.146}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Comparison of single concatenations for the particular case of 90 views evaluated with \ac {SSIM} on 5 different patients from the dataset. The best metrics are found with concatenation at $128\times 128$.\relax }}{60}{figure.caption.152}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Comparison of double concatenations for the particular case of 90 views evaluated with \ac {SSIM} on 5 different patients from the dataset. The best metrics are found with concatenations at $64\times 64$ and $128\times 128$ resolutions.\relax }}{61}{figure.caption.153}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Comparison of Average \ac {SSIM} for 5 different Patient data for 90 views with varying number of training samples. The configuration of the network is the one with best performance from the analysis in Figure~\ref {fig:c1}. (concatenations at $64\times 64$ and $128\times 128$). \relax }}{61}{figure.caption.154}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces General representation of an encoder-decoder architecture with fully convolutional layers and the proposed \ac {FBP} concatenations ($\bm {x}_1$ and $\bm {x}_2$) at two different resolutions $h_1 \times w_1$ and $h_2 \times w_2$\relax }}{47}{figure.caption.121}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Representation of a Dense Block with three layers.\relax }}{50}{figure.caption.129}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \ac {LRRCED}(D): Fully convolutional dense network with $\bm {x}_1$ at $64\times 64$ and $\bm {x}_2$ at $128\times 128$.\relax }}{51}{figure.caption.130}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \ac {LRRCED}(U): U-Net with $\bm {x}_1$ at $128\times 128$ and $\bm {x}_2$ at $256\times 256$.\relax }}{52}{figure.caption.132}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Samples from the dataset: Sinograms with different sparse-view configurations along with their corresponding \ac {FBP} estimate.\relax }}{54}{figure.caption.139}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Images reconstructed with LRR-CED(D) approach with different sparse-view configurations, i.e., projections with $N_\mathrm {a}=60,90$ and $120$.\relax }}{56}{figure.caption.148}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Images reconstructed with LRR-CED(U) approach with different Sparse-View configurations, i.e., projections with $N_\mathrm {a}=60,90$ and $120$.\relax }}{57}{figure.caption.149}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Comparative analysis for 60 views: From the top left, we have \ac {GT} image, reconstructions with \ac {LRRCED}(D) and \ac {LRRCED}(U). In the second row reconstructed images with FBP-ConvNet, PWLS-TV and \ac {FBP}. \relax }}{58}{figure.caption.152}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Comparative analysis for 90 views: From the top we have \ac {GT} image, reconstructions with \ac {LRRCED}(D) and \ac {LRRCED}(U). In the second row reconstructed images with FBP-ConvNet, PWLS-TV and \ac {FBP}.\relax }}{59}{figure.caption.153}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Intensity plot profile for the region marked in red from Figure~\ref {fig:res_60} for PWLS-TV, \ac {GT}, \ac {LRRCED}(D), \ac {LRRCED}(U) and FBP-ConvNet.\relax }}{60}{figure.caption.154}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Intensity plot profile for the region marked in red from Figure~\ref {fig:res_90} for PWLS-TV, \ac {GT}, \ac {LRRCED}(D), \ac {LRRCED}(U) and FBP-ConvNet.\relax }}{60}{figure.caption.155}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Comparison of single concatenations for the particular case of 90 views evaluated with \ac {SSIM} on 5 different patients from the dataset. The best metrics are found with concatenation at $128\times 128$.\relax }}{62}{figure.caption.161}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Comparison of double concatenations for the particular case of 90 views evaluated with \ac {SSIM} on 5 different patients from the dataset. The best metrics are found with concatenations at $64\times 64$ and $128\times 128$ resolutions.\relax }}{63}{figure.caption.162}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Comparison of Average \ac {SSIM} for 5 different Patient data for 90 views with varying number of training samples. The configuration of the network is the one with best performance from the analysis in Figure~\ref {fig:c1}. (concatenations at $64\times 64$ and $128\times 128$). \relax }}{63}{figure.caption.163}
 \addvspace {10\p@ }
