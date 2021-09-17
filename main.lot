@@ -3,17 +3,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Trainable Parameters comparison\relax }}{27}{table.caption.81}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Dataset Description\relax }}{31}{table.caption.97}
-\contentsline {table}{\numberline {3.3}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }}{35}{table.caption.111}
-\contentsline {table}{\numberline {3.4}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }}{38}{table.caption.113}
-\contentsline {table}{\numberline {3.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{38}{table.caption.119}
-\contentsline {table}{\numberline {3.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{38}{table.caption.120}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Architecture Summary.\relax }}{52}{table.caption.135}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Dataset Description\relax }}{53}{table.caption.142}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{57}{table.caption.154}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{57}{table.caption.155}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{61}{table.caption.163}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{62}{table.caption.164}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Trainable Parameters comparison\relax }}{29}{table.caption.90}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Dataset Description\relax }}{33}{table.caption.106}
+\contentsline {table}{\numberline {4.3}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }}{37}{table.caption.120}
+\contentsline {table}{\numberline {4.4}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }}{40}{table.caption.122}
+\contentsline {table}{\numberline {4.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{40}{table.caption.128}
+\contentsline {table}{\numberline {4.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{40}{table.caption.129}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Architecture Summary.\relax }}{54}{table.caption.144}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Dataset Description\relax }}{55}{table.caption.151}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{59}{table.caption.163}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{59}{table.caption.164}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{63}{table.caption.172}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{64}{table.caption.173}
 \addvspace {10\p@ }

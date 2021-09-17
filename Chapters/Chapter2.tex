@@ -1,70 +1,174 @@
-% Chapter 1
+\chapter{Neural Networks} 
 
-\chapter{Deep Learning and Tomographic Image Reconstruction} % Main chapter title
 
-\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\label{Chapter2}
 
-%----------------------------------------------------------------------------------------
-The impact of deep learning has been immense over the last few years in the field of medical imaging (\cite{litjens2017survey, greenspan2016guest}). Medical image reconstruction has also benefited hugely from the various advances in neural network architectures \cite{wang2020deep,yedder2021deep,reader2020deep}. In the specific case of \ac{CT} image reconstruction, there has been active interest in sparse-view and low-dose reconstruction scenarios. While with \ac{PET} reconstruction on the other hand, low-dose imaging and total body imaging have been on the forefront. In both cases, obtaining high quality reconstructed images is a challenging task. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods require the knowledge of noise and artifacts statistics and generally have longer reconstruction times \cite{kim2014combining}. Deep learning-based methods on the other hand are claimed to achieve reconstructed images with quality on par with iterative techniques and in a much shorter time frame \cite{leuschner2021quantitative}. In this work, the focus has been on \ac{CT} and \ac{PET} image reconstruction. 
-Image reconstruction corresponds to the task of mapping raw projection data retrieved from the detector to image domain data. As depicted in Fig~\ref{fig:dl}, one can broadly identify three different categories of approaches for the implementation of deep learning within the framework of medical image reconstruction:
-\begin{itemize}
-	\item[(i)] methods that use deep learning as an image processing step that improves the quality of the raw data and/or the reconstructed image (\cite{gong2018pet, maier2018deep}); 
-	\item[(ii)] methods that embed deep-learning image processing techniques in the iterative reconstruction framework to accelerate convergence or to improve image quality (\cite{xie2019generative,kim2018penalized,gong2019iterative});
-	\item[(iii)] direct reconstruction with deep learning alone without any use of traditional reconstruction methods  (\cite{whiteley2019direct,zhu2018image,haeggstroem2018deeprec}).
-\end{itemize}
+Neural networks also known as \ac{ANN} are machine learning algorithms that form the basis of deep learning. They inherit name and structure from neurons in the brain. Biological neurons transmit signals to one another through complex networks. This interconnected networking is realized though various architectures by \ac{ANN}s. Sets of artificial neurons are stacked on top of each other to form a layer. A typical neural network consists of many such layers that are connected to each other. The first layer is called input layer, the final layer is termed output layer and the layers in-between are called hidden layers. A neural network with three hidden layers is depicted in Fig~\ref{fig:nn}. The transmission of data across the nodes or artificial neurons happens through the connections. Each and every node has a specific weight and threshold associated. The output from a node is passed through the connection only if the value is above the threshold. Neural network approaches are data-driven. Their performance improves as they learn through training on a dataset. 
 
-\begin{figure}[!htbp]
+\begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{./Figures/dl_mi.pdf}
-	\caption{Deep Learning in Medical Image Reconstruction}
-	\label{fig:dl}
+\begin{neuralnetwork}[height=5]
+	\newcommand{\x}[2]{$x_#2$}
+	\newcommand{\y}[2]{$\hat{y}_#2$}
+	\newcommand{\hfirst}[2]{\small $h^{(1)}_#2$}
+	\newcommand{\hsecond}[2]{\small $h^{(2)}_#2$}
+	\inputlayer[count=4, bias=true, title=Input\\layer, text=\x]
+	\hiddenlayer[count=5, bias=false, title=Hidden\\layer 1, text=\hfirst] \linklayers
+	\hiddenlayer[count=4, bias=false, title=Hidden\\layer 2, text=\hsecond] \linklayers
+	\hiddenlayer[count=3, bias=false, title=Hidden\\layer 3, text=\hsecond] \linklayers
+	\outputlayer[count=2, title=Output\\layer, text=\y] \linklayers
+\end{neuralnetwork}
+\caption{Depiction of a neural network with an input layer, three hidden layers and an output layer}\label{fig:nn}
 \end{figure}
 
 
-Each of these categories are discussed along with reference to existing state of the art methods for \ac{CT} and \ac{PET} image reconstruction in this chapter. 
+To further understand the working of a neural network, we can imagine each node to be solving the problem of linear regression. For example consider a node with four inputs ($x_i, i=1,2,\dots4$), four weights ($w_i, i=1,2,\dots4$) and a bias:
 
-\section{Data Corrections or Post-processing}
-
-The use of deep learning for the development of either data corrections or post-reconstruction  image based approaches has shown potential to improve the quality of reconstructed images. While it is possible to train a \ac{CNN} to regress directly from the measurement (raw data) domain to the image domain, the use of \ac{CNN} entirely in one particular domain makes it fast and relatively easy to implement. The motivation behind using deep learning architectures for these processing task is the extremely well documented performance in denoising and super resolution tasks. Data corrections involve improving the measurement data either though denoising or finding missing projection angle data. Post-processing in the image domain on the other hand consists of improving images reconstructed with standard reconstruction methods. 
-
-
-An example of data corrections by improving the raw data through scatter correction is proposed in \cite{maier2018deep}. In this work a modified U-Net is used to estimate scatter and correct the raw data in order to improve \ac{CT} images. Sinogram repair is proposed by \cite{whiteley2019cnn}, where a \ac{CNN} is utilized to predict missing projection data for total body \ac{PET} image reconstruction. The repaired sinograms eventually improve image reconstruction by standard methods. In \ac{CT} imaging too missing projection data in sparse-view setting is estimated. An example in this regard is proposed in \cite{lee2018deep}, where the authors use U-Net to map sparse-view sinograms to full-view sinograms and then reconstruct the images using \ac{FBP}. 
-
-
-
-Denoising the reconstructed \ac{PET} images with a deep convolutional network was done in \cite{gong2018pet}. The authors used perceptual loss along with \ac{MSE} to preserve qualitative and quantitative accuracy of the reconstructed images. The network was initially trained on simulated data and then fine-tuned on real patient data. The authors in \cite{jin2017deep} use U-Net with a residual connection for denoising and artefact removal in the sparse-view estimate, while the work in \cite{zhang2018sparse} uses DenseNet with deconvolution for the same purpose. It is interesting to note that the networks have an encoder-decoder structure, wherein the encoder finds a compact representation of the input domain and the decoder learns to map this representation to the target domain. The dimensions of the input are reduced through the encoder as we go deeper into the layers. On the other hand, each of the decoder layers samples up these feature maps to eventually arrive at the output dimensions. 
-
-
-
-\section{Unrolled Iterative Methods}
-
-Despite resulting in an improvement of the reconstructed output, the above mentioned methods do not directly intervene with the reconstruction process. This can be done using the two distinct frameworks (ii) and (iii). The first one involves the incorporation of a deep neural network into an unrolled iterative algorithm where a trained neural network accelerates the convergence by improving the intermediate estimates in the iterations (\cite{gong2019iterative,xie2019generative,kim2018penalized}). The hybrid methodology of unrolled iterative networks combines model-based and neural network approaches exploring the benefits of both methods. 
-The paper by Gong et al. used a modified U-Net to represent images within the iterative reconstruction framework for \ac{PET} images. The deep learning architecture was trained on low-dose reconstructed images as input and high-dose reconstructed images as the output. The work by Xie et al. further extended this work by replacing the U-Net with a \ac{GAN} for image representation within the iterative framework. Kim et al incorporated a trained denoising convolutional neural network (DnCNN) along with a novel local linear fitting function into the iterative algorithm. The DnCNN which is trained on data with multiple noise levels improves the image estimate at each iteration. They used simulated and real patient data in their study. In \cite{gupta2018cnn}, a U-Net is used to encode the prior, i.e., to project the current estimate to the prior image set while gradient descent enforces measurement consistency. Neural networks can be also used to replace traditional operators in optimization strategies as shown by \cite{adler2018learned}. The reconstruction using these hybrid methods can be computationally expensive since it requires running an optimization procedure at test time.
-
-\section{Direct Reconstruction with Deep Learning}
-
-An alternative approach is using deep learning-based methods to directly map from projection to image space. Essentially neural network can be modeled to approximately learn  the inverse mapping from measurement($y$) to image ($x$). As represented in Fig~\ref{fig:direct}, a neural network ($F$) with parameters ($\theta$) can be represented as:
-
-\begin{equation}\label{eq:direct}
-x=\boldsymbol{F}_{\widehat{\boldsymbol{\theta}}} \boldsymbol{y}
+\begin{equation}
+\sum_{i=1}^{m} w_{i} x_{i}+\text { bias }=w_{1} x_{1}+w_{2} x_{2}+w_{3} x_{3}+w_{4} x_{4}+\text { bias }
 \end{equation}
 
-The challenge in this approach is the management of data and the number of parameters required for learning the mapping. Due to these challenges, this approach has been less explored compared to the two approaches discussed above. 
+The output of the node is the above summation after going through an activation function $a$:
+\begin{equation}
+\text { output }=a(x)=\left\{\begin{array}{l}
+1 \text { if } \sum w_{1} x_{1}+b \geq 0 \\
+0 \text { if } \sum w_{1} x_{1}+b<0
+\end{array}\right.
+\end{equation}
+In the above example, the given activation function of this node propagates the value $1$ only when the weighted sum of it's inputs is non-negative. When the condition of an activation function are met the output of this node becomes an input to the node to which it's connected. Due to the process of forwarding values through a network, an \ac{ANN} is also called feed-forward network. Complex networks with multiple layers of these nodes are used in practical tasks. An important category of machine learning task is supervised learning. It involves training a neural network on labeled datasets. The goal of training a neural network is to minimize a cost function that enforces the closeness of predicted and real output labels. During the training the network reorganizes it's weights based on the loss function. This process of updating weights is called optimization. Each update is aimed at reaching a minimum of the loss function. A popular optimization method is gradient descent. It guides the model in the direction of reducing errors to reach an optima. The development of back-propagation (\cite{rumelhart1986learning}) has been instrumental in successful implementation of optimization algorithms for neural networks.  
 
+
+\subsection{Convolutional Neural Networks}
+
+The neural network depicted in \ref{fig:nn} is an example of densely connected network, where all the neighboring nodes are connected with one another. As the size of data increases (say large image data), and the network becomes more complex, the number of parameters increases exponentially. To address this and also to be more suitable for image data \ac{CNN}s were formulated. \ac{CNN}s are extensively used in computer vision tasks like image classification, object detection, image segmentation (\cite{voulodimos2018deep}). The three main building blocks of a \ac{CNN} are Convolution, Activation and Pooling. Each of these layers are discussed below:
+
+\subsection{Convolution}
+
+Images are digitally stored in the form of 2D or 3D matrices depending on the format. A convolution kernel (also known as filter) is a matrix that operates on these images and transforms them based on the kernel values. These kernel values are also known as weights in the neural network terminology. Typically, the size of the kernel is much smaller than that of the image. Many sets of these kernels form the convolution layer of the \ac{CNN}.  The movement of the kernel over the image can be made either by a single pixel or multiple pixels. This step size is called stride ($s$). The resulting output of a convolution between filter and image is called a feature map. Consider a kernel $h$ and input image $f$ with $m$ rows and $n$ columns. Convolution between $h$ and $f$ results in a feature map $g$: 
+\begin{equation}
+g[m, n]=(h * f)[m, n]=\sum_{i} \sum_{j} h[i, j] f[m-i, n-j]
+\end{equation}
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.8\linewidth]{./Figures/direct-crop.pdf}
-	\caption{Direct image reconstruction with deep learning}
-	\label{fig:direct}
+	\includegraphics[width=0.4\linewidth]{./Figures/convol-crop.pdf}
+	\caption{Convolution of an input image of dimensions 5$\times$5 with a filter of dimensions 3$\times$3.(\cite{dumoulin2016guide})}
+	\label{fig:conv}
 \end{figure}
 
-The deep learning architecture proposed by Zhu et al.~\cite{zhu2018image} called AUTOMAP uses \ac{FC} layers (which encode the raw data information) followed with convolutional layers.
-The first three layers in this architecture are \ac{FC} layers with dimensions $2n^2$,$n^2$ and $n^2$ respectively where $n\times{}n$ is the dimension of the input image. The AUTOMAP requires the estimation of a huge number of parameters which makes it computationally intensive. Although initially developed for \ac{MRI}, AUTOMAP has been claimed to work on other imaging modalities too. Brain images encoded into sensor-domain sampling strategies with varying levels of additive white Gaussian noise were reconstructed with AUTOMAP.  Within the same concept of using \ac{FC} layers' architectures a three stage image reconstruction pipeline called DirectPET has been proposed to reduce associated computational issues  \cite{whiteley2019direct}. The first stage down-samples the sinogram data, following which a unique Radon transform layer encodes the transformation from sinogram to image space. Finally the estimated image is improved using a super resolution block. This work was applied to full body \ac{PET} images and remains the only approach that can reconstruct multiple slices simultaneously (up to 16 images). DeepPET is another approach implemented on simulated images using encoder-decoder architecture based on the neural network proposed by the visual geometric group \cite{haeggstroem2018deeprec}. Using realistic simulated data, they demonstrated a network that could reconstruct images faster, and with an image quality (in terms of root mean squared error) comparable to that of conventional iterative reconstruction techniques.  
+Given in Fig~\ref{fig:conv} is a representation of the convolution operation. Zero padding is used to manipulate the dimensions of the feature maps. In the above Figure above it is indicated with dotted lines. The function of padding here is to maintain same dimensions in the input image $f$ and the feature map $g$. A \ac{CNN} learns features from the input through many convolutional layers. The earlier layers learn general features like edges, contrast, the deep layers learn more abstract and finer details.  
+
+\subsection{Activation Layer}
+
+The activation layer that follows the convolution layer in a \ac{CNN} is most commonly the \ac{ReLU} activation function, depicted in Fig~\ref{fig:relu}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\linewidth]{relu-crop.pdf}
+	\caption{The \ac{ReLU} function}
+	\label{fig:relu}
+\end{figure}
 
 
-In \cite{li2019learning} the authors proposed an architecture termed iCT-Net  consisting of $12$ layers that are a combination of convolutions and modified fully-connected layers. The $12$ layers are separated into segments and are trained separately before being combined for end-to-end training. To reduce the number of parameters in learning the mapping for full resolution \ac{CT} reconstruction, \cite{fu2019hierarchical} proposed a breakdown of the problem into smaller fragments that can be mapped onto a hierarchical network architecture. The approach proposed in \cite{ye2018deep} converts the sinogram data into a stack of back projections for each angle, which are then fed into a \ac{CNN}. The spatial in-variance of the \ac{CNN} is exploited to learn the mapping from these single view stacked back projections onto reconstructed images. Currently, we observe that adversarial networks are increasingly used in scenarios with high-resolution images. In \cite{thaler2018sparse} a Wasserstein generative adversarial network \cite{arjovsky2017wasserstein} is proposed for sparse-view \ac{CT} image reconstruction. The authors used a combination of $L_1$ loss and adversarial loss to train their network. The generator in their work is a U-Net and the discriminator a typical classification \ac{CNN}. It is to be noted that the authors performed their experiments on down-sampled images of resolution $128\times 128$. Another methodology referred to as DUG-RECON \cite{kandarpa2020dug}, used a three-stage network to divide the image reconstruction problem into denoising, domain mapping and resolution improvement. They used a residual UNet for denoising the sinograms, then a double-UNet architecture to map the sinogram to image, and finally a super ResNet to improve image estimate. The approach was tested with both \ac{PET} and \ac{CT} data. 
+Many of the task based on images are non-linear in nature. Whether a computer vision task like identifying objects in an image or a medical imaging task involving tumor detection, the relationships are far from being linear. The \ac{ReLU} function increases this required non-linearity in the \ac{CNN}. 
 
+\subsection{Pooling Layer}
+
+The third building block of a \ac{CNN} is the pooling layer. Pooling operation is mainly used to reduce the dimensions of a tensor which enables faster computation. Max pooling is the most commonly used pooling operation. A max pooling operator of a particular size returns the maximum value of a selected region in the feature map. Similar to a filter it is implemented with a specific stride. A max pooling filter with $s=2$ is depicted in Fig~\ref{fig:mp}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\linewidth]{maxP-crop.pdf}
+	\caption{Max pooling with 2$\times$2 filter and stride 1}
+	\label{fig:mp}
+\end{figure}
+
+
+A \ac{CNN} with $2$ convolutional layers, $2$ activation layers and $2$ pooling layers is represented in Fig~\ref{fig:trad_cnn}. Layer number is given by $l$. The first and the last layer are the input and output respectively. Usually the last set of layers in a \ac{CNN} used for classification, regression tasks is a fully-connected layer which is similar to the neural network represented in Fig~\ref{fig:nn}. With the advent of powerful computation tools and efficient parallel processing, neural networks with many layers could be implemented. The term deep learning was coined for networks with this "deep" design (\cite{lecun2015deep}). Deep neural networks could be trained over large datasets and they outperformed many existing state of the art algorithms in computer vision. In this thesis we focus specifically on \ac{CNN}s under the umbrella of deep neural networks.  
+
+
+
+
+\begin{figure}[t!]
+	\centering
+	\begin{tikzpicture}
+	\node at (0.5,-1){\begin{tabular}{c}input image\\ $l = 0$\end{tabular}};
+	
+	\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
+	
+	\node at (3,3.5){\begin{tabular}{c}convolution \\+\\ activation\\ $l = 1$\end{tabular}};
+	
+	\draw[fill=black,opacity=0.2,draw=black] (2.75,1.25) -- (3.75,1.25) -- (3.75,2.25) -- (2.75,2.25) -- (2.75,1.25);
+	\draw[fill=black,opacity=0.2,draw=black] (2.5,1) -- (3.5,1) -- (3.5,2) -- (2.5,2) -- (2.5,1);
+	\draw[fill=black,opacity=0.2,draw=black] (2.25,0.75) -- (3.25,0.75) -- (3.25,1.75) -- (2.25,1.75) -- (2.25,0.75);
+	\draw[fill=black,opacity=0.2,draw=black] (2,0.5) -- (3,0.5) -- (3,1.5) -- (2,1.5) -- (2,0.5);
+	\draw[fill=black,opacity=0.2,draw=black] (1.75,0.25) -- (2.75,0.25) -- (2.75,1.25) -- (1.75,1.25) -- (1.75,0.25);
+	\draw[fill=black,opacity=0.2,draw=black] (1.5,0) -- (2.5,0) -- (2.5,1) -- (1.5,1) -- (1.5,0);
+	
+	\node at (4.5,-1){\begin{tabular}{c}pooling \\ $l = 3$\end{tabular}};
+	
+	\draw[fill=black,opacity=0.2,draw=black] (5,1.25) -- (5.75,1.25) -- (5.75,2) -- (5,2) -- (5,1.25);
+	\draw[fill=black,opacity=0.2,draw=black] (4.75,1) -- (5.5,1) -- (5.5,1.75) -- (4.75,1.75) -- (4.75,1);
+	\draw[fill=black,opacity=0.2,draw=black] (4.5,0.75) -- (5.25,0.75) -- (5.25,1.5) -- (4.5,1.5) -- (4.5,0.75);
+	\draw[fill=black,opacity=0.2,draw=black] (4.25,0.5) -- (5,0.5) -- (5,1.25) -- (4.25,1.25) -- (4.25,0.5);
+	\draw[fill=black,opacity=0.2,draw=black] (4,0.25) -- (4.75,0.25) -- (4.75,1) -- (4,1) -- (4,0.25);
+	\draw[fill=black,opacity=0.2,draw=black] (3.75,0) -- (4.5,0) -- (4.5,0.75) -- (3.75,0.75) -- (3.75,0);
+	
+	\node at (7,3.5){\begin{tabular}{c}convolution \\+\\ activation\\ $l = 4$\end{tabular}};
+	
+	\draw[fill=black,opacity=0.2,draw=black] (7.5,1.75) -- (8.25,1.75) -- (8.25,2.5) -- (7.5,2.5) -- (7.5,1.75);
+	\draw[fill=black,opacity=0.2,draw=black] (7.25,1.5) -- (8,1.5) -- (8,2.25) -- (7.25,2.25) -- (7.25,1.5);
+	\draw[fill=black,opacity=0.2,draw=black] (7,1.25) -- (7.75,1.25) -- (7.75,2) -- (7,2) -- (7,1.25);
+	\draw[fill=black,opacity=0.2,draw=black] (6.75,1) -- (7.5,1) -- (7.5,1.75) -- (6.75,1.75) -- (6.75,1);
+	\draw[fill=black,opacity=0.2,draw=black] (6.5,0.75) -- (7.25,0.75) -- (7.25,1.5) -- (6.5,1.5) -- (6.5,0.75);
+	\draw[fill=black,opacity=0.2,draw=black] (6.25,0.5) -- (7,0.5) -- (7,1.25) -- (6.25,1.25) -- (6.25,0.5);
+	\draw[fill=black,opacity=0.2,draw=black] (6,0.25) -- (6.75,0.25) -- (6.75,1) -- (6,1) -- (6,0.25);
+	\draw[fill=black,opacity=0.2,draw=black] (5.75,0) -- (6.5,0) -- (6.5,0.75) -- (5.75,0.75) -- (5.75,0);
+	
+	\node at (9.5,-1){\begin{tabular}{c}pooling\\ $l = 6$\end{tabular}};
+	
+	\draw[fill=black,opacity=0.2,draw=black] (10,1.75) -- (10.5,1.75) -- (10.5,2.25) -- (10,2.25) -- (10,1.75);
+	\draw[fill=black,opacity=0.2,draw=black] (9.75,1.5) -- (10.25,1.5) -- (10.25,2) -- (9.75,2) -- (9.75,1.5);
+	\draw[fill=black,opacity=0.2,draw=black] (9.5,1.25) -- (10,1.25) -- (10,1.75) -- (9.5,1.75) -- (9.5,1.25);
+	\draw[fill=black,opacity=0.2,draw=black] (9.25,1) -- (9.75,1) -- (9.75,1.5) -- (9.25,1.5) -- (9.25,1);
+	\draw[fill=black,opacity=0.2,draw=black] (9,0.75) -- (9.5,0.75) -- (9.5,1.25) -- (9,1.25) -- (9,0.75);
+	\draw[fill=black,opacity=0.2,draw=black] (8.75,0.5) -- (9.25,0.5) -- (9.25,1) -- (8.75,1) -- (8.75,0.5);
+	\draw[fill=black,opacity=0.2,draw=black] (8.5,0.25) -- (9,0.25) -- (9,0.75) -- (8.5,0.75) -- (8.5,0.25);
+	\draw[fill=black,opacity=0.2,draw=black] (8.25,0) -- (8.75,0) -- (8.75,0.5) -- (8.25,0.5) -- (8.25,0);
+	
+	\node at (12,3.5){\begin{tabular}{c}fully connected\\ or\\ dense layer\\$l = 7$\end{tabular}};
+	
+	\draw[fill=black,draw=black,opacity=0.5] (10.5,0) -- (11,0) -- (12.5,1.75) -- (12,1.75) -- (10.5,0);
+	
+	\node at (13,-1){\begin{tabular}{c}output $l = 8$\end{tabular}};
+	
+	\draw[fill=black,draw=black,opacity=0.5] (12.5,0.5) -- (13,0.5) -- (13.65,1.25) -- (13.15,1.25) -- (12.5,0.5);
+	\end{tikzpicture}
+	\caption{Architecture of a typical \ac{CNN}. This representation was first proposed by \cite{lecun1995convolutional}.}
+	\label{fig:trad_cnn}
+\end{figure}
+
+\subsection{Neural Networks for Image Reconstruction}
+
+Image to image translation tasks require the \ac{CNN} to map from image in one domain to an image in another related domain. This requires the design of the \ac{CNN} to be quite different from the one depicted in Fig~\ref{fig:trad_cnn}. Convolution and pooling operations compress the input to obtain an abstract representation in lower dimensions. To transform the output into an image from the lower dimensional representation, transposed convolution operators are used. In contrast to the compressing nature of convolutions, they expand the input feature map. The combination of convolution+pooling and transposed convolutions are adjusted depending on the dimensions of the input and output images. Transposed convolution is shown in Fig~\ref{fig:tc}. Essentially the transposed convolution spatially reverses the dimensions of the convolution+pooling operation. 
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{transposed.pdf}
+	\caption{Transposed convolution over a $2\times2$ input to get a $4\times4$ output. (\cite{dumoulin2016guide})}
+	\label{fig:tc}
+\end{figure}
+
+Transposed convolutions are used in many tasks like super resolution, image segmentation, denoising and image reconstruction. This version of \ac{CNN} appropriate for image reconstruction is represented in Fig~\ref{fig:fcn}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\linewidth]{fcn-crop.pdf}
+	\caption{\ac{CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.}
+	\label{fig:fcn}
+\end{figure}
+
+These architectures are sometimes referred to as \ac{CED}, since they contain two distinct paths of down sampling of input and up sampling of lower dimensional representation. The building blocks described in this section essentially form the basis of \ac{CNN}s proposed in this thesis. The next chapter consists of a review of existing works in deep learning applied to medical image reconstruction. And the following chapters describe the proposed methods. 
 
 
 

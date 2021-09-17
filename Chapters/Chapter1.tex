@@ -1,48 +1,24 @@
 % Chapter Template
 
-\chapter{Introduction} % Main chapter title
+\chapter{Image Reconstruction} % Main chapter title
 
 \label{Chapter1} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-
-\section{Motivation}
-
-The use of deep learning in medical imaging has been on the rise over the last few years. It has widely been used in various tasks across medical imaging such as image segmentation  (\cite{ronneberger2015u,guo2019deep,sinha2019multi,dolz2018hyperdense,hatt2018first}), image denoising (\cite{kadimesetty2018convolutional,li2020sacnn,chen2017low,yang2018low}), image analysis (\cite{litjens2017survey,amyar20193,cui2018artificial}). %\noteAB{Add more references}. 
-Deep learning based algorithms produce faster results along with best possible quality in accordance with existing state of the art methods (\cite{leuschner2021quantitative}). Medical Image reconstruction too has benefited hugely with the advancement of deep learning (\cite{reader2020deep,zhang2020review}).
-Medical Image reconstruction corresponds to the task of mapping raw projection data retrieved from the detector to image domain data. During the course of this thesis, the focus has been towards \ac{PET} and \ac{CT} image reconstruction. Both these modalities present a unique of set of challenges for image reconstruction. 
- 
-\ac{PET} imaging is a form of emission tomography wherein the image reconstruction task revolves around identifying the radio-tracer distribution emitted from the patient. A \ac{PET} image gives functional information about the organs in a patient making it invaluable for oncology. Some of the challenges in \ac{PET} image reconstruction are scatter, attenuation and difficulty in identifying the exact annihilation point of the electron-positron. Despite being the most sensitive emission tomography modality, the number of photons captured is low relative to the photons emitted contributing to further image degradation. These challenges result in very noisy images when reconstructed with analytical algorithms. These challenges are addressed by  Iterative/Model-based approaches which take into account detector geometry, noise statistics and approximate scatter and attenuation correction resulting in better image quality. 
-
-\ac{CT} imaging on the other hand is an example of transmission tomography. The extent of attenuation undergone by X-Rays that pass through a patient are measured to obtain attenuation maps. In \ac{CT} imaging research, there has been active interest in sparse-view and low-dose reconstruction scenarios. In both cases, severe artifacts are introduced in  reconstructed images either due to incomplete projections or low counts. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods for require the knowledge of the noise and artifacts statistics and generally have longer reconstruction times (\cite{kim2014combining}). 
-
-
-The main tasks involved in image reconstruction can be broadly categorized into three: sinogram correction, domain translation from sinogram to image, and image correction. Algorithms either tackle the three task individually or simultaneously account for them. One can relate to these tasks in the domain of Computer Vision wherein deep learning architectures have revolutionized the field by producing the state of the art results in most applications (\cite{guo2016deep}). For example, effective use of deep learning-based methods is seen in dealing with image denoising (\cite{kadimesetty2018convolutional,li2020sacnn,chen2017low,yang2018low}), super resolution (\cite{ledig2017photo,lim2017enhanced}) and image-to-image translation (\cite{isola2017image,zhu2017unpaired}) tasks. The continuous improvement in the availability of public data has further propelled interest in data-driven medical image reconstruction making it an active area of research. This thesis aims to explore novel deep learning approaches for \ac{PET} and \ac{CT} image reconstruction. Most common ways to introduce deep learning architectures in the image reconstruction pipeline are for pre-processing to correct raw projection data from the detector and post-processing to improve images reconstructed with existing methods. Another way is to embed the network into an iterative algorithm to enable faster convergence. The relatively less explored way called direct image reconstruction is to utilize neural networks alone for the entire reconstruction process. In this thesis \ac{CNN} approaches are proposed for direct image reconstruction with neural networks. 
-
-
-\section{Thesis Organization}
-
-This thesis is divided into six chapters with the first two chapters being introduction and literature review, followed by three chapters that focus on different deep learning methods explored during the thesis, and finally conclusion and perspectives. In the introduction various aspects of \ac{PET} and \ac{CT} image reconstruction are discussed along with the relevant background in deep learning background. The second chapter throws light on deep learning applied to medical image reconstruction and reviews the state of the art approaches in the scope of this thesis. 
-In chapter 3 , we discuss reconstruction framework \ac{DUGAN} for \ac{PET} and \ac{CT} image reconstruction. A novel method for Sparse-view \ac{CT} reconstruction called \ac{LRRCED} is covered in chapter 4. A modified version of \ac{LRRCED} for total body \ac{PET} is discussed in chapter 5. Potential improvements and ideas for future work are presented in the final chapter. 
-
-%----------------------------------------------------------------------------------------
-%	SECTION 3
-%----------------------------------------------------------------------------------------
-
-%\section{Imaging Modalities and Reconstruction}
-
-
+Tomographic imaging is the process of observing an object through it's cross-sections. It is a non-invasive technique where the interior of an object is visualized without any clinical intervention. In tomographic imaging usually a detector measures the radiation after it's interaction with the object. The measured data is transformed into comprehensible images that can be analyzed by the radiologist. This process of mapping measured data into images is called as image reconstruction. This chapter presents an introduction to the imaging principles of \ac{PET} and \ac{CT}. Analytic and \ac{MBIR} methods are then discussed both from a general standpoint and with algorithms specific to the respective imaging modality.  
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
 \section{PET}
 
 
-\ac{PET} images provide functional information to the radiologist making them invaluable in image analysis. The application of \ac{PET} imaging has been on the rise in oncology, cardiology and neuropsychiatry. The increased application lead to the development of many novel reconstruction approaches targeting better image quality. In this section image reconstruction concepts specific to \ac{PET} are discussed. 
-
-The aim of image reconstruction in \ac{PET} is to predict the tracer distribution emitted from the patient. The emission is a result of positron emitting radionuclide injected into the patient which causes positron-electron annihilation. This annihilation results in the production of gamma photons that travel in opposite directions in accordance with the law of conservation of momentum. The simultaneous detection of these photons (also called coincidence events) enables the estimation of tracer distribution in \ac{PET} imaging. A \ac{PET} scanner detects the coincidence events through a set of detectors arranged in a circular fashion. This design of the scanner facilitates detection of coincidence photons between a pair of detectors ($d_p$ and $d_q$). The centers of two detectors are connected by a straight line called \ac{LOR}. Photon pairs that are not subject to scatter are a result of annihilation events that occur along a thin volume surrounding the \ac{LOR}. In \ac{PET}, $\boldx = \boldlambda$ is the distribution of a radiotracer delivered to the patient by injection, and is measured through the detection of pairs of $\gamma$-rays emitted in opposite directions (indirectly from the positron-emitting radiotracer).
+\ac{PET} images provide functional information to the radiologist making them invaluable in image analysis. The application of \ac{PET} imaging has been on the rise in oncology, cardiology and neuropsychiatry. The increased application lead to the development of many novel reconstruction approaches targeting better image quality. \ac{PET} is a form of emission tomography wherein the patient to be imaged emits radiation which is collected by a detector. This emission is a result of positron emitting radionuclide injected into the patient which causes positron-electron annihilation. Typical radio-tracers used in \ac{PET} are \ac{FDG}, \ac{FLT}, rubidium chloride, etc. A \ac{PET} setup requires a cyclotron facility in the vicinity to produce these radioactive isotopes. Each of these radio-tracers is characterized by a positron emitting radio isotope. The positron decay for a radioactive nuclei (${ }_{}^{18} F$ for example) can be written as follows:
+$$
+{ }_{9}^{18} F \rightarrow{ }_{+1}^{o} \beta+{ }_{8}^{18} O
+$$
+The positron emitted (${ }_{+1}^{o} \beta$) is an unstable particle and it almost immediately annihilates with an electron. This annihilation results in the production of gamma photons that travel in opposite directions in accordance with the law of conservation of momentum. The simultaneous detection of these photons (also called coincidence events) enables the estimation of tracer distribution. The aim of image reconstruction in \ac{PET} is to determine this tracer distribution. A \ac{PET} scanner detects the coincidence events through a set of detectors arranged in a circular fashion. This design of the scanner facilitates detection of coincidence photons between a pair of detectors ($d_p$ and $d_q$). The centers of two detectors are connected by a straight line called \ac{LOR}. Photon pairs that are not subject to scatter are a result of annihilation events that occur along a thin volume surrounding the \ac{LOR}. In \ac{PET}, $\boldlambda$ is the distribution of a radiotracer delivered to the patient by injection, and is measured through the detection of pairs of $\gamma$-rays emitted in opposite directions (indirectly from the positron-emitting radiotracer). 
 
 \begin{figure}[!htbp]
 	\centering
@@ -51,37 +27,88 @@ The aim of image reconstruction in \ac{PET} is to predict the tracer distributio
 	\label{fig:2dpet}
 \end{figure}
 
-The number of detected coincidence events is related to the \ac{LOR} ($L_{d_{p},d_{q}}$) connecting the centers of detectors $d_p$ and $d_q$ through a sensitivity function $\psi(\vec{r}=(x,y,z))$. It is a Poisson variable whose mean can be written as:
+ The number of detected coincidence events is related to the \ac{LOR} ($L_{d_{p},d_{q}}$) connecting the centers of detectors $d_p$ and $d_q$ through a sensitivity function $\psi(\vec{r}=(x,y,z))$. It is a Poisson variable whose mean can be written as:
 
 \begin{equation}\label{eq:analy}
-\left\langle p_{d_{p},d_{q}}\right\rangle=\tau \int_{\mathrm{FOV}} d \vec{r} \lambda(\vec{r}) \psi_{d_{p}, d_{q}}(\vec{r})
+\left\langle p_{d_{p},d_{q}}\right\rangle=\tau \int_{\mathrm{FOV}} d \vec{r} f(\vec{r}) \psi_{d_{p}, d_{q}}(\vec{r})
 \end{equation}
 
-where $\lambda(\vec{r})$ denotes tracer concentration and $\tau$ is the acquisition time. The tracer concentration is assumed to be contained within the \ac{FOV}. The reconstruction task can be summarized as estimating tracer concentration $\lambda$, given measured data $p_{d_{p},d_{q}}$, $(d_{p},d_{q})=1\dots N_{LOR}$. The above linear model is typically used by analytical algorithms. The measurement data is assumed to have been corrected for non-linear effects like scatter and random coincidences. Another approximation is that $\psi(\vec{r})=0$, except when $r\in L_{d_{p},d_{q}} $. The measured data are therefore modeled as line integrals of tracer distribution ($\lambda$): 
+where $f(\vec{r})$ denotes tracer concentration and $\tau$ is the acquisition time. The tracer concentration is assumed to be contained within the \ac{FOV}. The reconstruction task can be summarized as estimating tracer concentration $f$, given measured data $p_{d_{p},d_{q}}$, $(d_{p},d_{q})=1\dots N_{LOR}$. The above linear model is typically used by analytical algorithms. The measurement data is assumed to have been corrected for non-linear effects like scatter and random coincidences. Another approximation is that $\psi(\vec{r})=0$, except when $r\in L_{d_{p},d_{q}} $. The measured data are therefore modeled as line integrals of tracer distribution ($\lambda$): 
 
 \begin{equation}
 \label{eq:line}
-\left\langle p_{d_{p}, d_{q}}\right\rangle=\int_{L_{d_{p}, d_{q}}} d \vec{r} \lambda(\vec{r})
+\left\langle p_{d_{p}, d_{q}}\right\rangle=\int_{L_{d_{p}, d_{q}}} d \vec{r} f(\vec{r})
 \end{equation}
 
 The coincidences from the detector are typically rearranged either in listmode or sinogram format. List mode data is a sequential recording of coincidence events. Time and energy of each detected photon can also be recorded. It has special significance in time of flight imaging for \ac{PET}. Most analytical reconstruction algorithms on the other hand are tailor made for sinogram data format. Fig~\ref{fig:2dpet}, represents a trans-axial slice of a \ac{PET} scanner. One can model 2-D sinogram model with this representation. The variables $s$ and $\phi$ are utilized to relate the \ac{LOR} to the Cartesian co-ordinates $(x,y)$. The radial variable $s$ is the distance between the center of the detector ring and the \ac{LOR}, while angular variable ($\phi$) gives the orientation of the \ac{LOR}. 
 For a co-ordinate $t$ along the line, Eq~\ref{eq:line} now becomes:
 \begin{equation}\label{eq:line_sino}
 \begin{array}{c}
-p\left(s, \phi\right)=\int_{\infty}^{\infty} d t \lambda(x= s \cos\phi +t \sin \phi, 
+p\left(s, \phi\right)=\int_{\infty}^{\infty} d t f(x= s \cos\phi +t \sin \phi, 
 \left.y=s \sin \phi + t \cos \phi\right)
 \end{array}
 \end{equation}
 
 Through the line integral approximation and keeping in context the corrected \ac{PET} data, $p_{d{a},d_{b}}\approx p(s,\phi)$. The function that maps the tracer distribution onto the line integrals is called as the x-ray transform. It is equivalent to the 2D version of the Radon transform. 
 
+\section{CT}
+% Write a paragraph on CT imaging
 
-\subsection{Analytic Reconstruction}
+\ac{CT} imaging is a form of transmission tomography. The high resolution images obtained from \ac{CT} scans have many applications. They are extensively used in diagnosis of muscle, tissue and bone disorders. They serve a guide for surgery planning and also to pin-point exact location of tumors. In emergency situations like a road accident, \ac{CT} scan is utilized to check for internal bleeding. However, the radiation passed through the patient has been a topic of constant debate in this imaging modality. Research in recent times has been focusing on methodologies to reduce radiation while keeping the image quality intact. 
 
-The starting point of analytic reconstruction is the central slice theorem. It states that 2D Fourier transform of the image ($\Lambda$) is related to the 1D Fourier transform of the x-ray transform as follows:
+
+A typical \ac{CT} imaging setup consists of a X-ray source, the object to be imaged and detectors to measure the extent of attenuation experienced by the X-rays. When X-rays are passed through an object they suffer attenuation due to scatter and absorption. Scattering occurs when a X-ray photon dislodges an electron by transferring a part of it's energy. This phenomenon also called Compton scatter is depicted in Fig~\ref{fig:com}. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{./Figures/compton-crop.pdf}
+	\caption{Depiction of Compton scatter}
+	\label{fig:com}
+\end{figure}
+
+Complete absorption happens through photo-electric effect where the entire energy of the x-ray photon is transferred to the electron. The difference is seen in Fig~\ref{fig:photo}, where the incident photon disappears after scatter. 
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{./Figures/photo-crop.pdf}
+	\caption{Depiction of Photo-electric effect}
+	\label{fig:photo}
+\end{figure}
+
+
+Different materials exhibit different absorption properties hence have unique linear attenuation co-efficient. Let the intensities of incident x-ray and the one after absorption be $I_{0}$ and $I_{a}$ respectively. From Beer-Lambert's law, we have:
+
+\begin{equation}\label{eq:BL}
+I_{a} = I_{0} \cdot \exp (-p) 
+\end{equation}
+
+where p is the line integral of attenuation coefficients along the path of the x-ray photons. Similar to \ref{eq:line}, measured data in \ac{CT} can be modeled with line integrals $p$:
+\begin{equation}\label{eq:l_CT}
+p =\ln \frac{I_{a}}{I_{0}} 
+\end{equation}
+The material specific property of attenuation ($\mu$) varies with the energy of the incoming X-ray. It reduces with the increase in energy of the X-ray. A cross-sectional \ac{CT} image consists of 
+
+Over the years many imaging geometries have been developed to maximize detector efficiency and obtain better image quality. The first generation of \ac{CT} scanners consisted of X-ray beam source and a small detector that rotated and linearly translated around the patient. It had much longer scanning time compared to modern \ac{CT} scanners. The second generation setup consisted of fan-beam source with an array of detectors. The motion was similar to that of the first generation. The third generation fan beam geometry is depicted in Fig~\ref{fig:xgeo}, the motion was restricted to rotation of the source-detector setup. The fourth generation consisted of stationary circular array of detectors similar to \ac{PET} with a rotating source. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\linewidth]{./Figures/x_ray_geo-crop.pdf}
+	\caption{Fan-beam geometry: the source and the detector rotate around the object}
+	\label{fig:xgeo}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\linewidth]{./Figures/cbct-crop.pdf}
+	\caption{Cone-beam geometry: the source rotates around the patient while the bed is translated creating a helical scan.}
+	\label{fig:cbct}
+\end{figure}
+A representation of a modern helical cone beam scanner is shown in Fig~\ref{fig:cbct}. The cone-beam source is rotated around the patient while the bed translates linearly resulting in a helical orbit. The detector is a 2D array of crystals making it more efficient and faster for data acquisition.
+
+\section{Analytic Reconstruction}
+
+The starting point of analytic reconstruction is the central slice theorem. It states that 2D Fourier transform of the image ($f$) is related to the 1D Fourier transform of the x-ray transform as follows:
 
 \begin{equation}
-P(v, \phi)=\Lambda\left(v_{x}=v \cos \phi, v_{y}=v \sin \phi\right)
+P(v, \phi)=f\left(v_{x}=v \cos \phi, v_{y}=v \sin \phi\right)
 \end{equation} 
 
 where
@@ -90,16 +117,16 @@ where
 P(v, \phi)=(\mathcal{F} p)(v, \phi)=\int_{\mathbb{R}} d s p(s, \phi) \exp (-2 \pi i s v)
 \end{equation}
 
-and $v$ is the frequency variable associated with $s$. In the context of tomographic reconstruction this theorem has the following implication: given the measurement data for all projection angles $\phi \in [0,\pi]$, the radial line sweeps all the frequencies hence making it possible to compute $\Lambda(v_{x},v_{y})$ for $(v_{x},v_{y})\in \mathbb{R}^2$. The image $\lambda$ can then be estimated by finding the inverse 2D Fourier transform. 
+and $v$ is the frequency variable associated with $s$. In the context of tomographic image reconstruction this theorem has the following implication: given the measurement data for all projection angles $\phi \in [0,\pi]$, the radial line sweeps all the frequencies hence making it possible to compute $f(v_{x},v_{y})$ for $(v_{x},v_{y})\in \mathbb{R}^2$. The image $\lambda$ can then be estimated by finding the inverse 2D Fourier transform. 
 
 \subsubsection{\ac{FBP}}
 
 One of the most used reconstruction algorithms across modalities is the filtered back-projection algorithm. The version with continuous sampling is written as follows:
- 
+
 
 \begin{equation}
 \begin{array}{l}
-\lambda(x, y)=\left(X^{*} p^{F}\right)(x, y)= 
+f(x, y)=\left(X^{*} p^{F}\right)(x, y)= 
 \int_{0}^{\pi} d \phi p^{F}(s=x \cos \phi+y \sin \phi, \phi)
 \end{array}
 \end{equation}
@@ -131,11 +158,12 @@ where $x$ is the image for a set of pixels $(i,j)$, $\boldy_f$ are the filtered 
 
 
 
-\subsection{Model-based Reconstruction}
+
+\section{Model-Based Image Reconstruction (MBIR)}
 
 Analytical methods are faster to implement and practical in a clinical setting but they are vulnerable to noise. The assumptions made in analytical formations are that the measurements are continuous and the solutions are of integral formulation. Sampling is done to the data a posteriori. They are also highly susceptible to system geometry. Since the 80's, \ac{MBIR} techniques (\cite{Shepp1982,fessler2000statistical}) became the standard approach. As they model the stochasticity of the system, they are more robust to noise as compared with \ac{FBP}, and can be completed with a penalty term for additional control over the noise (\cite{depierro1995}). They also incorporate corrections for scatter and are independent of detector geometry.
 
-\subsubsection{Data Model}
+\subsection{Data Model for PET}
 The starting point of any model-based method is the data model. The measurement $\boldy$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries:
 \begin{equation}\label{eq:poisson}
 \boldy \sim \mathrm{Poisson}(\boldybar(\boldx))
@@ -152,7 +180,31 @@ where $\boldA \in \bbR^{n\times m}$ is a system matrix such that each entry $[\b
 \end{equation} 
 
 
-\subsubsection{\ac{MLEM}}
+\subsection{Data Model for CT}
+Let an image be represented by $\boldx \in \bbR^m$ and the scanner measurement by $\boldb \in \bbR^n$ where $m$ is the number of voxels and $n$ is the number of measurements. In \ac{2D} \ac{CT} imaging $n$ depends on the number of detectors $N_\mathrm{d}$ and the number of angles $N_\mathrm{a}$. The task of medical image reconstruction corresponds to finding a mapping from $\boldb$ to $\boldx$. The measurement $\boldb$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries, i.e.,
+\begin{equation}\label{eq:pCT}
+\boldb \sim \mathrm{Poisson}(\boldbbar(\boldx))
+\end{equation}    
+where, $\boldb  =  [b_1(\boldx),\dots,b_n(\boldx)]\transp\in \bbR^n$ and $\boldbbar(\boldx)  =  [\bbar_1(\boldx),\dots,\bbar_n(\boldx)]\transp\in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
+
+The image $\boldx\in\mathbb{R}^m$ is a vectorized input image (also referred to as attenuation) representing the measure of X-rays absorbed or scattered as they pass through the patient. In a monochromatic setting, the expected number of counts $\boldbbar(\boldx)$  is given by the Beer-Lambert law, i.e.,
+\begin{equation}\label{eq:CT}
+\bbar_i(\boldx) = I \cdot \exp (-[\boldA \boldx]_i) \quad \forall i=1,\dots,n 
+\end{equation}
+where, $I$ is the intensity and $\boldA \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldA]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. Given the raw projections $\boldbbar$, we take the logarithm as follows
+\begin{equation}
+y_i = \log\left(\frac{I}{b_i}\right) \quad \forall i=1,\dots,n   
+\end{equation}
+where we assumed that the intensity $I$ is sufficiently high so that $b_i>0$ for all $i$. Image reconstruction is based on finding a suitable image $\boldxhat$ that approximately solves 
+\begin{equation}\label{eq:pb2solve}
+\boldy = \boldA \boldxhat 
+\end{equation} 
+
+where $\boldy  =  [y_1,\dots,y_n]\transp\in \bbR^m$. The reconstruction can also be achieved with more sophisticated iterative techniques that account for the stochastic properties of the measurement \eqref{eq:poisson} \cite{nuyts1998iterative,Elbakri2002}.
+
+In a sparse-view setting, the number of rotation angles of the detector is decreased in order to reduce the radiation passing through the patient. This implies a reduction in the number of projection angles in the measurement $\boldy$.
+
+\subsection{Maximum Likelihood Expectation Maximization (MLEM)}
 The most famous model based method for \ac{PET} image reconstruction is the \ac{MLEM} algorithm. The cost function for \ac{MLEM} is based on Poisson likelihood given as follows:
 \begin{equation}\label{eq:poisson_like}
 \operatorname{Pr}\{\boldybar \mid \boldx\}=\prod_{j=1}^{N_{L o R}} \exp \left(-\left\langle y_{j}\right\rangle\right)\left\langle y_{j}\right\rangle^{y_{j}} / y_{j} !
@@ -183,7 +235,7 @@ where $y_j$ are measured data corrected for random and scatter, $\alpha_{j}$ is 
 
 
 
-\subsubsection{OSEM}
+\subsection{OSEM}
 
 The \ac{OSEM} algorithm is a modification of the \ac{MLEM} algorithm which made it computationally practical for implementation in clinical setting. The \ac{LOR} data is divided into $\bm{S}$ disjoint subsets: $J_{1}, \cdots, J_{S} \subset\left[1, \cdots, N_{\text {LOR }}\right]$. Each of the parallel projection is assigned to a unique subset: $c, c+S, c+2S, \cdots, \leq N_{\phi}$ to the subset $J_{c+1}$. \ac{MLEM} (Eqn~\ref{eq:mlem}) is applied to each of the subsets individually in an orderly fashion. Subset $J_{N\bmod S}$ is used at iteration $N$:
 
@@ -197,48 +249,10 @@ i=1, \ldots, m
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
-\subsection{CT}
-% Write a paragraph on CT imaging
-
-\ac{CT} imaging is a form of transmission tomography. The high resolution images obtained from a \ac{CT} scans have many applications. They are extensively used in diagnosis of muscle, tissue and bone disorders. They serve a guide for surgery planning and also to pin-point exact location of tumors. In emergency situations like a road accident, \ac{CT} scan is utilized to check for internal bleeding. However, the radiation passed through the patient has been a topic of constant debate in this imaging modality. Research in recent times has been focusing on methodologies to reduce radiation while keeping the image quality intact. 
-
-
-A typical \ac{CT} imaging setup consists of a X-ray source, the object to be imaged and detectors to measure the extent of attenuation experienced by the X-rays. When X-rays are passed through an object they suffer attenuation due to scatter and absorption. Different materials exhibit different absorption properties hence have unique linear attenuation co-efficient.  Over the years many imaging geometries have been developed to maximize detector efficiency and obtain better image quality. Fan beam geometry depicted in Fig~\ref{fig:xgeo} was utilized in the experiments undertaken in this thesis. The analytic algorithm \ac{FBP} discussed above is relevant even in the context of \ac{CT} imaging. In the following section, the \ac{CT} data model for model-based method is discussed along with a standard iterative technique for reconstruction. 
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.7\linewidth]{./Figures/x_ray_geo-crop.pdf}
-	\caption{Fan-beam geometry }
-	\label{fig:xgeo}
-\end{figure}
-
-\subsection{Model Based Reconstruction}
-Let an image be represented by $\boldx \in \bbR^m$ and the scanner measurement by $\boldb \in \bbR^n$ where $m$ is the number of voxels and $n$ is the number of measurements. In \ac{2D} \ac{CT} imaging $n$ depends on the number of detectors $N_\mathrm{d}$ and the number of angles $N_\mathrm{a}$. The task of medical image reconstruction corresponds to finding a mapping from $\boldb$ to $\boldx$. The measurement $\boldb$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries, i.e.,
-\begin{equation}\label{eq:pCT}
-\boldb \sim \mathrm{Poisson}(\boldbbar(\boldx))
-\end{equation}    
-where, $\boldb  =  [b_1(\boldx),\dots,b_n(\boldx)]\transp\in \bbR^n$ and $\boldbbar(\boldx)  =  [\bbar_1(\boldx),\dots,\bbar_n(\boldx)]\transp\in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
-
-The image $\boldx\in\mathbb{R}^m$ is a vectorized input image (also referred to as attenuation) representing the measure of X-rays absorbed or scattered as they pass through the patient. In a monochromatic setting, the expected number of counts $\boldbbar(\boldx)$  is given by the Beer-Lambert law, i.e.,
-\begin{equation}\label{eq:CT}
-\bbar_i(\boldx) = I \cdot \exp (-[\boldA \boldx]_i) \quad \forall i=1,\dots,n 
-\end{equation}
-where, $I$ is the intensity and $\boldA \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldA]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. Given the raw projections $\boldbbar$, we take the logarithm as follows
-\begin{equation}
-y_i = \log\left(\frac{I}{b_i}\right) \quad \forall i=1,\dots,n   
-\end{equation}
-where we assumed that the intensity $I$ is sufficiently high so that $b_i>0$ for all $i$. Image reconstruction is based on finding a suitable image $\boldxhat$ that approximately solves 
-\begin{equation}\label{eq:pb2solve}
-\boldy = \boldA \boldxhat 
-\end{equation} 
- 
-where $\boldy  =  [y_1,\dots,y_n]\transp\in \bbR^m$. The reconstruction can also be achieved with more sophisticated iterative techniques that account for the stochastic properties of the measurement \eqref{eq:poisson} \cite{nuyts1998iterative,Elbakri2002}.
-
-In a sparse-view setting, the number of rotation angles of the detector is decreased in order to reduce the radiation passing through the patient. This implies a reduction in the number of projection angles in the measurement $\boldy$.
 
 
 
-\subsubsection{\ac{WLS}}
+\subsection{\ac{WLS}}
 
 One of the most common iterative techniques for \ac{CT} image reconstruction is the \ac{WLS} method, the image $\xhat$ is estimated by minimizing the following:
 
@@ -248,197 +262,31 @@ One of the most common iterative techniques for \ac{CT} image reconstruction is 
 
 where $W=\operatorname{diag}\left\{w_{i}\right\}$ is the diagonal weighting matrix that constitutes for the variance of each ray and $\|z\|_{W}^{2}=z^{\prime} W z$. Despite the statistical weighting, due to the noise in measurements and ill-conditioned problem of image reconstruction the image estimate will still be noisy. 
 
-An improvement to the above can be brought by finding a balance between the desired a priori characteristics of the image and the data fitting. This balance is realized through a regularized \ac{WLS} cost function:
+\subsection{Penalized MBIR}
+An improvement to the above mentioned \ac{MBIR} algorithms can be brought by finding a balance between the desired a priori characteristics of the image and the data fitting. This balance is realized through a regularized cost function.
 
-\begin{equation}
-\hat{x}=\underset{x \succeq 0}{\arg \min } \Psi(x), \quad \Psi(x) \triangleq \frac{1}{2}\|y-A x\|_{W}^{2}+\beta R(x)
-\end{equation} 
-
-
-where $R(x)$ is the regularization term, that enforces piece-wise smoothness on the image and $\beta$ the regularization parameter. The usual choice for $R$ is an edge preserving regularizer that penalized the differences between neighboring voxels:
+\subsubsection{Absolute Difference}
+One such form of regularization is introduced through an edge preserving regularizer that penalized the differences between neighboring voxels:
 
 \begin{equation}
 R(x)=\sum_{j=1}^{n_{\mathrm{p}}} \sum_{k \in \mathcal{N}_{j}} \psi_{j k}\left(x_{j}-x_{k}\right)
-\end{equation}    
+\end{equation}
 
-where $N_j$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels.
+where $R(x)$ is the regularization term, that enforces piece-wise smoothness on the image and $\beta$ the regularization parameter. $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels. Adding the penalty term in the cost function of \ac{WLS} we get:
+ 
+\begin{equation}
+\hat{x}=\underset{x \succeq 0}{\arg \min } \Psi(x), \quad \Psi(x) \triangleq \frac{1}{2}\|y-A x\|_{W}^{2}+\beta R(x)
+\end{equation} 
+   
 
-Sparse-view \ac{CT} image reconstruction problem has been explored during the course of this thesis. Sparse-view \ac{CT} image reconstruction is an under-determined problem due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. Consider a 2D digital image $x[p,q]$, discrete form of \ac{TV} can be written as:
+where $N_j$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. 
+
+\subsubsection{Total Variation (TV)}
+Complex image reconstruction problems like sparse-view \ac{CT} are under-determined due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. Consider a 2D digital image $x[p,q]$, discrete form of \ac{TV} can be written as:
 
 \begin{equation}
 \sum_{p} \sum_{p}|x[p, q]-x[p-1, q]|+|x[p, q]-x[p, q-1]|
 \end{equation}    
 
 This is an an-isotropic version of \ac{TV} regularization. Images reconstructed with \ac{TV}, sometimes have inexplicable artifacts due to the fact that the absolute value potential is not differentiable at $0$. 
-
-\section{Neural networks}
-
-Neural networks also known as \ac{ANN} are machine learning algorithms that form the basis of deep learning. They inherit name and structure from neurons in the brain. Biological neurons transmit signals to one another through complex networks. This interconnected networking is realized though various architectures by \ac{ANN}s. Sets of artificial neurons are stacked on top of each other to form a layer. A typical neural network consists of many such layers that are connected to each other. The first layer is called input layer, the final layer is termed output layer and the layers in-between are called hidden layers. A neural network with three hidden layers is depicted in Fig~\ref{fig:nn}. The transmission of data across the nodes or artificial neurons happens through the connections. Each and every node has a specific weight and threshold associated. The output from a node is passed through the connection only if the value is above the threshold. Neural network approaches are data-driven. Their performance improves as they learn through training on a dataset. 
-
-\begin{figure}
-	\centering
-\begin{neuralnetwork}[height=5]
-	\newcommand{\x}[2]{$x_#2$}
-	\newcommand{\y}[2]{$\hat{y}_#2$}
-	\newcommand{\hfirst}[2]{\small $h^{(1)}_#2$}
-	\newcommand{\hsecond}[2]{\small $h^{(2)}_#2$}
-	\inputlayer[count=4, bias=true, title=Input\\layer, text=\x]
-	\hiddenlayer[count=5, bias=false, title=Hidden\\layer 1, text=\hfirst] \linklayers
-	\hiddenlayer[count=4, bias=false, title=Hidden\\layer 2, text=\hsecond] \linklayers
-	\hiddenlayer[count=3, bias=false, title=Hidden\\layer 3, text=\hsecond] \linklayers
-	\outputlayer[count=2, title=Output\\layer, text=\y] \linklayers
-\end{neuralnetwork}
-\caption{Depiction of a neural network with an input layer, three hidden layers and an output layer}\label{fig:nn}
-\end{figure}
-
-
-To further understand the working of a neural network, we can imagine each node to be solving the problem of linear regression. For example consider a node with four inputs ($x_i, i=1,2,\dots4$), four weights ($w_i, i=1,2,\dots4$) and a bias:
-
-\begin{equation}
-\sum_{i=1}^{m} w_{i} x_{i}+\text { bias }=w_{1} x_{1}+w_{2} x_{2}+w_{3} x_{3}+w_{4} x_{4}+\text { bias }
-\end{equation}
-
-The output of the node is the above summation after going through an activation function $a$:
-\begin{equation}
-\text { output }=a(x)=\left\{\begin{array}{l}
-1 \text { if } \sum w_{1} x_{1}+b \geq 0 \\
-0 \text { if } \sum w_{1} x_{1}+b<0
-\end{array}\right.
-\end{equation}
-In the above example, the given activation function of this node propagates the value $1$ only when the weighted sum of it's inputs is non-negative. When the condition of an activation function are met the output of this node becomes an input to the node to which it's connected. Due to the process of forwarding values through a network, an \ac{ANN} is also called feed-forward network. Complex networks with multiple layers of these nodes are used in practical tasks. An important category of machine learning task is supervised learning. It involves training a neural network on labeled datasets. The goal of training a neural network is to minimize a cost function that enforces the closeness of predicted and real output labels. During the training the network reorganizes it's weights based on the loss function. This process of updating weights is called optimization. Each update is aimed at reaching a minimum of the loss function. A popular optimization method is gradient descent. It guides the model in the direction of reducing errors to reach an optima. The development of back-propagation (\cite{rumelhart1986learning}) has been instrumental in successful implementation of optimization algorithms for neural networks.  
-
-
-\subsection{Convolutional Neural Networks}
-
-The neural network depicted in \ref{fig:nn} is an example of densely connected network, where all the neighboring nodes are connected with one another. As the size of data increases (say large image data), and the network becomes more complex, the number of parameters increases exponentially. To address this and also to be more suitable for image data \ac{CNN}s were formulated. \ac{CNN}s are extensively used in computer vision tasks like image classification, object detection, image segmentation (\cite{voulodimos2018deep}). The three main building blocks of a \ac{CNN} are Convolution, Activation and Pooling. Each of these layers are discussed below:
-
-\subsection{Convolution}
-
-Images are digitally stored in the form of 2D or 3D matrices depending on the format. A convolution kernel (also known as filter) is a matrix that operates on these images and transforms them based on the kernel values. These kernel values are also known as weights in the neural network terminology. Typically, the size of the kernel is much smaller than that of the image. Many sets of these kernels form the convolution layer of the \ac{CNN}.  The movement of the kernel over the image can be made either by a single pixel or multiple pixels. This step size is called stride ($s$). The resulting output of a convolution between filter and image is called a feature map. Consider a kernel $h$ and input image $f$ with $m$ rows and $n$ columns. Convolution between $h$ and $f$ results in a feature map $g$: 
-\begin{equation}
-g[m, n]=(h * f)[m, n]=\sum_{i} \sum_{j} h[i, j] f[m-i, n-j]
-\end{equation}
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.4\linewidth]{./Figures/convol-crop.pdf}
-	\caption{Convolution of an input image of dimensions 5$\times$5 with a filter of dimensions 3$\times$3.(\cite{dumoulin2016guide})}
-	\label{fig:conv}
-\end{figure}
-
-Given in Fig~\ref{fig:conv} is a representation of the convolution operation. Zero padding is used to manipulate the dimensions of the feature maps. In the above Figure above it is indicated with dotted lines. The function of padding here is to maintain same dimensions in the input image $f$ and the feature map $g$. A \ac{CNN} learns features from the input through many convolutional layers. The earlier layers learn general features like edges, contrast, the deep layers learn more abstract and finer details.  
-
-\subsection{Activation Layer}
-
-The activation layer that follows the convolution layer in a \ac{CNN} is most commonly the \ac{ReLU} activation function, depicted in Fig~\ref{fig:relu}.
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.6\linewidth]{relu-crop.pdf}
-	\caption{The \ac{ReLU} function}
-	\label{fig:relu}
-\end{figure}
-
-
-Many of the task based on images are non-linear in nature. Whether a computer vision task like identifying objects in an image or a medical imaging task involving tumor detection, the relationships are far from being linear. The \ac{ReLU} function increases this required non-linearity in the \ac{CNN}. 
-
-\subsection{Pooling Layer}
-
-The third building block of a \ac{CNN} is the pooling layer. Pooling operation is mainly used to reduce the dimensions of a tensor which enables faster computation. Max pooling is the most commonly used pooling operation. A max pooling operator of a particular size returns the maximum value of a selected region in the feature map. Similar to a filter it is implemented with a specific stride. A max pooling filter with $s=2$ is depicted in Fig~\ref{fig:mp}.
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.6\linewidth]{maxP-crop.pdf}
-	\caption{Max pooling with 2$\times$2 filter and stride 1}
-	\label{fig:mp}
-\end{figure}
-
-
-A \ac{CNN} with $2$ convolutional layers, $2$ activation layers and $2$ pooling layers is represented in Fig~\ref{fig:trad_cnn}. Layer number is given by $l$. The first and the last layer are the input and output respectively. Usually the last set of layers in a \ac{CNN} used for classification, regression tasks is a fully-connected layer which is similar to the neural network represented in Fig~\ref{fig:nn}. With the advent of powerful computation tools and efficient parallel processing, neural networks with many layers could be implemented. The term deep learning was coined for networks with this "deep" design (\cite{lecun2015deep}). Deep neural networks could be trained over large datasets and they outperformed many existing state of the art algorithms in computer vision. In this thesis we focus specifically on \ac{CNN}s under the umbrella of deep neural networks.  
-
-
-
-
-\begin{figure}[t!]
-	\centering
-	\begin{tikzpicture}
-	\node at (0.5,-1){\begin{tabular}{c}input image\\ $l = 0$\end{tabular}};
-	
-	\draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
-	
-	\node at (3,3.5){\begin{tabular}{c}convolution \\+\\ activation\\ $l = 1$\end{tabular}};
-	
-	\draw[fill=black,opacity=0.2,draw=black] (2.75,1.25) -- (3.75,1.25) -- (3.75,2.25) -- (2.75,2.25) -- (2.75,1.25);
-	\draw[fill=black,opacity=0.2,draw=black] (2.5,1) -- (3.5,1) -- (3.5,2) -- (2.5,2) -- (2.5,1);
-	\draw[fill=black,opacity=0.2,draw=black] (2.25,0.75) -- (3.25,0.75) -- (3.25,1.75) -- (2.25,1.75) -- (2.25,0.75);
-	\draw[fill=black,opacity=0.2,draw=black] (2,0.5) -- (3,0.5) -- (3,1.5) -- (2,1.5) -- (2,0.5);
-	\draw[fill=black,opacity=0.2,draw=black] (1.75,0.25) -- (2.75,0.25) -- (2.75,1.25) -- (1.75,1.25) -- (1.75,0.25);
-	\draw[fill=black,opacity=0.2,draw=black] (1.5,0) -- (2.5,0) -- (2.5,1) -- (1.5,1) -- (1.5,0);
-	
-	\node at (4.5,-1){\begin{tabular}{c}pooling \\ $l = 3$\end{tabular}};
-	
-	\draw[fill=black,opacity=0.2,draw=black] (5,1.25) -- (5.75,1.25) -- (5.75,2) -- (5,2) -- (5,1.25);
-	\draw[fill=black,opacity=0.2,draw=black] (4.75,1) -- (5.5,1) -- (5.5,1.75) -- (4.75,1.75) -- (4.75,1);
-	\draw[fill=black,opacity=0.2,draw=black] (4.5,0.75) -- (5.25,0.75) -- (5.25,1.5) -- (4.5,1.5) -- (4.5,0.75);
-	\draw[fill=black,opacity=0.2,draw=black] (4.25,0.5) -- (5,0.5) -- (5,1.25) -- (4.25,1.25) -- (4.25,0.5);
-	\draw[fill=black,opacity=0.2,draw=black] (4,0.25) -- (4.75,0.25) -- (4.75,1) -- (4,1) -- (4,0.25);
-	\draw[fill=black,opacity=0.2,draw=black] (3.75,0) -- (4.5,0) -- (4.5,0.75) -- (3.75,0.75) -- (3.75,0);
-	
-	\node at (7,3.5){\begin{tabular}{c}convolution \\+\\ activation\\ $l = 4$\end{tabular}};
-	
-	\draw[fill=black,opacity=0.2,draw=black] (7.5,1.75) -- (8.25,1.75) -- (8.25,2.5) -- (7.5,2.5) -- (7.5,1.75);
-	\draw[fill=black,opacity=0.2,draw=black] (7.25,1.5) -- (8,1.5) -- (8,2.25) -- (7.25,2.25) -- (7.25,1.5);
-	\draw[fill=black,opacity=0.2,draw=black] (7,1.25) -- (7.75,1.25) -- (7.75,2) -- (7,2) -- (7,1.25);
-	\draw[fill=black,opacity=0.2,draw=black] (6.75,1) -- (7.5,1) -- (7.5,1.75) -- (6.75,1.75) -- (6.75,1);
-	\draw[fill=black,opacity=0.2,draw=black] (6.5,0.75) -- (7.25,0.75) -- (7.25,1.5) -- (6.5,1.5) -- (6.5,0.75);
-	\draw[fill=black,opacity=0.2,draw=black] (6.25,0.5) -- (7,0.5) -- (7,1.25) -- (6.25,1.25) -- (6.25,0.5);
-	\draw[fill=black,opacity=0.2,draw=black] (6,0.25) -- (6.75,0.25) -- (6.75,1) -- (6,1) -- (6,0.25);
-	\draw[fill=black,opacity=0.2,draw=black] (5.75,0) -- (6.5,0) -- (6.5,0.75) -- (5.75,0.75) -- (5.75,0);
-	
-	\node at (9.5,-1){\begin{tabular}{c}pooling\\ $l = 6$\end{tabular}};
-	
-	\draw[fill=black,opacity=0.2,draw=black] (10,1.75) -- (10.5,1.75) -- (10.5,2.25) -- (10,2.25) -- (10,1.75);
-	\draw[fill=black,opacity=0.2,draw=black] (9.75,1.5) -- (10.25,1.5) -- (10.25,2) -- (9.75,2) -- (9.75,1.5);
-	\draw[fill=black,opacity=0.2,draw=black] (9.5,1.25) -- (10,1.25) -- (10,1.75) -- (9.5,1.75) -- (9.5,1.25);
-	\draw[fill=black,opacity=0.2,draw=black] (9.25,1) -- (9.75,1) -- (9.75,1.5) -- (9.25,1.5) -- (9.25,1);
-	\draw[fill=black,opacity=0.2,draw=black] (9,0.75) -- (9.5,0.75) -- (9.5,1.25) -- (9,1.25) -- (9,0.75);
-	\draw[fill=black,opacity=0.2,draw=black] (8.75,0.5) -- (9.25,0.5) -- (9.25,1) -- (8.75,1) -- (8.75,0.5);
-	\draw[fill=black,opacity=0.2,draw=black] (8.5,0.25) -- (9,0.25) -- (9,0.75) -- (8.5,0.75) -- (8.5,0.25);
-	\draw[fill=black,opacity=0.2,draw=black] (8.25,0) -- (8.75,0) -- (8.75,0.5) -- (8.25,0.5) -- (8.25,0);
-	
-	\node at (12,3.5){\begin{tabular}{c}fully connected\\ or\\ dense layer\\$l = 7$\end{tabular}};
-	
-	\draw[fill=black,draw=black,opacity=0.5] (10.5,0) -- (11,0) -- (12.5,1.75) -- (12,1.75) -- (10.5,0);
-	
-	\node at (13,-1){\begin{tabular}{c}output $l = 8$\end{tabular}};
-	
-	\draw[fill=black,draw=black,opacity=0.5] (12.5,0.5) -- (13,0.5) -- (13.65,1.25) -- (13.15,1.25) -- (12.5,0.5);
-	\end{tikzpicture}
-	\caption{Architecture of a typical \ac{CNN}. This representation was first proposed by \cite{lecun1995convolutional}.}
-	\label{fig:trad_cnn}
-\end{figure}
-
-\subsection{Neural Networks for Image Reconstruction}
-
-Image to image translation tasks require the \ac{CNN} to map from image in one domain to an image in another related domain. This requires the design of the \ac{CNN} to be quite different from the one depicted in Fig~\ref{fig:trad_cnn}. Convolution and pooling operations compress the input to obtain an abstract representation in lower dimensions. To transform the output into an image from the lower dimensional representation, transposed convolution operators are used. In contrast to the compressing nature of convolutions, they expand the input feature map. The combination of convolution+pooling and transposed convolutions are adjusted depending on the dimensions of the input and output images. Transposed convolution is shown in Fig~\ref{fig:tc}. Essentially the transposed convolution spatially reverses the dimensions of the convolution+pooling operation. 
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.5\linewidth]{transposed.pdf}
-	\caption{Transposed convolution over a $2\times2$ input to get a $4\times4$ output. (\cite{dumoulin2016guide})}
-	\label{fig:tc}
-\end{figure}
-
-Transposed convolutions are used in many tasks like super resolution, image segmentation, denoising and image reconstruction. This version of \ac{CNN} appropriate for image reconstruction is represented in Fig~\ref{fig:fcn}
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=1.0\linewidth]{fcn-crop.pdf}
-	\caption{\ac{CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.}
-	\label{fig:fcn}
-\end{figure}
-
-These architectures are sometimes referred to as \ac{CED}, since they contain two distinct paths of down sampling of input and up sampling of lower dimensional representation. The building blocks described in this section essentially form the basis of \ac{CNN}s proposed in this thesis. The next chapter consists of a review of existing works in deep learning applied to medical image reconstruction. And the following chapters describe the proposed methods. 
-
-
 

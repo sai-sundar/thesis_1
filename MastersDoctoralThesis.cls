@@ -516,6 +516,13 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 %----------------------------------------------------------------------------------------
 
+
+%------------------------ Introduction Page Design------------------------------
+%-------------------------------------------------------------------------------
+
+%--------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
+
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
 \AtEndPreamble{\RequirePackage{hyperref}
 \hypersetup{pdfpagemode={UseOutlines},

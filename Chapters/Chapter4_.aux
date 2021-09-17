@@ -1,0 +1,341 @@
+\relax 
+\providecommand\zref@newlabel[2]{}
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}DUG-RECON: A Framework for Direct Image Reconstruction using Convolutional Generative Networks}{19}{chapter.66}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\newlabel{Chapter3}{{3}{19}{DUG-RECON: A Framework for Direct Image Reconstruction using Convolutional Generative Networks}{chapter.66}{}}
+\acro@used@twice {DUGAN}{19}{19}{50}
+\acro@used@twice {PET}{19}{19}{50}
+\acro@used@twice {CT}{19}{19}{50}
+\acro@used@twice {2D}{19}{19}{50}
+\acro@used@twice {PET}{19}{19}{50}
+\acro@used@twice {CT}{19}{19}{50}
+\acro@used@twice {PET}{19}{19}{50}
+\acro@used@twice {CT}{19}{19}{50}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Method}{20}{section.67}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Deep Learning Architectures}{20}{subsection.68}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Proposed Deep Learning pipeline for Direct Image Reconstruction\relax }}{20}{figure.caption.69}}
+\newlabel{fig:approach}{{3.1}{20}{Proposed Deep Learning pipeline for Direct Image Reconstruction\relax }{figure.caption.69}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Trainable Parameters comparison\relax }}{21}{table.caption.70}}
+\newlabel{table:1}{{3.1}{21}{Trainable Parameters comparison\relax }{table.caption.70}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Denoising}{21}{section*.71}}
+\acro@used@twice {MSE}{20}{20}{51}
+\newlabel{eq:mse}{{3.1}{21}{Denoising}{equation.72}{}}
+\@writefile{toc}{\contentsline {subsubsection}{ Image Reconstruction }{21}{section*.74}}
+\acro@used@twice {FC}{21}{21}{52}
+\acro@used@twice {GAN}{21}{21}{52}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Representation of the denoising network. The inputs to the network were \ac {2D} grayscale slices with resolution $128\times {}128$ and the outputs were denoised sinograms.\relax }}{22}{figure.caption.73}}
+\acro@used@twice {2D}{21}{21}{52}
+\newlabel{fig:denoise_nn}{{3.2}{22}{Representation of the denoising network. The inputs to the network were \ac {2D} grayscale slices with resolution $128\times {}128$ and the outputs were denoised sinograms.\relax }{figure.caption.73}{}}
+\acro@used@twice {DUGAN}{21}{21}{52}
+\acro@used@twice {DUGAN}{22}{22}{53}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Representation of the \ac {DUGAN}, the image reconstruction block. This network was trained on denoised sinograms which were the outputs of the previous segment.\relax }}{23}{figure.caption.78}}
+\acro@used@twice {DUGAN}{23}{23}{54}
+\newlabel{fig:dugan}{{3.3}{23}{Representation of the \ac {DUGAN}, the image reconstruction block. This network was trained on denoised sinograms which were the outputs of the previous segment.\relax }{figure.caption.78}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Super Resolution}{23}{section*.82}}
+\acro@used@twice {SR}{23}{23}{54}
+\acro@used@once {PReLU}{23}{23}{54}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Training the DUG\relax }}{24}{algocf.81}}
+\newlabel{alg:1}{{1}{24}{Image Reconstruction}{algocf.81}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Representation of the super resolution block. It consists of 8 residual blocks with Convolution, Batch normalization and PReLu.\relax }}{24}{figure.caption.84}}
+\newlabel{fig:super}{{3.4}{24}{Representation of the super resolution block. It consists of 8 residual blocks with Convolution, Batch normalization and PReLu.\relax }{figure.caption.84}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Dataset Description}{24}{section.85}}
+\acro@used@twice {PET}{24}{24}{55}
+\acro@used@twice {CT}{24}{24}{55}
+\acro@used@twice {PET}{24}{24}{55}
+\acro@used@twice {CT}{24}{24}{55}
+\acro@used@twice {CT}{24}{24}{55}
+\acro@used@twice {PET}{24}{24}{55}
+\acro@used@twice {PET}{24}{24}{55}
+\acro@used@twice {CT}{24}{24}{55}
+\acro@used@twice {PET}{24}{24}{55}
+\acro@used@twice {CT}{24}{24}{55}
+\acro@used@twice {CT}{24}{24}{55}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Dataset Description\relax }}{25}{table.caption.86}}
+\newlabel{table:2}{{3.2}{25}{Dataset Description\relax }{table.caption.86}{}}
+\acro@used@twice {PET}{25}{25}{56}
+\acro@used@twice {2D}{25}{25}{56}
+\acro@used@twice {2D}{25}{25}{56}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Data preparation\relax }}{25}{figure.caption.87}}
+\newlabel{fig:data_prep}{{3.5}{25}{Data preparation\relax }{figure.caption.87}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Example PET sinogram-image pairs from the dataset\relax }}{26}{figure.caption.88}}
+\newlabel{fig:realdata}{{3.6}{26}{Example PET sinogram-image pairs from the dataset\relax }{figure.caption.88}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Training}{26}{section.89}}
+\acro@used@twice {CT}{25}{25}{56}
+\acro@used@twice {PET}{25}{25}{56}
+\acro@used@twice {SR}{25}{25}{56}
+\acro@used@twice {DUGAN}{25}{25}{56}
+\acro@used@twice {GT}{25}{25}{56}
+\acro@used@twice {SR}{25}{25}{56}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Example CT sinogram-image pairs from the dataset \relax }}{27}{figure.caption.90}}
+\newlabel{fig:phantom}{{3.7}{27}{Example CT sinogram-image pairs from the dataset \relax }{figure.caption.90}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Quantitative analysis}{27}{section.91}}
+\acro@used@twice {RMSE}{26}{26}{57}
+\acro@used@twice {SSIM}{26}{26}{57}
+\acro@used@twice {GT}{27}{27}{58}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Region of Interest analysis}{27}{subsection.94}}
+\acro@used@twice {SNR}{27}{27}{58}
+\acro@used@twice {CNR}{27}{27}{58}
+\acro@used@twice {SNR}{27}{27}{58}
+\acro@used@twice {CNR}{27}{27}{58}
+\newlabel{SNR}{{3.8}{27}{Region of Interest analysis}{equation.95}{}}
+\newlabel{CNR}{{3.9}{28}{Region of Interest analysis}{equation.96}{}}
+\acro@used@once {ROI}{28}{28}{59}
+\acro@used@twice {DUGAN}{28}{28}{59}
+\acro@used@twice {SR}{28}{28}{59}
+\acro@used@twice {GT}{28}{28}{59}
+\acro@used@twice {OSEM}{28}{28}{59}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Representation of DeepPET. The number of filters in each convolutional layer is labeled on top of each block.\relax }}{28}{figure.caption.97}}
+\newlabel{fig:deepPET}{{3.8}{28}{Representation of DeepPET. The number of filters in each convolutional layer is labeled on top of each block.\relax }{figure.caption.97}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Comparison with DeepPET}{28}{section.98}}
+\acro@used@twice {PET}{28}{28}{59}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Results}{29}{section.99}}
+\acro@used@twice {GT}{28}{28}{59}
+\acro@used@twice {PET}{28}{28}{59}
+\acro@used@twice {GT}{28}{28}{59}
+\acro@used@twice {DUGAN}{28}{28}{59}
+\acro@used@twice {GT}{28}{28}{59}
+\acro@used@twice {DUGAN}{28}{28}{59}
+\acro@used@twice {GT}{28}{28}{59}
+\acro@used@twice {PET}{28}{28}{59}
+\acro@used@twice {GT}{28}{28}{59}
+\acro@used@twice {DUGAN}{28}{28}{59}
+\acro@used@twice {DUGAN}{28}{28}{59}
+\acro@used@twice {GT}{28}{28}{59}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }}{29}{table.caption.100}}
+\acro@used@twice {SSIM}{29}{29}{60}
+\acro@used@twice {RMSE}{29}{29}{60}
+\newlabel{table:3}{{3.3}{29}{The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }{table.caption.100}{}}
+\acro@used@twice {RMSE}{29}{29}{60}
+\acro@used@twice {SSIM}{29}{29}{60}
+\acro@used@twice {ROI}{29}{29}{60}
+\acro@used@twice {MLEM}{29}{29}{60}
+\acro@used@twice {MLEM}{29}{29}{60}
+\acro@used@twice {CT}{29}{29}{60}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Image predictions by \ac {DUGAN}+SR, DeepPET and \ac {GT} for four \ac {PET} Images from different parts of the patient volume\relax }}{30}{figure.caption.101}}
+\acro@used@twice {DUGAN}{29}{29}{60}
+\acro@used@twice {GT}{29}{29}{60}
+\acro@used@twice {PET}{29}{29}{60}
+\newlabel{fig:PET_results}{{3.9}{30}{Image predictions by \ac {DUGAN}+SR, DeepPET and \ac {GT} for four \ac {PET} Images from different parts of the patient volume\relax }{figure.caption.101}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces \ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {PET} image along 4 regions of interest\relax }}{30}{figure.caption.103}}
+\acro@used@twice {SNR}{29}{29}{60}
+\acro@used@twice {CNR}{29}{29}{60}
+\acro@used@twice {PET}{29}{29}{60}
+\newlabel{fig:PET_roi}{{3.10}{30}{\ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {PET} image along 4 regions of interest\relax }{figure.caption.103}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Image predictions by \ac {DUGAN}+ \ac {SR}, DeepPET and \ac {GT} are displayed for 3 \ac {CT} Images along different parts of the patient volume.\relax }}{31}{figure.caption.104}}
+\acro@used@twice {DUGAN}{29}{29}{60}
+\acro@used@twice {SR}{29}{29}{60}
+\acro@used@twice {GT}{29}{29}{60}
+\acro@used@twice {CT}{29}{29}{60}
+\newlabel{fig:CT_results}{{3.11}{31}{Image predictions by \ac {DUGAN}+ \ac {SR}, DeepPET and \ac {GT} are displayed for 3 \ac {CT} Images along different parts of the patient volume.\relax }{figure.caption.104}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces \ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {CT} image along 4 regions of interest\relax }}{31}{figure.caption.105}}
+\acro@used@twice {SNR}{29}{29}{60}
+\acro@used@twice {CNR}{29}{29}{60}
+\acro@used@twice {CT}{29}{29}{60}
+\newlabel{fig:CT_roi}{{3.12}{31}{\ac {SNR} and \ac {CNR} comparison amongst DUG+SR and OSEM for \ac {CT} image along 4 regions of interest\relax }{figure.caption.105}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }}{32}{table.caption.102}}
+\acro@used@twice {SSIM}{29}{29}{60}
+\acro@used@twice {RMSE}{29}{29}{60}
+\acro@used@twice {CT}{29}{29}{60}
+\acro@used@twice {2D}{29}{29}{60}
+\acro@used@twice {DUGAN}{29}{29}{60}
+\acro@used@twice {DUGAN}{29}{29}{60}
+\acro@used@twice {SR}{29}{29}{60}
+\newlabel{table:4}{{3.4}{32}{The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }{table.caption.102}{}}
+\acro@used@twice {RMSE}{29}{29}{60}
+\acro@used@twice {SSIM}{29}{29}{60}
+\acro@used@twice {GT}{29}{29}{60}
+\acro@used@twice {CT}{29}{29}{60}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{32}{table.caption.108}}
+\acro@used@twice {SD}{32}{32}{63}
+\acro@used@twice {SNR}{32}{32}{63}
+\newlabel{table:5}{{3.5}{32}{ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }{table.caption.108}{}}
+\acro@used@twice {SD}{32}{32}{63}
+\acro@used@twice {SNR}{32}{32}{63}
+\acro@used@twice {CNR}{32}{32}{63}
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{32}{table.caption.109}}
+\acro@used@twice {SD}{32}{32}{63}
+\acro@used@twice {SNR}{32}{32}{63}
+\newlabel{table:6}{{3.6}{32}{ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }{table.caption.109}{}}
+\acro@used@twice {SD}{32}{32}{63}
+\acro@used@twice {SNR}{32}{32}{63}
+\acro@used@twice {CNR}{32}{32}{63}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Intensity Profile across the image (highlighted by a yellow line) for a \ac {PET} image prediction by \ac {DUGAN}, \ac {DUGAN}+SR and DeepPET compared with the \ac {GT}\relax }}{33}{figure.caption.106}}
+\acro@used@twice {PET}{32}{32}{63}
+\acro@used@twice {DUGAN}{32}{32}{63}
+\acro@used@twice {DUGAN}{32}{32}{63}
+\acro@used@twice {GT}{32}{32}{63}
+\newlabel{fig:PET_ip}{{3.13}{33}{Intensity Profile across the image (highlighted by a yellow line) for a \ac {PET} image prediction by \ac {DUGAN}, \ac {DUGAN}+SR and DeepPET compared with the \ac {GT}\relax }{figure.caption.106}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Intensity Profile for two \ac {CT} images (highlighted by a yellow line) predicted by \ac {DUGAN} and \ac {SR} compared with the \ac {GT}\relax }}{34}{figure.caption.107}}
+\acro@used@twice {CT}{32}{32}{63}
+\acro@used@twice {DUGAN}{32}{32}{63}
+\acro@used@twice {SR}{32}{32}{63}
+\acro@used@twice {GT}{32}{32}{63}
+\newlabel{fig:CT_ip}{{3.14}{34}{Intensity Profile for two \ac {CT} images (highlighted by a yellow line) predicted by \ac {DUGAN} and \ac {SR} compared with the \ac {GT}\relax }{figure.caption.107}{}}
+\acro@used@twice {ROI}{32}{32}{63}
+\acro@used@twice {FBP}{32}{32}{63}
+\acro@used@twice {FBP}{32}{32}{63}
+\acro@used@twice {SNR}{32}{32}{63}
+\acro@used@twice {CNR}{32}{32}{63}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Discussion}{35}{section.110}}
+\acro@used@twice {DUGAN}{36}{36}{67}
+\acro@used@twice {SSIM}{36}{36}{67}
+\acro@used@twice {MSE}{36}{36}{67}
+\acro@used@twice {ROI}{36}{36}{67}
+\acro@used@twice {SNR}{36}{36}{67}
+\acro@used@twice {CNR}{36}{36}{67}
+\acro@used@twice {PET}{36}{36}{67}
+\acro@used@twice {CT}{36}{36}{67}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Conclusion}{36}{section.111}}
+\acro@used@twice {2D}{36}{36}{67}
+\@setckpt{Chapters/Chapter3}{
+\setcounter{page}{38}
+\setcounter{equation}{9}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{8}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{14}
+\setcounter{table}{6}
+\setcounter{LT@tables}{3}
+\setcounter{LT@chunks}{1}
+\setcounter{ContinuedFloat}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{87}
+\setcounter{maxnames}{3}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextradate}{2}
+\setcounter{maxextraalpha}{2}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{origlanguage}{0}
+\setcounter{savedoriglanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{parentequation}{0}
+\setcounter{AlgoLine}{0}
+\setcounter{algocfline}{1}
+\setcounter{algocfproc}{1}
+\setcounter{algocf}{1}
+\setcounter{ALG@line}{0}
+\setcounter{ALG@rem}{0}
+\setcounter{ALG@nested}{0}
+\setcounter{ALG@Lnr}{1}
+\setcounter{ALG@blocknr}{1}
+\setcounter{ALG@storecount}{0}
+\setcounter{ALG@tmpcounter}{0}
+\setcounter{proposition}{0}
+\setcounter{definition}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{35}
+\setcounter{section@level}{1}
+}
