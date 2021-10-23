@@ -11,47 +11,74 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Depiction of a neural network with an input layer, three hidden layers and an output layer\relax }}{14}{figure.caption.64}}
 \newlabel{fig:nn}{{2.1}{14}{Depiction of a neural network with an input layer, three hidden layers and an output layer\relax }{figure.caption.64}{}}
 \acro@used@twice {ANN}{13}{13}{44}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.1}Convolutional Neural Networks}{14}{subsection.67}}
-\acro@used@twice {CNN}{14}{14}{45}
-\acro@used@twice {CNN}{14}{14}{45}
-\acro@used@twice {CNN}{14}{14}{45}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.2}Convolution}{15}{subsection.68}}
-\acro@used@twice {CNN}{15}{15}{46}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Convolution of an input image of dimensions 5$\times $5 with a filter of dimensions 3$\times $3.(\cite {dumoulin2016guide})\relax }}{15}{figure.caption.70}}
-\newlabel{fig:conv}{{2.2}{15}{Convolution of an input image of dimensions 5$\times $5 with a filter of dimensions 3$\times $3.(\cite {dumoulin2016guide})\relax }{figure.caption.70}{}}
-\acro@used@twice {CNN}{15}{15}{46}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.3}Activation Layer}{16}{subsection.71}}
-\acro@used@twice {CNN}{16}{16}{47}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Cost Function}{15}{section.67}}
+\newlabel{eq:log_like}{{2.3}{15}{Cost Function}{equation.68}{}}
+\acro@used@once {MSE}{15}{15}{46}
+\acro@used@once {MAE}{15}{15}{46}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Output Unit}{15}{section.70}}
+\acro@used@twice {ReLU}{15}{15}{46}
 \acro@used@twice {ReLU}{16}{16}{47}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The \ac {ReLU} function\relax }}{16}{figure.caption.72}}
 \acro@used@twice {ReLU}{16}{16}{47}
-\newlabel{fig:relu}{{2.3}{16}{The \ac {ReLU} function\relax }{figure.caption.72}{}}
-\acro@used@twice {ReLU}{16}{16}{47}
-\acro@used@twice {CNN}{16}{16}{47}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.4}Pooling Layer}{16}{subsection.73}}
-\acro@used@twice {CNN}{16}{16}{47}
-\acro@used@twice {CNN}{16}{16}{47}
-\acro@used@twice {CNN}{16}{16}{47}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Max pooling with 2$\times $2 filter and stride 1\relax }}{17}{figure.caption.74}}
-\newlabel{fig:mp}{{2.4}{17}{Max pooling with 2$\times $2 filter and stride 1\relax }{figure.caption.74}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a typical \ac {CNN}. This representation was first proposed by \cite {lecun1995convolutional}.\relax }}{17}{figure.caption.75}}
-\acro@used@twice {CNN}{17}{17}{48}
-\newlabel{fig:trad_cnn}{{2.5}{17}{Architecture of a typical \ac {CNN}. This representation was first proposed by \cite {lecun1995convolutional}.\relax }{figure.caption.75}{}}
-\acro@used@twice {CNN}{16}{16}{47}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.5}Neural Networks for Image Reconstruction}{17}{subsection.76}}
-\acro@used@twice {CNN}{17}{17}{48}
-\acro@used@twice {CNN}{17}{17}{48}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Transposed convolution over a $2\times 2$ input to get a $4\times 4$ output. (\cite {dumoulin2016guide})\relax }}{18}{figure.caption.77}}
-\newlabel{fig:tc}{{2.6}{18}{Transposed convolution over a $2\times 2$ input to get a $4\times 4$ output. (\cite {dumoulin2016guide})\relax }{figure.caption.77}{}}
-\acro@used@twice {CNN}{18}{18}{49}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces \ac {CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.\relax }}{18}{figure.caption.78}}
-\acro@used@twice {CNN}{18}{18}{49}
-\newlabel{fig:fcn}{{2.7}{18}{\ac {CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.\relax }{figure.caption.78}{}}
-\acro@used@twice {CED}{18}{18}{49}
-\acro@used@twice {CNN}{18}{18}{49}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Backpropagation}{16}{section.73}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Computational graph with one hidden layer. The nodes in the first layer store the input $x$, weight $w$ and the bias $b$. The second layer contains the hidden layer with 2 units each with the corresponding operation written below. The final layer is the output layer denoted by $\mathaccentV {hat}45E{y}=\sigma (wx+b)$, where $\sigma $ is the sigmoid function defined earlier.\relax }}{17}{figure.caption.74}}
+\newlabel{fig:graph}{{2.2}{17}{Computational graph with one hidden layer. The nodes in the first layer store the input $x$, weight $w$ and the bias $b$. The second layer contains the hidden layer with 2 units each with the corresponding operation written below. The final layer is the output layer denoted by $\hat {y}=\sigma (wx+b)$, where $\sigma $ is the sigmoid function defined earlier.\relax }{figure.caption.74}{}}
+\acro@used@once {MLP}{17}{17}{48}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Forward propagation algorithm for a single input example $\boldsymbol  {x}$\relax }}{18}{algocf.79}}
+\newlabel{alg:forward}{{1}{18}{Backpropagation}{algocf.79}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Backward propagation for neural network from Algorithm~\ref  {alg:forward}\relax }}{18}{algocf.82}}
+\newlabel{alg:backprop}{{2}{18}{Backpropagation}{algocf.82}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Optimization}{18}{section.83}}
+\acro@used@once {SGD}{18}{18}{49}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{19}{subsection.84}}
+\acro@used@twice {SGD}{19}{19}{50}
+\acro@used@twice {SGD}{19}{19}{50}
+\acro@used@twice {SGD}{19}{19}{50}
+\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Training update at an iteration $j$ for \acf {SGD}\relax }}{19}{algocf.87}}
+\newlabel{alg:sgd}{{3}{19}{Stochastic Gradient Descent}{algocf.87}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Adam}{19}{subsection.88}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces Adam algorithm\relax }}{20}{algocf.91}}
+\newlabel{alg:adam}{{4}{20}{Adam}{algocf.91}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Convolutional Neural Networks}{20}{section.92}}
+\acro@used@twice {CNN}{19}{19}{50}
+\acro@used@twice {CNN}{19}{19}{50}
+\acro@used@twice {CNN}{19}{19}{50}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Convolution}{20}{subsection.93}}
+\acro@used@twice {CNN}{20}{20}{51}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Convolution of an input image of dimensions 5$\times $5 with a filter of dimensions 3$\times $3.(\cite {dumoulin2016guide})\relax }}{21}{figure.caption.95}}
+\newlabel{fig:conv}{{2.3}{21}{Convolution of an input image of dimensions 5$\times $5 with a filter of dimensions 3$\times $3.(\cite {dumoulin2016guide})\relax }{figure.caption.95}{}}
+\acro@used@twice {CNN}{21}{21}{52}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Activation Layer}{21}{subsection.96}}
+\acro@used@twice {CNN}{21}{21}{52}
+\acro@used@twice {ReLU}{21}{21}{52}
+\acro@used@twice {ReLU}{21}{21}{52}
+\acro@used@twice {CNN}{21}{21}{52}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces The \ac {ReLU} function\relax }}{22}{figure.caption.97}}
+\acro@used@twice {ReLU}{21}{21}{52}
+\newlabel{fig:relu}{{2.4}{22}{The \ac {ReLU} function\relax }{figure.caption.97}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Pooling Layer}{22}{subsection.98}}
+\acro@used@twice {CNN}{21}{21}{52}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Max pooling with 2$\times $2 filter and stride 1\relax }}{22}{figure.caption.99}}
+\newlabel{fig:mp}{{2.5}{22}{Max pooling with 2$\times $2 filter and stride 1\relax }{figure.caption.99}{}}
+\acro@used@twice {CNN}{22}{22}{53}
+\acro@used@twice {CNN}{22}{22}{53}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Architecture of a typical \ac {CNN}. This representation was first proposed by \cite {lecun1995convolutional}.\relax }}{23}{figure.caption.100}}
+\acro@used@twice {CNN}{23}{23}{54}
+\newlabel{fig:trad_cnn}{{2.6}{23}{Architecture of a typical \ac {CNN}. This representation was first proposed by \cite {lecun1995convolutional}.\relax }{figure.caption.100}{}}
+\acro@used@twice {CNN}{22}{22}{53}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.4}Neural Networks for Image Reconstruction}{23}{subsection.101}}
+\acro@used@twice {CNN}{23}{23}{54}
+\acro@used@twice {CNN}{23}{23}{54}
+\acro@used@twice {CNN}{23}{23}{54}
+\acro@used@twice {CED}{23}{23}{54}
+\acro@used@twice {CNN}{23}{23}{54}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Transposed convolution over a $2\times 2$ input to get a $4\times 4$ output. (\cite {dumoulin2016guide})\relax }}{24}{figure.caption.102}}
+\newlabel{fig:tc}{{2.7}{24}{Transposed convolution over a $2\times 2$ input to get a $4\times 4$ output. (\cite {dumoulin2016guide})\relax }{figure.caption.102}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces \ac {CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.\relax }}{24}{figure.caption.103}}
+\acro@used@twice {CNN}{23}{23}{54}
+\newlabel{fig:fcn}{{2.8}{24}{\ac {CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.\relax }{figure.caption.103}{}}
 \@setckpt{Chapters/Chapter2}{
-\setcounter{page}{20}
-\setcounter{equation}{3}
+\setcounter{page}{26}
+\setcounter{equation}{9}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -60,12 +87,12 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{2}
-\setcounter{section}{0}
-\setcounter{subsection}{5}
+\setcounter{section}{5}
+\setcounter{subsection}{4}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{7}
+\setcounter{figure}{8}
 \setcounter{table}{0}
 \setcounter{LT@tables}{3}
 \setcounter{LT@chunks}{1}
@@ -79,7 +106,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{45}
+\setcounter{instcount}{46}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -181,9 +208,9 @@
 \setcounter{bbx:relatedtotal}{0}
 \setcounter{parentequation}{0}
 \setcounter{AlgoLine}{0}
-\setcounter{algocfline}{0}
-\setcounter{algocfproc}{0}
-\setcounter{algocf}{0}
+\setcounter{algocfline}{4}
+\setcounter{algocfproc}{4}
+\setcounter{algocf}{4}
 \setcounter{ALG@line}{0}
 \setcounter{ALG@rem}{0}
 \setcounter{ALG@nested}{0}
@@ -195,7 +222,7 @@
 \setcounter{definition}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{26}
+\setcounter{bookmark@seq@number}{32}
 \setcounter{section@level}{2}
 \setcounter{nn@layerindex@counter}{5}
 \setcounter{nn@lastlayerstart@counter}{1}

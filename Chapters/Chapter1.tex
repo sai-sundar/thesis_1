@@ -44,12 +44,12 @@ The coincidences from the detector are typically rearranged either in listmode o
 For a co-ordinate $t$ along the line, Eq~\ref{eq:line} now becomes:
 \begin{equation}\label{eq:line_sino}
 \begin{array}{c}
-p\left(s, \phi\right)=\int_{\infty}^{\infty} d t f(x= s \cos\phi +t \sin \phi, 
+p\left(s, \phi\right)=\int_{-\infty}^{\infty} d t f(x= s \cos\phi +t \sin \phi, 
 \left.y=s \sin \phi + t \cos \phi\right)
 \end{array}
 \end{equation}
 
-Through the line integral approximation and keeping in context the corrected \ac{PET} data, $p_{d{a},d_{b}}\approx p(s,\phi)$. The function that maps the tracer distribution onto the line integrals is called as the x-ray transform. It is equivalent to the 2D version of the Radon transform. 
+Through the line integral approximation and keeping in context the corrected \ac{PET} data, $p_{d_{a},d_{b}}\approx p(s,\phi)$. The function that maps the tracer distribution onto the line integrals is called as the x-ray transform. It is equivalent to the 2D version of the Radon transform. 
 
 \section{CT}
 % Write a paragraph on CT imaging
@@ -117,7 +117,7 @@ where
 P(v, \phi)=(\mathcal{F} p)(v, \phi)=\int_{\mathbb{R}} d s p(s, \phi) \exp (-2 \pi i s v)
 \end{equation}
 
-and $v$ is the frequency variable associated with $s$. In the context of tomographic image reconstruction this theorem has the following implication: given the measurement data for all projection angles $\phi \in [0,\pi]$, the radial line sweeps all the frequencies hence making it possible to compute $f(v_{x},v_{y})$ for $(v_{x},v_{y})\in \mathbb{R}^2$. The image $\lambda$ can then be estimated by finding the inverse 2D Fourier transform. 
+and $v$ is the frequency variable associated with $s$. In the context of tomographic image reconstruction this theorem has the following implication: given the measurement data for all projection angles $\phi \in [0,\pi]$, the radial line sweeps all the frequencies hence making it possible to compute $f(v_{x},v_{y})$ for $(v_{x},v_{y})\in \mathbb{R}^2$. The image $f$ can then be estimated by finding the inverse 2D Fourier transform. 
 
 \subsubsection{\ac{FBP}}
 
