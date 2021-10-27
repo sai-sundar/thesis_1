@@ -188,7 +188,11 @@ Adam is another optimization algorithm which incorporates adaptive learning rate
 	\label{alg:adam}
 \end{algorithm}
 
-\section{Convolutional Neural Networks}
+\subsection{Universal Approximation Theorem}
+
+The wide usage of neural networks is a testimony of their ability to adapt across multiple applications. This is based on the universal approximation theorem which states that a feed-forward network with a linear output layer and at least one hidden layer with a non-linear squashing activation function (like sigmoid) can approximate any function mapping from any finite dimensional discrete space to another provided that the network has enough hidden units (\cite{hornik1990universal}). This statement needs to be taken with a pinch of salt as it does not guarantee determining the optimal parameters of the network. It merely acknowledges the existence of a network that can represent the function in question. Training the network has two major challenges. One, the optimization process involved in training the network may not be able to find the network weights suitable to represent the function due to inadequate data (under-fitting problem). Two, the training could lead to a set of parameters that do not generalize well for the test data (over-fitting). Depending on the application and the data, network design is subject to change. The best network parameters that generalize well are usually obtained empirically through careful and logical experimentation. In theory a network with a single layer is sufficient to learn the representation but it would need to be very large and therefore may fail to generalize. Hence, deeper architectures with multiple hidden layers are preferred over shallow network with infeasible number of neurons. In the next section, specialized deep neural network suitable for images called \acf{CNN} is discussed. 
+
+\section{Convolutional Neural Network}
 
 The neural network depicted in \ref{fig:nn} is an example of densely connected network, where all the neighboring nodes are connected with one another. As the size of data increases (say large image data), and the network becomes more complex, the number of parameters increases exponentially. To address this and also to be more suitable for image data \ac{CNN}s were formulated. \ac{CNN}s are extensively used in computer vision tasks like image classification, object detection, image segmentation (\cite{voulodimos2018deep}). The three main building blocks of a \ac{CNN} are Convolution, Activation and Pooling. Each of these layers are discussed below:
 
@@ -297,6 +301,7 @@ A \ac{CNN} with $2$ convolutional layers, $2$ activation layers and $2$ pooling 
 	\caption{Architecture of a typical \ac{CNN}. This representation was first proposed by \cite{lecun1995convolutional}.}
 	\label{fig:trad_cnn}
 \end{figure}
+
 
 \subsection{Neural Networks for Image Reconstruction}
 

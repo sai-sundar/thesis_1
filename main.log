@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  21 OCT 2021 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  27 OCT 2021 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3008,7 +3008,7 @@ Overfull \hbox (2.88783pt too wide) in paragraph at lines 17--17
 
 1: section
 [11]
-Overfull \hbox (32.68448pt too wide) in paragraph at lines 53--53
+Overfull \hbox (32.68448pt too wide) in paragraph at lines 54--54
  [] [][][]\T1/ppl/b/n/12 LRR-CED: Low-Resolution Re-con-struc-tion aware Con-vo
 -lu-tional Encoder- 
  []
@@ -3108,7 +3108,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 
 
 ]
-<./Figures/PET_det-crop.pdf, id=778, 290.08376pt x 290.08376pt>
+<./Figures/PET_det-crop.pdf, id=783, 290.08376pt x 290.08376pt>
 File: ./Figures/PET_det-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_det-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_det-crop.pdf  used on input line 25.
@@ -3126,12 +3126,12 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 26.
  [2 <./Figures/PET_det-crop.pdf>] [3]
-<./Figures/compton-crop.pdf, id=811, 253.94875pt x 135.50626pt>
+<./Figures/compton-crop.pdf, id=816, 253.94875pt x 135.50626pt>
 File: ./Figures/compton-crop.pdf Graphic file (type pdf)
 <use ./Figures/compton-crop.pdf>
 Package pdftex.def Info: ./Figures/compton-crop.pdf  used on input line 63.
 (pdftex.def)             Requested size: 282.81912pt x 150.91614pt.
-<./Figures/photo-crop.pdf, id=813, 164.615pt x 135.50626pt>
+<./Figures/photo-crop.pdf, id=818, 164.615pt x 135.50626pt>
 File: ./Figures/photo-crop.pdf Graphic file (type pdf)
 <use ./Figures/photo-crop.pdf>
 Package pdftex.def Info: ./Figures/photo-crop.pdf  used on input line 72.
@@ -3147,12 +3147,12 @@ er-ties hence have unique
 pdfTeX warning: /usr/bin/pdflatex (file ./Figures/photo-crop.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-<./Figures/x_ray_geo-crop.pdf, id=839, 292.09125pt x 206.7725pt>
+<./Figures/x_ray_geo-crop.pdf, id=844, 292.09125pt x 206.7725pt>
 File: ./Figures/x_ray_geo-crop.pdf Graphic file (type pdf)
 <use ./Figures/x_ray_geo-crop.pdf>
 Package pdftex.def Info: ./Figures/x_ray_geo-crop.pdf  used on input line 93.
 (pdftex.def)             Requested size: 242.4199pt x 171.6148pt.
-<./Figures/cbct-crop.pdf, id=840, 243.91125pt x 215.80624pt>
+<./Figures/cbct-crop.pdf, id=845, 243.91125pt x 215.80624pt>
 File: ./Figures/cbct-crop.pdf Graphic file (type pdf)
 <use ./Figures/cbct-crop.pdf>
 Package pdftex.def Info: ./Figures/cbct-crop.pdf  used on input line 100.
@@ -3295,52 +3295,53 @@ t/12 x\OT1/ppl/m/n/12 ; []\OT1/zplm/m/n/12 )\OT1/ppl/m/n/12 .$\T1/ppl/m/n/12 ,
  []
 
 [15]
-<./Figures/back_prop-crop.pdf, id=957, 173.64874pt x 146.5475pt>
+<./Figures/back_prop-crop.pdf, id=962, 173.64874pt x 146.5475pt>
 File: ./Figures/back_prop-crop.pdf Graphic file (type pdf)
 <use ./Figures/back_prop-crop.pdf>
 Package pdftex.def Info: ./Figures/back_prop-crop.pdf  used on input line 82.
 (pdftex.def)             Requested size: 161.60916pt x 136.39284pt.
  [16] [17 <./Figures/back_prop-crop.pdf>] [18] [19] [20]
-<./Figures/convol-crop.pdf, id=1027, 182.6825pt x 197.73875pt>
+<./Figures/convol-crop.pdf, id=1033, 182.6825pt x 197.73875pt>
 File: ./Figures/convol-crop.pdf Graphic file (type pdf)
 <use ./Figures/convol-crop.pdf>
-Package pdftex.def Info: ./Figures/convol-crop.pdf  used on input line 204.
+Package pdftex.def Info: ./Figures/convol-crop.pdf  used on input line 208.
 (pdftex.def)             Requested size: 161.60916pt x 174.93692pt.
-<Figures/relu-crop.pdf, id=1032, 263.98625pt x 196.735pt>
+ [21]
+<Figures/relu-crop.pdf, id=1044, 263.98625pt x 196.735pt>
 File: Figures/relu-crop.pdf Graphic file (type pdf)
 <use Figures/relu-crop.pdf>
-Package pdftex.def Info: Figures/relu-crop.pdf  used on input line 217.
+Package pdftex.def Info: Figures/relu-crop.pdf  used on input line 221.
 (pdftex.def)             Requested size: 242.4199pt x 180.66216pt.
- [21 <./Figures/convol-crop.pdf>]
-<Figures/maxP-crop.pdf, id=1051, 309.155pt x 147.55125pt>
-File: Figures/maxP-crop.pdf Graphic file (type pdf)
-<use Figures/maxP-crop.pdf>
-Package pdftex.def Info: Figures/maxP-crop.pdf  used on input line 231.
-(pdftex.def)             Requested size: 242.4199pt x 115.70413pt.
- [22 <./Figures/relu-crop.pdf> <./Figures/maxP-crop.pdf
+ [22 <./Figures/convol-crop.pdf> <./Figures/relu-crop.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./Figures/maxP-crop.pdf): PDF inclusion
+pdfTeX warning: /usr/bin/pdflatex (file ./Figures/relu-crop.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (36.67169pt too wide) in paragraph at lines 296--297
+<Figures/maxP-crop.pdf, id=1071, 309.155pt x 147.55125pt>
+File: Figures/maxP-crop.pdf Graphic file (type pdf)
+<use Figures/maxP-crop.pdf>
+Package pdftex.def Info: Figures/maxP-crop.pdf  used on input line 235.
+(pdftex.def)             Requested size: 242.4199pt x 115.70413pt.
+
+Overfull \hbox (36.67169pt too wide) in paragraph at lines 300--301
  [][] 
  []
 
-<Figures/transposed.pdf, id=1083, 165.90782pt x 185.82524pt>
+[23 <./Figures/maxP-crop.pdf>]
+<Figures/transposed.pdf, id=1095, 165.90782pt x 185.82524pt>
 File: Figures/transposed.pdf Graphic file (type pdf)
 <use Figures/transposed.pdf>
-Package pdftex.def Info: Figures/transposed.pdf  used on input line 307.
+Package pdftex.def Info: Figures/transposed.pdf  used on input line 312.
 (pdftex.def)             Requested size: 202.01454pt x 226.26694pt.
-<Figures/fcn-crop.pdf, id=1087, 534.99875pt x 143.53625pt>
+<Figures/fcn-crop.pdf, id=1099, 534.99875pt x 143.53625pt>
 File: Figures/fcn-crop.pdf Graphic file (type pdf)
 <use Figures/fcn-crop.pdf>
-Package pdftex.def Info: Figures/fcn-crop.pdf  used on input line 316.
+Package pdftex.def Info: Figures/fcn-crop.pdf  used on input line 321.
 (pdftex.def)             Requested size: 404.02908pt x 108.40314pt.
-) [23] [24 <./Figures/transposed.pdf> <./Figures/fcn-crop.pdf>] [25]
+ [24 <./Figures/transposed.pdf>]) [25 <./Figures/fcn-crop.pdf>]
 \openout2 = `Chapters/Chapter3.aux'.
 
-
-(./Chapters/Chapter3.tex [26
+ (./Chapters/Chapter3.tex [26
 
 
 
@@ -3354,13 +3355,13 @@ m-age (Gong
 
 1: section
 [27]
-<./Figures/dl_mi.pdf, id=1145, 380.42125pt x 217.81375pt>
+<./Figures/dl_mi.pdf, id=1152, 380.42125pt x 217.81375pt>
 File: ./Figures/dl_mi.pdf Graphic file (type pdf)
 <use ./Figures/dl_mi.pdf>
 Package pdftex.def Info: ./Figures/dl_mi.pdf  used on input line 18.
 (pdftex.def)             Requested size: 323.22449pt x 185.06943pt.
  [28 <./Figures/dl_mi.pdf>] [29]
-<./Figures/direct-crop.pdf, id=1187, 395.4775pt x 161.60374pt>
+<./Figures/direct-crop.pdf, id=1194, 395.4775pt x 161.60374pt>
 File: ./Figures/direct-crop.pdf Graphic file (type pdf)
 <use ./Figures/direct-crop.pdf>
 Package pdftex.def Info: ./Figures/direct-crop.pdf  used on input line 57.
@@ -3377,7 +3378,7 @@ Chapter 4.
 
 
 ]
-<./Figures/three-step-crop.pdf, id=1238, 503.8825pt x 60.225pt>
+<./Figures/three-step-crop.pdf, id=1245, 503.8825pt x 60.225pt>
 File: ./Figures/three-step-crop.pdf Graphic file (type pdf)
 <use ./Figures/three-step-crop.pdf>
 Package pdftex.def Info: ./Figures/three-step-crop.pdf  used on input line 20.
@@ -3402,20 +3403,20 @@ Overfull \vbox (15.32729pt too high) has occurred while \output is active []
 
 
 [34 <./Figures/three-step-crop.pdf>]
-<./Figures/denoise-crop.pdf, id=1261, 518.93875pt x 186.6975pt>
+<./Figures/denoise-crop.pdf, id=1268, 518.93875pt x 186.6975pt>
 File: ./Figures/denoise-crop.pdf Graphic file (type pdf)
 <use ./Figures/denoise-crop.pdf>
 Package pdftex.def Info: ./Figures/denoise-crop.pdf  used on input line 58.
 (pdftex.def)             Requested size: 404.02908pt x 145.36421pt.
  [35] [36 <./Figures/denoise-crop.pdf>]
-<./Figures/dugan-crop.pdf, id=1300, 503.8825pt x 333.245pt>
+<./Figures/dugan-crop.pdf, id=1307, 503.8825pt x 333.245pt>
 File: ./Figures/dugan-crop.pdf Graphic file (type pdf)
 <use ./Figures/dugan-crop.pdf>
 Package pdftex.def Info: ./Figures/dugan-crop.pdf  used on input line 85.
 (pdftex.def)             Requested size: 404.02908pt x 267.20653pt.
 
 [37 <./Figures/dugan-crop.pdf>]
-<./Figures/super-crop.pdf, id=1328, 390.45876pt x 140.525pt>
+<./Figures/super-crop.pdf, id=1335, 390.45876pt x 140.525pt>
 File: ./Figures/super-crop.pdf Graphic file (type pdf)
 <use ./Figures/super-crop.pdf>
 Package pdftex.def Info: ./Figures/super-crop.pdf  used on input line 124.
@@ -3427,20 +3428,20 @@ Overfull \hbox (0.91753pt too wide) in paragraph at lines 130--132
  []
 
 [38 <./Figures/super-crop.pdf>]
-<./Figures/dataset_gen-crop.pdf, id=1355, 527.9725pt x 405.515pt>
+<./Figures/dataset_gen-crop.pdf, id=1362, 527.9725pt x 405.515pt>
 File: ./Figures/dataset_gen-crop.pdf Graphic file (type pdf)
 <use ./Figures/dataset_gen-crop.pdf>
 Package pdftex.def Info: ./Figures/dataset_gen-crop.pdf  used on input line 161
 .
 (pdftex.def)             Requested size: 399.991pt x 307.21693pt.
-<./Figures/PET_sample-crop.pdf, id=1356, 198.7425pt x 198.7425pt>
+<./Figures/PET_sample-crop.pdf, id=1363, 198.7425pt x 198.7425pt>
 File: ./Figures/PET_sample-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_sample-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_sample-crop.pdf  used on input line 168.
 
 (pdftex.def)             Requested size: 202.01454pt x 202.0202pt.
  [39 <./Figures/dataset_gen-crop.pdf>]
-<./Figures/CT_sample-crop.pdf, id=1400, 198.7425pt x 199.74625pt>
+<./Figures/CT_sample-crop.pdf, id=1407, 198.7425pt x 199.74625pt>
 File: ./Figures/CT_sample-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_sample-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_sample-crop.pdf  used on input line 183.
@@ -3457,13 +3458,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--199
  []
 
 [41 <./Figures/CT_sample-crop.pdf>]
-<./Figures/deepPET-crop.pdf, id=1442, 549.05125pt x 310.15875pt>
+<./Figures/deepPET-crop.pdf, id=1449, 549.05125pt x 310.15875pt>
 File: ./Figures/deepPET-crop.pdf Graphic file (type pdf)
 <use ./Figures/deepPET-crop.pdf>
 Package pdftex.def Info: ./Figures/deepPET-crop.pdf  used on input line 222.
 (pdftex.def)             Requested size: 404.02908pt x 228.2408pt.
  [42 <./Figures/deepPET-crop.pdf>]
-<./Figures/PET_with_dp-crop.pdf, id=1463, 303.1325pt x 313.17pt>
+<./Figures/PET_with_dp-crop.pdf, id=1470, 303.1325pt x 313.17pt>
 File: ./Figures/PET_with_dp-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_with_dp-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_with_dp-crop.pdf  used on input line 267
@@ -3473,18 +3474,18 @@ Package pdftex.def Info: ./Figures/PET_with_dp-crop.pdf  used on input line 267
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/PET_MLEM-crop.pdf, id=1464, 493.845pt x 338.26375pt>
+<./Figures/PET_MLEM-crop.pdf, id=1471, 493.845pt x 338.26375pt>
 File: ./Figures/PET_MLEM-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_MLEM-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_MLEM-crop.pdf  used on input line 302.
 (pdftex.def)             Requested size: 323.22449pt x 221.39145pt.
-<./Figures/CT_with_dp-crop.pdf, id=1465, 530.98375pt x 375.4025pt>
+<./Figures/CT_with_dp-crop.pdf, id=1472, 530.98375pt x 375.4025pt>
 File: ./Figures/CT_with_dp-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_with_dp-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_with_dp-crop.pdf  used on input line 309.
 
 (pdftex.def)             Requested size: 323.22449pt x 228.51974pt.
-<./Figures/CT_roi2-crop.pdf, id=1466, 470.75874pt x 301.125pt>
+<./Figures/CT_roi2-crop.pdf, id=1473, 470.75874pt x 301.125pt>
 File: ./Figures/CT_roi2-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_roi2-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_roi2-crop.pdf  used on input line 317.
@@ -3498,12 +3499,12 @@ sion: multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./Figures/CT_roi2-crop.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >]
-<./Figures/PET_ip2-crop.pdf, id=1660, 313.17pt x 532.99126pt>
+<./Figures/PET_ip2-crop.pdf, id=1667, 313.17pt x 532.99126pt>
 File: ./Figures/PET_ip2-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_ip2-crop.pdf>
 Package pdftex.def Info: ./Figures/PET_ip2-crop.pdf  used on input line 327.
 (pdftex.def)             Requested size: 323.22449pt x 550.12572pt.
-<./Figures/CT_ip2-crop.pdf, id=1661, 455.7025pt x 735.74875pt>
+<./Figures/CT_ip2-crop.pdf, id=1668, 455.7025pt x 735.74875pt>
 File: ./Figures/CT_ip2-crop.pdf Graphic file (type pdf)
 <use ./Figures/CT_ip2-crop.pdf>
 Package pdftex.def Info: ./Figures/CT_ip2-crop.pdf  used on input line 334.
@@ -3520,7 +3521,7 @@ Package pdftex.def Info: ./Figures/CT_ip2-crop.pdf  used on input line 334.
 Chapter 5.
 1: section
 [53] [54]
-<Figures/general_enc-crop.pdf, id=1801, 410.53375pt x 338.26375pt>
+<Figures/general_enc-crop.pdf, id=1808, 410.53375pt x 338.26375pt>
 File: Figures/general_enc-crop.pdf Graphic file (type pdf)
 <use Figures/general_enc-crop.pdf>
 Package pdftex.def Info: Figures/general_enc-crop.pdf  used on input line 30.
@@ -3532,25 +3533,25 @@ nc-tion $\OML/zplm/b/it/12 F[] [] [] \U/fplmbb/m/n/12 R[] \OMS/zplm/m/n/12 !
  []
 
 [55 <./Figures/general_enc-crop.pdf>] [56] [57]
-<./Figures/dense_block-crop.pdf, id=1844, 124.465pt x 359.3425pt>
+<./Figures/dense_block-crop.pdf, id=1851, 124.465pt x 359.3425pt>
 File: ./Figures/dense_block-crop.pdf Graphic file (type pdf)
 <use ./Figures/dense_block-crop.pdf>
 Package pdftex.def Info: ./Figures/dense_block-crop.pdf  used on input line 79.
 
 (pdftex.def)             Requested size: 92.92496pt x 268.28896pt.
-<./Figures/densenet-crop.pdf, id=1845, 430.60875pt x 603.25375pt>
+<./Figures/densenet-crop.pdf, id=1852, 430.60875pt x 603.25375pt>
 File: ./Figures/densenet-crop.pdf Graphic file (type pdf)
 <use ./Figures/densenet-crop.pdf>
 Package pdftex.def Info: ./Figures/densenet-crop.pdf  used on input line 88.
 (pdftex.def)             Requested size: 335.34486pt x 469.80884pt.
-<./Figures/u_net-crop.pdf, id=1846, 533.995pt x 415.5525pt>
+<./Figures/u_net-crop.pdf, id=1853, 533.995pt x 415.5525pt>
 File: ./Figures/u_net-crop.pdf Graphic file (type pdf)
 <use ./Figures/u_net-crop.pdf>
 Package pdftex.def Info: ./Figures/u_net-crop.pdf  used on input line 144.
 (pdftex.def)             Requested size: 323.22449pt x 251.54002pt.
  [58 <./Figures/dense_block-crop.pdf>] [59 <./Figures/densenet-crop.pdf>] [60 <
 ./Figures/u_net-crop.pdf>]
-<./Figures/data-crop.pdf, id=1912, 383.4325pt x 337.26pt>
+<./Figures/data-crop.pdf, id=1919, 383.4325pt x 337.26pt>
 File: ./Figures/data-crop.pdf Graphic file (type pdf)
 <use ./Figures/data-crop.pdf>
 Package pdftex.def Info: ./Figures/data-crop.pdf  used on input line 204.
@@ -3563,24 +3564,24 @@ d a []pe-nal-ized weighted
  []
 
 [63]
-<./Figures/views_dense-crop.pdf, id=1975, 517.935pt x 298.11375pt>
+<./Figures/views_dense-crop.pdf, id=1982, 517.935pt x 298.11375pt>
 File: ./Figures/views_dense-crop.pdf Graphic file (type pdf)
 <use ./Figures/views_dense-crop.pdf>
 Package pdftex.def Info: ./Figures/views_dense-crop.pdf  used on input line 247
 .
 (pdftex.def)             Requested size: 323.22449pt x 186.0477pt.
-<./Figures/views_unet-crop.pdf, id=1976, 517.935pt x 298.11375pt>
+<./Figures/views_unet-crop.pdf, id=1983, 517.935pt x 298.11375pt>
 File: ./Figures/views_unet-crop.pdf Graphic file (type pdf)
 <use ./Figures/views_unet-crop.pdf>
 Package pdftex.def Info: ./Figures/views_unet-crop.pdf  used on input line 255.
 
 (pdftex.def)             Requested size: 323.22449pt x 186.0477pt.
-<./Figures/results1-crop.pdf, id=1977, 387.4475pt x 571.13374pt>
+<./Figures/results1-crop.pdf, id=1984, 387.4475pt x 571.13374pt>
 File: ./Figures/results1-crop.pdf Graphic file (type pdf)
 <use ./Figures/results1-crop.pdf>
 Package pdftex.def Info: ./Figures/results1-crop.pdf  used on input line 301.
 (pdftex.def)             Requested size: 404.02908pt x 595.58604pt.
-<./Figures/result2-crop.pdf, id=1978, 387.4475pt x 571.13374pt>
+<./Figures/result2-crop.pdf, id=1985, 387.4475pt x 571.13374pt>
 File: ./Figures/result2-crop.pdf Graphic file (type pdf)
 <use ./Figures/result2-crop.pdf>
 Package pdftex.def Info: ./Figures/result2-crop.pdf  used on input line 308.
@@ -3707,7 +3708,7 @@ Overfull \hbox (20.69629pt too wide) in paragraph at lines 297--297
 et-works^^Q.
  []
 
-
+[79]
 Overfull \hbox (10.33781pt too wide) in paragraph at lines 297--297
 []\T1/ppl/m/n/12 Diederik P Kingma and Jimmy Ba. ^^P  Adam: A method for stocha
 s-
@@ -3719,7 +3720,7 @@ Overfull \hbox (4.34515pt too wide) in paragraph at lines 297--297
 -ing deep
  []
 
-[79]
+
 Overfull \hbox (56.25716pt too wide) in paragraph at lines 297--297
 []\T1/ppl/m/n/12 Lale Kostakoglu et al. ^^P  A phase II study of 3-deoxy-3-18F-
 fluorothymidine
@@ -3773,13 +3774,13 @@ Overfull \hbox (17.29164pt too wide) in paragraph at lines 297--297
 m-age com-put-ing and computer-
  []
 
-
+[81]
 Overfull \hbox (7.03754pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 med-i-cal im-age seg-men-ta-tion^^Q. In: \T1/ppl/m/it/12 arXiv p
 reprint arXiv:1906.02849
  []
 
-[81]
+
 Overfull \hbox (6.6494pt too wide) in paragraph at lines 297--297
 []\T1/ppl/m/n/12 Franz Thaler et al. ^^P  Sparse-view CT re-con-struc-tion us-i
 ng wasser-
@@ -3803,13 +3804,13 @@ Overfull \hbox (14.82399pt too wide) in paragraph at lines 297--297
 ppl/m/it/12 Physics in Medicine
  []
 
-
+[82]
 Overfull \hbox (0.34091pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 reg-u-lar-ized im-age re-con-struc-tion for PET^^Q. In: \T1/ppl/
 m/it/12 15th In-ter-na-tional
  []
 
-[82]
+
 Overfull \hbox (2.77243pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 ^^P  Deep learn-ing for biomed-i-cal im-age re-con-struc-tion: A
  sur-vey^^Q.
@@ -3835,9 +3836,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
 (./Chapters/Chapter5.aux) (./Appendices/AppendixA.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 03F6E565C7EF59EE45A666915E7D64E2;11838.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 92D1026A87504F3F79042AD286C7C995;12057
+(rerunfilecheck)             After:  B3C25D63995D1BF808339538AF3E3C7B;12052.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3846,13 +3853,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 64848 strings out of 492982
- 1502712 string characters out of 6134895
+ 64853 strings out of 492982
+ 1502871 string characters out of 6134895
  1917230 words of memory out of 5000000
- 67064 multiletter control sequences out of 15000+600000
+ 67067 multiletter control sequences out of 15000+600000
  620563 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,20n,100p,10377b,2969s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,20n,100p,10377b,2967s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -3869,10 +3876,10 @@ per/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (115 pages, 6857175 bytes).
+Output written on main.pdf (115 pages, 6858875 bytes).
 PDF statistics:
- 2383 PDF objects out of 2487 (max. 8388607)
- 1824 compressed objects within 19 object streams
- 391 named destinations out of 1000 (max. 500000)
- 761 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2390 PDF objects out of 2487 (max. 8388607)
+ 1831 compressed objects within 19 object streams
+ 393 named destinations out of 1000 (max. 500000)
+ 769 words of extra memory for PDF output out of 10000 (max. 10000000)
 

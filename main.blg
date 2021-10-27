@@ -23,7 +23,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 14730 items from 5000.
+Reallocated field_info (elt_size=4) to 14869 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: example.bib
 Repeated entry---line 428 of file example.bib
@@ -69,45 +69,45 @@ I'm skipping whatever remains of this entry
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 70 entries,
+You've used 71 entries,
             6268 wiz_defined-function locations,
-            1548 strings with 23442 characters,
-and the built_in function-call counts, 581308 in all, are:
-= -- 43395
-> -- 9307
-< -- 2764
-+ -- 16720
-- -- 3797
-* -- 46429
-:= -- 63929
+            1554 strings with 23647 characters,
+and the built_in function-call counts, 587961 in all, are:
+= -- 43818
+> -- 9464
+< -- 2812
++ -- 16894
+- -- 3864
+* -- 46985
+:= -- 64582
 add.period$ -- 0
-call.type$ -- 70
-change.case$ -- 1582
+call.type$ -- 71
+change.case$ -- 1606
 chr.to.int$ -- 32
-cite$ -- 138
-duplicate$ -- 64750
-empty$ -- 51175
-format.name$ -- 6785
-if$ -- 115440
+cite$ -- 140
+duplicate$ -- 65487
+empty$ -- 51763
+format.name$ -- 6878
+if$ -- 116813
 int.to.chr$ -- 0
-int.to.str$ -- 198
+int.to.str$ -- 201
 missing$ -- 0
-newline$ -- 3495
-num.names$ -- 3817
-pop$ -- 25918
+newline$ -- 3536
+num.names$ -- 3873
+pop$ -- 26268
 preamble$ -- 1
-purify$ -- 2140
+purify$ -- 2170
 quote$ -- 0
-skip$ -- 13498
+skip$ -- 13716
 stack$ -- 0
-substring$ -- 74901
-swap$ -- 14708
-text.length$ -- 2363
-text.prefix$ -- 119
+substring$ -- 75562
+swap$ -- 14910
+text.length$ -- 2403
+text.prefix$ -- 120
 top$ -- 1
-type$ -- 2368
+type$ -- 2402
 warning$ -- 0
-while$ -- 8042
+while$ -- 8123
 width$ -- 0
-write$ -- 3426
+write$ -- 3466
 (There were 10 error messages)

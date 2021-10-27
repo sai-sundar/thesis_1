@@ -1207,6 +1207,48 @@
     \field{year}{2018}
   \endentry
 
+  \entry{hornik1990universal}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HK}{%
+         family={Hornik},
+         familyi={H\bibinitperiod},
+         given={Kurt},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Stinchcombe},
+         familyi={S\bibinitperiod},
+         given={Maxwell},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={White},
+         familyi={W\bibinitperiod},
+         given={Halbert},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{HKSMWH1}
+    \strng{fullhash}{HKSMWH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{HSW90}
+    \field{labelyear}{1990}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{5}
+    \field{pages}{551\bibrangedash 560}
+    \field{title}{Universal approximation of an unknown mapping and its
+  derivatives using multilayer feedforward networks}
+    \field{volume}{3}
+    \field{journaltitle}{Neural networks}
+    \field{year}{1990}
+  \endentry
+
   \entry{huang2017densely}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=HG}{%
