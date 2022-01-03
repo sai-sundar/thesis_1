@@ -303,27 +303,27 @@ A \ac{CNN} with $2$ convolutional layers, $2$ activation layers and $2$ pooling 
 \end{figure}
 
 
-\subsection{Neural Networks for Image Reconstruction}
+\subsection{Neural Networks for Image to Image Translation}
 
-Image to image translation tasks require the \ac{CNN} to map from image in one domain to an image in another related domain. This requires the design of the \ac{CNN} to be quite different from the one depicted in Fig~\ref{fig:trad_cnn}. Convolution and pooling operations compress the input to obtain an abstract representation in lower dimensions. To transform the output into an image from the lower dimensional representation, transposed convolution operators are used. In contrast to the compressing nature of convolutions, they expand the input feature map. The combination of convolution+pooling and transposed convolutions are adjusted depending on the dimensions of the input and output images. Transposed convolution is shown in Fig~\ref{fig:tc}. Essentially the transposed convolution spatially reverses the dimensions of the convolution+pooling operation. 
+Image to image translation tasks require the \ac{CNN} to map from image in one domain to an image in another related domain. This requires the design of the \ac{CNN} to be quite different from the one depicted in Fig~\ref{fig:trad_cnn}. Convolution and pooling operations compress the input to obtain an abstract representation in lower dimensions. This lower dimensional encoding is transformed back into an image through the use of transposed convolution operators. In contrast to the compressing nature of convolutions, they expand the input feature map. The combination of convolution+pooling and transposed convolutions are adjusted depending on the dimensions of the input and output images. Transposed convolution is shown in Fig~\ref{fig:tc}. Essentially the transposed convolution spatially reverses the dimensions of the convolution+pooling operation. These networks with two parts where one part downsamples the input image and the other part upsamples the encoding into an image are called encoder-decoder networks. Since we use convolutions for achieving this encoder-decoder setup they are specifically called as \acf{CED}. 
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.5\linewidth]{transposed.pdf}
+	\includegraphics[width=0.4\linewidth]{transposed.pdf}
 	\caption{Transposed convolution over a $2\times2$ input to get a $4\times4$ output. (\cite{dumoulin2016guide})}
 	\label{fig:tc}
 \end{figure}
 
-Transposed convolutions are used in many tasks like super resolution, image segmentation, denoising and image reconstruction. This version of \ac{CNN} appropriate for image reconstruction is represented in Fig~\ref{fig:fcn}
+\acp{CED} are used in a variety of image to image translation tasks. Across the literature one would find many variations used in super resolution, image segmentation, denoising and image reconstruction. This subset of \acp{CNN} appropriate for image reconstruction task is represented in Fig~\ref{fig:ced}. 
 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.0\linewidth]{fcn-crop.pdf}
 	\caption{\ac{CNN} for image to image translation tasks. This example has an identical structure in convolution path and the transposed convolution path.}
-	\label{fig:fcn}
+	\label{fig:ced}
 \end{figure}
 
-These architectures are sometimes referred to as \ac{CED}, since they contain two distinct paths of down sampling of input and up sampling of lower dimensional representation. The building blocks described in this section essentially form the basis of \ac{CNN}s proposed in this thesis. The next chapter consists of a review of existing works in deep learning applied to medical image reconstruction. And the following chapters describe the proposed methods. 
+The building blocks described in this section essentially form the basis of neural network approaches proposed in this thesis. The next chapter consists of a review of existing works in deep learning applied to medical image reconstruction. And the following chapters describe the proposed methods. 
 
 
 

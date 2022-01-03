@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  27 OCT 2021 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  3 JAN 2022 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3001,6 +3001,11 @@ Overfull \hbox (3.46753pt too wide) detected at line 7
  []
 
 
+Overfull \hbox (3.46753pt too wide) detected at line 8
+ []\T1/ppl/m/n/12 xxxi
+ []
+
+
 Overfull \hbox (2.88783pt too wide) in paragraph at lines 17--17
  [][] [][][]\T1/ppl/m/n/12 Maximum Like-li-hood Ex-pec-ta-tion Max-i-miza-tion 
 (MLEM)[][] [][]  
@@ -3111,33 +3116,33 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 <./Figures/PET_det-crop.pdf, id=783, 290.08376pt x 290.08376pt>
 File: ./Figures/PET_det-crop.pdf Graphic file (type pdf)
 <use ./Figures/PET_det-crop.pdf>
-Package pdftex.def Info: ./Figures/PET_det-crop.pdf  used on input line 25.
+Package pdftex.def Info: ./Figures/PET_det-crop.pdf  used on input line 24.
 (pdftex.def)             Requested size: 242.4199pt x 242.42046pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 26.
+(Font)              scaled to size 11.40997pt on input line 25.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 26.
+(Font)              scaled to size 8.33606pt on input line 25.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 26.
+(Font)              scaled to size 6.25204pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 26.
+(Font)              scaled to size 11.40997pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 26.
+(Font)              scaled to size 8.33606pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 26.
+(Font)              scaled to size 6.25204pt on input line 25.
  [2 <./Figures/PET_det-crop.pdf>] [3]
-<./Figures/compton-crop.pdf, id=816, 253.94875pt x 135.50626pt>
+<./Figures/compton-crop.pdf, id=815, 253.94875pt x 135.50626pt>
 File: ./Figures/compton-crop.pdf Graphic file (type pdf)
 <use ./Figures/compton-crop.pdf>
-Package pdftex.def Info: ./Figures/compton-crop.pdf  used on input line 63.
+Package pdftex.def Info: ./Figures/compton-crop.pdf  used on input line 62.
 (pdftex.def)             Requested size: 282.81912pt x 150.91614pt.
-<./Figures/photo-crop.pdf, id=818, 164.615pt x 135.50626pt>
+<./Figures/photo-crop.pdf, id=817, 164.615pt x 135.50626pt>
 File: ./Figures/photo-crop.pdf Graphic file (type pdf)
 <use ./Figures/photo-crop.pdf>
-Package pdftex.def Info: ./Figures/photo-crop.pdf  used on input line 72.
+Package pdftex.def Info: ./Figures/photo-crop.pdf  used on input line 71.
 (pdftex.def)             Requested size: 202.01454pt x 166.29742pt.
 
-Overfull \hbox (15.45866pt too wide) in paragraph at lines 78--79
+Overfull \hbox (15.45866pt too wide) in paragraph at lines 77--78
 []\T1/ppl/m/n/12 Different ma-te-ri-als ex-hibit dif-fer-ent ab-sorp-tion prop-
 er-ties hence have unique
  []
@@ -3147,24 +3152,24 @@ er-ties hence have unique
 pdfTeX warning: /usr/bin/pdflatex (file ./Figures/photo-crop.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-<./Figures/x_ray_geo-crop.pdf, id=844, 292.09125pt x 206.7725pt>
+<./Figures/x_ray_geo-crop.pdf, id=843, 292.09125pt x 206.7725pt>
 File: ./Figures/x_ray_geo-crop.pdf Graphic file (type pdf)
 <use ./Figures/x_ray_geo-crop.pdf>
-Package pdftex.def Info: ./Figures/x_ray_geo-crop.pdf  used on input line 93.
+Package pdftex.def Info: ./Figures/x_ray_geo-crop.pdf  used on input line 92.
 (pdftex.def)             Requested size: 242.4199pt x 171.6148pt.
-<./Figures/cbct-crop.pdf, id=845, 243.91125pt x 215.80624pt>
+<./Figures/cbct-crop.pdf, id=844, 243.91125pt x 215.80624pt>
 File: ./Figures/cbct-crop.pdf Graphic file (type pdf)
 <use ./Figures/cbct-crop.pdf>
-Package pdftex.def Info: ./Figures/cbct-crop.pdf  used on input line 100.
+Package pdftex.def Info: ./Figures/cbct-crop.pdf  used on input line 99.
 (pdftex.def)             Requested size: 242.4199pt x 214.48853pt.
 
-Overfull \hbox (6.00343pt too wide) in paragraph at lines 104--105
+Overfull \hbox (6.00343pt too wide) in paragraph at lines 103--104
 []\T1/ppl/m/n/12 A rep-re-sen-ta-tion of a mod-ern he-li-cal cone beam scan-ner
  is shown in Fig [][]1.5[][].
  []
 
 [5 <./Figures/x_ray_geo-crop.pdf>]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 117
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
@@ -3172,18 +3177,18 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 122.
+(hyperref)                than one, level fixed on input line 121.
 
 [6 <./Figures/cbct-crop.pdf>] [7]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 166.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 165.
  [8]
-Overfull \hbox (15.65683pt too wide) in paragraph at lines 207--207
+Overfull \hbox (15.65683pt too wide) in paragraph at lines 206--206
 []\T1/ppl/b/n/14.4 Maximum Like-li-hood Ex-pec-ta-tion Max-i-miza-tion (MLEM) 
  []
 
 [9] [10]
-Overfull \hbox (34.03732pt too wide) in paragraph at lines 285--286
+Overfull \hbox (34.03732pt too wide) in paragraph at lines 284--285
 \T1/ppl/m/n/12 Complex im-age re-con-struc-tion prob-lems like sparse-view []CT
  are under-determined
  []
@@ -3332,7 +3337,7 @@ Overfull \hbox (36.67169pt too wide) in paragraph at lines 300--301
 File: Figures/transposed.pdf Graphic file (type pdf)
 <use Figures/transposed.pdf>
 Package pdftex.def Info: Figures/transposed.pdf  used on input line 312.
-(pdftex.def)             Requested size: 202.01454pt x 226.26694pt.
+(pdftex.def)             Requested size: 161.60916pt x 181.01015pt.
 <Figures/fcn-crop.pdf, id=1099, 534.99875pt x 143.53625pt>
 File: Figures/fcn-crop.pdf Graphic file (type pdf)
 <use Figures/fcn-crop.pdf>
@@ -3386,21 +3391,6 @@ Package pdftex.def Info: ./Figures/three-step-crop.pdf  used on input line 20.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package scrlayer-scrpage Warning: \headheight to low.
-(scrlayer-scrpage)                At least 35.9889pt needed,
-(scrlayer-scrpage)                but only 20.66162pt found.
-(scrlayer-scrpage)                I'll enlarge \headheight, for further
-(scrlayer-scrpage)                processing, but you should do this yourself,
-(scrlayer-scrpage)                e.g., setting geometry's option
-(scrlayer-scrpage)                `head=35.9889pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 5
-0.
-
-
-Overfull \vbox (15.32729pt too high) has occurred while \output is active []
-
 
 [34 <./Figures/three-step-crop.pdf>]
 <./Figures/denoise-crop.pdf, id=1268, 518.93875pt x 186.6975pt>
@@ -3763,18 +3753,24 @@ Overfull \hbox (8.7726pt too wide) in paragraph at lines 297--297
  []
 
 [80]
+Overfull \hbox (1.99834pt too wide) in paragraph at lines 297--297
+[]\T1/ppl/m/n/12 Jonathan Long, Evan Shel-hamer, and Trevor Dar-rell. ^^P  Full
+y con-
+ []
+
+
 Overfull \hbox (0.10121pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 ul-tra-sound im-age en-hance-ment^^Q. In: \T1/ppl/m/it/12 2018 I
 EEE In-ter-na-tional Ul-
  []
 
-
+[81]
 Overfull \hbox (17.29164pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 In: \T1/ppl/m/it/12 In-ter-na-tional Con-fer-ence on Med-i-cal i
 m-age com-put-ing and computer-
  []
 
-[81]
+
 Overfull \hbox (7.03754pt too wide) in paragraph at lines 297--297
 \T1/ppl/m/n/12 med-i-cal im-age seg-men-ta-tion^^Q. In: \T1/ppl/m/it/12 arXiv p
 reprint arXiv:1906.02849
@@ -3836,15 +3832,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
 (./Chapters/Chapter5.aux) (./Appendices/AppendixA.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5FC516A3DE8D5D86B3FE50E706C04A9F;12088.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 92D1026A87504F3F79042AD286C7C995;12057
-(rerunfilecheck)             After:  B3C25D63995D1BF808339538AF3E3C7B;12052.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3853,13 +3843,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 64853 strings out of 492982
- 1502871 string characters out of 6134895
- 1917230 words of memory out of 5000000
- 67067 multiletter control sequences out of 15000+600000
+ 64896 strings out of 492982
+ 1504153 string characters out of 6134895
+ 1917424 words of memory out of 5000000
+ 67109 multiletter control sequences out of 15000+600000
  620563 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,20n,100p,10377b,2967s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,20n,100p,10377b,2969s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -3876,10 +3866,10 @@ per/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (115 pages, 6858875 bytes).
+Output written on main.pdf (115 pages, 6857059 bytes).
 PDF statistics:
- 2390 PDF objects out of 2487 (max. 8388607)
- 1831 compressed objects within 19 object streams
- 393 named destinations out of 1000 (max. 500000)
+ 2391 PDF objects out of 2487 (max. 8388607)
+ 1832 compressed objects within 19 object streams
+ 394 named destinations out of 1000 (max. 500000)
  769 words of extra memory for PDF output out of 10000 (max. 10000000)
 

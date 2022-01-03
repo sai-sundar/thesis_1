@@ -2461,6 +2461,43 @@
     \field{year}{2013}
   \endentry
 
+  \entry{long2015fully}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=LJ}{%
+         family={Long},
+         familyi={L\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Shelhamer},
+         familyi={S\bibinitperiod},
+         given={Evan},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=DT}{%
+         family={Darrell},
+         familyi={D\bibinitperiod},
+         given={Trevor},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LJSEDT1}
+    \strng{fullhash}{LJSEDT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{LSD15}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}
+    \field{pages}{3431\bibrangedash 3440}
+    \field{title}{Fully convolutional networks for semantic segmentation}
+    \field{year}{2015}
+  \endentry
+
   \entry{maier2018deep}{article}{}
     \name{author}{4}{}{%
       {{hash=MJ}{%

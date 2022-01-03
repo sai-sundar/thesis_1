@@ -1,7 +1,7 @@
 % Chapter 4
 
-\chapter{LRR-CED:  Low-Resolution Reconstruction aware Convolutional Encoder-Decoder Network  for Direct Sparse-View CT Image Reconstruction} % Main chapter title
-
+\chapter{LRR-CED: Low-Resolution Reconstruction aware Convolutional Encoder-Decoder Network  for Direct Sparse-View CT Image Reconstruction} % Main chapter title
+\chaptermark{LRRCED}
 \label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
 Sparse-view \ac{CT} reconstruction has been at the forefront of research in medical imaging. Reducing the total X-ray radiation dose to the patient while preserving the reconstruction accuracy is a big challenge. The sparse-view approach is based on reducing the number of rotation angles, which leads to poor quality reconstructed images as it introduces several artifacts. These artifacts are more clearly visible in traditional reconstruction methods like the \ac{FBP} algorithm. Over the years, several model-based iterative and more recently deep learning-based methods have been proposed to improve sparse-view \ac{CT} reconstruction. Many deep learning-based methods improve \ac{FBP}-reconstructed images as a post-processing step. In this work, we propose a direct deep learning-based reconstruction that exploits the information from low-dimensional \ac{FBP} estimates, to learn the  projection-to-image mapping. This is done by concatenating the \ac{FBP} estimate at multiple resolutions in the decoder part of a \ac{CED}. This approach is investigated on two different networks, based on Dense Blocks and U-Net to show that a direct mapping can be learned from a sinogram to an image.  The results are compared to a post-processing deep learning method and an iterative method that uses a \ac{TV} regularization. 
