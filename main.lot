@@ -11,10 +11,11 @@
 \contentsline {table}{\numberline {4.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{46}{table.caption.154}
 \contentsline {table}{\numberline {4.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{46}{table.caption.155}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Architecture Summary.\relax }}{60}{table.caption.170}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Dataset Description\relax }}{61}{table.caption.177}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{65}{table.caption.189}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{65}{table.caption.190}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{69}{table.caption.198}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{70}{table.caption.199}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Dataset Description\relax }}{61}{table.caption.175}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{64}{table.caption.187}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{64}{table.caption.188}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Quantitative comparison of images reconstructed with the proposed algorithms w.r.t. \ac {GT} across different slices in the patient volume from the real dataset displayed in Fig.~\ref {fig:m1}\relax }}{67}{table.caption.195}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{73}{table.caption.202}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{73}{table.caption.203}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Ablation Study: Quantitative comparison of different configurations of the DenseNet\relax }}{73}{table.caption.209}
 \addvspace {10\p@ }

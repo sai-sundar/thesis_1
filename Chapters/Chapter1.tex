@@ -118,7 +118,7 @@ P(v, \phi)=(\mathcal{F} p)(v, \phi)=\int_{\mathbb{R}} d s p(s, \phi) \exp (-2 \p
 
 and $v$ is the frequency variable associated with $s$. In the context of tomographic image reconstruction this theorem has the following implication: given the measurement data for all projection angles $\phi \in [0,\pi]$, the radial line sweeps all the frequencies hence making it possible to compute $f(v_{x},v_{y})$ for $(v_{x},v_{y})\in \mathbb{R}^2$. The image $f$ can then be estimated by finding the inverse 2D Fourier transform. 
 
-\subsubsection{\ac{FBP}}
+\subsubsection{FBP}
 
 One of the most used reconstruction algorithms across modalities is the filtered back-projection algorithm. The version with continuous sampling is written as follows:
 
@@ -234,7 +234,7 @@ where $y_j$ are measured data corrected for random and scatter, $\alpha_{j}$ is 
 
 
 
-\subsection{OSEM}
+\subsection{Ordered Subsets Expectation Maximization (OSEM)}
 
 The \ac{OSEM} algorithm is a modification of the \ac{MLEM} algorithm which made it computationally practical for implementation in clinical setting. The \ac{LOR} data is divided into $\bm{S}$ disjoint subsets: $J_{1}, \cdots, J_{S} \subset\left[1, \cdots, N_{\text {LOR }}\right]$. Each of the parallel projection is assigned to a unique subset: $c, c+S, c+2S, \cdots, \leq N_{\phi}$ to the subset $J_{c+1}$. \ac{MLEM} (Eqn~\ref{eq:mlem}) is applied to each of the subsets individually in an orderly fashion. Subset $J_{N\bmod S}$ is used at iteration $N$:
 
@@ -251,7 +251,7 @@ i=1, \ldots, m
 
 
 
-\subsection{\ac{WLS}}
+\subsection{Weighted Least Squares (WLS)}
 
 One of the most common iterative techniques for \ac{CT} image reconstruction is the \ac{WLS} method, the image $\xhat$ is estimated by minimizing the following:
 

@@ -75,75 +75,45 @@ One of the most established architectures for image-to-image translation is U-Ne
 A typical U-Net consists of Convolution, Activation (\ac{ReLU}) and Pooling layers in the encoder and Upsampling, Convolution and Activation in the decoder. We have used U-Net without the dropout, similar to the dense network. The U-Net is represented in Figure~\ref{fig:un}. 
 
 \begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.23\linewidth]{./Figures/dense_block-crop.pdf}
-	\caption{Representation of a Dense Block with three layers.}
-	\label{fig:db}
+	\begin{subfigure}{.25\textwidth}
+		\centering
+		\includegraphics[width=0.4\linewidth]{dense_block-crop.pdf}
+		\caption{Dense Block}
+		\label{fig:db}
+	\end{subfigure}%
+	\begin{subfigure}{.40\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{dense_net-crop.pdf}
+		\caption{\ac{LRRCED}(D)}
+		\label{fig:dn1}
+	\end{subfigure}%
+	\begin{subfigure}{.35\textwidth}
+		\centering
+		\includegraphics[width=0.5\linewidth]{arc-crop.pdf}
+		\caption{Architecture Summary}
+		\label{fig:dn2}
+	\end{subfigure}%
+	\caption{Different components of \ac{LRRCED}(D): \subref{fig:db} Representation of a dense block with three layers. \subref{fig:dn1} \ac{LRRCED}(D): Fully convolutional dense network with $\boldx_1$ at $64\times64$ and $\boldx_2$ at $128\times128$. \subref{fig:dn2} Complete architecture summary}
+	\label{fig:den}
 \end{figure}
-
-
-
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=.83\linewidth]{./Figures/densenet-crop.pdf}
-	\caption{\ac{LRRCED}(D): Fully convolutional dense network with $\boldx_1$ at $64\times64$ and $\boldx_2$ at $128\times128$.}
-	\label{fig:dn}
-\end{figure}
-
-
-
-\begin{table}[ht!]
-	\centering
-	\caption{Architecture Summary.}
-	\label{table:1a}
-	\begin{tabular}{||c||} 
-		\hline
-		Input (Sinogram), channels=1 \\ 
-		\hline
-		$3 \times 3$ Convolutions \\ 
-		\hline
-		DB (4 layers) + TD  \\ 
-		\hline
-		DB (5 layers) + TD    \\ 
-		\hline
-		DB (7 layers) + TD \\  
-		\hline 
-		DB (10 layers) + TD \\ 
-		\hline
-		DB (12 layers) + TD \\  
-		\hline
-		DB (15 layers)    \\  
-		\hline
-		TU + DB (12 layers) \\
-		\hline
-		TU + DB (10 layers) \\
-		Concatenate $\boldx_1$  \\
-		\hline
-		TU + DB (7 layers) \\
-		Concatenate $\boldx_2$  \\     
-		\hline
-		TU + DB (5 layers) \\
-		\hline
-		TU + DB (4 layers) \\
-		\hline
-		$1\times 1$ Convolution \\
-		\hline
-		Sigmoid     \\
-		\hline  
-		Output (Image), channels $=1$ \\
-		\hline  
-		
-		
-	\end{tabular}
-	
-\end{table}
 
 
 \begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.8\linewidth]{./Figures/u_net-crop.pdf}
-	\caption{\ac{LRRCED}(U): U-Net with $\boldx_1$ at $128\times128$ and $\boldx_2$ at $256\times256$.}
-	\label{fig:un}
+	\begin{subfigure}{.60\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{u_net-crop.pdf}
+		\caption{\ac{LRRCED}(U)}
+		\label{fig:un}
+	\end{subfigure}%
+	\begin{subfigure}{.40\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{unet_details-crop.pdf}
+		\caption{Architecture Summary}
+		\label{fig:ud}
+	\end{subfigure}%
+	\caption{Different components of \ac{LRRCED}(U): \subref{fig:un} \ac{LRRCED}(U): U-Net with $\boldx_1$ at $64\times64$ and $\boldx_2$ at $128\times128$. \subref{fig:ud} Complete architecture summary.}
+	\label{fig:unet}
+	
 \end{figure}
 
 \subsubsection{Loss Function}
@@ -164,7 +134,7 @@ The final loss function that was used for training both the aforementioned netwo
 \begin{equation}\label{eq:loss}
 \mathcal{L}(\boldx^\star,\boldxhat) = \alpha\mathrm{MAE}(\boldx^\star, \boldxhat)+\beta(P_{1}(\boldx^\star,\boldxhat)+P_{3}(\boldx^\star,\boldxhat))
 \end{equation}
-where $P_{1}$ and $P_{3}$ are perceptual loss from the extracted features of the two different blocks above-mentioned, $\alpha$ and $\beta$ are weights which were set to $0.5$ and $10$ during the training phase.  
+where $P_{1}$ and $P_{3}$ are perceptual loss from the extracted features of the two different blocks above-mentioned, $\alpha$ and $\beta$ are weights which were set to $10$ and $0.5$ during the training phase.  
 
 
 \section{Dataset}
@@ -174,13 +144,13 @@ The data used in this work is from the \ac{Lung} \cite{Lung20,clark2013cancer}. 
 
 \begin{table}[ht!]
 	\caption{Dataset Description}
-	\label{table:2a}
+	\label{table:1}
 	\centering
 	\begin{tabular}{||c|c||} 
 		\hline
 		Dataset Statistics &  \\ [0.5ex] 
 		\hline
-		Modalities & CT, PET   \\ 
+		Modalities & CT   \\ 
 		\hline
 		Number of Participants  & 355  \\
 		\hline
@@ -190,8 +160,6 @@ The data used in this work is from the \ac{Lung} \cite{Lung20,clark2013cancer}. 
 		\hline
 		Number of 2-D Image slices & 251,135 \\ 
 		\hline
-		PET Matrix size & 200 \\ 
-		\hline
 		CT Matrix size & 512 \\ 
 		\hline
 		
@@ -199,17 +167,17 @@ The data used in this work is from the \ac{Lung} \cite{Lung20,clark2013cancer}. 
 	
 \end{table}
 
+
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.8\linewidth]{./Figures/data-crop.pdf}
+	\includegraphics[width=0.75\linewidth]{dataset-crop.pdf}
 	\caption{Samples from the dataset: Sinograms with different sparse-view configurations along with their corresponding \ac{FBP} estimate.}
 	\label{fig:data}
 \end{figure}
 
-
 \section{Training}
 
-We implemented the architectures described in the previous section using TensorFlow \cite{abadi2016tensorflow} and Keras \cite{chollet2015keras}. A subset of the dataset consisting of 22,000 \ac{2D} \ac{CT} images was used in this study. We then split the data into 20,000 images for training and 2,000 images for testing. The sinograms and \ac{FBP} estimates were generated using the ASTRA toolbox as described above. The sinograms were resized to $512 \times 512$ to ensure symmetry with the images for easier training of the network. The \ac{FBP} estimates $\boldxhat_1$ and $\boldxhat_2$ were resized to the resolutions required for concatenation to the proposed networks. The neural networks were independently trained for each of the sparse-view settings with $N_\mathrm{a}=60,90$ and $120$. The choice of $\boldx_1$ and $\boldx_2$ were at $64\times64$ and $128\times128$ resolutions for \ac{LRRCED}(D) and $128\times128$ and $256\times256$ resolutions for \ac{LRRCED}(U). The networks were trained for 25 epochs with Adam optimizer with a decay of $10^{-4}$.
+We implemented the architectures described in the previous section using TensorFlow and Keras \cite{abadi2016tensorflow,chollet2015keras}. A subset of the dataset consisting of 22,000 \ac{2D} \ac{CT} images was used in this study. We then split the data into 30,000 images for training and 2,000 images for testing. The sinograms and \ac{FBP} estimates were generated using the ASTRA toolbox as described above. The sinograms were resized to $512 \times 512$ to ensure symmetry with the images for easier training of the network. The \ac{FBP} estimates $\boldxhat_1$ and $\boldxhat_2$ were resized to the resolutions required for concatenation to the proposed networks. The neural networks were independently trained for each of the sparse-view settings with $N_\mathrm{a}=20,40,60,90$ and $120$. The choice of $\boldx_1$ and $\boldx_2$ were at $64\times64$ and $128\times128$ resolutions for \ac{LRRCED}(D) and $128\times128$ and $256\times256$ resolutions for \ac{LRRCED}(U). The networks were trained for $50$ epochs with Adam optimizer with a decay of $10^{-4}$.
 
 
 \section{Quantitative Analysis:}
@@ -232,43 +200,44 @@ where $L$ is the maximum intensity in the image and \ac{RMSE} is given by
 
 \section{Comparative Analysis}
 
-The  \ac{LRRCED} method was compared with a post-processing deep learning-based approach, namely FBP-ConvNet \cite{jin2017deep}, and a \ac{PWLS}-\ac{TV} solver for the model-based iterative \ac{CT} reconstruction \cite{tang2009performance}. We trained FBP-ConvNet on a set of 20,000 noisy, artifact-ridden \ac{FBP} image and \ac{GT} pairs. This network was trained for 25 epochs. 
+The  \ac{LRRCED} method was compared with a post-processing deep learning-based approach, namely FBP-ConvNet \cite{jin2017deep}, and a \ac{PWLS}-\ac{TV} solver for the model-based iterative \ac{CT} reconstruction \cite{tang2009performance}. We trained FBP-ConvNet on a set of 30,000 noisy, artifact-ridden \ac{FBP} image and \ac{GT} pairs. This network was trained for 50 epochs. 
 
 \section{Results} \label{sec:results}
 
 \subsection{Experimental Results}
 
-Figure~\ref{fig:d_ang} shows the images reconstructed with \ac{LRRCED}(D) for various degrees of sparsity in the projections. Also given below each image is the \ac{SSIM} and \ac{PSNR} w.r.t. \ac{GT}. The region enclosed in the yellow box is further zoomed in for clearer inspection. As the sparsity in the views reduces, the \ac{SSIM} and \ac{PSNR} also improve. Similarly in Figure~\ref{fig:u_ang}, we show the images reconstructed with \ac{LRRCED}(U). Similar to the previous case, we observe improvements in the metrics as the sparsity decreases. 
+Fig.~\ref{fig:d_ang} shows the images reconstructed with \ac{LRRCED}(D) for various degrees of sparsity in the projections. Images from various parts of the patient volume are displayed at different HUT windows for clearer evaluation of the proposed approach. We observe the improvement in the reconstructed images with the decrease in sparsity in the views. The images reconstructed with $N_\mathrm{a}=120$ appear closest to the \ac{GT}. The soft tissue regions in the images reconstructed with <60 views show artifacts which are not present with the use of more projections. Similarly in Fig.~\ref{fig:u_ang}, we show the images reconstructed with \ac{LRRCED}(U).  
 
-In Figure~\ref{fig:res_60} and Figure~\ref{fig:res_90} we present a comparison of reconstructed images with different algorithms with 60 views and 90 views respectively. The top row consists of the \ac{GT} and the proposed \ac{LRRCED}(D) and \ac{LRRCED}(U) approaches. The second row consists of FBP-ConvNet, \ac{PWLS}-\ac{TV} iterative method and \ac{FBP}. The region highlighted in yellow is zoomed and corresponding images are displayed in the third and fourth rows. These methods are quantitatively compared in Table~\ref{table:3} and Table~\ref{table:4}. We observe that the deep learning methods perform better than the iterative and analytical methods. The proposed approach has the best metrics for projections with 90 views. The deep learning-based methods have similar metrics in the 60-view scenario. The intensity line profiles of the regions marked in red in Figure~\ref{fig:res_60} and Figure~\ref{fig:res_90} are plotted in Figure~\ref{fig:ip_60} and Figure~\ref{fig:ip_90} respectively. In accordance with the metrics tabulated in Table~\ref{table:3} and Table~\ref{table:4}, we find that the plots of deep learning-based methods are very close to that of the \ac{GT}. Even though the proposed approach with typical \acp{CED} performs a task which is more complex than denoising, the metrics indicate that the quality has not deteriorated compared to a standard post-processing approach. The inclusion of perceptual loss in \ref{eq:loss} was to improve the sharpness of the reconstructed images. This is indeed reflected in the images predicted by the proposed approach but we also observe some artifacts (regularly spaced white dots) in the images (especially for 60 views).
+In Fig.~\ref{fig:res_60} and Fig.~\ref{fig:res_90} we present a comparison of reconstructed images using different algorithms with 60 and 90 views respectively. The top row consists of the \ac{GT} and the reconstructed image by proposed \ac{LRRCED}(D) approach. The second row consists of  images with \ac{LRRCED}(U) and the FBP-ConvNet. Finally in the last row are the images reconstructed with \ac{PWLS}-\ac{TV} iterative method and \ac{FBP}. The region highlighted in yellow is zoomed and displayed alongside the corresponding image. These methods are quantitatively compared in Table~\ref{table:2} and Table~\ref{table:3}. We observe that the deep learning methods perform better than the iterative and analytical methods. The images reconstructed with U-Net based methods namely LRRCED(U) and FBP-ConvNet, have very similar characteristics: The contrast is higher and they perform better quantitatively. However, images reconstructed with DenseNet by comparison show less noise and streaking artifacts. These visual observations can be more clearly seen in the zoomed images shown in Fig.~\ref{fig:res_60}. This is further reiterated in the intensity plot profiles shown in Fig.~\ref{fig:ip_60} and Fig.~\ref{fig:ip_90}, where the LRR-CED(D) results are closer to the GT. In accordance with the metrics tabulated in Table~\ref{table:2} and Table~\ref{table:3}, we find that the plots of deep learning-based methods are very close to that of the \ac{GT}. Even though the proposed approach with typical \acp{CED} performs a task which is more complex than denoising, the metrics indicate that the quality has not deteriorated compared to a standard post-processing approach. 
 
-\begin{figure}[!htbp]
+
+\begin{figure*}[!htbp]
 	\centering
-	\includegraphics[width=0.8\linewidth]{./Figures/views_dense-crop.pdf}
-	\caption{Images reconstructed with LRR-CED(D) approach with different sparse-view configurations, i.e., projections with $N_\mathrm{a}=60,90$ and $120$.}
+	\includegraphics[width=1.00\linewidth]{views_dense-crop.pdf}
+	\caption{Images reconstructed with LRR-CED(D) approach with different sparse-view configurations, i.e., projections with $N_\mathrm{a}=120,90,60,40$ and $20$. For better visual inspection images in first row are displayed in $-40 \pm 600$ HUT window, the second row in $-340 \pm 400$ HUT and the third in $-150 \pm 400$ HUT.}
 	\label{fig:d_ang}
-\end{figure}
+\end{figure*}
 
 
-\begin{figure}[!htbp]
+\begin{figure*}[!htbp]
 	\centering
-	\includegraphics[width=0.8\linewidth]{./Figures/views_unet-crop.pdf}
-	\caption{Images reconstructed with LRR-CED(U) approach with different Sparse-View configurations, i.e., projections with $N_\mathrm{a}=60,90$ and $120$.}
+	\includegraphics[width=1.00\linewidth]{views-unet-crop.pdf}
+	\caption{Images reconstructed with LRR-CED(U) approach with different Sparse-View configurations, i.e., projections with $N_\mathrm{a}=120,90,60,40$ and $20$. Images in first row are displayed in $-40 \pm 600$ HUT window, the second row in $-340 \pm 400$ HUT and the third in $-150 \pm 400$ HUT.}
 	\label{fig:u_ang}
-\end{figure}
+\end{figure*}
 
 
 \begin{table}[ht!]
 	\centering
 	\caption{Quantitative comparison of various reconstruction algorithms with \ac{SSIM} and \ac{PSNR} for projections with 60 views}
-	\label{table:3a}
+	\label{table:2}
 	\begin{tabular}{||c|c|c|c|c|c||} 
 		\hline
 		Metric & FBP & PWLS-TV & FBP & \ac{LRRCED} & \ac{LRRCED}  \\ %[0.5ex] 
 		&     &         & ConvNet & (D) & (U) \\
 		\hline\hline
-		SSIM & $0.16$ & $0.66$ & $0.85$ & $0.84$ & $0.87$ \\ 
-		PSNR & $11.57$ & $28.23$ & $31.52$ & $29.48$ & $30.12$ \\   
+		SSIM & $0.16$ & $0.66$ & $0.90$ & $0.89$ & $0.90$ \\ 
+		PSNR & $11.57$ & $28.23$ & $31.58$ & $30.04$ & $30.20$ \\   
 		\hline  
 		
 		\hline  
@@ -279,14 +248,14 @@ In Figure~\ref{fig:res_60} and Figure~\ref{fig:res_90} we present a comparison o
 \begin{table}[ht!]
 	\centering
 	\caption{Quantitative comparison of various reconstruction algorithms with \ac{SSIM} and \ac{PSNR} for projections with 90 views}
-	\label{table:4a}
+	\label{table:3}
 	\begin{tabular}{||c|c|c|c|c|c||} 
 		\hline
 		Metric & FBP & PWLS-TV & FBP & \ac{LRRCED} & \ac{LRRCED}  \\ %[0.5ex] 
 		&     &         & ConvNet & (D) & (U) \\
 		\hline\hline
-		SSIM & $0.19$ & $0.72$ & $0.81$ & $0.88$ & $0.89$ \\ 
-		PSNR & $13.57$ & $30.21$ & $31.45$ & $32.53$ & $31.84$ \\   
+		SSIM & $0.19$ & $0.72$ & $0.93$ & $0.91$ & $0.92$ \\ 
+		PSNR & $13.57$ & $30.21$ & $35.27$ & $32.70$ & $32.86$ \\   
 		\hline  
 		
 		\hline  
@@ -294,80 +263,176 @@ In Figure~\ref{fig:res_60} and Figure~\ref{fig:res_90} we present a comparison o
 	
 \end{table}
 
-
-
 \begin{figure}[!t]
 	\centering
-	\includegraphics[width=1.0\linewidth]{./Figures/results1-crop.pdf}
-	\caption{Comparative analysis for 60 views: From the top left, we have \ac{GT} image, reconstructions with \ac{LRRCED}(D) and \ac{LRRCED}(U). In the second row reconstructed images with FBP-ConvNet, PWLS-TV and \ac{FBP}. }
+	\includegraphics[width=0.9\linewidth]{60_views-crop.pdf}
+	\caption{Comparative analysis for 60 views: From the top left corner, we have \ac{GT} image, reconstructions with \ac{LRRCED}(D) . In the second row reconstructed images with \ac{LRRCED}(U) and FBP-ConvNet. Finally images reconstructed with PWLS-TV and \ac{FBP}.}
 	\label{fig:res_60}
 \end{figure}
 
+
+
+
 \begin{figure}[!t]
 	\centering
-	\includegraphics[width=1.0\linewidth]{./Figures/result2-crop.pdf}
-	\caption{Comparative analysis for 90 views: From the top we have \ac{GT} image, reconstructions with \ac{LRRCED}(D) and \ac{LRRCED}(U). In the second row reconstructed images with FBP-ConvNet, PWLS-TV and \ac{FBP}.}
+	\includegraphics[width=0.9\linewidth]{90_views-crop.pdf}
+	\caption{Comparative analysis for 90 views: From the top left corner, we have \ac{GT} image, reconstructions with \ac{LRRCED}(D) . In the second row reconstructed images with \ac{LRRCED}(U) and FBP-ConvNet. Finally images reconstructed with PWLS-TV and \ac{FBP}.}
 	\label{fig:res_90}
 \end{figure}
 
-\begin{figure}[!h]
-	\centering
-	\begin{tikzpicture}[scale=1] 
-	\begin{axis}[
-	% title=X-ray source Energy: $140$ keV,
-	mark options={mark size = 3pt},
-	xlabel={Distance (in pixels)},
-	ylabel={Normalized Attenuation (mm$^{-1}$)},
-	xmin = 200,
-	xmax = 300,
-	grid = major,
-	legend columns=2,
-	legend cell align=left,
-	legend entries={PWLS-TV,\ac{GT},\ac{LRRCED}(D),\ac{LRRCED}(U),FBP-ConvNet},
-	% legend entries={MCAOL,CAOL, Huber, TV, },
-	legend style={at={(0.5,1.2)},anchor=north}
-	]
-	
-	\addplot[color=blue, style={thick}] table[x=Distance, y=PWLS-TV] {./Plots/Fig11.txt};
-	\addplot[color=green, style={thick}] table[x=Distance, y=GT] {./Plots/Fig11.txt};
-	\addplot[color=red, style={thick}] table[x=Distance, y=LRR-CED(D)] {./Plots/Fig11.txt};
-	\addplot[color=magenta, style={thick}] table[x=Distance, y=LRR-CED(U)] {./Plots/Fig11.txt};
-	\addplot[color=black, style={thick}] table[x=Distance, y=FBP-ConvNet] {./Plots/Fig11.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{Intensity plot profile for the region marked in red from Figure~\ref{fig:res_60} for PWLS-TV, \ac{GT}, \ac{LRRCED}(D), \ac{LRRCED}(U) and FBP-ConvNet.}\label{fig:ip_60}
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.9] 
+		\begin{axis}[
+		% title=X-ray source Energy: $140$ keV,
+		mark options={mark size = 3pt},
+		xlabel={Distance (in pixels)},
+		ylabel={Attenuation (mm$^{-1}$)},
+		xmin = 16,
+		xmax = 116,
+		grid = major,
+		legend columns=2,
+		legend cell align=left,
+		legend entries={\ac{GT},\ac{LRRCED}(D),FBP-ConvNet},
+		legend style={at={(0.5,1.2)},anchor=north}
+		]
+		\addplot[color=green, style={thick}] table[x=Distance, y=GT] {./Figures/60_views.txt};
+		\addplot[color=red, style={thick}] table[x=Distance, y=LRR-CED(D)] {./Figures/60_views.txt};
+		\addplot[color=black, style={thick}] table[x=Distance, y=FBP-ConvNet] {./Figures/60_views.txt};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{60 views 1}
+		\label{fig:ip_60_d}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.9] 
+		\begin{axis}[
+		mark options={mark size = 3pt},
+		xlabel={Distance (in pixels)},
+		ylabel={Attenuation (mm$^{-1}$)},
+		xmin = 16,
+		xmax = 116,
+		grid = major,
+		legend columns=2,
+		legend cell align=left,
+		legend entries={\ac{GT},\ac{LRRCED}(U),FBP-ConvNet},
+		legend style={at={(0.5,1.2)},anchor=north}
+		]
+		\addplot[color=green, style={thick}] table[x=Distance, y=GT] {./Figures/60_views.txt};
+		\addplot[color=blue, style={thick}] table[x=Distance, y=LRR-CED(U)] {./Figures/60_views.txt};
+		\addplot[color=black, style={thick}] table[x=Distance, y=FBP-ConvNet] {./Figures/60_views.txt};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{60 views 2}
+		\label{fig:ip_60_u}
+	\end{subfigure}%
+	\caption{Intensity plot profile for the region marked in red from Fig.~\ref{fig:res_60} comparing \ac{LRRCED}(D) and FBP-ConvNet to the \ac{GT} in \subref{fig:ip_60_d} and \ac{LRRCED}(U) and FBP-ConvNet in \subref{fig:ip_60_u}}
+	\label{fig:ip_60}
 \end{figure}
 
-\begin{figure}[!h]
-	\centering
-	\begin{tikzpicture}[scale=1] 
-	\begin{axis}[
-	% title=X-ray source Energy: $140$ keV,
-	mark options={mark size = 3pt},
-	xlabel={Distance (in pixels)},
-	ylabel={Normalized Attenuation (mm$^{-1}$)},
-	xmin = 200,
-	xmax = 300,
-	grid = major,
-	legend columns=2,
-	legend cell align=left,
-	legend entries={PWLS-TV,\ac{GT},\ac{LRRCED}(D),\ac{LRRCED}(U),FBP-ConvNet},
-	% legend entries={MCAOL,CAOL, Huber, TV, },
-	legend style={at={(0.5,1.2)},anchor=north}
-	]
-	
-	\addplot[color=blue, style={thick}] table[x=Distance, y=PWLS-TV] {./Plots/Fig10.txt};
-	\addplot[color=green, style={thick}] table[x=Distance, y=GT] {./Plots/Fig10.txt};
-	\addplot[color=red, style={thick}] table[x=Distance, y=LRR-CED(D)] {./Plots/Fig10.txt};
-	\addplot[color=magenta, style={thick}] table[x=Distance, y=LRR-CED(U)] {./Plots/Fig10.txt};
-	\addplot[color=black, style={thick}] table[x=Distance, y=FBP-ConvNet] {./Plots/Fig10.txt};
-	\end{axis}
-	\end{tikzpicture}
-	
-	\caption{Intensity plot profile for the region marked in red from Figure~\ref{fig:res_90} for PWLS-TV, \ac{GT}, \ac{LRRCED}(D), \ac{LRRCED}(U) and FBP-ConvNet.}\label{fig:ip_90}
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.9] 
+		\begin{axis}[
+		mark options={mark size = 3pt},
+		xlabel={Distance (in pixels)},
+		ylabel={Attenuation (mm$^{-1}$)},
+		xmin = 200,
+		xmax = 300,
+		grid = major,
+		legend columns=2,
+		legend cell align=left,
+		legend entries={\ac{GT},\ac{LRRCED}(D),FBP-ConvNet},
+		legend style={at={(0.5,1.2)},anchor=north}
+		]
+		\addplot[color=green, style={thick}] table[x=Distance, y=GT] {./Figures/90_views.txt};
+		\addplot[color=red, style={thick}] table[x=Distance, y=LRR-CED(D)] {./Figures/90_views.txt};
+		\addplot[color=black, style={thick}] table[x=Distance, y=FBP-ConvNet] {./Figures/90_views.txt};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{90 views 1}
+		\label{fig:ip_90_d}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\begin{tikzpicture}[scale=0.9] 
+		\begin{axis}[
+		mark options={mark size = 3pt},
+		xlabel={Distance (in pixels)},
+		ylabel={Attenuation (mm$^{-1}$)},
+		xmin = 200,
+		xmax = 300,
+		grid = major,
+		legend columns=2,
+		legend cell align=left,
+		legend entries={\ac{GT},\ac{LRRCED}(U),FBP-ConvNet},
+		legend style={at={(0.5,1.2)},anchor=north}
+		]
+		\addplot[color=green, style={thick}] table[x=Distance, y=GT] {./Figures/90_views.txt};
+		\addplot[color=blue, style={thick}] table[x=Distance, y=LRR-CED(U)] {./Figures/90_views.txt};
+		\addplot[color=black, style={thick}] table[x=Distance, y=FBP-ConvNet] {./Figures/90_views.txt};
+		\end{axis}
+		\end{tikzpicture}
+		\caption{90 views 2}
+		\label{fig:ip_90_u}
+	\end{subfigure}%
+	\caption{Intensity plot profile for the region marked in red from Fig.~\ref{fig:res_90} comparing \ac{LRRCED}(D) and FBP-ConvNet to the \ac{GT} in \subref{fig:ip_90_d} and \ac{LRRCED}(U) and FBP-ConvNet in \subref{fig:ip_90_u}}
+	\label{fig:ip_90}
 \end{figure}
 
+\subsection{Experiments with real data}
+
+The proposed networks were initialized with the weights from the previous study and were then trained on the real data. The real data used in this study was part of the Low Dose \ac{CT} grand challenge \cite{mccollough2016tu}. The data constituted of 10 patients, acquired with flying spot technique and a helical scan. It was a subset of the larger Mayo \ac{CT} clinic database \cite{moen2021low}. The data from nine patients constituting of 3,994 \ac{2D} slices was used for training and the trained network was tested on another patient data.  The \ac{3D} sinograms obtained from the helical scan were converted into \ac{2D} sinograms through the single slice re-binning method employed in \cite{kim2017low}. We further resampled the sinograms reducing the number of views to 64. The number of detector panels was 734. The \ac{FBP} estimates were generated from these sparse-view sinograms and resized for training the \ac{LRRCED}.
+
+We present the results for four different slices across the patient volume and their quantitative evaluation in Figure~\ref{fig:m1} and Table~\ref{table:m1}, respectively. We observe that the reconstructed images with the proposed networks have similar characteristics as the ones from the simulation study. The transfer learning strategy ensures that the quality of the reconstructed images is maintained even with very limited training data.
+
+
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=0.8\linewidth]{./mayo-crop.pdf}\hfill
+	\caption{Real data study: Images reconstructed with the proposed approaches across 4 different slices displayed in the window $40 \pm 200 $ HUT. }\label{fig:m1}
+\end{figure}
+
+
+\begin{table}[ht!]
+	\centering
+	\caption{Quantitative comparison of images reconstructed with the proposed algorithms w.r.t. \ac{GT} across different slices in the patient volume from the real dataset displayed in Fig.~\ref{fig:m1}}
+	\label{table:m1}
+	\begin{tabular}{||c|c|c|c||} 
+		\hline
+		Image & Metric  & LRRCED(D) & LRRCED(U) \\ %[0.5ex] 
+		\hline\hline
+		a & SSIM      & $0.89$ & $0.92$ \\ 
+		&  PSNR      & $35.70$ & $36.64$  \\   
+		\hline  
+		b & SSIM      & $0.88$ & $0.92$ \\ 
+		& PSNR      & $35.19$ & $36.13$  \\   
+		\hline
+		c & SSIM      & $0.94$ & $0.92$ \\ 
+		& PSNR      & $40.86$ & $42.04$  \\   
+		\hline
+		d & SSIM      & $0.84$ & $0.91$ \\ 
+		& PSNR      & $33.37$ & $34.59$  \\   
+		\hline
+		
+	\end{tabular}
+	
+\end{table}
+
+\subsection{Stability Study}
+One of the major challenges to data-driven neural network approaches is the ability to generalize over different types of test data. The extent to which a neural network is stable when presented with data different from the training data is the focus of this study. This topic has been extensively evaluated in the article by \cite{antun2020instabilities}. The authors analyzed the impact of tiny perturbations and small structural changes in sampling and image domain on the reconstructed images. They also observed the way in which a change in sampling (sparsity in \ac{CT} for example) could influence performance. In our work centered around sparse-view \ac{CT} image reconstruction, we performed a series of experiments with different levels of sparsity in the testing data. The proposed network \ac{LRRCED}(D) was trained separately on each of the sparsity configurations, ($N_\mathrm{a}= 20,40,60,90 \: \mathrm{and} \:  120$). It was then tested using the sinograms and the corresponding \ac{FBP} estimates for all of the possible values of $N_\mathrm{a}$ considered.
+
+The results are displayed in Fig~\ref{fig:ins1}. The top row corresponds to network trained with 20-view data, the second with 40-view data and so on. The trend is towards an improvement in overall image quality with reduced sparsity in the sinograms. On one hand, we observe that in the scenarios where the testing data has more sparsity than the training data, the artifacts in the reconstructed images are more clearly visible. This is clearly seen in the last two rows in Figure~\ref{fig:ins1}, where the network was trained on 90 views and 120 views data and the images  reconstructed with lower $N_\mathrm{a}$ are ridden with artifacts. On the other hand, the image quality especially in the soft tissue regions is higher when the network is trained and tested on data with more views. The proposed network maintains stability in the reconstructed images with the increase in the sampling in the testing data. However, when the testing data has fewer views than the training data, artifacts are present in the reconstructed images.
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=1.0\linewidth]{./instab_1-crop.pdf}\hfill
+	\caption{Stability study: Each row corresponds to the network trained on specific value of $N_\mathrm{a}$, and tested with all the possible values of $N_\mathrm{a}$.}\label{fig:ins1}
+\end{figure}
 
 \subsection{Hyperparameter optimization}
 
@@ -383,6 +448,11 @@ To select the best possible configuration for concatenation in the proposed appr
 
 One of the biggest challenges in any data driven algorithm is the selection of training examples required for the experiments. It is important to analyze this hyper-parameter as it serves as an important factor for the network to be reproducible and scalable. We varied the number of training examples for the best concatenation setting from the previous section and the 90-view scenario. The evaluation was similar to the previous experiment with the average \ac{SSIM} for 5 patients. The results from these experiments are tabulated in Table~\ref{table:6}. As seen in Figure~\ref{fig:tr}, the performance of the network improves along with the increase in the number of training examples. There is however a marginal difference in the performance of the network when trained with 20,000 or 30,000 training examples, hence making us choose 20,000 training examples as the optimum number for this hyper-parameter. The average \ac{SSIM} values across the test patients tend to get similar as the number of training examples increases.
 
+\subsection{Ablation Study} \label{sec:ablation}
+
+We performed an ablation study to understand the impact of the proposed concatenations on the neural network performance. DenseNet described earlier was trained for 50 epochs on 20,000 data samples in three different scenariosas shown in Figure~\ref{fig:a2}, two of which used either a sinogram consisting of randomly distributed Gaussian noise and no low-resolution concatenations: (i) true sinogram and the reconstructed image only (no low-resolution concatenations), (ii) Gaussian noise sinogram, low-resolution concatenations and the reconstructed images, and (iii) true sinogram, low-resolution concatenations and the reconstructed images. 
+
+The image predictions by the three different neural networks are shown in Figure~\ref{fig:a1}. DenseNet without the low-resolution concatenations does produce images with some structural information, but the other two configurations generate images of much better quality. We observe that the concatenations indeed help the network learn the structure of the image, while the sinograms contribute in artifact and noise removal. This is reflected upon closer inspection of the third and fourth images in Figure~\ref{fig:a1}. The images predicted with \ac{LRRCED}(D) trained using the randomly distributed Gaussian noise sinogram instead of the true sinogram have artifacts and noise which is also seen quantitatively in Table~\ref{table:7}. The best metrics and image quality are demonstrated by the neural network trained on the combination of sinograms and low-resolution estimates labeled as \ac{LRRCED}(D) in Figure~\ref{fig:a1}. 
 
 
 
@@ -523,13 +593,45 @@ One of the biggest challenges in any data driven algorithm is the selection of t
 	\caption{Comparison of Average \ac{SSIM} for 5 different Patient data for 90 views with varying number of training samples. The configuration of the network is the one with best performance from the analysis in Figure~\ref{fig:c1}. (concatenations at $64\times 64$ and $128\times 128$). }\label{fig:tr}
 \end{figure}
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.5\linewidth]{./ab_rep-crop.pdf}\hfill
+\caption{Schematic representation of configurations used in the ablation study: (i) true sinogram and the reconstructed image only (no low-resolution concatenations); (ii) randomly distributed Gaussian noise sinogram, low-resolution concatenations and the reconstructed images; (iii) true sinogram, low-resolution concatenations and the reconstructed images.}\label{fig:a2}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1.0\linewidth]{./ablation-crop.pdf}\hfill
+\caption{Ablation study: Predictions from different configurations of the network.\label{fig:a1}}
+\end{figure}
+
+
+\begin{table}[ht!]
+\centering
+\caption{Ablation Study: Quantitative comparison of different configurations of the DenseNet}
+\label{table:7}
+\begin{tabular}{||c|c|c|c|c|c||} 
+	\hline
+	Sl.No.    & True      & Concatenations   & Gaussian noise &    \ac{SSIM} &  \ac{PSNR}      \\ %[0.5ex] 
+	& sinograms &                  &  sinograms     &              &                 \\
+	\hline\hline
+	(i)        &\cmark    &    \xmark       &    \xmark     &    $0.29$    &  $12.05$         \\     
+	\hline
+	(ii)       &\xmark    &    \cmark       &    \cmark     &    $0.70$    &  $28.89$         \\
+	\hline  
+	(iii)       &\cmark    &    \cmark       &    \xmark     &  $\bm{0.88}$ & $\bm{32.53}$     \\ 
+	\hline
+\end{tabular}
+
+\end{table}
 
 
 \section{Discussion} \label{sec:discussion}
 
-The use of deep learning architectures in the framework of medical image reconstruction is propelled by potentially faster reconstruction without compromising on the quality of the images. To this end, hybrid image reconstruction involving unrolled iterative algorithms with embedded deep learning architectures do not significantly reduce the reconstruction time. Hence, the use of deep learning architectures for either improving images from a fast analytic algorithm or direct reconstruction becomes more relevant for their incorporation into the image reconstruction pipeline. One significant problem for direct image reconstruction is the requirement of large and complex networks to learn the mapping from sinograms to images without the help of any reconstruction estimate. The networks used for post-processing on the other hand are simpler and relatively easy to train. In this work we attempted to use these post-processing networks for the direct image reconstruction task. We show that concatenating \ac{FBP} estimates at lower resolutions is sufficient to allow the network to learn the mapping from sinogram to image space. Through the use of two different networks with the concatenation approach we demonstrate that this idea can be applied to \acp{CED} in general.   
+The use of deep learning architectures in the framework of medical image reconstruction is propelled by potentially faster reconstruction without compromising on the quality of the images. To this end, hybrid image reconstruction involving unrolled iterative algorithms with embedded deep learning architectures do not significantly reduce the reconstruction time. Hence, the use of deep learning architectures for either improving images from a fast analytic algorithm or direct reconstruction becomes more relevant for their incorporation into the image reconstruction pipeline. One significant problem for direct image reconstruction is the requirement of large and complex networks to learn the mapping from sinograms to images without the help of any reconstruction estimate. The networks used for post-processing on the other hand are simpler and relatively easy to train. In this work we attempted to use these post-processing networks for the direct image reconstruction task along with low-resolution scout images from direct analytical method. We show that concatenating \ac{FBP} estimates at lower resolutions is sufficient to allow the network to learn the mapping from sinogram to image space. Through the use of two different networks with the concatenation approach we demonstrate that this idea can be applied to \acp{CED} in general.   
 
-In the sparse-view \ac{CT} scenario artifact removal along with denoising increases the challenges of getting a clean well-resolved image. We observed that the use of traditional loss functions (L1 or L2) resulted in blurry images. To tackle this and to improve the sharpness of the images we used perceptual loss along with the standard L1 loss. The reconstructed images with our proposed \ac{LRRCED}(D) and \ac{LRRCED}(U) have higher \ac{SSIM} and \ac{PSNR} than images reconstructed with a traditional iterative algorithm. The evaluation metrics were very close to a standard post-processing deep learning method FBP-ConvNet. This similarity stems from the fact that the choice of networks used in our proposed work was inspired from post-processing \acp{CED}. The contribution in this work is the use of these networks to learn the mapping from sparse sinograms to images with the same amount of training examples, which is possible only with the proposed addition of the concatenations.  
+In the sparse-view \ac{CT} scenario artifact removal along with denoising increases the challenges of getting a clean well-resolved image. We observed that the use of traditional loss functions (L1 or L2) resulted in blurry images. To tackle this and to improve the sharpness of the images we used perceptual loss along with the standard L1 loss. The reconstructed images with our proposed \ac{LRRCED}(D) and \ac{LRRCED}(U) have higher \ac{SSIM} and \ac{PSNR} than images reconstructed with a traditional iterative algorithm and a standard post-processing deep learning method FBP-ConvNet. The similarity in the images from the deep learning methods stems from the fact that the choice of networks used in our proposed work was inspired from post-processing \acp{CED}. The contribution in this work is the use of these networks to learn the mapping from sparse sinograms to images with the same amount of training examples, which is possible only with the proposed addition of the concatenations. Through the ablation study from Section~\ref{sec:ablation}, we reiterate the contribution of both the sinogram and the low-resolution concatenations for image reconstruction. The \ac{CED} without the concatenations could learn the mapping but it would need much higher number of training examples for image quality comparable to other methods. The proposed method was compared to a U-Net based denoising method (FBP-ConvNet), which has one of the best quantitative metrics in image reconstruction as established by the recent quantitative comparison study carried out by \cite{leuschner2021quantitative}. As it was shown in this study, complex unrolled methods do only marginally better than the U-Net, hence making it one of the most frequently used benchmarks for comparison purposes. 
 
 We are currently exploring the possibility of using image estimates from earlier iterations of standard iterative algorithms while ensuring that the trade-off between time and image quality is not compromised. The use of other alternative architectures is also being explored to arrive at reconstructed images which perform significantly better than existing post-processing approaches. Finally, we are working on experiments with low-dose \ac{CT} and other tomographic reconstruction modalities to establish the adaptability of the proposed approach.  
 

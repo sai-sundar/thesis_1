@@ -197,6 +197,60 @@
     \field{year}{2019}
   \endentry
 
+  \entry{antun2020instabilities}{article}{}
+    \name{author}{5}{}{%
+      {{hash=AV}{%
+         family={Antun},
+         familyi={A\bibinitperiod},
+         given={Vegard},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=RF}{%
+         family={Renna},
+         familyi={R\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Poon},
+         familyi={P\bibinitperiod},
+         given={Clarice},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Adcock},
+         familyi={A\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HAC}{%
+         family={Hansen},
+         familyi={H\bibinitperiod},
+         given={Anders\bibnamedelima C},
+         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {National Acad Sciences}%
+    }
+    \strng{namehash}{AV+1}
+    \strng{fullhash}{AVRFPCABHAC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ant+20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{48}
+    \field{pages}{30088\bibrangedash 30095}
+    \field{title}{On instabilities of deep learning in image reconstruction and
+  the potential costs of AI}
+    \field{volume}{117}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2020}
+  \endentry
+
   \entry{adler2018learned}{article}{}
     \name{author}{2}{}{%
       {{hash=AJ}{%
@@ -1602,6 +1656,48 @@
     \field{year}{2014}
   \endentry
 
+  \entry{kim2017low}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KK}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Kyungsang},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=EFG}{%
+         family={El\bibnamedelima Fakhri},
+         familyi={E\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Georges},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LQ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Quanzheng},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{KKEFGLQ1}
+    \strng{fullhash}{KKEFGLQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{KEFL17}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{10}
+    \field{pages}{e376\bibrangedash e390}
+    \field{title}{Low-dose CT reconstruction using spatially encoded nonlocal
+  penalty}
+    \field{volume}{44}
+    \field{journaltitle}{Medical physics}
+    \field{year}{2017}
+  \endentry
+
   \entry{kim2018penalized}{article}{}
     \name{author}{9}{}{%
       {{hash=KK}{%
@@ -2461,43 +2557,6 @@
     \field{year}{2013}
   \endentry
 
-  \entry{long2015fully}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=LJ}{%
-         family={Long},
-         familyi={L\bibinitperiod},
-         given={Jonathan},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=SE}{%
-         family={Shelhamer},
-         familyi={S\bibinitperiod},
-         given={Evan},
-         giveni={E\bibinitperiod},
-      }}%
-      {{hash=DT}{%
-         family={Darrell},
-         familyi={D\bibinitperiod},
-         given={Trevor},
-         giveni={T\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LJSEDT1}
-    \strng{fullhash}{LJSEDT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{LSD15}
-    \field{labelyear}{2015}
-    \field{labeldatesource}{year}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
-  pattern recognition}
-    \field{pages}{3431\bibrangedash 3440}
-    \field{title}{Fully convolutional networks for semantic segmentation}
-    \field{year}{2015}
-  \endentry
-
   \entry{maier2018deep}{article}{}
     \name{author}{4}{}{%
       {{hash=MJ}{%
@@ -2544,6 +2603,112 @@
     \field{volume}{37}
     \field{journaltitle}{Journal of Nondestructive Evaluation}
     \field{year}{2018}
+  \endentry
+
+  \entry{mccollough2016tu}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MC}{%
+         family={McCollough},
+         familyi={M\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{MC1}
+    \strng{fullhash}{MC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{McC16}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{6Part35}
+    \field{pages}{3759\bibrangedash 3760}
+    \field{title}{TU-FG-207A-04: Overview of the Low Dose CT Grand Challenge}
+    \field{volume}{43}
+    \field{journaltitle}{Medical physics}
+    \field{year}{2016}
+  \endentry
+
+  \entry{moen2021low}{article}{}
+    \name{author}{9}{}{%
+      {{hash=MTR}{%
+         family={Moen},
+         familyi={M\bibinitperiod},
+         given={Taylor\bibnamedelima R},
+         giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Baiyu},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HIDR}{%
+         family={Holmes\bibnamedelima III},
+         familyi={H\bibinitperiod\bibinitdelim I\bibinitperiod},
+         given={David\bibnamedelima R},
+         giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=DX}{%
+         family={Duan},
+         familyi={D\bibinitperiod},
+         given={Xinhui},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Zhicong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Lifeng},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Leng},
+         familyi={L\bibinitperiod},
+         given={Shuai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FJG}{%
+         family={Fletcher},
+         familyi={F\bibinitperiod},
+         given={Joel\bibnamedelima G},
+         giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=MCH}{%
+         family={McCollough},
+         familyi={M\bibinitperiod},
+         given={Cynthia\bibnamedelima H},
+         giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{MTR+1}
+    \strng{fullhash}{MTRCBHIDRDXYZYLLSFJGMCH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Moe+21}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{2}
+    \field{pages}{902\bibrangedash 911}
+    \field{title}{Low-dose CT image and projection dataset}
+    \field{volume}{48}
+    \field{journaltitle}{Medical physics}
+    \field{year}{2021}
   \endentry
 
   \entry{nuyts1998iterative}{article}{}
