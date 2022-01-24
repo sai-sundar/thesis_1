@@ -7,7 +7,7 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-Tomographic imaging is the process of observing an object through its cross-sections. It is a non-invasive technique where the interior of an object is visualized without any clinical intervention. In tomographic imaging usually a detector measures the radiation after it's interaction with the object. The measured data is transformed into comprehensible images that can be analyzed by the radiologist. This process of mapping measured data into images is called as image reconstruction. This chapter presents an introduction to the imaging principles of \ac{PET} and \ac{CT}. Analytic and \ac{MBIR} methods are then discussed both from a general standpoint and with algorithms specific to the respective imaging modality.  
+Tomographic imaging is the process of observing an object through its cross-sections. It is a non-invasive technique where the interior of an object is visualized without any clinical intervention. In tomographic imaging usually a detector measures the radiation after it's interaction with the object. The measured data is transformed into comprehensible images that can be analyzed by a specialist. This process of mapping measured data into images is called as image reconstruction. This chapter presents an introduction to the imaging principles of \ac{PET} and \ac{CT}. Analytic and \ac{MBIR} methods are then discussed both from a general standpoint and with algorithms specific to the respective imaging modality.  
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
@@ -29,26 +29,25 @@ The positron emitted (${ }_{+1}^{o} \beta$) is an unstable particle and it almos
  The number of detected coincidence events is related to the \ac{LOR} ($L_{d_{p},d_{q}}$) connecting the centers of detectors $d_p$ and $d_q$ through a sensitivity function $\psi(\vec{r}=(x,y,z))$. It is a Poisson variable whose mean can be written as:
 
 \begin{equation}\label{eq:analy}
-\left\langle p_{d_{p},d_{q}}\right\rangle=\tau \int_{\mathrm{FOV}} d \vec{r} f(\vec{r}) \psi_{d_{p}, d_{q}}(\vec{r})
+p_{d_{p},d_{q}} =\tau \int_{\mathrm{FOV}} \lambda (\vec{r}) \psi_{d_{p}, d_{q}}(\vec{r}) d \vec{r}
 \end{equation}
-
-where $f(\vec{r})$ denotes tracer concentration and $\tau$ is the acquisition time. The tracer concentration is assumed to be contained within the \ac{FOV}. The reconstruction task can be summarized as estimating tracer concentration $f$, given measured data $p_{d_{p},d_{q}}$, $(d_{p},d_{q})=1\dots N_{LOR}$. The above linear model is typically used by analytical algorithms. The measurement data is assumed to have been corrected for non-linear effects like scatter and random coincidences. Another approximation is that $\psi(\vec{r})=0$, except when $r\in L_{d_{p},d_{q}} $. The measured data are therefore modeled as line integrals of tracer distribution ($f$): 
+where $\lambda(\vec{r})$ denotes tracer concentration and $\tau$ is the acquisition time. The tracer concentration is assumed to be contained within the \ac{FOV}. The reconstruction task can be summarized as estimating tracer concentration $\lambda$, given measured data $p_{d_{p},d_{q}}$, $(d_{p},d_{q})=1\dots N_{LOR}$. The above linear model is typically used by analytical algorithms. The measurement data is assumed to have been corrected for non-linear effects like scatter and random coincidences. Another approximation is that $\psi(\vec{r})=0$, except when $r\in L_{d_{p},d_{q}} $. The measured data are therefore modeled as line integrals of tracer distribution ($\lambda$): 
 
 \begin{equation}
 \label{eq:line}
-\left\langle p_{d_{p}, d_{q}}\right\rangle=\int_{L_{d_{p}, d_{q}}} d \vec{r} f(\vec{r})
+p_{d_{p}, d_{q}}=\int_{L_{d_{p}, d_{q}}} \lambda (\vec{r}) d \vec{r}
 \end{equation}
 
 The coincidences from the detector are typically rearranged either in listmode or sinogram format. List mode data is a sequential recording of coincidence events. Time and energy of each detected photon can also be recorded. It has special significance in time of flight imaging for \ac{PET}. Most analytical reconstruction algorithms on the other hand are tailor made for sinogram data format. Fig~\ref{fig:2dpet}, represents a trans-axial slice of a \ac{PET} scanner. One can model 2-D sinogram model with this representation. The variables $s$ and $\phi$ are utilized to relate the \ac{LOR} to the Cartesian co-ordinates $(x,y)$. The radial variable $s$ is the distance between the center of the detector ring and the \ac{LOR}, while angular variable ($\phi$) gives the orientation of the \ac{LOR}. 
 For a co-ordinate $t$ along the line, Eq~\ref{eq:line} now becomes:
 \begin{equation}\label{eq:line_sino}
 \begin{array}{c}
-p\left(s, \phi\right)=\int_{-\infty}^{\infty} d t f(x= s \cos\phi +t \sin \phi, 
-\left.y=s \sin \phi + t \cos \phi\right)
+p\left(s, \phi\right)=\int_{-\infty}^{\infty}  \lambda(x= s \cos\phi +t \sin \phi, 
+\left.y=s \sin \phi + t \cos \phi\right) d t 
 \end{array}
 \end{equation}
 
-Through the line integral approximation and keeping in context the corrected \ac{PET} data, $p_{d_{a},d_{b}}\approx p(s,\phi)$. The function that maps the tracer distribution onto the line integrals is called as the x-ray transform. It is equivalent to the 2D version of the Radon transform. 
+Through the line integral approximation and keeping in context the corrected \ac{PET} data, $p_{d_{p},d_{q}}\approx p(s,\phi)$. The function that maps the tracer distribution onto the line integrals is called as the x-ray transform. It is equivalent to the 2D version of the Radon transform. 
 
 \section{CT}
 % Write a paragraph on CT imaging
@@ -79,12 +78,14 @@ Different materials exhibit different absorption properties hence have unique li
 \begin{equation}\label{eq:BL}
 I_{a} = I_{0} \cdot \exp (-p) 
 \end{equation}
-
+\begin{equation}
+p = \int_{r_{0}}^{r_{1}} \mu(r) dr 
+\end{equation}
 where p is the line integral of attenuation coefficients along the path of the x-ray photons. Similar to \ref{eq:line}, measured data in \ac{CT} can be modeled with line integrals $p$:
 \begin{equation}\label{eq:l_CT}
 p =\ln \frac{I_{a}}{I_{0}} 
 \end{equation}
-The material specific property of attenuation ($\mu$) varies with the energy of the incoming X-ray. It reduces with the increase in energy of the X-ray. A cross-sectional \ac{CT} image consists of 
+The material specific property of attenuation $\mu$ varies with the energy of the incoming X-ray. It reduces with the increase in energy of the X-ray. 
 
 Over the years many imaging geometries have been developed to maximize detector efficiency and obtain better image quality. The first generation of \ac{CT} scanners consisted of X-ray beam source and a small detector that rotated and linearly translated around the patient. It had much longer scanning time compared to modern \ac{CT} scanners. The second generation setup consisted of fan-beam source with an array of detectors. The motion was similar to that of the first generation. The third generation fan beam geometry is depicted in Fig~\ref{fig:xgeo}, the motion was restricted to rotation of the source-detector setup. The fourth generation consisted of stationary circular array of detectors similar to \ac{PET} with a rotating source. 
 \begin{figure}[!htbp]
@@ -104,18 +105,15 @@ A representation of a modern helical cone beam scanner is shown in Fig~\ref{fig:
 
 \section{Analytic Reconstruction}
 
-The starting point of analytic reconstruction is the central slice theorem. It states that 2D Fourier transform of the image ($f$) is related to the 1D Fourier transform of the x-ray transform as follows:
+This section discusses analytic reconstruction applicable to both \ac{PET} and \ac{CT} imaging. The image is referred to as $f$ and it is assumed to represent the activity distribution $\lambda$ for \ac{PET} and the attenuation $\mu$ for \ac{CT}. The starting point of analytic reconstruction is the central slice theorem. It states that 2D Fourier transform of the image ($f$) is related to the 1D Fourier transform of the x-ray transform as follows:
 
 \begin{equation}
-P(v, \phi)=f\left(v_{x}=v \cos \phi, v_{y}=v \sin \phi\right)
+P(v, \phi)=(\mathcal{F} f)\left(v_{x}=v \cos \phi, v_{y}=v \sin \phi\right)
 \end{equation} 
-
 where
-
 \begin{equation}
-P(v, \phi)=(\mathcal{F} p)(v, \phi)=\int_{\mathbb{R}} d s p(s, \phi) \exp (-2 \pi i s v)
+P(v, \phi)=(\mathcal{F} p)(v, \phi)=\int_{\mathbb{R}}  p(s, \phi) \exp (-2 \pi i s v) d s
 \end{equation}
-
 and $v$ is the frequency variable associated with $s$. In the context of tomographic image reconstruction this theorem has the following implication: given the measurement data for all projection angles $\phi \in [0,\pi]$, the radial line sweeps all the frequencies hence making it possible to compute $f(v_{x},v_{y})$ for $(v_{x},v_{y})\in \mathbb{R}^2$. The image $f$ can then be estimated by finding the inverse 2D Fourier transform. 
 
 \subsubsection{FBP}
@@ -125,26 +123,18 @@ One of the most used reconstruction algorithms across modalities is the filtered
 
 \begin{equation}
 \begin{array}{l}
-f(x, y)=\left(X^{*} p^{F}\right)(x, y)= 
-\int_{0}^{\pi} d \phi p^{F}(s=x \cos \phi+y \sin \phi, \phi)
+f(x, y)=\int_{0}^{\pi}  p^{F}(s=x \cos \phi+y \sin \phi, \phi) d \phi
 \end{array}
 \end{equation}
-
-
 where filtered projections $p^{F}$ are given by
-
 \begin{equation}
-p^{F}(s, \phi)=\int_{-R_{F}}^{R_{F}} d s^{\prime} p\left(s^{\prime}, \phi\right) h\left(s-s^{\prime}\right)
+p^{F}(s, \phi)=\int p\left(s^{\prime}, \phi\right) h\left(s-s^{\prime}\right) d s^{\prime}
 \end{equation}
-
-
 and $h$ is the ramp filter given by
 
 \begin{equation}
-h(s)=\int_{-\infty}^{\infty} d v|v| \exp (2 \pi i s v)
+h(s)=\int_{-\infty}^{\infty} d v|v| \exp (2 \pi \iota s v)
 \end{equation}
-
-
 
 The function mapping from $p^{F}$ to $\lambda$ is the back-projection operator. 
 In reality discrete sampling is required to accurately model the acquisition process. The discrete implementation of the \ac{FBP} can be written as follows:
@@ -152,96 +142,58 @@ In reality discrete sampling is required to accurately model the acquisition pro
 \begin{equation}\label{eq:FBP}
 \boldx(i,j) = \frac{\pi}{N_\phi}\sum_{l=0}^{N_\phi-1}\boldy_f(s=i\cos\phi_l+j\sin\phi_l,\phi_l)
 \end{equation}
-
-where $x$ is the image for a set of pixels $(i,j)$, $\boldy_f$ are the filtered projections obtained by filtering the projections, expressed in terms of radial variable $s$ and projection angle $\phi$, and $N_\phi$ number of projection angles. The above equation is the approximation of backprojection by a discrete quadrature. 
+where $\boldx$ is the image for a set of pixels $(i,j)$, $\boldy_f$ are the filtered projections obtained by filtering the projections, expressed in terms of radial variable $s$ and projection angle $\phi$, and $N_\phi$ number of projection angles. The above equation is the approximation of backprojection by a discrete quadrature. 
 
 
 
 
 \section{Model-Based Image Reconstruction (MBIR)}
 
-Analytical methods are faster to implement and practical in a clinical setting but they are vulnerable to noise. The assumptions made in analytical formations are that the measurements are continuous and the solutions are of integral formulation. Sampling is done to the data a posteriori. They are also highly susceptible to system geometry. Since the 80's, \ac{MBIR} techniques (\cite{Shepp1982,fessler2000statistical}) became the standard approach. As they model the stochasticity of the system, they are more robust to noise as compared with \ac{FBP}, and can be completed with a penalty term for additional control over the noise (\cite{depierro1995}). They also incorporate corrections for scatter and are independent of detector geometry.
+Analytical methods are faster to implement and practical in a clinical setting but they are vulnerable to noise. The assumptions made in analytical algorithms are that the measurements are continuous and the solutions are of integral formulation. Sampling is done to the data a posteriori. They are also highly susceptible to system geometry. Since the 80's, \ac{MBIR} techniques (\cite{Shepp1982,fessler2000statistical}) became the standard approach. As they model the stochasticity of the system, they are more robust to noise as compared with \ac{FBP}, and can be completed with a penalty term for additional control over the noise (\cite{depierro1995}). They also incorporate corrections for scatter and are independent of detector geometry.
 
 \subsection{Data Model for PET}
 The starting point of any model-based method is the data model. The measurement $\boldy$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries:
 \begin{equation}\label{eq:poisson}
-\boldy \sim \mathrm{Poisson}(\boldybar(\boldx))
+\boldy \sim \mathrm{Poisson}(\boldybar(\boldlambda))
 \end{equation}    
-where $\boldybar(\boldx) \in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
-
-The expected number of counts is
+where $\boldybar(\boldlambda) \in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldlambda \in \bbR^m$, represented by $m$ voxels. The expected number of counts is
 \begin{equation}\label{eq:PET}
-\boldybar(\boldlambda) = \boldA \boldlambda
+\boldybar(\boldlambda) = \boldA \boldlambda + \bm{r}
 \end{equation}
-where $\boldA \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldA]_{i,j}$ represents the probability that a photon pair emitted from voxel $j$. Image reconstruction is achieved by finding a suitable image $\boldxhat = \boldlambdahat$ that approximately solves 
-\begin{equation}\label{eq:pb1solve}
-\boldy = \boldybar(\boldx) \, .
-\end{equation} 
-
-
-\subsection{Data Model for CT}
-Let an image be represented by $\boldx \in \bbR^m$ and the scanner measurement by $\boldb \in \bbR^n$ where $m$ is the number of voxels and $n$ is the number of measurements. In \ac{2D} \ac{CT} imaging $n$ depends on the number of detectors $N_\mathrm{d}$ and the number of angles $N_\mathrm{a}$. The task of medical image reconstruction corresponds to finding a mapping from $\boldb$ to $\boldx$. The measurement $\boldb$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries, i.e.,
-\begin{equation}\label{eq:pCT}
-\boldb \sim \mathrm{Poisson}(\boldbbar(\boldx))
-\end{equation}    
-where, $\boldb  =  [b_1(\boldx),\dots,b_n(\boldx)]\transp\in \bbR^n$ and $\boldbbar(\boldx)  =  [\bbar_1(\boldx),\dots,\bbar_n(\boldx)]\transp\in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldx$. 
-
-The image $\boldx\in\mathbb{R}^m$ is a vectorized input image (also referred to as attenuation) representing the measure of X-rays absorbed or scattered as they pass through the patient. In a monochromatic setting, the expected number of counts $\boldbbar(\boldx)$  is given by the Beer-Lambert law, i.e.,
-\begin{equation}\label{eq:CT}
-\bbar_i(\boldx) = I \cdot \exp (-[\boldA \boldx]_i) \quad \forall i=1,\dots,n 
-\end{equation}
-where, $I$ is the intensity and $\boldA \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldA]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. Given the raw projections $\boldbbar$, we take the logarithm as follows
+where $\boldA \in \bbR^{n\times m}$ is a system matrix that accounts for the detector geometry, attenuation and the resolution model and $\bm{r}$ is a term to model scatter and random events. Each entry $[\boldA]_{i,j}$ represents the probability that a photon pair emitted from voxel $j$ is captured at detector $i$. Image reconstruction is achieved by finding a suitable image $\boldlambdahat$, which when represented with \ref{eq:PET} is in agreement with \ref{eq:poisson}, and follows a cost function $L$:
 \begin{equation}
-y_i = \log\left(\frac{I}{b_i}\right) \quad \forall i=1,\dots,n   
+\boldlambdahat=\underset{\boldlambda \ge 0}{\operatorname{argmin}} \; L(\boldlambda)
 \end{equation}
-where we assumed that the intensity $I$ is sufficiently high so that $b_i>0$ for all $i$. Image reconstruction is based on finding a suitable image $\boldxhat$ that approximately solves 
-\begin{equation}\label{eq:pb2solve}
-\boldy = \boldA \boldxhat 
-\end{equation} 
 
-where $\boldy  =  [y_1,\dots,y_n]\transp\in \bbR^m$. The reconstruction can also be achieved with more sophisticated iterative techniques that account for the stochastic properties of the measurement \eqref{eq:poisson} \cite{nuyts1998iterative,Elbakri2002}.
-
-In a sparse-view setting, the number of rotation angles of the detector is decreased in order to reduce the radiation passing through the patient. This implies a reduction in the number of projection angles in the measurement $\boldy$.
-
-\subsection{Maximum Likelihood Expectation Maximization (MLEM)}
-The most famous model based method for \ac{PET} image reconstruction is the \ac{MLEM} algorithm. The cost function for \ac{MLEM} is based on Poisson likelihood given as follows:
+\subsubsection{Maximum Likelihood Expectation Maximization (MLEM)}
+The most famous model based method for \ac{PET} image reconstruction is the \ac{MLEM} algorithm (\cite{shepp1982maximum}). The cost function for \ac{MLEM} is based on Poisson likelihood given as follows:
 \begin{equation}\label{eq:poisson_like}
-\operatorname{Pr}\{\boldybar \mid \boldx\}=\prod_{j=1}^{N_{L o R}} \exp \left(-\left\langle y_{j}\right\rangle\right)\left\langle y_{j}\right\rangle^{y_{j}} / y_{j} !
+\operatorname{Pr}(\boldy \mid \boldybar(\boldlambda))=\prod_{i=1}^{N_{L o R}} \exp (-\ybar_{i}(\lambda)) \frac{\ybar_{i}(\lambda)^{y_{i}}}{y_{i} !} 
 \end{equation}
 
-Putting \ref{eq:PET} in \ref{eq:poisson_like}, taking log and dropping terms that do not depend on unknown image $x$ we get the cost function for \ac{MLEM},
+Putting \ref{eq:PET} in \ref{eq:poisson_like}, taking log and dropping terms that do not depend on unknown image $\boldlambda$ we get the cost function for \ac{MLEM},
 
 \begin{equation}
-Q(\boldxbar, \boldybar)=\sum_{j=1}^{N_{L O R}}\left\{-\sum_{i=1}^{m} \boldA_{j, i} x_{i}+y_{j} \log \left(\sum_{i=1}^{m} \boldA_{j, i} x_{i}\right)\right\}
+L(\boldxbar, \boldybar)=\sum_{j=1}^{N_{L O R}}\left\{-\sum_{i=1}^{m} \boldA_{j, i} x_{i}+y_{j} \log \left(\sum_{i=1}^{m} \boldA_{j, i} x_{i}\right)\right\}
 \end{equation}
-where $Q$ is the cost function and the definition of other variables is consistent from above. As long as the matrix $\boldA$ is singular, the above cost function remains convex and results in a unique image. 
-The update step to map from the current estimate $x^{n}$ to the next estimate $x^{n+1}$ can be written as follows:
+where $L$ is the cost function and the definition of other variables is consistent from above. As long as the matrix $\boldA$ is singular, the above cost function remains convex and results in a unique image. 
+The update step to map from the current estimate $x^{N}$ to the next estimate $x^{N+1}$ can be written as follows:
 
 \begin{equation}\label{eq:mlem}
-\boldx_{i}^{n+1}=x_{i}^{n} \frac{1}{\sum_{j^{\prime}=1}^{N_{L o R}} \boldA_{j^{\prime}, i}} \sum_{j=1}^{N_{L O R}} \boldA_{j, i} \frac{y_{j}}{\sum_{i^{\prime}=1}^{m} \boldA_{j, i^{\prime}} x_{i^{\prime}}^{n}} \quad i=1, \ldots, m
+\boldx_{j}^{N+1}=x_{j}^{N} \frac{1}{\sum_{i^{\prime}=1}^{N_{L o R}} \boldA_{i^{\prime}, j}} \sum_{i=1}^{N_{L O R}} \boldA_{i,j} \frac{y_{i}}{\sum_{j^{\prime}=1}^{m} \boldA_{i, j^{\prime}} x_{j^{\prime}}^{N}}; \quad j=1, \ldots, m
 \end{equation}
 
-The initial estimate $x_i^{1}$, $i=1, \ldots, m$ typically follows a uniform distribution. The denominator with sum over index $i^{\prime}$ is the forward projection operation. Hence it estimates the measured data for the current image estimate. The numerator with sum over index $j$ is the back projection over the ratio of measured and estimated data. The \ac{MLEM} algorithm does not include a prior and it converges to the image that best fits the data. This estimate has inherent instabilities as the fitting is done closely to the noisy measured data. Contrary to \ac{FBP}, data corrections in \ac{MLEM} can be added to the cost function. Attenuation correction can be introduced as a multiplicative factor while scatter and randoms are added to the cost function as follows:
-
-\begin{equation}
-\begin{array}{l}
-\boldx_{i}^{n+1}=x_{i}^{n} \frac{1}{\sum_{j^{\prime}=1}^{N_{L O R}} \boldA_{j^{\prime}, i} / \alpha_{j^{\prime}}} \sum_{j=1}^{N_{L o R}} \boldA_{j, i} \frac{y_{j}+2 \bar{r}_{j}+\bar{s}_{j}}{\sum_{i^{\prime}=1}^{m} \boldA_{j, i^{\prime}} x_{i^{\prime}}^{n}+\alpha_{j}\left(2 \bar{r}_{j}+\bar{s}_{j}\right)} \\
-i=1, \ldots, m
-\end{array}
-\end{equation}
-
-where $y_j$ are measured data corrected for random and scatter, $\alpha_{j}$ is the factor for attenuation correction, $\bar{r}_{j}$ and $\bar{s}_{j}$ are estimates for random and scatter background in \ac{LOR} $j$. 
+The initial estimate $x_i^{1}$, $j=1, \ldots, m$ typically follows a uniform distribution. The denominator with sum over index $j^{\prime}$ is the forward projection operation. Hence it estimates the measured data for the current image estimate. The numerator with sum over index $j$ is the back projection over the ratio of measured and estimated data. The \ac{MLEM} algorithm does not include a prior and it converges to the image that best fits the data. This estimate has inherent instabilities as the fitting is done closely to the noisy measured data. 
 
 
-
-\subsection{Ordered Subsets Expectation Maximization (OSEM)}
+\subsubsection{Ordered Subsets Expectation Maximization (OSEM)}
 
 The \ac{OSEM} algorithm is a modification of the \ac{MLEM} algorithm which made it computationally practical for implementation in clinical setting. The \ac{LOR} data is divided into $\bm{S}$ disjoint subsets: $J_{1}, \cdots, J_{S} \subset\left[1, \cdots, N_{\text {LOR }}\right]$. Each of the parallel projection is assigned to a unique subset: $c, c+S, c+2S, \cdots, \leq N_{\phi}$ to the subset $J_{c+1}$. \ac{MLEM} (Eqn~\ref{eq:mlem}) is applied to each of the subsets individually in an orderly fashion. Subset $J_{N\bmod S}$ is used at iteration $N$:
 
 \begin{equation}
 \begin{array}{l}
-\boldx_{i}^{N+1}=\boldx_{i}^{N} \frac{1}{\sum_{j^{\prime} \in J_{N \bmod S}} \boldA_{j^{\prime}, i}} \sum_{j \in J_{N \bmod S}} \boldA_{j, i} \frac{y_{j}}{\sum_{i^{\prime}=1}^{m} \boldA_{j, i^{\prime}} \boldx_{i^{\prime}}^{N}} \\
-i=1, \ldots, m
+\boldx_{j}^{N+1}=\boldx_{j}^{N} \frac{1}{\sum_{i^{\prime} \in J_{N \bmod S}} \boldA_{i^{\prime}, i}} \sum_{i \in J_{N \bmod S}} \boldA_{i,j} \frac{y_{i}}{\sum_{j^{\prime}=1}^{m} \boldA_{i, j^{\prime}} \boldx_{j^{\prime}}^{N}} \\
+j=1, \ldots, m
 \end{array}
 \end{equation}  
 
@@ -249,43 +201,69 @@ i=1, \ldots, m
 %	SUBSECTION 2
 %-----------------------------------
 
+\subsection{Data Model for CT}
+Let an image be represented by $\boldmu \in \bbR^m$ and the scanner measurement by $\boldb \in \bbR^n$ where $m$ is the number of voxels and $n$ is the number of measurements. In \ac{2D} \ac{CT} imaging $n$ depends on the number of detectors $N_\mathrm{d}$ and the number of angles $N_\mathrm{a}$. The task of medical image reconstruction corresponds to finding a mapping from $\boldb$ to $\boldmu$. The measurement $\boldb$ is a random vector modeling the number of detection (photon counting) at each of the $n$ detector bins, and follows a Poisson distribution with independent entries, i.e.,
+\begin{equation}\label{eq:pCT}
+\boldb \sim \mathrm{Poisson}(\boldbbar(\boldmu))
+\end{equation}    
+where, $\boldb  =  [b_1(\boldmu),\dots,b_n(\boldmu)]\transp\in \bbR^n$ and $\boldbbar(\boldmu)  =  [\bbar_1(\boldmu),\dots,\bbar_n(\boldmu)]\transp\in \bbR^n$ is the expected number of counts (noiseless), which is a function of the image $\boldmu$. 
 
+The image $\boldmu\in\mathbb{R}^m$ is a vectorized input image (also referred to as attenuation) representing the measure of X-rays absorbed or scattered as they pass through the patient. In a monochromatic setting, the expected number of counts $\boldbbar(\boldmu)$  is given by the Beer-Lambert law, i.e.,
+\begin{equation}\label{eq:CT}
+\bbar_i(\boldmu) = B_i \cdot \exp (-[\boldA \boldmu]_i) \quad \forall i=1,\dots,n 
+\end{equation}
+where, $B_i$ is the blank scan value at $i$ and $\boldA \in \bbR^{n\times m}$ is a system matrix such that each entry $[\boldA]_{i,j}$ represents the contribution of the $j$-th image voxel to the $i$-th detector. Given the raw projections $\boldbbar$, we take the logarithm as follows
+\begin{equation}
+y_i = \log\left(\frac{B_i}{b_i}\right) \quad \forall i=1,\dots,n   
+\end{equation}
+where we assumed that the intensity $I$ is sufficiently high so that $b_i>0$ for all $i$. Image reconstruction is based on finding a suitable image $\boldmuhat$ that approximately solves 
+\begin{equation}\label{eq:pb2solve}
+\boldy = \boldA \boldmuhat 
+\end{equation} 
+where $\boldy  =  [y_1,\dots,y_n]\transp\in \bbR^m$. 
 
-\subsection{Weighted Least Squares (WLS)}
+\subsubsection{Maximum Likelihood for Transmission tomography (MLTR)}
 
-One of the most common iterative techniques for \ac{CT} image reconstruction is the \ac{WLS} method, the image $\xhat$ is estimated by minimizing the following:
+The \ac{MLEM} algorithm was implemented for transmission tomography by \cite{lange1984reconstruction}. A practical version of the same with a gradient ascent algorithm called \ac{MLTR} was proposed for helical beam geometry  by \cite{nuyts1998iterative}. The image reconstruction problem for \ac{CT} can be summarized as finding a suitable image $\boldmuhat$, which when represented by \ref{eq:CT} in agreement with \ref{eq:pCT}, follows a cost function $L$:
+
+\begin{equation}\label{eq:argminCT}
+\boldmuhat=\underset{\boldmu > 0}{\operatorname{argmin}} \; L(\boldmu)
+\end{equation}
+Similar to \ac{PET}, the cost function for \ac{CT} follows a Poisson likelihood that can be given as follows: 
+\begin{equation}\label{eq:poisson_CT}
+\operatorname{Pr}(\boldb \mid \boldbbar(\boldmu))=\prod_{i=1}^{N_{L o R}} \exp (-\bbar_{i}(\mu)) \frac{\bbar_{i}(\mu)^{b_{i}}}{b_{i} !} 
+\end{equation}  
+The update step for \ac{MLTR} can be given as follows:
+
+\begin{equation}\label{eq:MLTR}
+\mu_{j}^{\text {new }}=\mu_{j}+\frac{\alpha}{m}\left(1-\frac{\sum_{i} A_{i j} y_{i}}{\sum_{i} A_{i j} B_{i} \exp \left(-\sum_{\xi} A_{i \xi} \mu_{\xi}\right)}\right)
+\end{equation}
+where $\alpha$ is the relaxation parameter. 
+
+\subsubsection{Weighted Least Squares (WLS)}
+
+One of the most common iterative techniques for \ac{CT} image reconstruction is the \ac{WLS} method, the image $\boldmuhat$ is estimated by minimizing the following:
 
 \begin{equation}
-\hat{x}=\underset{x \succeq 0}{\arg \min } \frac{1}{2}\|y-A x\|_{W}^{2}
+\boldmuhat=\underset{\mu \succeq 0}{\arg \min } \frac{1}{2}\|\boldy-\boldA \boldmu\|_{W}^{2}
 \end{equation}
-
-where $W=\operatorname{diag}\left\{w_{i}\right\}$ is the diagonal weighting matrix that constitutes for the variance of each ray and $\|z\|_{W}^{2}=z^{\prime} W z$. Despite the statistical weighting, due to the noise in measurements and ill-conditioned problem of image reconstruction the image estimate will still be noisy. 
+where $W=\operatorname{diag}\left\{w_{i}\right\}$ is the diagonal weighting matrix that constitutes for the variance of each ray and $\|z\|_{W}^{2}=z^{\prime} W z$. The weighting matrix accounts for the recorded x-ray intensity and electronic noise. Despite the statistical weighting, due to the ill-conditioned problem of image reconstruction the image estimate will still be noisy. 
 
 \subsection{Penalized MBIR}
 An improvement to the above mentioned \ac{MBIR} algorithms can be brought by finding a balance between the desired a priori characteristics of the image and the data fitting. This balance is realized through a regularized cost function.
 
-\subsubsection{Absolute Difference}
-One such form of regularization is introduced through an edge preserving regularizer that penalized the differences between neighboring voxels:
-
-\begin{equation}
-R(x)=\sum_{j=1}^{n_{\mathrm{p}}} \sum_{k \in \mathcal{N}_{j}} \psi_{j k}\left(x_{j}-x_{k}\right)
+\begin{equation}\label{eq:p_mbir}
+\boldxhat=\underset{\boldx > 0}{\operatorname{argmin}} \; L(\boldx) + \beta R(\boldx)
 \end{equation}
-
-where $R(x)$ is the regularization term, that enforces piece-wise smoothness on the image and $\beta$ the regularization parameter. $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels. Adding the penalty term in the cost function of \ac{WLS} we get:
- 
+where $R(\boldx)$ is the regularizer and $\beta$ is the regularization parameter that controls the balance between the data fidelity term and the regularization. The effect of a regularizer is usually to encourage the image to be piece-wise smooth.  
+One such form of regularization is introduced through an edge preserving regularizer that penalizes the differences between neighboring voxels:
+%Adding the penalty term in the cost function of \ac{WLS} we get:
+%\begin{equation}
+%\hat{x}=\underset{x \succeq 0}{\arg \min } \Psi(x), \quad \Psi(x) \triangleq \frac{1}{2}\|y-A x\|_{W}^{2}+\beta R(x)
+%\end{equation}  
+%where $N_j$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. 
 \begin{equation}
-\hat{x}=\underset{x \succeq 0}{\arg \min } \Psi(x), \quad \Psi(x) \triangleq \frac{1}{2}\|y-A x\|_{W}^{2}+\beta R(x)
-\end{equation} 
-   
-
-where $N_j$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. 
-
-\subsubsection{Total Variation (TV)}
-Complex image reconstruction problems like sparse-view \ac{CT} are under-determined due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. Consider a 2D digital image $x[p,q]$, discrete form of \ac{TV} can be written as:
-
-\begin{equation}
-\sum_{p} \sum_{p}|x[p, q]-x[p-1, q]|+|x[p, q]-x[p, q-1]|
-\end{equation}    
-
-This is an an-isotropic version of \ac{TV} regularization. Images reconstructed with \ac{TV}, sometimes have inexplicable artifacts due to the fact that the absolute value potential is not differentiable at $0$. 
+R(x)=\sum_{j=1}^{m} \sum_{k \in \mathcal{N}_{j}} \psi_{j k}\left(x_{j}-x_{k}\right)
+\end{equation}
+where $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels and $\mathcal{N}_{j}$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. Quadratic functions with $\psi = |t^2|$ are a straightforward choice but they lead to the loss of resolution with blurred edges, as they increase rapidly. Complex image reconstruction problems like sparse-view \ac{CT} are under-determined due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. The potential function in this case is an absolute value function, $\psi = |t|$. 
 

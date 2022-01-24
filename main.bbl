@@ -1978,6 +1978,40 @@
     \field{year}{2015}
   \endentry
 
+  \entry{lange1984reconstruction}{article}{}
+    \true{moreauthor}
+    \name{author}{2}{}{%
+      {{hash=LK}{%
+         family={Lange},
+         familyi={L\bibinitperiod},
+         given={Kenneth},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Carson},
+         familyi={C\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LKCR+1}
+    \strng{fullhash}{LKCR+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{LC+84}
+    \field{labelyear}{1984}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{2}
+    \field{pages}{306\bibrangedash 16}
+    \field{title}{EM reconstruction algorithms for emission and transmission
+  tomography}
+    \field{volume}{8}
+    \field{journaltitle}{J Comput Assist Tomogr}
+    \field{year}{1984}
+  \endentry
+
   \entry{ledig2017photo}{inproceedings}{}
     \true{moreauthor}
     \name{author}{10}{}{%
@@ -3021,13 +3055,52 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelalpha}{SV82}
+    \field{extraalpha}{1}
     \field{labelyear}{1982}
+    \field{extradate}{1}
     \field{labeldatesource}{year}
     \field{sortinit}{S}
     \field{sortinithash}{S}
     \field{number}{2}
     \field{pages}{113\bibrangedash 122}
     \field{title}{Maximum Likelihood Reconstruction for Emission Tomography}
+    \field{volume}{1}
+    \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{1982}
+  \endentry
+
+  \entry{shepp1982maximum}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SLA}{%
+         family={Shepp},
+         familyi={S\bibinitperiod},
+         given={Lawrence\bibnamedelima A},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VY}{%
+         family={Vardi},
+         familyi={V\bibinitperiod},
+         given={Yehuda},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SLAVY2}
+    \strng{fullhash}{SLAVY2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SV82}
+    \field{extraalpha}{2}
+    \field{labelyear}{1982}
+    \field{extradate}{2}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{113\bibrangedash 122}
+    \field{title}{Maximum likelihood reconstruction for emission tomography}
     \field{volume}{1}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
     \field{year}{1982}
