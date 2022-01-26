@@ -712,6 +712,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelalpha}{EF02}
+    \field{extraalpha}{1}
     \field{labelyear}{2002}
     \field{labeldatesource}{year}
     \field{sortinit}{E}
@@ -722,6 +723,41 @@
   computed tomography}
     \field{volume}{21}
     \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{2002}
+  \endentry
+
+  \entry{erdogan2002monotonic}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=EH}{%
+         family={Erdogan},
+         familyi={E\bibinitperiod},
+         given={Hakan},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=FJA}{%
+         family={Fessler},
+         familyi={F\bibinitperiod},
+         given={Jeffrey\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{EHFJA1}
+    \strng{fullhash}{EHFJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{EF02}
+    \field{extraalpha}{2}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{year}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{booktitle}{5th IEEE EMBS International Summer School on Biomedical
+  Imaging, 2002.}
+    \field{pages}{14\bibrangedash pp}
+    \field{title}{Monotonic algorithms for transmission tomography}
     \field{year}{2002}
   \endentry
 

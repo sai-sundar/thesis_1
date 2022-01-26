@@ -262,8 +262,26 @@ One such form of regularization is introduced through an edge preserving regular
 %\hat{x}=\underset{x \succeq 0}{\arg \min } \Psi(x), \quad \Psi(x) \triangleq \frac{1}{2}\|y-A x\|_{W}^{2}+\beta R(x)
 %\end{equation}  
 %where $N_j$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. 
-\begin{equation}
-R(x)=\sum_{j=1}^{m} \sum_{k \in \mathcal{N}_{j}} \psi_{j k}\left(x_{j}-x_{k}\right)
+\begin{equation}\label{eq:prior}
+R(x)=\sum_{j=1}^{m} \sum_{k \in \mathcal{N}_{j}} w_{j k} \psi \left(x_{j}-x_{k}\right)
 \end{equation}
-where $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels and $\mathcal{N}_{j}$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. Quadratic functions with $\psi = |t^2|$ are a straightforward choice but they lead to the loss of resolution with blurred edges, as they increase rapidly. Complex image reconstruction problems like sparse-view \ac{CT} are under-determined due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. The potential function in this case is an absolute value function, $\psi = |t|$. 
+where $\psi$ is a potential function that controls the penalization of differences in the neighboring voxels and $\mathcal{N}_{j}$ are the set of neighboring indices of the $j^\mathrm{th}$ voxel. The weights $w_{jk}$ help in incorporating details from anatomical images like MRI. Quadratic functions with $\psi = |t^2|$ are easier to implement but they increase rapidly leading to the loss of resolution with blurred edges. Complex image reconstruction problems like sparse-view \ac{CT} are under-determined due to the limited number of projection data available for reconstruction. In such a scenario stronger forms of regularization like \ac{TV} are utilized. The potential function in this case is an absolute value function, $\psi = |t|$. 
+
+A host of iterative algorithms have been proposed to solve the optimization problem with regularization both for \ac{PET} and \ac{CT}. For \ac{PET}, \cite{depierro1995} proposed a modified version of the \ac{MLEM} algorithm to include regularization. The update step to include a prior of the form in \ref{eq:prior} with a quadratic potential can be written as:
+\begin{equation}
+x_{j}^{new}=\frac{2 x_{j}^{EM}}{\left(1-\beta v_{j} x_{j}^{S M}\right)+\sqrt{\left(1-\beta v_{j} x_{j}^{S M}\right)^{2}+4 \beta v_{j} x_{j}^{E M}}}
+\end{equation}
+where $\boldx^{EM}$ is the current estimate using the \ac{MLEM} update step from \ref{eq:mlem}, $\bm{s}=\bm{A}^T \bm{1}$ is the sensitivity image, 
+\begin{equation}\label{eq:map_v}
+v_{j}=\frac{\sum_{l=1}^{J} w_{j l}}{s_{j}}
+\end{equation}
+$\boldx^{SM}$ is the edge-constrained, weighted smoothing factor of the current estimate:
+\begin{equation}\label{eq:map}
+x_{j}^{S M}=\frac{1}{2 \sum_{l=1}^{m} w_{j l}} \sum_{l=1}^{m} w_{j l}\left(x_{j}^{n_{iter}}+x_{l}^{n_{iter}}\right)
+\end{equation}
+This algorithm is based on optimization transfer principle which essentially transforms the problem into simpler parts at each iteration. \cite{erdogan2002monotonic} used the optimization transfer principle for transmission tomography. They proposed algorithm    
+
+
+
+
 
