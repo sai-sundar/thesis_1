@@ -19,58 +19,58 @@
 \contentsline {subsubsection}{Maximum Likelihood for Transmission tomography (MLTR)}{10}{section*.55}
 \contentsline {subsubsection}{Weighted Least Squares (WLS)}{11}{section*.59}
 \contentsline {subsection}{\numberline {1.4.3}Penalized MBIR}{11}{subsection.61}
-\contentsline {chapter}{\numberline {2}Neural Networks}{13}{chapter.67}
-\contentsline {section}{\numberline {2.1}Cost Function}{15}{section.71}
-\contentsline {section}{\numberline {2.2}Output Unit}{15}{section.74}
-\contentsline {section}{\numberline {2.3}Backpropagation}{16}{section.77}
-\contentsline {section}{\numberline {2.4}Optimization}{18}{section.87}
-\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{19}{subsection.88}
-\contentsline {subsection}{\numberline {2.4.2}Adam}{19}{subsection.92}
-\contentsline {subsection}{\numberline {2.4.3}Universal Approximation Theorem}{20}{subsection.96}
-\contentsline {section}{\numberline {2.5}Convolutional Neural Network}{21}{section.97}
-\contentsline {subsection}{\numberline {2.5.1}Convolution}{21}{subsection.98}
-\contentsline {subsection}{\numberline {2.5.2}Activation Layer}{22}{subsection.101}
-\contentsline {subsection}{\numberline {2.5.3}Pooling Layer}{23}{subsection.103}
-\contentsline {subsection}{\numberline {2.5.4}Neural Networks for Image to Image Translation}{23}{subsection.106}
-\contentsline {chapter}{\numberline {3}Deep Learning and Tomographic Image Reconstruction}{27}{chapter.109}
-\contentsline {section}{\numberline {3.1}Data Corrections or Post-processing}{28}{section.111}
-\contentsline {section}{\numberline {3.2}Unrolled Iterative Methods}{29}{section.112}
-\contentsline {section}{\numberline {3.3}Direct Reconstruction with Deep Learning}{30}{section.113}
-\contentsline {chapter}{\numberline {4}DUG-RECON: A Framework for Direct Image Reconstruction using Convolutional Generative Networks}{33}{chapter.116}
-\contentsline {section}{\numberline {4.1}Method}{34}{section.117}
-\contentsline {subsection}{\numberline {4.1.1}Deep Learning Architectures}{34}{subsection.118}
-\contentsline {subsubsection}{Denoising}{35}{section*.121}
-\contentsline {subsubsection}{ Image Reconstruction }{35}{section*.124}
-\contentsline {subsubsection}{Super Resolution}{37}{section*.132}
-\contentsline {section}{\numberline {4.2}Dataset Description}{38}{section.135}
-\contentsline {section}{\numberline {4.3}Training}{40}{section.139}
-\contentsline {section}{\numberline {4.4}Quantitative analysis}{41}{section.141}
-\contentsline {subsection}{\numberline {4.4.1}Region of Interest analysis}{41}{subsection.144}
-\contentsline {section}{\numberline {4.5}Comparison with DeepPET}{42}{section.148}
-\contentsline {section}{\numberline {4.6}Results}{43}{section.149}
-\contentsline {section}{\numberline {4.7}Discussion}{49}{section.160}
-\contentsline {section}{\numberline {4.8}Conclusion}{50}{section.161}
-\contentsline {chapter}{\numberline {5}LRR-CED: Low-Resolution Reconstruction aware Convolutional Encoder-Decoder Network for Direct Sparse-View CT Image Reconstruction}{53}{chapter.162}
-\contentsline {section}{\numberline {5.1}Main Contribution}{54}{section.163}
-\contentsline {section}{\numberline {5.2}Methods}{56}{section.165}
-\contentsline {subsection}{\numberline {5.2.1}Proposed Low Resolution Reconstruction aware \ac {CED} Model}{56}{subsection.166}
-\contentsline {subsubsection}{Fully Convolutional Dense Networks}{57}{section*.170}
-\contentsline {subsubsection}{U-Net}{58}{section*.171}
-\contentsline {subsubsection}{Loss Function}{58}{section*.174}
-\contentsline {section}{\numberline {5.3}Dataset}{60}{section.178}
-\contentsline {section}{\numberline {5.4}Training}{61}{section.181}
-\contentsline {section}{\numberline {5.5}Quantitative Analysis:}{63}{section.182}
-\contentsline {section}{\numberline {5.6}Comparative Analysis}{63}{section.186}
-\contentsline {section}{\numberline {5.7}Results}{63}{section.187}
-\contentsline {subsection}{\numberline {5.7.1}Experimental Results}{63}{subsection.188}
-\contentsline {subsection}{\numberline {5.7.2}Experiments with real data}{66}{subsection.197}
-\contentsline {subsection}{\numberline {5.7.3}Stability Study}{69}{subsection.200}
-\contentsline {subsection}{\numberline {5.7.4}Hyperparameter optimization}{70}{subsection.202}
-\contentsline {subsubsection}{Concatenation Resolution Selection}{70}{section*.203}
-\contentsline {subsubsection}{Training Examples Analysis}{72}{section*.204}
-\contentsline {subsection}{\numberline {5.7.5}Ablation Study}{72}{subsection.205}
-\contentsline {section}{\numberline {5.8}Discussion}{73}{section.214}
-\contentsline {section}{\numberline {5.9}Conclusion}{77}{section.215}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{79}{appendix.216}
-\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{79}{section.217}
-\contentsline {chapter}{Bibliography}{81}{appendix*.218}
+\contentsline {chapter}{\numberline {2}Neural Networks}{15}{chapter.67}
+\contentsline {section}{\numberline {2.1}Cost Function}{17}{section.71}
+\contentsline {section}{\numberline {2.2}Output Unit}{17}{section.74}
+\contentsline {section}{\numberline {2.3}Backpropagation}{18}{section.77}
+\contentsline {section}{\numberline {2.4}Optimization}{20}{section.87}
+\contentsline {subsection}{\numberline {2.4.1}Stochastic Gradient Descent}{21}{subsection.88}
+\contentsline {subsection}{\numberline {2.4.2}Adam}{21}{subsection.92}
+\contentsline {subsection}{\numberline {2.4.3}Universal Approximation Theorem}{22}{subsection.96}
+\contentsline {section}{\numberline {2.5}Convolutional Neural Network}{23}{section.97}
+\contentsline {subsection}{\numberline {2.5.1}Convolution}{23}{subsection.98}
+\contentsline {subsection}{\numberline {2.5.2}Activation Layer}{24}{subsection.101}
+\contentsline {subsection}{\numberline {2.5.3}Pooling Layer}{25}{subsection.103}
+\contentsline {subsection}{\numberline {2.5.4}Neural Networks for Image to Image Translation}{25}{subsection.106}
+\contentsline {chapter}{\numberline {3}Deep Learning and Tomographic Image Reconstruction}{29}{chapter.109}
+\contentsline {section}{\numberline {3.1}Data Corrections or Post-processing}{30}{section.111}
+\contentsline {section}{\numberline {3.2}Unrolled Iterative Methods}{31}{section.112}
+\contentsline {section}{\numberline {3.3}Direct Reconstruction with Deep Learning}{32}{section.113}
+\contentsline {chapter}{\numberline {4}DUG-RECON: A Framework for Direct Image Reconstruction using Convolutional Generative Networks}{35}{chapter.116}
+\contentsline {section}{\numberline {4.1}Method}{36}{section.117}
+\contentsline {subsection}{\numberline {4.1.1}Deep Learning Architectures}{36}{subsection.118}
+\contentsline {subsubsection}{Denoising}{37}{section*.121}
+\contentsline {subsubsection}{ Image Reconstruction }{37}{section*.124}
+\contentsline {subsubsection}{Super Resolution}{39}{section*.132}
+\contentsline {section}{\numberline {4.2}Dataset Description}{40}{section.135}
+\contentsline {section}{\numberline {4.3}Training}{42}{section.139}
+\contentsline {section}{\numberline {4.4}Quantitative analysis}{43}{section.141}
+\contentsline {subsection}{\numberline {4.4.1}Region of Interest analysis}{43}{subsection.144}
+\contentsline {section}{\numberline {4.5}Comparison with DeepPET}{44}{section.148}
+\contentsline {section}{\numberline {4.6}Results}{45}{section.149}
+\contentsline {section}{\numberline {4.7}Discussion}{51}{section.160}
+\contentsline {section}{\numberline {4.8}Conclusion}{52}{section.161}
+\contentsline {chapter}{\numberline {5}LRR-CED: Low-Resolution Reconstruction aware Convolutional Encoder-Decoder Network for Direct Sparse-View CT Image Reconstruction}{55}{chapter.162}
+\contentsline {section}{\numberline {5.1}Main Contribution}{56}{section.163}
+\contentsline {section}{\numberline {5.2}Methods}{58}{section.165}
+\contentsline {subsection}{\numberline {5.2.1}Proposed Low Resolution Reconstruction aware \ac {CED} Model}{58}{subsection.166}
+\contentsline {subsubsection}{Fully Convolutional Dense Networks}{59}{section*.170}
+\contentsline {subsubsection}{U-Net}{60}{section*.171}
+\contentsline {subsubsection}{Loss Function}{60}{section*.174}
+\contentsline {section}{\numberline {5.3}Dataset}{62}{section.178}
+\contentsline {section}{\numberline {5.4}Training}{63}{section.181}
+\contentsline {section}{\numberline {5.5}Quantitative Analysis:}{65}{section.182}
+\contentsline {section}{\numberline {5.6}Comparative Analysis}{65}{section.186}
+\contentsline {section}{\numberline {5.7}Results}{65}{section.187}
+\contentsline {subsection}{\numberline {5.7.1}Experimental Results}{65}{subsection.188}
+\contentsline {subsection}{\numberline {5.7.2}Experiments with real data}{68}{subsection.197}
+\contentsline {subsection}{\numberline {5.7.3}Stability Study}{71}{subsection.200}
+\contentsline {subsection}{\numberline {5.7.4}Hyperparameter optimization}{72}{subsection.202}
+\contentsline {subsubsection}{Concatenation Resolution Selection}{72}{section*.203}
+\contentsline {subsubsection}{Training Examples Analysis}{74}{section*.204}
+\contentsline {subsection}{\numberline {5.7.5}Ablation Study}{74}{subsection.205}
+\contentsline {section}{\numberline {5.8}Discussion}{75}{section.214}
+\contentsline {section}{\numberline {5.9}Conclusion}{79}{section.215}
+\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{81}{appendix.216}
+\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{81}{section.217}
+\contentsline {chapter}{Bibliography}{83}{appendix*.218}
