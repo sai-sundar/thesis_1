@@ -1297,6 +1297,66 @@
     \field{year}{2018}
   \endentry
 
+  \entry{hong2018enhancing}{article}{}
+    \name{author}{6}{}{%
+      {{hash=HX}{%
+         family={Hong},
+         familyi={H\bibinitperiod},
+         given={Xiang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zan},
+         familyi={Z\bibinitperiod},
+         given={Yunlong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WF}{%
+         family={Weng},
+         familyi={W\bibinitperiod},
+         given={Fenghua},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=TW}{%
+         family={Tao},
+         familyi={T\bibinitperiod},
+         given={Weijie},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=PQ}{%
+         family={Peng},
+         familyi={P\bibinitperiod},
+         given={Qiyu},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=HQ}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Qiu},
+         giveni={Q\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{HX+1}
+    \strng{fullhash}{HXZYWFTWPQHQ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Hon+18}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{10}
+    \field{pages}{2322\bibrangedash 2332}
+    \field{title}{Enhancing the image quality via transferred deep residual
+  learning of coarse PET sinograms}
+    \field{volume}{37}
+    \field{journaltitle}{IEEE transactions on medical imaging}
+    \field{year}{2018}
+  \endentry
+
   \entry{hornik1990universal}{article}{}
     \name{author}{3}{}{%
       {{hash=HK}{%
@@ -2627,6 +2687,66 @@
     \field{year}{2013}
   \endentry
 
+  \entry{ma2021sinogram}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MYJ}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Yin-Jin},
+         giveni={Y\bibinitperiod-J\bibinitperiod},
+      }}%
+      {{hash=RY}{%
+         family={Ren},
+         familyi={R\bibinitperiod},
+         given={Yong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=FP}{%
+         family={Feng},
+         familyi={F\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GXD}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Xiao-Dong},
+         giveni={X\bibinitperiod-D\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wei},
+         familyi={W\bibinitperiod},
+         given={Biao},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{MYJ+1}
+    \strng{fullhash}{MYJRYFPHPGXDWB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ma+21}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{4}
+    \field{pages}{1\bibrangedash 14}
+    \field{title}{Sinogram denoising via attention residual dense convolutional
+  neural network for low-dose computed tomography}
+    \field{volume}{32}
+    \field{journaltitle}{Nuclear Science and Techniques}
+    \field{year}{2021}
+  \endentry
+
   \entry{maier2018deep}{article}{}
     \name{author}{4}{}{%
       {{hash=MJ}{%
@@ -2898,6 +3018,46 @@
     \field{year}{2018}
   \endentry
 
+  \entry{qian2017deep}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=QH}{%
+         family={Qian},
+         familyi={Q\bibinitperiod},
+         given={Hua},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RX}{%
+         family={Rui},
+         familyi={R\bibinitperiod},
+         given={Xue},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Ahn},
+         familyi={A\bibinitperiod},
+         given={Sangtae},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{QHRXAS1}
+    \strng{fullhash}{QHRXAS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{QRA17}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{booktitle}{2017 IEEE Nuclear Science Symposium and Medical Imaging
+  Conference (NSS/MIC)}
+    \field{pages}{1\bibrangedash 5}
+    \field{title}{Deep learning models for PET scatter estimations}
+    \field{year}{2017}
+  \endentry
+
   \entry{reader2020deep}{article}{}
     \name{author}{6}{}{%
       {{hash=RAJ}{%
@@ -3040,6 +3200,65 @@
     \field{volume}{323}
     \field{journaltitle}{nature}
     \field{year}{1986}
+  \endentry
+
+  \entry{sanaat2021deeptofsino}{article}{}
+    \name{author}{6}{}{%
+      {{hash=SA}{%
+         family={Sanaat},
+         familyi={S\bibinitperiod},
+         given={Amirhossein},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Shooli},
+         familyi={S\bibinitperiod},
+         given={Hossein},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=FS}{%
+         family={Ferdowsi},
+         familyi={F\bibinitperiod},
+         given={Sohrab},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Shiri},
+         familyi={S\bibinitperiod},
+         given={Isaac},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Arabi},
+         familyi={A\bibinitperiod},
+         given={Hossein},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zaidi},
+         familyi={Z\bibinitperiod},
+         given={Habib},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{SA+1}
+    \strng{fullhash}{SASHFSSIAHZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{San+21}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{pages}{118697}
+    \field{title}{DeepTOFSino: A deep learning model for synthesizing full-dose
+  time-of-flight bin sinograms from their corresponding low-dose sinograms}
+    \field{volume}{245}
+    \field{journaltitle}{NeuroImage}
+    \field{year}{2021}
   \endentry
 
   \entry{sinha2019multi}{article}{}
@@ -3465,6 +3684,60 @@
     \field{year}{2019}
   \endentry
 
+  \entry{whiteley2020fastpet}{article}{}
+    \name{author}{6}{}{%
+      {{hash=WW}{%
+         family={Whiteley},
+         familyi={W\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=PV}{%
+         family={Panin},
+         familyi={P\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=ZC}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Chuanyu},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cabello},
+         familyi={C\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bharkhada},
+         familyi={B\bibinitperiod},
+         given={Deepak},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Gregor},
+         familyi={G\bibinitperiod},
+         given={Jens},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WW+1}
+    \strng{fullhash}{WWPVZCCJBDGJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Whi+20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{FastPET: Near real-time PET reconstruction from histo-images
+  using a neural network}
+    \field{journaltitle}{arXiv preprint arXiv:2002.04665}
+    \field{year}{2020}
+  \endentry
+
   \entry{wang2020deep}{article}{}
     \name{author}{3}{}{%
       {{hash=WG}{%
@@ -3504,6 +3777,84 @@
     \field{volume}{2}
     \field{journaltitle}{Nature Machine Intelligence}
     \field{year}{2020}
+  \endentry
+
+  \entry{xie2018artifact}{article}{}
+    \name{author}{9}{}{%
+      {{hash=XS}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Shipeng},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Xinyu},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=XL}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Lizhe},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Jin},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yudong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Jingjie},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Hu},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Yining},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group}%
+    }
+    \strng{namehash}{XS+1}
+    \strng{fullhash}{XSZXCYXLLJZYYJZHHY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Xie+18}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 9}
+    \field{title}{Artifact removal using improved GoogLeNet for sparse-view
+  {CT} reconstruction}
+    \field{volume}{8}
+    \field{journaltitle}{Scientific Reports}
+    \field{year}{2018}
   \endentry
 
   \entry{xie2019generative}{inproceedings}{}
@@ -3820,6 +4171,90 @@
     \field{year}{2018}
   \endentry
 
+  \entry{zhao2020study}{article}{}
+    \name{author}{10}{}{%
+      {{hash=ZK}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Kui},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ZL}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Long},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gao},
+         familyi={G\bibinitperiod},
+         given={Size},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WX}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Xiaozhuang},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yaofa},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Xin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Huatao},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Kanfeng},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Yunqi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Hongwei},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science San Francisco, CA USA}%
+    }
+    \strng{namehash}{ZK+1}
+    \strng{fullhash}{ZKZLGSWXWYZXWHLKZYYH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Zha+20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{number}{9}
+    \field{pages}{e0238455}
+    \field{title}{Study of low-dose PET image recovery using supervised
+  learning with CycleGAN}
+    \field{volume}{15}
+    \field{journaltitle}{Plos one}
+    \field{year}{2020}
+  \endentry
+
   \entry{zhu2017unpaired}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=ZJY}{%
@@ -3915,6 +4350,72 @@
     \field{volume}{555}
     \field{journaltitle}{Nature}
     \field{year}{2018}
+  \endentry
+
+  \entry{zhu2020low}{inproceedings}{}
+    \name{author}{7}{}{%
+      {{hash=ZJ}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Jiongtao},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Su},
+         familyi={S\bibinitperiod},
+         given={Ting},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=DX}{%
+         family={Deng},
+         familyi={D\bibinitperiod},
+         given={Xiaolei},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=SX}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Xindong},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Hairong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Liang},
+         familyi={L\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Ge},
+         familyi={G\bibinitperiod},
+         given={Yongshuai},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{organization}{2}{%
+      {International Society for Optics}%
+      {Photonics}%
+    }
+    \strng{namehash}{ZJ+1}
+    \strng{fullhash}{ZJSTDXSXZHLDGY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Zhu+20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{booktitle}{Medical Imaging 2020: Physics of Medical Imaging}
+    \field{pages}{1131241}
+    \field{title}{Low-dose CT reconstruction with simultaneous sinogram and
+  image domain denoising by deep neural network}
+    \field{volume}{11312}
+    \field{year}{2020}
   \endentry
 \enddatalist
 \endinput

@@ -26,15 +26,106 @@ Each of these categories are discussed along with reference to existing state of
 \section{Data Corrections or Post-processing}
 
 The use of deep learning for the development of either data corrections or post-reconstruction  image based approaches has shown potential to improve the quality of reconstructed images. While it is possible to train a \ac{CNN} to regress directly from the measurement (raw data) domain to the image domain, the use of \ac{CNN} entirely in one particular domain makes it fast and relatively easy to implement. The motivation behind using deep learning architectures for these processing task is the extremely well documented performance in denoising and super resolution tasks. Data corrections involve improving the measurement data either though denoising or finding missing projection angle data. Post-processing in the image domain on the other hand consists of improving images reconstructed with standard reconstruction methods. 
+Corrections in measured data $\boldy$ can be expressed as finding an estimate $\boldyhat$ through a neural network $F$ with parameters $\bm{\theta}$. 
+\begin{equation}\label{eq:data_cor}
+	\boldyhat = \bm{F}_{\bm{\theta}} (\boldy)
+\end{equation} 
+The new set of corrected data $\boldyhat$ are then used to reconstruct images through traditional methods. An example of data corrections in \ac{PET} image reconstruction through sinogram repair is proposed by \cite{whiteley2019cnn}, where a \ac{CNN} is utilized to predict missing projection data for total body \ac{PET} image reconstruction. The repaired sinograms eventually improve image reconstruction by standard methods.
 
+In \ac{CT} imaging, missing projection data in sparse-view setting is estimated through neural networks. An example in this regard is proposed in \cite{lee2018deep}, where the authors use U-Net to map sparse-view sinograms to full-view sinograms and then reconstruct the images using \ac{FBP}. Another idea to improve the raw data through scatter correction is proposed in \cite{maier2018deep}. In this work a modified U-Net is used to estimate scatter and correct the raw data in order to improve \ac{CT} images. 
 
-An example of data corrections by improving the raw data through scatter correction is proposed in \cite{maier2018deep}. In this work a modified U-Net is used to estimate scatter and correct the raw data in order to improve \ac{CT} images. Sinogram repair is proposed by \cite{whiteley2019cnn}, where a \ac{CNN} is utilized to predict missing projection data for total body \ac{PET} image reconstruction. The repaired sinograms eventually improve image reconstruction by standard methods. In \ac{CT} imaging too missing projection data in sparse-view setting is estimated. An example in this regard is proposed in \cite{lee2018deep}, where the authors use U-Net to map sparse-view sinograms to full-view sinograms and then reconstruct the images using \ac{FBP}. 
+Improvements in the images reconstructed by traditional methods are usually brought about through neural networks designed for denoising or super resolution. An image $\boldxhat$ ($\boldlambdahat$ or $\boldmuhat$) estimated by conventional methods like \ac{FBP} or \ac{OSEM} is improved through a neural network:
 
+\begin{equation}\label{eq:post_pro}
+\boldx_{\mathrm{den}} = \bm{F}_{\bm{\theta}} (\boldxhat)
+\end{equation} 
+where $\boldx_{\mathrm{den}}$ is the post-processed image. Over the years the trend in \ac{PET} imaging has been towards reducing the dose of the radiotracer injected into the patient, which in turn leads to noisier reconstructed images. The approach has been to create datasets with conventional algorithms (like \ac{OSEM}) for both low-dose and normal dose settings and then train a neural network to achieve normal dose quality starting from low-dose images. Apart from the low dose noise problem, in \ac{CT}, improvements in sparse-view imaging through has been an active area of research. The focus here is to reduce the artifacts produced by \ac{FBP} with sparse-view sinograms. These artifacts are either removed by first finding the missing projections and repairing the sinograms or by post-processing the images. In both these scenarios \ac{FBP} is utilized; in the former case neural network corrects the sinograms thereby providing full-view sinograms for reconstruction and in the latter case \ac{FBP} estimated artifact effected images are improved by the neural network.  
 
+Some of the recent developments in post-processing and data corrections for \ac{PET} and \ac{CT} are summarized in Table~\ref{table:pp_PET} and Table~\ref{table:pp_CT}. A short description of the method along with the citation is given in the second column of both the tables. These approaches typically modify an existing neural network architecture to suit the problem they are addressing. U-Net is one of the most utilized architectures as seen in the third column where the base neural network is given. The datasets utilized by each of these is works is mentioned in the final column. Along with proposed modifications of established neural networks, these approaches typically use loss functions consisting of multiple components. The authors in \cite{gong2018pet} used perceptual loss along with \ac{MSE} to preserve qualitative and quantitative accuracy of the reconstructed images. The work proposed by \cite{whiteley2020fastpet} uses \ac{MSSIM} along with perceptual loss and \ac{MAE}. Another strategy used is pre-training on simulated data followed by fine-tuning on real patient data. Data corrections in the form of scatter correction of the sinogram data is proposed in \cite{qian2017deep}. The authors use \ac{CNN} followed by \ac{FC} layers in their approach. In \ac{CT} imaging there are works that do denoising of low-dose sinograms (\cite{ma2021sinogram,zhu2020low}) and also finding the missing projections in sparse-view sinograms (\cite{lee2018deep}). The same problem is tackled in the image domain through denoising (\cite{yang2018low}) and artifact removal for sparse-view problem (\cite{jin2017deep,xie2018artifact,zhang2018sparse}).
+\begin{table}[ht!]
+	\centering
+	\caption{Summary of recent works on data corrections and post-processing approaches in \ac{PET}}
+	\label{table:pp_PET}
+	\scriptsize
+	\begin{tabular}{||c|c|c|c||} 
+		\hline
+		Sl.No.    & Method             & Base Neural  & Dataset        \\ %[0.5ex] 
+		          &                    &  Network     &                \\
+		\hline\hline
+		1         & \cite{gong2018pet} & \ac{CNN} with residual & BrainWeb and XCAT  \\     
+		          &  Low-dose Image    &  blocks                & phantoms; Fine-tuning/testing  \\ 
+		          &   Denoising        & & with real patient data       \\ 
+		\hline
+		2         &  \cite{whiteley2020fastpet}& U-Net with residual & Real PET/CT data \\
+		          & Histo Image        & blocks      &        \\
+		          & Correction         &                &        \\
+		\hline  
+		3         & \cite{zhao2020study}& Cycle GAN    & Real PET/CT data  \\ 
+       	          & Low-dose Image      &              &                   \\ 
+       	          & Denoising           &              &                   \\ 
+       	\hline
+       	4         & \cite{qian2017deep} & CNN with fully    & Monte Carlo simulations  \\ 
+                  & Sinogram Scatter    & connected layer   & with phantoms            \\ 
+       	          & Correction          &                   &                          \\ 
+       	\hline
+       	5         & \cite{hong2018enhancing}& Deep residual CNN & Digital phantoms  \\ 
+       	          & Single Image Super      &                   &             \\ 
+       	          & Resolution for sinograms&                   &                          \\ 
+       	\hline
+       	6         & \cite{sanaat2021deeptofsino}&   ResNet       & Real TOF-PET/CT data  \\ 
+       	          & Low-dose to full-dose    &                   &             \\ 
+       	          & sinogram synthesis    &                      &                          \\ 
+       	\hline
+       	
+	\end{tabular}
+	
+\end{table}
 
-Denoising the reconstructed \ac{PET} images with a deep convolutional network was done in \cite{gong2018pet}. The authors used perceptual loss along with \ac{MSE} to preserve qualitative and quantitative accuracy of the reconstructed images. The network was initially trained on simulated data and then fine-tuned on real patient data. The authors in \cite{jin2017deep} use U-Net with a residual connection for denoising and artefact removal in the sparse-view estimate, while the work in \cite{zhang2018sparse} uses DenseNet with deconvolution for the same purpose. It is interesting to note that the networks have an encoder-decoder structure, wherein the encoder finds a compact representation of the input domain and the decoder learns to map this representation to the target domain. The dimensions of the input are reduced through the encoder as we go deeper into the layers. On the other hand, each of the decoder layers samples up these feature maps to eventually arrive at the output dimensions. 
+\begin{table}[ht!]
+	\centering
+	\caption{Summary of recent works on data corrections and post-processing approaches in \ac{CT}}
+	\label{table:pp_CT}
+	%\footnotesize
+	\scriptsize
+	\begin{tabular}{||c|c|c|c||} 
+		\hline
+		Sl.No.    &       Method             & Base Neural          & Dataset        \\ %[0.5ex] 
+            	  &                          &    Network                      &                \\
+		\hline\hline
+		1         & \cite{lee2018deep}       &   Residual U-Net     & Simulated projections          \\     
+		          &  Sinogram synthesis      &                      & from real patient data         \\ 
+		          &   for sparse-view CT     &                      &                                \\ 
+		\hline
+		2         &  \cite{jin2017deep}      & Residual U-Net       & Phantom and Real patient       \\
+		          & Artifact removal in      &                      &   data along with projections  \\
+		          & sparse-view reconstructed images&               &                                \\
+		\hline  
+		3         & \cite{xie2018artifact}   & Improved GoogleNet   & Simulated projections          \\ 
+		          & Artifact removal in      &                      & from real data                 \\ 
+		          & sparse-view reconstructed images&               &                                \\ 
+		\hline
+		4         & \cite{zhang2018sparse}    & DeneNet with        & Simulated projections          \\ 
+		          & Artifact removal in       & deconvolutions      & from real data                 \\ 
+		          & sparse-view reconstructed images&               &                                \\ 
+		\hline
+		5         & \cite{ma2021sinogram}     & Attention residual  & Real data along with           \\ 
+		          & Low dose sinogram         &  dense CNN          & projections                    \\ 
+		          & denoising                 &                     &                                \\ 
+		\hline
+		6         & \cite{yang2018low}        &    Wasserstein-GAN & Real data along with            \\ 
+		          & Low-dose image            &                    & projections                     \\ 
+		          & denosing                  &                    &                                 \\ 
+		\hline
+		7         & \cite{zhu2020low}         &  Three-segment network  & Real data along with            \\ 
+		          & Simultaneous sinogram and &  ADAPTIVE-NET      & projections                     \\ 
+	 	          & image domain denoising    &                    &                                 \\ 
+		\hline
+		
+	\end{tabular}
+	
+\end{table}
 
-
+An important aspect of the methods discussed in this section is that they all claim to provide fast reconstructed images using well established neural network architectures. This also stems from the fact that most of these approaches start with an image estimate that is also obtained with a relatively faster conventional method, like \ac{FBP} for \ac{CT} and \ac{OSEM} for \ac{PET}. These fast estimates are usually very noisy or artifact ridden. These approaches rely on the neural network to handle the noise and artifacts. The attractiveness of these methods is the simplicity, ease of implementation and the lack of requirement of large datasets of raw detector data. 
 
 \section{Unrolled Iterative Methods}
 
