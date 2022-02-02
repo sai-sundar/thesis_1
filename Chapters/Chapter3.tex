@@ -127,9 +127,49 @@ Some of the recent developments in post-processing and data corrections for \ac{
 
 An important aspect of the methods discussed in this section is that they all claim to provide fast reconstructed images using well established neural network architectures. This also stems from the fact that most of these approaches start with an image estimate that is also obtained with a relatively faster conventional method, like \ac{FBP} for \ac{CT} and \ac{OSEM} for \ac{PET}. These fast estimates are usually very noisy or artifact ridden. These approaches rely on the neural network to handle the noise and artifacts. The attractiveness of these methods is the simplicity, ease of implementation and the lack of requirement of large datasets of raw detector data. 
 
-\section{Unrolled Iterative Methods}
+\section{Hybrid Methods}
 
-Despite resulting in an improvement of the reconstructed output, the above mentioned methods do not directly intervene with the reconstruction process. This can be done using the two distinct frameworks (ii) and (iii). The first one involves the incorporation of a deep neural network into an unrolled iterative algorithm where a trained neural network accelerates the convergence by improving the intermediate estimates in the iterations (\cite{gong2019iterative,xie2019generative,kim2018penalized}). The hybrid methodology of unrolled iterative networks combines model-based and neural network approaches exploring the benefits of both methods. 
+The methods mentioned in this section and the next, are directly involved in the reconstruction process, rather than being exclusive to data corrections or post-reconstruction processing. The hybrid methodology for image reconstruction combines model-based and neural network approaches exploring the benefits of both methods. Data-driven information learned by a neural networks can be incorporated into an iterative algorithm through the regularization term. \cite{gong2019iterative} used a modified version of the U-Net comprising of multi-channel input to represent \ac{PET} images.
+\begin{equation}\label{eq:iter_CNN}
+\boldlambda = \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})
+\end{equation} 
+where $\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}$ represents the trained denoising neural network (modified U-Net) with fixed trainable parameters $\theta_{\mathrm{fixed}}$. The \ac{PET} reconstruction model (from \ref{eq:PET}) can be modified to incorporate \ref{eq:iter_CNN}. 
+
+\begin{equation}\label{eq:mod_PET}
+	\boldybar(\boldlambda) = \boldA \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z}) + \bm{r}
+\end{equation}
+The unknown image $\boldlambda$ can be estimated using the maximum likelihood criterion:
+\begin{equation}\label{eq:iter_CNN2}
+\boldlambdahat = \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{\hat{z}})
+\end{equation} 
+\begin{equation}
+\boldlambdahat=\underset{\boldlambda \ge 0}{\operatorname{argmin}} \; L(\bm{z})
+\end{equation}
+
+In order to ease the difficulty of solving the above due to the non-linearity of the neural network, the authors adapted a constrained version of the above:
+
+\begin{equation}\label{constr}
+ 	\operatorname{max} \; L(\bm{\boldlambda});  \; \mathrm{s.t.} \; \boldlambda = \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{\hat{z}})
+\end{equation}
+To solve the above optimization problem the authors used the augmented Lagrangian format:
+\begin{equation}
+L_{\rho}=L(\boldlambda)-\frac{\rho}{2}\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})+\bm{\gamma}\|^{2}+\frac{\rho}{2}\|\bm{\gamma}\|^{2},
+\end{equation}
+The authors used the \ac{ADMM} algorithm to split the above into three steps:
+
+\begin{equation}
+\boldlambda^{n+1}=\underset{\boldlambda}{\arg \max} \; L(\boldlambda)-\frac{\rho}{2}\left\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{n}+\bm{\gamma}^{n}\right\|^{2}
+\end{equation}
+
+\begin{equation}
+\bm{z}^{n+1}=\arg \min \left\|\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})-\left(\boldlambda^{n+1}+\bm{\gamma}^{n}\right)\right\|^{2}
+\end{equation}
+
+\begin{equation}
+\bm{\gamma}^{n+1}=\bm{\gamma}^{n}+\boldlambda^{n+1}-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{n+1}
+\end{equation}
+
+
 The paper by Gong et al. used a modified U-Net to represent images within the iterative reconstruction framework for \ac{PET} images. The deep learning architecture was trained on low-dose reconstructed images as input and high-dose reconstructed images as the output. The work by Xie et al. further extended this work by replacing the U-Net with a \ac{GAN} for image representation within the iterative framework. Kim et al incorporated a trained denoising convolutional neural network (DnCNN) along with a novel local linear fitting function into the iterative algorithm. The DnCNN which is trained on data with multiple noise levels improves the image estimate at each iteration. They used simulated and real patient data in their study. In \cite{gupta2018cnn}, a U-Net is used to encode the prior, i.e., to project the current estimate to the prior image set while gradient descent enforces measurement consistency. Neural networks can be also used to replace traditional operators in optimization strategies as shown by \cite{adler2018learned}. The reconstruction using these hybrid methods can be computationally expensive since it requires running an optimization procedure at test time.
 
 \section{Direct Reconstruction with Deep Learning}
