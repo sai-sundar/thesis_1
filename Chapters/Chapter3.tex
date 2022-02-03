@@ -129,7 +129,12 @@ An important aspect of the methods discussed in this section is that they all cl
 
 \section{Hybrid Methods}
 
-The methods mentioned in this section and the next, are directly involved in the reconstruction process, rather than being exclusive to data corrections or post-reconstruction processing. The hybrid methodology for image reconstruction combines model-based and neural network approaches exploring the benefits of both methods. Data-driven information learned by a neural networks can be incorporated into an iterative algorithm through the regularization term. \cite{gong2019iterative} used a modified version of the U-Net comprising of multi-channel input to represent \ac{PET} images.
+The methods mentioned in this section and the next, are directly involved in the reconstruction process, rather than being exclusive to data corrections or post-reconstruction processing. The hybrid methodology for image reconstruction combines model-based and neural network approaches exploring the benefits of both methods. In this section we discuss some of the recent works in both \ac{PET} and \ac{CT} that fall in the category of hybrid methods.
+
+\begin{itemize}
+
+
+\item Data-driven information learned by a neural networks can be incorporated into an iterative algorithm through the regularization term. \cite{gong2019iterative} used a modified version of the U-Net comprising of multi-channel input to represent \ac{PET} images.
 \begin{equation}\label{eq:iter_CNN}
 \boldlambda = \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})
 \end{equation} 
@@ -157,18 +162,51 @@ L_{\rho}=L(\boldlambda)-\frac{\rho}{2}\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{
 \end{equation}
 The authors used the \ac{ADMM} algorithm to split the above into three steps:
 
-\begin{equation}
-\boldlambda^{n+1}=\underset{\boldlambda}{\arg \max} \; L(\boldlambda)-\frac{\rho}{2}\left\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{n}+\bm{\gamma}^{n}\right\|^{2}
+\begin{equation}\label{eq:ad1}
+\boldlambda^{N+1}=\underset{\boldlambda}{\arg \max} \; L(\boldlambda)-\frac{\rho}{2}\left\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{N}+\bm{\gamma}^{N}\right\|^{2}
 \end{equation}
 
-\begin{equation}
-\bm{z}^{n+1}=\arg \min \left\|\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})-\left(\boldlambda^{n+1}+\bm{\gamma}^{n}\right)\right\|^{2}
+\begin{equation}\label{eq:ad2}
+\bm{z}^{N+1}=\arg \min \left\|\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})-\left(\boldlambda^{N+1}+\bm{\gamma}^{N}\right)\right\|^{2}
 \end{equation}
 
-\begin{equation}
-\bm{\gamma}^{n+1}=\bm{\gamma}^{n}+\boldlambda^{n+1}-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{n+1}
+\begin{equation}\label{eq:ad3}
+\bm{\gamma}^{N+1}=\bm{\gamma}^{N}+\boldlambda^{N+1}-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{N+1}
+\end{equation}
+\ref{eq:ad1} is equivalent to penalized \ac{PET} reconstruction and the authors used the optimization transfer method proposed in \cite{wang2012penalized}. The second part of the algorithm (from \ref{eq:ad2}) involving the input $\bm{z}$ update, is a non-linear version of the least squares problem. In the above methodology, the network parameters $\bm{\theta}$ are fixed while the input to the network $\bm{z}$ is updated. The authors extended this approach in \cite{gong2018pet2} by using a fixed input to the network $\bm{z}_{\mathrm{fixed}}$, while setting the network parameters to update. The fixed input to the network was an MRI image while the network training was based on the concept of deep image prior (\cite{ulyanov2018deep}). The second sub-problem was modified to reflect the update in the network parameters:
+
+\begin{equation}\label{eq:dip}
+\bm{\theta}^{N+1}=\arg \min \left\|\bm{F}_{\bm{\theta}}(\bm{z_{fixed}})-\left(\boldlambda^{N+1}+\bm{\gamma}^{N}\right)\right\|^{2}
 \end{equation}
 
+Both these methods require that the raw data also agree with the denoising \ac{CNN}. The images reconstructed are reported to have better lesion contrast compared to the post-processing \ac{CNN} denoising approaches, indicating an advantage of the hybrid methods, despite being slightly tedious to implement and having longer prediction times.
+
+\item Apart from using neural networks for regularization, the prior information captured by them can be combined with established model-based methods. One such approach called FBSEM-Net was proposed by \cite{mehranian2020model}. Their unrolled method is based on forward-backward splitting (FBS) algorithm. The objective function for their method was:
+
+\begin{equation}
+\boldlambda^{N}=\underset{\boldlambda}{\operatorname{argmax}}\left\{L(\boldlambda \mid \boldy)-\frac{1}{2 \beta}\left\|\boldlambda-\boldlambda_{R e g}^{N}\right\|^{2}\right\}
+\end{equation}
+with $\beta$ being a hyper-parameter that controls the balance between the data fidelity term and the regularization term. The authors solved the above through the method of separable surrogates proposed in \cite{depierro1995}. The three steps involved in obtaining the final image update: computing the regularization term, finding the EM update and fusing the EM update with the neural network estimated prior. The first step to compute the regularization term cn be written as:
+
+\begin{equation}\label{eq:fbs1}
+\boldlambda_{reg}^N = \bm{F}(\boldlambda^{N-1})
+\end{equation} 
+where $F$ is a residual neural network estimating the regularization term based on the image from the previous iteration. 
+The second step involved getting the EM update $\boldlambda_{EM}^{N}$ similar to \ref{eq:mlem}. Finally the image is estimated by
+\begin{equation}\label{eq:fb2}
+\begin{array}{l}
+\lambda_j^{N+1} 
+=\frac{2 \lambda_{E M}^{N}}{\left(1-\delta_{j} \lambda_{j, R e g}^{N}\right)+\sqrt{\left(1-\delta_{j} \lambda_{j, R e g}^{n}\right)^{2}+4 \delta_{j} \lambda_{j, E M}^{n}}} ,\; \delta_{j}=\frac{1}{\beta s_{j}}
+\end{array}
+\end{equation}
+
+During the network training, two reconstructions occur simultaneously, one with good quality reference data and the other with noisy data. The role of the neural network is to denoise the current estimate, such that the fused combined image using \ref{eq:fb2} best agrees with the high quality \ac{MLEM} reconstructed image. The overall methodology constitutes of a very deep network with each iteration being a block of \ac{CNN} along with the conventional \ac{MLEM} layers. 
+
+
+\item 
+
+
+\end{itemize}
 
 The paper by Gong et al. used a modified U-Net to represent images within the iterative reconstruction framework for \ac{PET} images. The deep learning architecture was trained on low-dose reconstructed images as input and high-dose reconstructed images as the output. The work by Xie et al. further extended this work by replacing the U-Net with a \ac{GAN} for image representation within the iterative framework. Kim et al incorporated a trained denoising convolutional neural network (DnCNN) along with a novel local linear fitting function into the iterative algorithm. The DnCNN which is trained on data with multiple noise levels improves the image estimate at each iteration. They used simulated and real patient data in their study. In \cite{gupta2018cnn}, a U-Net is used to encode the prior, i.e., to project the current estimate to the prior image set while gradient descent enforces measurement consistency. Neural networks can be also used to replace traditional operators in optimization strategies as shown by \cite{adler2018learned}. The reconstruction using these hybrid methods can be computationally expensive since it requires running an optimization procedure at test time.
 

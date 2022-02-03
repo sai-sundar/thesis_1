@@ -871,7 +871,9 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Gon+18}
+    \field{extraalpha}{1}
     \field{labelyear}{2018}
+    \field{extradate}{1}
     \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
@@ -879,6 +881,57 @@
     \field{pages}{153\bibrangedash 161}
     \field{title}{{PET} image denoising using a deep neural network through
   fine tuning}
+    \field{volume}{3}
+    \field{journaltitle}{IEEE Transactions on Radiation and Plasma Medical
+  Sciences}
+    \field{year}{2018}
+  \endentry
+
+  \entry{gong2018pet2}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GK}{%
+         family={Gong},
+         familyi={G\bibinitperiod},
+         given={Kuang},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Guan},
+         familyi={G\bibinitperiod},
+         given={Jiahui},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LCC}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Chih-Chieh},
+         giveni={C\bibinitperiod-C\bibinitperiod},
+      }}%
+      {{hash=QJ}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Jinyi},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{GK+1}
+    \strng{fullhash}{GKGJLCCQJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Gon+18}
+    \field{extraalpha}{2}
+    \field{labelyear}{2018}
+    \field{extradate}{2}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{2}
+    \field{pages}{153\bibrangedash 161}
+    \field{title}{PET image denoising using a deep neural network through fine
+  tuning}
     \field{volume}{3}
     \field{journaltitle}{IEEE Transactions on Radiation and Plasma Medical
   Sciences}
@@ -2901,6 +2954,43 @@
     \field{year}{2021}
   \endentry
 
+  \entry{mehranian2020model}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MA}{%
+         family={Mehranian},
+         familyi={M\bibinitperiod},
+         given={Abolfazl},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RAJ}{%
+         family={Reader},
+         familyi={R\bibinitperiod},
+         given={Andrew\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{MARAJ1}
+    \strng{fullhash}{MARAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{MR20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{1}
+    \field{pages}{54\bibrangedash 64}
+    \field{title}{Model-Based Deep Learning PET Image Reconstruction Using
+  Forward--Backward Splitting Expectation--Maximization}
+    \field{volume}{5}
+    \field{journaltitle}{IEEE transactions on radiation and plasma medical
+  sciences}
+    \field{year}{2020}
+  \endentry
+
   \entry{nuyts1998iterative}{article}{}
     \name{author}{6}{}{%
       {{hash=NJ}{%
@@ -3485,6 +3575,43 @@
     \field{year}{2009}
   \endentry
 
+  \entry{ulyanov2018deep}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=UD}{%
+         family={Ulyanov},
+         familyi={U\bibinitperiod},
+         given={Dmitry},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Vedaldi},
+         familyi={V\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LV}{%
+         family={Lempitsky},
+         familyi={L\bibinitperiod},
+         given={Victor},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{UDVALV1}
+    \strng{fullhash}{UDVALV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{UVL18}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{booktitle}{Proceedings of the IEEE conference on computer vision and
+  pattern recognition}
+    \field{pages}{9446\bibrangedash 9454}
+    \field{title}{Deep image prior}
+    \field{year}{2018}
+  \endentry
+
   \entry{van2016fast}{article}{}
     \name{author}{9}{}{%
       {{hash=VAW}{%
@@ -3736,6 +3863,42 @@
   using a neural network}
     \field{journaltitle}{arXiv preprint arXiv:2002.04665}
     \field{year}{2020}
+  \endentry
+
+  \entry{wang2012penalized}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Guobao},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=QJ}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Jinyi},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WGQJ1}
+    \strng{fullhash}{WGQJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{WQ12}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{year}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{number}{12}
+    \field{pages}{2194\bibrangedash 2204}
+    \field{title}{Penalized likelihood PET image reconstruction using
+  patch-based edge-preserving regularization}
+    \field{volume}{31}
+    \field{journaltitle}{IEEE transactions on medical imaging}
+    \field{year}{2012}
   \endentry
 
   \entry{wang2020deep}{article}{}
