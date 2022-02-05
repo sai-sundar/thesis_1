@@ -462,6 +462,42 @@
     \field{year}{2013}
   \endentry
 
+  \entry{chambolle2011first}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CA}{%
+         family={Chambolle},
+         familyi={C\bibinitperiod},
+         given={Antonin},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PT}{%
+         family={Pock},
+         familyi={P\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{CAPT1}
+    \strng{fullhash}{CAPT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{CP11}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{1}
+    \field{pages}{120\bibrangedash 145}
+    \field{title}{A first-order primal-dual algorithm for convex problems with
+  applications to imaging}
+    \field{volume}{40}
+    \field{journaltitle}{Journal of mathematical imaging and vision}
+    \field{year}{2011}
+  \endentry
+
   \entry{cui2018artificial}{article}{}
     \name{author}{5}{}{%
       {{hash=CS}{%

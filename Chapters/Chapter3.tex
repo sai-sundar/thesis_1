@@ -203,9 +203,24 @@ The second step involved getting the EM update $\boldlambda_{EM}^{N}$ similar to
 During the network training, two reconstructions occur simultaneously, one with good quality reference data and the other with noisy data. The role of the neural network is to denoise the current estimate, such that the fused combined image using \ref{eq:fb2} best agrees with the high quality \ac{MLEM} reconstructed image. The overall methodology constitutes of a very deep network with each iteration being a block of \ac{CNN} along with the conventional \ac{MLEM} layers. 
 
 
+\item \cite{adler2018learned} proposed a learned primal-dual algorithm which was one of the first methods that combined \ac{MBIR} methods with deep learning for low-dose \ac{CT} image reconstruction. The authors proposed a generalized algorithm that could be modified for other tomographic imaging modalities also. \acp{CNN} are used both in the image domain and the sinogram domain, connected through the forward projection operator and it's adjoint. In many \ac{MBIR} approaches, non-smooth regularizers are used. They are typically handled through smooth approximations which lead to additional parameters and non-exact solutions. As an alternative, proximal methods are used to tackle the non-smooth objective functions. Inspired from one such proximal \ac{PDHG} algorithm (\cite{chambolle2011first}), the authors proposed a learned reconstruction scheme. They replaced the proximal operators with learned parameterized operators (\acp{CNN}) to result in a learned reconstruction operator. The algorithm is summarized in \ref{alg:pd}. 
+
+\begin{algorithm}
+	\SetAlgoLined
+	For primal and dual variables $x \in X^{N_{primal}}$ and $h \in X^{N_{dual}}$, proximal dual and primal operators represented by neural networks,  $\Gamma_{\theta_{k}^{d}}$, $\Lambda_{\theta_{k}^{p}}$, K iterations,measurement data $\boldy$
+	\For{k = 1,2,\dots, K}{
+		$\bm{h}^{[k]}=\Gamma_{\theta_{k}^{d}}\left(\bm{h}^{[k-1]}, \bm{A}\left(\boldx_{(2)}^{[k-1]}\right), \boldy\right)$
+		
+		$\boldx^{[k]}=\Lambda_{\theta_{k}^{p}}\left(\boldx^{[k-1]},\left[\bm{A}\left(\boldx_{(1)}^{[k-1]}\right)\right]^{*}\left(\bm{h}_{(1)}^{[m]}\right)\right)$
+				
+	}
+    \Return $\boldxhat = \boldx_{(1)}^{[K]}$
+	\caption{Learned Primal-Dual}
+	\label{alg:pd}
+\end{algorithm}
+They reported better qualitative and quantitative results when compared to TV and deep learning-based post-processing method. 
+
 \item 
-
-
 \end{itemize}
 
 The paper by Gong et al. used a modified U-Net to represent images within the iterative reconstruction framework for \ac{PET} images. The deep learning architecture was trained on low-dose reconstructed images as input and high-dose reconstructed images as the output. The work by Xie et al. further extended this work by replacing the U-Net with a \ac{GAN} for image representation within the iterative framework. Kim et al incorporated a trained denoising convolutional neural network (DnCNN) along with a novel local linear fitting function into the iterative algorithm. The DnCNN which is trained on data with multiple noise levels improves the image estimate at each iteration. They used simulated and real patient data in their study. In \cite{gupta2018cnn}, a U-Net is used to encode the prior, i.e., to project the current estimate to the prior image set while gradient descent enforces measurement consistency. Neural networks can be also used to replace traditional operators in optimization strategies as shown by \cite{adler2018learned}. The reconstruction using these hybrid methods can be computationally expensive since it requires running an optimization procedure at test time.
