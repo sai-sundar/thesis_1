@@ -2,7 +2,7 @@
 
 \chapter{Deep Learning and Tomographic Image Reconstruction} % Main chapter title
 
-\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
 %----------------------------------------------------------------------------------------
 The impact of deep learning has been immense over the last few years in the field of medical imaging (\cite{litjens2017survey, greenspan2016guest}). Medical image reconstruction has also benefited hugely from the various advances in neural network architectures \cite{wang2020deep,yedder2021deep,reader2020deep}. In the specific case of \ac{CT} image reconstruction, there has been active interest in sparse-view and low-dose reconstruction scenarios. While with \ac{PET} reconstruction on the other hand, low-dose imaging and total body imaging have been on the forefront. In both cases, obtaining high quality reconstructed images is a challenging task. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods require the knowledge of noise and artifacts statistics and generally have longer reconstruction times \cite{kim2014combining}. Deep learning-based methods on the other hand are claimed to achieve reconstructed images with quality on par with iterative techniques and in a much shorter time frame \cite{leuschner2021quantitative}. In this work, the focus has been on \ac{CT} and \ac{PET} image reconstruction. 
@@ -203,7 +203,7 @@ The second step involved getting the EM update $\boldlambda_{EM}^{N}$ similar to
 During the network training, two reconstructions occur simultaneously, one with good quality reference data and the other with noisy data. The role of the neural network is to denoise the current estimate, such that the fused combined image using \ref{eq:fb2} best agrees with the high quality \ac{MLEM} reconstructed image. The overall methodology constitutes of a very deep network with each iteration being a block of \ac{CNN} along with the conventional \ac{MLEM} layers. 
 
 
-\item \cite{adler2018learned} proposed a learned primal-dual algorithm which was one of the first methods that combined \ac{MBIR} methods with deep learning for low-dose \ac{CT} image reconstruction. The authors proposed a generalized algorithm that could be modified for other tomographic imaging modalities also. \acp{CNN} are used both in the image domain and the sinogram domain, connected through the forward projection operator and it's adjoint. In many \ac{MBIR} approaches, non-smooth regularizers are used. They are typically handled through smooth approximations which lead to additional parameters and non-exact solutions. As an alternative, proximal methods are used to tackle the non-smooth objective functions. Inspired from one such proximal \ac{PDHG} algorithm (\cite{chambolle2011first}), the authors proposed a learned reconstruction scheme. They replaced the proximal operators with learned parameterized operators (\acp{CNN}) to result in a learned reconstruction operator. The algorithm is summarized in \ref{alg:pd}. 
+\item \cite{adler2018learned} proposed a learned primal-dual algorithm which was one of the first methods that combined \ac{MBIR} methods with deep learning for low-dose \ac{CT} image reconstruction. The authors proposed a generalized algorithm that could be modified for other tomographic imaging modalities also. \acp{CNN} are used both in the image domain and the sinogram domain, connected through the forward projection operator and it's adjoint. In many \ac{MBIR} approaches, non-smooth regularizers are used. They are typically handled through smooth approximations which lead to additional parameters and non-exact solutions. As an alternative, proximal methods are used to tackle the non-smooth objective functions. Inspired from one such proximal \ac{PDHG} algorithm (\cite{chambolle2011first}), the authors proposed a learned reconstruction scheme. They replaced the proximal operators with learned parameterized operators (\acp{CNN}) to result in a learned reconstruction operator. The primal and dual operators were parameterized as \acp{CNN} consisting of 3 layers and in total of 64 intermediate convolution channels. The algorithm is summarized in \ref{alg:pd}. 
 
 \begin{algorithm}
 	\SetAlgoLined
@@ -218,9 +218,20 @@ During the network training, two reconstructions occur simultaneously, one with 
 	\caption{Learned Primal-Dual}
 	\label{alg:pd}
 \end{algorithm}
-They reported better qualitative and quantitative results when compared to TV and deep learning-based post-processing method. 
 
-\item 
+The neural networks and the projection/back-projection operators were implemented using operator discretization library (ODL) and Tensorflow \cite{abadi2016tensorflow}. The authors tested their approach on ellipse phantoms and real patient data. They reported better qualitative and quantitative results when compared to TV and deep learning-based post-processing method. 
+
+\item A hybrid method for sparse-view \ac{CT} was proposed in \cite{wu2021drone}. The authors propose a three-stage reconstruction framework consisting of embedding, refinement and awareness. The first module extends the sinogram and reduces the sparse-view artifacts. The refinement part of the method recovers finer details in the images and finally the last module regularizes the images from the earlier modules by ensuring consistency between the measurement data and images. The last module adapted from compressed sensing ensures stability and generalizability in the reconstructed images through a compressed sensing model. The embedding module consists of two neural networks $F_1$ and $F_2$, the first one is a U-Net that operates in the sinogram domain mapping from 60 views to 180 views, and the second one a W-GAN that operates in the image domain refining the image obtained though \ac{FBP} on the upsampled sinograms. It can be represented as follows:
+
+\begin{equation}
+\boldx^{\prime}=F_{2}(\bm{A}^{+}(F_{1} (\boldy)))
+\end{equation}
+where $\boldx^{\prime}$ is the image estimated by the embedding module, $\bm{A}$ is the \ac{FBP} reconstruction operator. The next module maintains a balance between the extension of views and refining the subsequent details in the images through two neural networks similar to the ones in the first module. The residual between the image predicted by the embedding module and the re-sampled sinogram can be written as: $(\boldy'-\boldA \boldx')$. The first neural network is trained to minimize the \ac{MSE} between the measurement data labels and predictions.   
+
+\begin{equation}
+	\boldy'' = F_3(\boldy'-\boldA \boldx')
+\end{equation} 
+
 \end{itemize}
 
 The paper by Gong et al. used a modified U-Net to represent images within the iterative reconstruction framework for \ac{PET} images. The deep learning architecture was trained on low-dose reconstructed images as input and high-dose reconstructed images as the output. The work by Xie et al. further extended this work by replacing the U-Net with a \ac{GAN} for image representation within the iterative framework. Kim et al incorporated a trained denoising convolutional neural network (DnCNN) along with a novel local linear fitting function into the iterative algorithm. The DnCNN which is trained on data with multiple noise levels improves the image estimate at each iteration. They used simulated and real patient data in their study. In \cite{gupta2018cnn}, a U-Net is used to encode the prior, i.e., to project the current estimate to the prior image set while gradient descent enforces measurement consistency. Neural networks can be also used to replace traditional operators in optimization strategies as shown by \cite{adler2018learned}. The reconstruction using these hybrid methods can be computationally expensive since it requires running an optimization procedure at test time.

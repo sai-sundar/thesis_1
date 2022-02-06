@@ -3937,6 +3937,63 @@
     \field{year}{2012}
   \endentry
 
+  \entry{wu2021drone}{article}{}
+    \name{author}{6}{}{%
+      {{hash=WW}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Weiwen},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Dianlin},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=NC}{%
+         family={Niu},
+         familyi={N\bibinitperiod},
+         given={Chuang},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Hengyong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vardhanabhuti},
+         familyi={V\bibinitperiod},
+         given={Varut},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Ge},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WW+2}
+    \strng{fullhash}{WWHDNCYHVVWG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wu+21}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{year}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{DRONE: Dual-domain residual-based optimization NEtwork for
+  sparse-view CT reconstruction}
+    \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{2021}
+  \endentry
+
   \entry{wang2020deep}{article}{}
     \name{author}{3}{}{%
       {{hash=WG}{%
