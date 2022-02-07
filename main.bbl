@@ -2197,6 +2197,47 @@
     \field{year}{1984}
   \endentry
 
+  \entry{liu2019deep}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Zhiyuan},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CH}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Huai},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Huafeng},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{LZCHLH1}
+    \strng{fullhash}{LZCHLH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{LCL19}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}
+    \field{pages}{48\bibrangedash 56}
+    \field{title}{Deep learning based framework for direct reconstruction of
+  PET images}
+    \field{year}{2019}
+  \endentry
+
   \entry{ledig2017photo}{inproceedings}{}
     \true{moreauthor}
     \name{author}{10}{}{%
@@ -3937,6 +3978,60 @@
     \field{year}{2012}
   \endentry
 
+  \entry{wu2020high}{article}{}
+    \name{author}{5}{}{%
+      {{hash=WW}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Weiwen},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=HD}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Dianlin},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=AK}{%
+         family={An},
+         familyi={A\bibinitperiod},
+         given={Kang},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shaoyu},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Luo},
+         familyi={L\bibinitperiod},
+         given={Fulin},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WW+2}
+    \strng{fullhash}{WWHDAKWSLF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Wu+20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{pages}{1\bibrangedash 14}
+    \field{title}{A high-quality photon-counting CT technique based on weight
+  adaptive total-variation and image-spectral tensor factorization for small
+  animals imaging}
+    \field{volume}{70}
+    \field{journaltitle}{IEEE Transactions on Instrumentation and Measurement}
+    \field{year}{2020}
+  \endentry
+
   \entry{wu2021drone}{article}{}
     \name{author}{6}{}{%
       {{hash=WW}{%
@@ -4670,6 +4765,48 @@
     \field{pages}{1131241}
     \field{title}{Low-dose CT reconstruction with simultaneous sinogram and
   image domain denoising by deep neural network}
+    \field{volume}{11312}
+    \field{year}{2020}
+  \endentry
+
+  \entry{zhang2020deep}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=ZC}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Chengzhu},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yinsheng},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CGH}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Guang-Hong},
+         giveni={G\bibinitperiod-H\bibinitperiod},
+      }}%
+    }
+    \list{organization}{2}{%
+      {International Society for Optics}%
+      {Photonics}%
+    }
+    \strng{namehash}{ZCLYCGH1}
+    \strng{fullhash}{ZCLYCGH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{ZLC20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{booktitle}{Medical Imaging 2020: Physics of Medical Imaging}
+    \field{pages}{1131206}
+    \field{title}{Deep learning enabled prior image constrained compressed
+  sensing (DL-PICCS) reconstruction framework for sparse-view reconstruction}
     \field{volume}{11312}
     \field{year}{2020}
   \endentry
