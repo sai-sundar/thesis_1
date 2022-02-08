@@ -1763,55 +1763,6 @@
     \field{year}{2018}
   \endentry
 
-  \entry{kandarpa2020dug}{article}{}
-    \name{author}{4}{}{%
-      {{hash=KV}{%
-         family={Kandarpa},
-         familyi={K\bibinitperiod},
-         given={VSS},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=BA}{%
-         family={Bousse},
-         familyi={B\bibinitperiod},
-         given={Alexandre},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=BD}{%
-         family={Benoit},
-         familyi={B\bibinitperiod},
-         given={Didier},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=VD}{%
-         family={Visvikis},
-         familyi={V\bibinitperiod},
-         given={Dimitris},
-         giveni={D\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{KV+1}
-    \strng{fullhash}{KVBABDVD1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Kan+20}
-    \field{labelyear}{2020}
-    \field{labeldatesource}{year}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{number}{1}
-    \field{pages}{44\bibrangedash 53}
-    \field{title}{DUG-RECON: A Framework for Direct Image Reconstruction Using
-  Convolutional Generative Networks}
-    \field{volume}{5}
-    \field{journaltitle}{IEEE Transactions on Radiation and Plasma Medical
-  Sciences}
-    \field{year}{2020}
-  \endentry
-
   \entry{kingma2014adam}{article}{}
     \name{author}{2}{}{%
       {{hash=KDP}{%
@@ -3610,6 +3561,64 @@
     \field{year}{2018}
   \endentry
 
+  \entry{tian2020deep}{article}{}
+    \name{author}{6}{}{%
+      {{hash=TC}{%
+         family={Tian},
+         familyi={T\bibinitperiod},
+         given={Chunwei},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Fei},
+         familyi={F\bibinitperiod},
+         given={Lunke},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Wenxian},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=XY}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Yong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zuo},
+         familyi={Z\bibinitperiod},
+         given={Wangmeng},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=LCW}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Chia-Wen},
+         giveni={C\bibinitperiod-W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{TC+1}
+    \strng{fullhash}{TCFLZWXYZWLCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Tia+20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{pages}{251\bibrangedash 275}
+    \field{title}{Deep learning on image denoising: An overview}
+    \field{volume}{131}
+    \field{journaltitle}{Neural Networks}
+    \field{year}{2020}
+  \endentry
+
   \entry{tang2009performance}{article}{}
     \name{author}{3}{}{%
       {{hash=TJ}{%
@@ -4128,6 +4137,48 @@
     \field{volume}{2}
     \field{journaltitle}{Nature Machine Intelligence}
     \field{year}{2020}
+  \endentry
+
+  \entry{xiang2021fista}{article}{}
+    \name{author}{3}{}{%
+      {{hash=XJ}{%
+         family={Xiang},
+         familyi={X\bibinitperiod},
+         given={Jinxi},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DY}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Yonggui},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Yunjie},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{XJDYYY1}
+    \strng{fullhash}{XJDYYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{XDY21}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{year}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{number}{5}
+    \field{pages}{1329\bibrangedash 1339}
+    \field{title}{FISTA-net: Learning a fast iterative shrinkage thresholding
+  network for inverse problems in imaging}
+    \field{volume}{40}
+    \field{journaltitle}{IEEE Transactions on Medical Imaging}
+    \field{year}{2021}
   \endentry
 
   \entry{xie2018artifact}{article}{}

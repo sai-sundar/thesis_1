@@ -36,41 +36,42 @@
 \contentsline {section}{\numberline {3.1}Data Corrections or Post-processing}{30}{section.111}
 \contentsline {section}{\numberline {3.2}Hybrid Methods}{33}{section.116}
 \contentsline {section}{\numberline {3.3}Direct Reconstruction with Deep Learning}{39}{section.139}
-\contentsline {chapter}{\numberline {4}DUG-RECON: A Framework for Direct Image Reconstruction using Convolutional Generative Networks}{41}{chapter.141}
-\contentsline {section}{\numberline {4.1}Method}{42}{section.142}
-\contentsline {subsection}{\numberline {4.1.1}Deep Learning Architectures}{42}{subsection.143}
-\contentsline {subsubsection}{Denoising}{43}{section*.146}
-\contentsline {subsubsection}{ Image Reconstruction }{43}{section*.149}
-\contentsline {subsubsection}{Super Resolution}{45}{section*.157}
-\contentsline {section}{\numberline {4.2}Dataset Description}{46}{section.160}
-\contentsline {section}{\numberline {4.3}Training}{48}{section.164}
-\contentsline {section}{\numberline {4.4}Quantitative analysis}{49}{section.166}
-\contentsline {subsection}{\numberline {4.4.1}Region of Interest analysis}{49}{subsection.169}
-\contentsline {section}{\numberline {4.5}Comparison with DeepPET}{50}{section.173}
-\contentsline {section}{\numberline {4.6}Results}{51}{section.174}
-\contentsline {section}{\numberline {4.7}Discussion}{57}{section.185}
-\contentsline {section}{\numberline {4.8}Conclusion}{58}{section.186}
-\contentsline {chapter}{\numberline {5}LRR-CED: Low-Resolution Reconstruction aware Convolutional Encoder-Decoder Network for Direct Sparse-View CT Image Reconstruction}{61}{chapter.187}
-\contentsline {section}{\numberline {5.1}Main Contribution}{62}{section.188}
-\contentsline {section}{\numberline {5.2}Methods}{64}{section.190}
-\contentsline {subsection}{\numberline {5.2.1}Proposed Low Resolution Reconstruction aware \ac {CED} Model}{64}{subsection.191}
-\contentsline {subsubsection}{Fully Convolutional Dense Networks}{65}{section*.195}
-\contentsline {subsubsection}{U-Net}{66}{section*.196}
-\contentsline {subsubsection}{Loss Function}{66}{section*.199}
-\contentsline {section}{\numberline {5.3}Dataset}{68}{section.203}
-\contentsline {section}{\numberline {5.4}Training}{69}{section.206}
-\contentsline {section}{\numberline {5.5}Quantitative Analysis:}{71}{section.207}
-\contentsline {section}{\numberline {5.6}Comparative Analysis}{71}{section.211}
-\contentsline {section}{\numberline {5.7}Results}{71}{section.212}
-\contentsline {subsection}{\numberline {5.7.1}Experimental Results}{71}{subsection.213}
-\contentsline {subsection}{\numberline {5.7.2}Experiments with real data}{74}{subsection.222}
-\contentsline {subsection}{\numberline {5.7.3}Stability Study}{77}{subsection.225}
-\contentsline {subsection}{\numberline {5.7.4}Hyperparameter optimization}{78}{subsection.227}
-\contentsline {subsubsection}{Concatenation Resolution Selection}{78}{section*.228}
-\contentsline {subsubsection}{Training Examples Analysis}{80}{section*.229}
-\contentsline {subsection}{\numberline {5.7.5}Ablation Study}{80}{subsection.230}
-\contentsline {section}{\numberline {5.8}Discussion}{81}{section.239}
-\contentsline {section}{\numberline {5.9}Conclusion}{85}{section.240}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{87}{appendix.241}
-\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{87}{section.242}
-\contentsline {chapter}{Bibliography}{89}{appendix*.243}
+\contentsline {chapter}{\numberline {4}DUG-RECON: A Framework for Direct Image Reconstruction using Convolutional Generative Networks}{43}{chapter.141}
+\contentsline {section}{\numberline {4.1}Method}{44}{section.142}
+\contentsline {subsection}{\numberline {4.1.1}Deep Learning Architectures}{44}{subsection.143}
+\contentsline {subsubsection}{Denoising}{45}{section*.146}
+\contentsline {subsubsection}{ Image Reconstruction }{45}{section*.149}
+\contentsline {subsubsection}{Super Resolution}{47}{section*.157}
+\contentsline {section}{\numberline {4.2}Dataset Description}{48}{section.160}
+\contentsline {section}{\numberline {4.3}Training}{50}{section.164}
+\contentsline {section}{\numberline {4.4}Quantitative analysis}{51}{section.166}
+\contentsline {subsection}{\numberline {4.4.1}Region of Interest analysis}{51}{subsection.169}
+\contentsline {section}{\numberline {4.5}Comparison with DeepPET}{52}{section.173}
+\contentsline {section}{\numberline {4.6}Results}{53}{section.174}
+\contentsline {section}{\numberline {4.7}Discussion}{59}{section.185}
+\contentsline {section}{\numberline {4.8}Conclusion}{60}{section.186}
+\contentsline {chapter}{\numberline {5}LRR-CED: Low-Resolution Reconstruction aware Convolutional Encoder-Decoder Network for Direct Sparse-View CT Image Reconstruction}{63}{chapter.187}
+\contentsline {section}{\numberline {5.1}Main Contribution}{64}{section.188}
+\contentsline {section}{\numberline {5.2}Methods}{66}{section.190}
+\contentsline {subsection}{\numberline {5.2.1}Proposed Low Resolution Reconstruction aware \ac {CED} Model}{66}{subsection.191}
+\contentsline {subsubsection}{Fully Convolutional Dense Networks}{67}{section*.195}
+\contentsline {subsubsection}{U-Net}{68}{section*.196}
+\contentsline {subsubsection}{Loss Function}{68}{section*.199}
+\contentsline {section}{\numberline {5.3}Dataset}{70}{section.203}
+\contentsline {section}{\numberline {5.4}Training}{71}{section.206}
+\contentsline {section}{\numberline {5.5}Quantitative Analysis:}{73}{section.207}
+\contentsline {section}{\numberline {5.6}Comparative Analysis}{73}{section.211}
+\contentsline {section}{\numberline {5.7}Results}{73}{section.212}
+\contentsline {subsection}{\numberline {5.7.1}Experimental Results}{73}{subsection.213}
+\contentsline {subsection}{\numberline {5.7.2}Experiments with real data}{76}{subsection.222}
+\contentsline {subsection}{\numberline {5.7.3}Stability Study}{79}{subsection.225}
+\contentsline {subsection}{\numberline {5.7.4}Hyperparameter optimization}{80}{subsection.227}
+\contentsline {subsubsection}{Concatenation Resolution Selection}{80}{section*.228}
+\contentsline {subsubsection}{Training Examples Analysis}{82}{section*.229}
+\contentsline {subsection}{\numberline {5.7.5}Ablation Study}{82}{subsection.230}
+\contentsline {section}{\numberline {5.8}Discussion}{83}{section.239}
+\contentsline {section}{\numberline {5.9}Conclusion}{87}{section.240}
+\contentsline {chapter}{\numberline {6}Conclusions and Perspectives}{89}{chapter.241}
+\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{91}{appendix.242}
+\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{91}{section.243}
+\contentsline {chapter}{Bibliography}{93}{appendix*.244}
