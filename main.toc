@@ -72,6 +72,6 @@
 \contentsline {section}{\numberline {5.8}Discussion}{83}{section.239}
 \contentsline {section}{\numberline {5.9}Conclusion}{87}{section.240}
 \contentsline {chapter}{\numberline {6}Conclusions and Perspectives}{89}{chapter.241}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{91}{appendix.242}
-\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{91}{section.243}
-\contentsline {chapter}{Bibliography}{93}{appendix*.244}
+\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{93}{appendix.242}
+\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{93}{section.243}
+\contentsline {chapter}{Bibliography}{95}{appendix*.244}

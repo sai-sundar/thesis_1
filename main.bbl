@@ -97,45 +97,6 @@
     \field{year}{2016}
   \endentry
 
-  \entry{arjovsky2017wasserstein}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=AM}{%
-         family={Arjovsky},
-         familyi={A\bibinitperiod},
-         given={Martin},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=CS}{%
-         family={Chintala},
-         familyi={C\bibinitperiod},
-         given={Soumith},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=BL}{%
-         family={Bottou},
-         familyi={B\bibinitperiod},
-         given={L{\'e}on},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {PMLR}%
-    }
-    \strng{namehash}{AMCSBL1}
-    \strng{fullhash}{AMCSBL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{ACB17}
-    \field{labelyear}{2017}
-    \field{labeldatesource}{year}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{booktitle}{International conference on machine learning}
-    \field{pages}{214\bibrangedash 223}
-    \field{title}{Wasserstein generative adversarial networks}
-    \field{year}{2017}
-  \endentry
-
   \entry{amyar20193}{article}{}
     \name{author}{6}{}{%
       {{hash=AA}{%
@@ -460,6 +421,57 @@
     \field{volume}{26}
     \field{journaltitle}{Journal of Digital Imaging}
     \field{year}{2013}
+  \endentry
+
+  \entry{cocosco1997brainweb}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CCA}{%
+         family={Cocosco},
+         familyi={C\bibinitperiod},
+         given={Chris\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Kollokian},
+         familyi={K\bibinitperiod},
+         given={Vasken},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KRKS}{%
+         family={Kwan},
+         familyi={K\bibinitperiod},
+         given={Remi K-S},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod-S\bibinitperiod},
+      }}%
+      {{hash=PGB}{%
+         family={Pike},
+         familyi={P\bibinitperiod},
+         given={G\bibnamedelima Bruce},
+         giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=EAC}{%
+         family={Evans},
+         familyi={E\bibinitperiod},
+         given={Alan\bibnamedelima C},
+         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Citeseer}%
+    }
+    \strng{namehash}{CCA+1}
+    \strng{fullhash}{CCAKVKRKSPGBEAC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Coc+97}
+    \field{labelyear}{1997}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{NeuroImage}
+    \field{title}{Brainweb: Online interface to a 3D MRI simulated brain
+  database}
+    \field{year}{1997}
   \endentry
 
   \entry{chambolle2011first}{article}{}
