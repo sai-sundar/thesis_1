@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  9 FEB 2022 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.10.20)  10 FEB 2022 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3776,21 +3776,21 @@ Overfull \hbox (6.48671pt too wide) in paragraph at lines 14--15
 smaller datasets.
  []
 
-[90]) [91]
+[90] [91]) [92]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [92
-
-
-
-]
+ (./Appendices/AppendixA.tex
 Appendix A.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
 1: section
-[93] [94
+[93
+
+
+
+] [94
 
 
 ]
@@ -3803,6 +3803,12 @@ truc-
 Overfull \hbox (17.63725pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 tion^^Q. In: \T1/ppl/m/it/12 IEEE Trans-ac-tions on Med-i-cal Im
 ag-ing \T1/ppl/m/n/12 37.6 (2018), pp. 1322^^U
+ []
+
+
+Overfull \hbox (61.6731pt too wide) in paragraph at lines 301--301
+\T1/ppl/m/n/12 coders for med-i-cal im-age seg-men-ta-tion^^Q. In: \T1/ppl/m/it
+/12 arXiv preprint arXiv:2102.04306
  []
 
 
@@ -3873,6 +3879,12 @@ penalty^^Q.
  []
 
 
+Overfull \hbox (0.40955pt too wide) in paragraph at lines 301--301
+[]\T1/ppl/m/n/12 Salman Khan et al. ^^P  Trans-form-ers in vi-sion: A sur-vey^^
+Q. In: \T1/ppl/m/it/12 ACM
+ []
+
+
 Overfull \hbox (4.34515pt too wide) in paragraph at lines 301--301
 []\T1/ppl/m/n/12 Kyungsang Kim et al. ^^P  Pe-nal-ized PET re-con-struc-tion us
 -ing deep
@@ -3890,7 +3902,7 @@ Overfull \hbox (2.45712pt too wide) in paragraph at lines 301--301
 1/ppl/m/it/12 Jour-
  []
 
-
+[98]
 Overfull \hbox (1.36089pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 CT im-age re-con-struc-tion^^Q. In: \T1/ppl/m/it/12 IEEE Trans-a
 c-tions on Med-i-cal Imag-
@@ -3902,7 +3914,7 @@ Overfull \hbox (3.1744pt too wide) in paragraph at lines 301--301
  learn-
  []
 
-[98]
+
 Overfull \hbox (7.88014pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/it/12 In-ter-na-tional Con-fer-ence on Med-i-cal Im-age Com-put-ing a
 nd Computer-
@@ -3944,7 +3956,7 @@ Overfull \hbox (0.90224pt too wide) in paragraph at lines 301--301
 p
  []
 
-
+[100]
 Overfull \hbox (0.10121pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 ul-tra-sound im-age en-hance-ment^^Q. In: \T1/ppl/m/it/12 2018 I
 EEE In-ter-na-tional Ul-
@@ -3956,7 +3968,7 @@ Overfull \hbox (17.29164pt too wide) in paragraph at lines 301--301
 m-age com-put-ing and computer-
  []
 
-[100]
+
 Overfull \hbox (8.60922pt too wide) in paragraph at lines 301--301
 []\T1/ppl/m/n/12 Amirhossein Sanaat et al. ^^P  DeepTOF-Sino: A deep learn-ing 
 model
@@ -3974,7 +3986,7 @@ Overfull \hbox (7.03754pt too wide) in paragraph at lines 301--301
 reprint arXiv:1906.02849
  []
 
-
+[101]
 Overfull \hbox (6.6494pt too wide) in paragraph at lines 301--301
 []\T1/ppl/m/n/12 Franz Thaler et al. ^^P  Sparse-view CT re-con-struc-tion us-i
 ng wasser-
@@ -3998,13 +4010,13 @@ Overfull \hbox (0.22209pt too wide) in paragraph at lines 301--301
  Deep
  []
 
-[101]
+
 Overfull \hbox (14.82399pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 re-pair to mit-i-gate de-fec-tive block de-tec-tors^^Q. In: \T1/
 ppl/m/it/12 Physics in Medicine
  []
 
-
+[102]
 Overfull \hbox (18.9811pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 tion^^Q. In: \T1/ppl/m/it/12 IEEE trans-ac-tions on med-i-cal im
 ag-ing \T1/ppl/m/n/12 31.12 (2012), pp. 2194^^U
@@ -4040,13 +4052,13 @@ Overfull \hbox (13.0729pt too wide) in paragraph at lines 301--301
 -en-tific Re-ports \T1/ppl/m/n/12 8.1 (2018),
  []
 
-[102]
+
 Overfull \hbox (0.34091pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 reg-u-lar-ized im-age re-con-struc-tion for PET^^Q. In: \T1/ppl/
 m/it/12 15th In-ter-na-tional
  []
 
-
+[103]
 Overfull \hbox (2.77243pt too wide) in paragraph at lines 301--301
 \T1/ppl/m/n/12 ^^P  Deep learn-ing for biomed-i-cal im-age re-con-struc-tion: A
  sur-vey^^Q.
@@ -4064,7 +4076,7 @@ Overfull \hbox (6.78537pt too wide) in paragraph at lines 301--301
 : \T1/ppl/m/it/12 IEEE
  []
 
-[103] [104]
+[104]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
  (./main.aux (./Chapters/Intro.aux) (./Chapters/Chapter1.aux)
@@ -4087,13 +4099,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 65453 strings out of 492982
- 1517648 string characters out of 6134895
- 1957857 words of memory out of 5000000
- 67559 multiletter control sequences out of 15000+600000
+ 65477 strings out of 492982
+ 1518580 string characters out of 6134895
+ 1965618 words of memory out of 5000000
+ 67575 multiletter control sequences out of 15000+600000
  622910 words of font info for 225 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,21n,100p,10377b,2967s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,21n,100p,10377b,2972s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -4111,10 +4123,10 @@ share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (136 pages, 11582043 bytes).
+Output written on main.pdf (136 pages, 11586597 bytes).
 PDF statistics:
- 3011 PDF objects out of 3580 (max. 8388607)
- 2269 compressed objects within 23 object streams
- 476 named destinations out of 1000 (max. 500000)
+ 3029 PDF objects out of 3580 (max. 8388607)
+ 2287 compressed objects within 23 object streams
+ 484 named destinations out of 1000 (max. 500000)
  818 words of extra memory for PDF output out of 10000 (max. 10000000)
 
