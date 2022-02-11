@@ -247,6 +247,58 @@
     \field{year}{2018}
   \endentry
 
+  \entry{chan2019noise}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CC}{%
+         family={Chan},
+         familyi={C\bibinitperiod},
+         given={Chung},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=QW}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Wenyuan},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=AE}{%
+         family={Asma},
+         familyi={A\bibinitperiod},
+         given={Evren},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CC+1}
+    \strng{fullhash}{CCZJYLQWAE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Cha+19}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{2019 IEEE Nuclear Science Symposium and Medical Imaging
+  Conference (NSS/MIC)}
+    \field{pages}{1\bibrangedash 3}
+    \field{title}{Noise to noise ensemble learning for PET image denoising}
+    \field{year}{2019}
+  \endentry
+
   \entry{chen2017low}{inproceedings}{}
     \name{author}{7}{}{%
       {{hash=CH}{%
@@ -5019,6 +5071,48 @@
     \field{pages}{1\bibrangedash 5}
     \field{title}{Deep back projection for sparse-view {CT} reconstruction}
     \field{year}{2018}
+  \endentry
+
+  \entry{yuan2020half2half}{article}{}
+    \name{author}{3}{}{%
+      {{hash=YN}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Nimu},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=QJ}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Jinyi},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{YNZJQJ1}
+    \strng{fullhash}{YNZJQJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{YZQ20}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{21}
+    \field{pages}{215020}
+    \field{title}{Half2Half: deep neural network based CT image denoising
+  without independent reference data}
+    \field{volume}{65}
+    \field{journaltitle}{Physics in Medicine \& Biology}
+    \field{year}{2020}
   \endentry
 
   \entry{zhang2020review}{article}{}
