@@ -3844,6 +3844,48 @@
     \field{year}{2019}
   \endentry
 
+  \entry{snyder1981matheematical}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SDL}{%
+         family={Snyder},
+         familyi={S\bibinitperiod},
+         given={Donald\bibnamedelima L},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=TLJ}{%
+         family={Thomas},
+         familyi={T\bibinitperiod},
+         given={Lewis\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=TPMM}{%
+         family={Ter-Pogossian},
+         familyi={T\bibinitperiod-P\bibinitperiod},
+         given={Michel\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SDLTLJTPMM1}
+    \strng{fullhash}{SDLTLJTPMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{STTP81}
+    \field{labelyear}{1981}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{3}
+    \field{pages}{3575\bibrangedash 3583}
+    \field{title}{A matheematical model for positron-emission tomography
+  systems having time-of-flight measurements}
+    \field{volume}{28}
+    \field{journaltitle}{IEEE Transactions on Nuclear Science}
+    \field{year}{1981}
+  \endentry
+
   \entry{Shepp1982}{article}{}
     \name{author}{2}{}{%
       {{hash=SLA}{%

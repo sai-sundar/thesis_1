@@ -6,19 +6,19 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces Summary of recent works on data corrections and post-processing approaches in \ac {PET}\relax }}{32}{table.caption.116}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Summary of recent works on data corrections and post-processing approaches in \ac {CT}\relax }}{33}{table.caption.117}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Trainable Parameters comparison\relax }}{45}{table.caption.147}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Dataset Description\relax }}{49}{table.caption.163}
-\contentsline {table}{\numberline {4.3}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }}{53}{table.caption.177}
-\contentsline {table}{\numberline {4.4}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }}{56}{table.caption.179}
-\contentsline {table}{\numberline {4.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{56}{table.caption.185}
-\contentsline {table}{\numberline {4.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{56}{table.caption.186}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Trainable Parameters comparison\relax }}{45}{table.caption.149}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Dataset Description\relax }}{49}{table.caption.165}
+\contentsline {table}{\numberline {4.3}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the various modalities compared\relax }}{53}{table.caption.179}
+\contentsline {table}{\numberline {4.4}{\ignorespaces The \ac {SSIM} and \ac {RMSE} for the \ac {CT} images are evaluated for 4 different \ac {2D} slices. Here the architecture indicates the prediction by \ac {DUGAN} and that of \ac {DUGAN} along with \ac {SR} segment\relax }}{56}{table.caption.181}
+\contentsline {table}{\numberline {4.5}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 12\relax }}{56}{table.caption.187}
+\contentsline {table}{\numberline {4.6}{\ignorespaces ROI Analysis: The mean, \ac {SD} and the \ac {SNR} for the 4 regions of interest marked in Figure 15\relax }}{56}{table.caption.188}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Dataset Description\relax }}{71}{table.caption.206}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{74}{table.caption.218}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{74}{table.caption.219}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Quantitative comparison of images reconstructed with the proposed algorithms w.r.t. \ac {GT} across different slices in the patient volume from the real dataset displayed in Fig.~\ref {fig:m1}\relax }}{77}{table.caption.226}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{83}{table.caption.233}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{83}{table.caption.234}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Ablation Study: Quantitative comparison of different configurations of the DenseNet\relax }}{83}{table.caption.240}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Dataset Description\relax }}{71}{table.caption.208}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 60 views\relax }}{74}{table.caption.220}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Quantitative comparison of various reconstruction algorithms with \ac {SSIM} and \ac {PSNR} for projections with 90 views\relax }}{74}{table.caption.221}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Quantitative comparison of images reconstructed with the proposed algorithms w.r.t. \ac {GT} across different slices in the patient volume from the real dataset displayed in Fig.~\ref {fig:m1}\relax }}{77}{table.caption.228}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Average \ac {SSIM} for different configurations of concatenations\relax }}{83}{table.caption.235}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Average \ac {SSIM} for different number of training examples\relax }}{83}{table.caption.236}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Ablation Study: Quantitative comparison of different configurations of the DenseNet\relax }}{83}{table.caption.242}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

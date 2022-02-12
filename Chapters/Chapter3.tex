@@ -5,12 +5,14 @@
 \label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
 %----------------------------------------------------------------------------------------
-The impact of deep learning has been immense over the last few years in the field of medical imaging (\cite{litjens2017survey, greenspan2016guest}). Medical image reconstruction has also benefited hugely from the various advances in neural network architectures (\cite{wang2020deep,yedder2021deep,reader2020deep}). In the specific case of \ac{CT} image reconstruction, there has been active interest in sparse-view and low-dose reconstruction scenarios. While with \ac{PET} reconstruction on the other hand, low-dose imaging and total body imaging have been on the forefront. In both cases, obtaining high quality reconstructed images is a challenging task. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods require the knowledge of noise and artifacts statistics and generally have longer reconstruction times. Deep learning-based methods on the other hand are claimed to achieve reconstructed images with quality on par with iterative techniques and in a much shorter time frame (\cite{leuschner2021quantitative}). In this work, the focus has been on \ac{PET} and \ac{CT} image reconstruction. 
+The impact of deep learning has been immense over the last few years in the field of medical imaging (\cite{greenspan2016guest,litjens2017survey}). Medical image reconstruction has also benefited hugely from the various advances in neural network architectures (\cite{wang2020deep,reader2020deep,yedder2021deep}). In the specific case of \ac{CT} image reconstruction, there has been active interest in sparse-view and low-dose reconstruction scenarios, while with \ac{PET} reconstruction on the other hand, low-dose imaging and total body imaging have been on the forefront. In both cases, obtaining high quality reconstructed images is a challenging task. Many established model-based iterative methods account for the low-dose and sparse-view settings to remove artifacts and noise from the reconstruction (\cite{nuyts1998iterative,Elbakri2002,liu2013total}). However, these methods are computationally expensive and generally have longer reconstruction times. Deep learning-based methods on the other hand are claimed to achieve reconstructed images with quality on par with iterative techniques and in a much shorter time frame (\cite{leuschner2021quantitative}).
+
+In this work, the focus has been on \ac{PET} and \ac{CT} image reconstruction. 
 Image reconstruction corresponds to the task of mapping raw projection data retrieved from the detector to image domain. As depicted in Fig~\ref{fig:dl}, one can broadly identify three different categories of approaches for the implementation of deep learning within the framework of medical image reconstruction:
 \begin{itemize}
-	\item[(i)] methods that use deep learning as an image processing step that improves the quality of the raw data and/or the reconstructed image (\cite{gong2018pet, maier2018deep}); 
-	\item[(ii)] methods that embed deep-learning image processing techniques in the iterative reconstruction framework to accelerate convergence or to improve image quality (\cite{xie2019generative,kim2018penalized,gong2019iterative});
-	\item[(iii)] direct reconstruction with deep learning alone without any use of traditional reconstruction methods  (\cite{whiteley2019direct,zhu2018image,haeggstroem2018deeprec}).
+	\item[(i)] Methods that use deep learning as an image processing step that improves the quality of the raw data and/or the reconstructed image (\cite{gong2018pet, maier2018deep}); 
+	\item[(ii)] Methods that embed deep-learning image processing techniques in the iterative reconstruction framework to accelerate convergence or to improve image quality (\cite{xie2019generative,kim2018penalized,gong2019iterative});
+	\item[(iii)] Direct reconstruction with deep learning alone without any use of traditional reconstruction methods  (\cite{whiteley2019direct,zhu2018image,haeggstroem2018deeprec}).
 \end{itemize}
 
 \begin{figure}[!htbp]
@@ -27,10 +29,11 @@ Each of these categories are discussed along with reference to some of the popul
 
 The use of deep learning for the development of either data corrections or post-reconstruction  image based approaches has shown potential to improve the quality of reconstructed images. While it is possible to train a \ac{CNN} to regress directly from the measurement (raw data) domain to the image domain, the use of \ac{CNN} entirely in one particular domain makes it fast and relatively easy to implement. The motivation behind using deep learning architectures for these processing tasks is the extremely well documented performance in denoising and super resolution domains (\cite{tian2020deep,wang2020deep}). Data corrections involve improving the measurement data either through denoising or finding missing projection angle data. Post-processing in the image domain on the other hand consists of improving images reconstructed with standard reconstruction methods. 
 
-Corrections in measured data $\boldy$ can be expressed as finding an estimate $\boldyhat$ through a neural network $F$ with parameters $\bm{\theta}$. 
+The corrected data $\boldyhat$ is obtained from measured data $\boldy$ as: 
 \begin{equation}\label{eq:data_cor}
 	\boldyhat = F_{\bm{\theta}} (\boldy)
 \end{equation} 
+where $F$ is the neural network with trainable parameters $\bm{\theta}$. 
 The new set of corrected data $\boldyhat$ are then used to reconstruct images through traditional methods. An example of data corrections in \ac{PET} image reconstruction through sinogram repair is proposed by \cite{whiteley2019cnn}, where a \ac{CNN} is utilized to predict missing projection data for total body \ac{PET} image reconstruction. The repaired sinograms eventually improve image reconstruction by standard methods.
 
 In \ac{CT} imaging, missing projection data in sparse-view setting is estimated through neural networks. An example in this regard is proposed in \cite{lee2018deep}, where the authors use U-Net to map sparse-view sinograms to full-view sinograms and then reconstruct the images using \ac{FBP}. Another idea to improve the raw data through scatter correction is proposed in \cite{maier2018deep}. In this work a modified U-Net is used to estimate scatter and correct the raw data in order to improve \ac{CT} images. 
@@ -42,7 +45,7 @@ Improvements in the images reconstructed by traditional methods are usually brou
 \end{equation} 
 where $\boldx_{\mathrm{den}}$ is the post-processed image. Over the years the trend in \ac{PET} imaging has been towards reducing the dose of the radiotracer injected into the patient, which in turn leads to noisier reconstructed images. The approach has been to create datasets with conventional algorithms (like \ac{OSEM}) for both low-dose and normal dose settings and then train a neural network to achieve normal dose quality starting from low-dose images. Apart from the low dose noise problem, in \ac{CT}, improvements in sparse-view imaging through deep learning has been an active area of research. The focus here is to reduce the artifacts produced by \ac{FBP} with sparse-view sinograms. These artifacts are either removed by first finding the missing projections and repairing the sinograms or by post-processing the images. In both these scenarios \ac{FBP} is utilized; in the former case neural network corrects the sinograms thereby providing full-view sinograms for reconstruction and in the latter case \ac{FBP} estimated artifact effected images are improved by the neural network.  
 
-Some of the recent developments in post-processing and data corrections for \ac{PET} and \ac{CT} are summarized in Table~\ref{table:pp_PET} and Table~\ref{table:pp_CT}. A short description of the method along with the citation is given in the second column of both the tables. These approaches typically modify an existing neural network architecture to suit the problem they are addressing. U-Net is one of the most utilized architectures as seen in the third column where the base neural network is given. The datasets utilized by each of these works are mentioned in the final column. Along with the proposed modifications of established neural networks, these approaches typically use loss functions consisting of multiple components. The authors in \cite{gong2018pet} used perceptual loss along with \ac{MSE} to preserve qualitative and quantitative accuracy of the reconstructed images. The work proposed by \cite{whiteley2020fastpet} uses \ac{MSSIM} along with perceptual loss and \ac{MAE}. Another strategy used is pre-training on simulated data followed by fine-tuning on real patient data. Data corrections in the form of scatter correction of the sinogram data is proposed in \cite{qian2017deep}. The authors use \ac{CNN} followed by \ac{FC} layers in their approach. In \ac{CT} imaging there are works that do denoising of low-dose sinograms (\cite{ma2021sinogram,zhu2020low}) and also finding the missing projections in sparse-view sinograms (\cite{lee2018deep}). The same problem is tackled in the image domain through denoising (\cite{yang2018low}) and artifact removal for sparse-view problem (\cite{jin2017deep,xie2018artifact,zhang2018sparse}).
+Some of the recent developments in post-processing and data corrections for \ac{PET} and \ac{CT} are summarized in Table~\ref{table:pp_PET} and Table~\ref{table:pp_CT}. A short description of the method along with the citation is given in the second column of both the tables. These approaches typically modify an existing neural network architecture to suit the problem they are addressing. U-Net is one of the most utilized architectures as seen in the third column where the base neural network is given. The datasets utilized by each of these works are mentioned in the final column. Along with the proposed modifications of established neural networks, these approaches typically use loss functions consisting of multiple components. The authors in \cite{gong2018pet} used perceptual loss along with \ac{MSE} to preserve qualitative and quantitative accuracy of the reconstructed images. The work proposed by \cite{whiteley2020fastpet} uses \ac{MSSIM} along with perceptual loss and \ac{MAE}. Another strategy used is pre-training on simulated data followed by fine-tuning on real patient data. Data corrections in the form of scatter correction of the sinogram data is proposed in \cite{qian2017deep}. The authors use \ac{CNN} followed by \ac{FC} layers in their approach. In \ac{CT} imaging there are works that do denoising of low-dose sinograms (\cite{zhu2020low,ma2021sinogram}) and also finding the missing projections in sparse-view sinograms (\cite{lee2018deep}). The same problem is tackled in the image domain through denoising (\cite{yang2018low}) and artifact removal for sparse-view problem (\cite{jin2017deep,xie2018artifact,zhang2018sparse}).
 \begin{table}[ht!]
 	\centering
 	\caption{Summary of recent works on data corrections and post-processing approaches in \ac{PET}}
@@ -137,7 +140,7 @@ The methods mentioned in this section and the next, are directly involved in the
 
 \item Data-driven information learned by a neural network can be incorporated into an iterative algorithm through the regularization term. \cite{gong2019iterative} used a modified version of the U-Net comprising of multi-channel input to represent \ac{PET} images.
 \begin{equation}\label{eq:iter_CNN}
-\boldlambda = F_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})
+\boldlambda = F_{\bm{\theta}_{\mathrm{fixed}}}(\bm{z})
 \end{equation} 
 where $F_{\bm{\theta_{\mathrm{fixed}}}}$ represents the trained denoising neural network (modified U-Net) with fixed trainable parameters $\bm{\theta_{\mathrm{fixed}}}$ and $\bm{z}$ represents the input to the neural network. The \ac{PET} reconstruction model (from \ref{eq:PET}) can be modified to incorporate \ref{eq:iter_CNN}. 
 
@@ -146,43 +149,47 @@ where $F_{\bm{\theta_{\mathrm{fixed}}}}$ represents the trained denoising neural
 \end{equation}
 The unknown image $\boldlambda$ can be estimated using the maximum likelihood criterion:
 \begin{equation}\label{eq:iter_CNN2}
-\boldlambdahat = F_{\bm{\theta_{\mathrm{fixed}}}}(\bm{\hat{z}})
+\boldlambdahat = F_{\bm{\theta}_{\mathrm{fixed}}}(\bm{\hat{z}})
 \end{equation} 
 \begin{equation}
-\boldlambdahat=\underset{\boldlambda \ge 0}{\operatorname{argmin}} \; L(\bm{z})
+\bm{\hat{z}} = \underset{z}{\operatorname{argmax}} \; L(F_{\bm{\theta}_{\mathrm{fixed}}}(\bm{\hat{z}}))
 \end{equation}
 
 In order to ease the difficulty of solving the above due to the non-linearity of the neural network, the authors adapted a constrained version of the above:
 
 \begin{equation}\label{constr}
- 	\operatorname{max} \; L(\bm{\boldlambda});  \; \mathrm{s.t.} \; \boldlambda = \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{\hat{z}})
+ 	\underset{\lambda,z}{\operatorname{max}} \; L(\bm{\boldlambda}),  \; \mathrm{s.t.} \; \boldlambda = \bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{\hat{z}})
 \end{equation}
-To solve the above optimization problem the authors used the augmented Lagrangian format:
+The authors solved the above optimization problem with the \ac{ADMM} algorithm. Using the augmented Lagrangian format, the above problem can be expressed as:
 \begin{equation}
-L_{\rho}=L(\boldlambda)-\frac{\rho}{2}\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})+\bm{\gamma}\|^{2}+\frac{\rho}{2}\|\bm{\gamma}\|^{2},
+	\underset{\boldlambda,\bm{z}}{\operatorname{min}} \; \underset{\bm{u}}{\operatorname{max}} \; L_{p} (\boldlambda,\bm{z},\bm{u}) 
 \end{equation}
-The authors used the \ac{ADMM} algorithm to split the above into three steps:
+where,
+\begin{equation}
+L_{\rho}=L(\boldlambda)-\frac{\rho}{2}\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})+\bm{u}\|^{2}+\frac{\rho}{2}\|\bm{u}\|^{2},
+\end{equation}
 
+The three update steps featuring each of the variables to be optimized can be written as:
 \begin{equation}\label{eq:ad1}
-\boldlambda^{N+1}=\underset{\boldlambda}{\arg \max} \; L(\boldlambda)-\frac{\rho}{2}\left\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{N}+\bm{\gamma}^{N}\right\|^{2}
+\boldlambda^{N+1}=\underset{\boldlambda}{\arg \max} \; L(\boldlambda)-\frac{\rho}{2}\left\|\boldlambda-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{N}+\bm{u}^{N}\right\|^{2}
 \end{equation}
 
 \begin{equation}\label{eq:ad2}
-\bm{z}^{N+1}=\arg \min \left\|\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})-\left(\boldlambda^{N+1}+\bm{\gamma}^{N}\right)\right\|^{2}
+\bm{z}^{N+1}=\arg \min \left\|\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})-\left(\boldlambda^{N+1}+\bm{u}^{N}\right)\right\|^{2}
 \end{equation}
 
 \begin{equation}\label{eq:ad3}
-\bm{\gamma}^{N+1}=\bm{\gamma}^{N}+\boldlambda^{N+1}-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{N+1}
+\bm{u}^{N+1}=\bm{u}^{N}+\boldlambda^{N+1}-\bm{F}_{\bm{\theta_{\mathrm{fixed}}}}(\bm{z})^{N+1}
 \end{equation}
-\ref{eq:ad1} is equivalent to penalized \ac{PET} reconstruction and the authors used the optimization transfer method proposed in \cite{wang2012penalized}. The second part of the algorithm (from \ref{eq:ad2}) involving the input $\bm{z}$ update, is a non-linear version of the least squares problem. In the above methodology, the network parameters $\bm{\theta}$ are fixed while the input to the network $\bm{z}$ is updated. The authors extended this approach in \cite{gong2018pet2} by using a fixed input to the network $\bm{z}_{\mathrm{fixed}}$, while setting the network parameters to update. The fixed input to the network was an MRI image while the network training was based on the concept of deep image prior (\cite{ulyanov2018deep}). The second sub-problem was modified to reflect the update in the network parameters:
+The problem \ref{eq:ad1} is equivalent to penalized \ac{PET} reconstruction and the authors used the optimization transfer method proposed in \cite{wang2012penalized}. The second part of the algorithm (from \ref{eq:ad2}) involving the input $\bm{z}$ update, is a non-linear version of the least squares problem. In the above methodology, the network parameters $\bm{\theta}$ are fixed while the input to the network $\bm{z}$ is updated. The authors extended this approach in \cite{gong2018pet2} by using a fixed input to the network $\bm{z}_{\mathrm{fixed}}$, while setting the network parameters to update. The fixed input to the network was an MRI image while the network training was based on the concept of deep image prior (\cite{ulyanov2018deep}). The second sub-problem was modified to reflect the update in the network parameters:
 
 \begin{equation}\label{eq:dip}
-\bm{\theta}^{N+1}=\arg \min \left\|\bm{F}_{\bm{\theta}}(\bm{z_{fixed}})-\left(\boldlambda^{N+1}+\bm{\gamma}^{N}\right)\right\|^{2}
+\bm{\theta}^{N+1}=\arg \min \left\|\bm{F}_{\bm{\theta}}(\bm{z_{fixed}})-\left(\boldlambda^{N+1}+\bm{u}^{N}\right)\right\|^{2}
 \end{equation}
 
 Both these methods require that the raw data also agree with the denoising \ac{CNN}. The images reconstructed are reported to have better lesion contrast compared to the post-processing \ac{CNN} denoising approaches, indicating an advantage of the hybrid methods, despite being slightly tedious to implement and having longer prediction times.
 
-\item Apart from using neural networks for regularization, the prior information captured by them can be combined with established model-based methods. One such approach called FBSEM-Net was proposed by \cite{mehranian2020model}. Their unrolled method is based on forward-backward splitting (FBS) algorithm. The objective function for their method was:
+\item Apart from using neural networks for regularization, the prior information captured by them can be combined with established model-based methods. One such approach called FBSEM-Net was proposed by \cite{mehranian2020model}. Their unrolled method is based on forward-backward splitting (FBS) algorithm. The update for their method is:
 
 \begin{equation}
 \boldlambda^{N}=\underset{\boldlambda}{\operatorname{argmax}}\left\{L(\boldlambda \mid \boldy)-\frac{1}{2 \beta}\left\|\boldlambda-\boldlambda_{R e g}^{N}\right\|^{2}\right\}
@@ -190,7 +197,7 @@ Both these methods require that the raw data also agree with the denoising \ac{C
 with $\beta$ being a hyper-parameter that controls the balance between the data fidelity term and the regularization term. The authors solved the above through the method of separable surrogates proposed in \cite{depierro1995}. The three steps involved in obtaining the final image update: computing the regularization term, finding the EM update and fusing the EM update with the neural network estimated prior. The first step to compute the regularization term can be written as:
 
 \begin{equation}\label{eq:fbs1}
-\boldlambda_{reg}^N = F(\boldlambda^{N-1})
+\boldlambda_{reg}^N = F_{\bm{\theta}}(\boldlambda^{N-1})
 \end{equation} 
 where $F$ is a residual neural network estimating the regularization term based on the image from the previous iteration. 
 The second step involved getting the EM update $\boldlambda_{EM}^{N}$ similar to \ref{eq:mlem}. Finally the image is estimated by
@@ -203,6 +210,46 @@ The second step involved getting the EM update $\boldlambda_{EM}^{N}$ similar to
 
 During the network training, two reconstructions occur simultaneously, one with good quality reference data and the other with noisy data. The role of the neural network is to denoise the current estimate, such that the fused combined image using \ref{eq:fb2} best agrees with the high quality \ac{MLEM} reconstructed image. The overall methodology constitutes of a very deep network with each iteration being a block of \ac{CNN} along with the conventional \ac{MLEM} layers. 
 
+\item A hybrid method for sparse-view \ac{CT} was proposed in \cite{wu2021drone}. The authors propose a three-stage reconstruction framework consisting of embedding, refinement and awareness. The first module extends the sinogram and reduces the sparse-view artifacts. The refinement part of the method recovers finer details in the images and finally the last module regularizes the images from the earlier modules by ensuring consistency between the measurement data and images. The last module was adapted from compressed sensing and it ensures stability and generalizability in the reconstructed images. The embedding module consists of two neural networks $F_1$ and $F_2$, the first one is a U-Net that operates in the sinogram domain, mapping from 60 views to 180 views, and the second one a W-GAN that operates in the image domain refining the image obtained through \ac{FBP} on the upsampled sinograms. It can be represented as follows:
+
+\begin{equation}
+\boldx^{\prime}=F_{2}(\bm{A_{2}}^{+}(F_{1} (\boldy)))
+\end{equation}
+where $\boldx^{\prime}$ is the image estimated by the embedding module, $\bm{A_2}^{+}$ is the \ac{FBP} reconstruction operator for the up-sampled views ($180$). The next module maintains a balance between the extension of views and refining the subsequent details in the images through two neural networks similar to the ones in the first module. The residual between the image predicted by the embedding module and the re-sampled sinogram is: $(\boldy'-\boldA_{2} \boldx')$, where $\boldy'=F_{1}(\boldy)$. The first neural network is trained to minimize the \ac{MSE} between the measurement data labels and predictions.   
+
+\begin{equation}
+\boldy'' = F_3(\boldy'-\boldA_{2} \boldx')
+\end{equation} 
+The second neural network in the refinement module is trained to minimize the \ac{MSE} between the image data and labels, resulting in a residual image:
+
+\begin{equation}
+\boldx'' = F_4(\boldA_{2}^{+}(\boldy''))
+\end{equation} 
+The measurement data and the images are then updated with the predictions from the trained networks:
+
+\begin{equation}
+\boldy^d = \boldy'' + \bm{A_{2}} \boldx' 
+\end{equation}
+
+\begin{equation}
+\boldx^d = \boldx' + \boldx''
+\end{equation}
+
+
+The final module combines the deep learning-based data image priors ${\boldy^d,\boldx^d}$ and the compressed sensing framework to arrive at an objective function as follows:
+
+\begin{equation}\label{eq:cs}
+\min _{\boldx}\left\{\begin{array}{l}
+\frac{1}{2}\left\|\mathbf{y}-\mathbf{A}_{1} \boldx \right\|^{2}+\frac{\alpha_{1}}{2}\left\|\boldy^{d}-\mathbf{A}_{2} \boldx\right\|^{2} \\
++\frac{\alpha_{2}}{2} \mathrm{~W}(\boldx) +\frac{\alpha_{3}}{2} \mathrm{~W}\left(\boldx-\boldx^{d}\right)
+\end{array}\right\}
+\end{equation}
+where $\alpha_{1} \ge 0$ balances the two data fidelity terms, $\boldA_{1}$ represents the system matrix that projects the lower-sampled data (60 views) and $\boldA_{2}$ represents the system matrix that projects the higher up-sampled data (180 views), $\alpha_{2}$ and $\alpha_{3}$ are the regularization hyper-parameters. For regularization, the authors used a variation of TV, called total difference represented by $W$ defined as follows:  
+\begin{equation}
+\bm{W} (\boldx)=\sum_{i=2}^{m} \sum_{j=2}^{n}\left(\left|x\left(i,j\right)-x\left(i,j-1\right)\right|+\left|x\left(i, j\right)-x\left(i,j-1\right)\right|\right)
+\end{equation}
+
+The authors validated their method on clinical and pre-clinical datasets and reported superior performance of their proposed method when compared to deep learning-based methods like FBPConvNet (\cite{jin2017deep}), HD-Net (\cite{wu2020high}) and DL-PICCS (\cite{zhang2020deep}).
 
 \item \cite{adler2018learned} proposed a learned primal-dual algorithm which was one of the first methods that combined \ac{MBIR} methods with deep learning for low-dose \ac{CT} image reconstruction. The authors proposed a generalized algorithm that could be modified for other tomographic imaging modalities also. \acp{CNN} are used both in the image domain and the sinogram domain, connected through the forward projection operator and it's adjoint. In many \ac{MBIR} approaches, non-smooth regularizers are used. They are typically handled through smooth approximations which lead to additional parameters and non-exact solutions. As an alternative, proximal methods are used to tackle the non-smooth objective functions. The method proposed in this article was inspired from one such proximal \ac{PDHG} algorithm (\cite{chambolle2011first}). They replaced the proximal operators with learned parameterized operators (\acp{CNN}) to result in a learned reconstruction operator. The primal and dual operators were parameterized as \acp{CNN} consisting of 3 layers and in total of 64 intermediate convolution channels. The different steps involved in the method are summarized in Algorithm~\ref{alg:pd}. The neural networks and the projection/back-projection operators were implemented using operator discretization library (ODL) and Tensorflow (\cite{abadi2016tensorflow}). The authors tested their approach on ellipse phantoms and real patient data. They reported better qualitative and quantitative results when compared to TV and deep learning-based post-processing method. 
 
@@ -221,41 +268,6 @@ For primal and dual variables $x \in X^{N_{primal}}$ and $h \in X^{N_{dual}}$, p
 \end{algorithm}
 
 
-\item A hybrid method for sparse-view \ac{CT} was proposed in \cite{wu2021drone}. The authors propose a three-stage reconstruction framework consisting of embedding, refinement and awareness. The first module extends the sinogram and reduces the sparse-view artifacts. The refinement part of the method recovers finer details in the images and finally the last module regularizes the images from the earlier modules by ensuring consistency between the measurement data and images. The last module was adapted from compressed sensing and it ensures stability and generalizability in the reconstructed images. The embedding module consists of two neural networks $F_1$ and $F_2$, the first one is a U-Net that operates in the sinogram domain, mapping from 60 views to 180 views, and the second one a W-GAN that operates in the image domain refining the image obtained through \ac{FBP} on the upsampled sinograms. It can be represented as follows:
-
-\begin{equation}
-\boldx^{\prime}=F_{2}(\bm{A_{2}}^{+}(F_{1} (\boldy)))
-\end{equation}
-where $\boldx^{\prime}$ is the image estimated by the embedding module, $\bm{A_2}^{+}$ is the \ac{FBP} reconstruction operator for the up-sampled views ($180$). The next module maintains a balance between the extension of views and refining the subsequent details in the images through two neural networks similar to the ones in the first module. The residual between the image predicted by the embedding module and the re-sampled sinogram can be written as: $(\boldy'-\boldA_{2} \boldx')$. The first neural network is trained to minimize the \ac{MSE} between the measurement data labels and predictions.   
-
-\begin{equation}
-	\boldy'' = F_3(\boldy'-\boldA_{2} \boldx')
-\end{equation} 
-The second neural network in the refinement module is trained to minimize the \ac{MSE} between the image data and labels resulting in a refined image:
-
-\begin{equation}
-\boldx'' = F_4(\boldA_{2}^{+}(\boldy''))
-\end{equation} 
-The measurement data and the images are then updated with the predictions from the trained networks:
-
-\begin{equation}
-	\boldy^d = \boldy'' + \bm{A_{2}} \boldx' 
-\end{equation}
-
-\begin{equation}
-    \boldx^d = \boldx' + \boldx''
-\end{equation}
-
-
-The final module combines the deep learning-based data image priors ${\boldy^d,\boldx^d}$ and the compressed sensing framework to arrive at an objective function as follows:
-
-\begin{equation}\label{eq:cs}
-\min _{\boldx}\left\{\begin{array}{l}
-\frac{1}{2}\left\|\mathbf{y}-\mathbf{A}_{1} \boldx \right\|^{2}+\frac{\alpha_{1}}{2}\left\|\boldy^{d}-\mathbf{A}_{2} \boldx\right\|^{2} \\
-+\frac{\alpha_{2}}{2} \mathrm{~W} \boldx+\frac{\alpha_{3}}{2} \mathrm{~W}\left(\boldx-\boldx^{d}\right)
-\end{array}\right\}
-\end{equation}
-where $\alpha_{1} \ge 0$ balances the two data fidelity terms, $\boldA_{1}$ represents the system matrix that projects the lower-sampled data (60 views) and $\boldA_{2}$ represents the system matrix that projects the higher up-sampled data (180 views). For the regularization the authors used a variation of TV, called total difference represented by $W$. $\alpha_{2}$ and $\alpha_{3}$ are the regularization hyper-parameters. The authors validated their method on clinical and pre-clinical datasets and reported superior performance of their proposed method when compared to deep learning-based methods like FBPConvNet (\cite{jin2017deep}), HD-Net (\cite{wu2020high}) and DL-PICCS (\cite{zhang2020deep}).
 
 \end{itemize}
  
